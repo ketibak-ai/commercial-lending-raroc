@@ -1,0 +1,501 @@
+relationship_id,name,industry,rating,lending_weight,deposit_weight,payments_weight,ird_trades,segment
+R001,Northwind Manufacturing Group,Industrial Manufacturing,4,1.6,1.2,1.4,3,Key Relationship
+R002,Harborview Health Partners,Healthcare,3,1.2,1.8,1.6,2,Key Relationship
+R003,Cascade Logistics Holdings,Transportation & Logistics,5,1.4,1.0,1.8,3,Key Relationship
+R004,Summit Ridge Software,Technology,4,0.5,2.6,1.5,0,Key Relationship
+R005,Keystone Commercial Properties,Commercial Real Estate,5,2.4,0.4,0.3,4,Key Relationship
+R006,Prairie Harvest Foods,Food Distribution,5,1.0,1.1,1.3,2,Key Relationship
+R007,Blue Mesa Energy Services,Energy,7,1.8,0.25,0.3,3,Key Relationship
+R008,Lakeshore Retail Brands,Retail,6,1.1,0.9,1.9,1,Key Relationship
+R009,Aurora Aerospace Components,Aerospace & Defense,4,1.3,1.0,0.8,1,Key Relationship
+R010,Greenfield Agri Cooperative,Agriculture,5,1.0,0.8,0.7,1,Key Relationship
+R011,Client 011,Healthcare,7,1.0,1.0,1.0,0,Business Banking
+R012,Client 012,Construction,6,1.0,1.0,1.0,0,Middle Market
+R013,Client 013,Retail,5,1.0,1.0,1.0,0,Business Banking
+R014,Client 014,Food Distribution,5,1.0,1.0,1.0,0,Business Banking
+R015,Client 015,Food Distribution,5,1.0,1.0,1.0,0,Business Banking
+R016,Client 016,Wholesale Trade,6,1.0,1.0,1.0,0,Middle Market
+R017,Client 017,Healthcare,7,1.0,1.0,1.0,0,Middle Market
+R018,Client 018,Professional Services,5,1.0,1.0,1.0,0,Business Banking
+R019,Client 019,Transportation & Logistics,4,1.0,1.0,1.0,0,Middle Market
+R020,Client 020,Healthcare,4,1.0,1.0,1.0,0,Business Banking
+R021,Client 021,Energy,6,1.0,1.0,1.0,0,Business Banking
+R022,Client 022,Education,7,1.0,1.0,1.0,0,Business Banking
+R023,Client 023,Professional Services,3,1.0,1.0,1.0,0,Business Banking
+R024,Client 024,Construction,3,1.0,1.0,1.0,0,Business Banking
+R025,Client 025,Professional Services,6,1.0,1.0,1.0,0,Business Banking
+R026,Client 026,Construction,4,1.0,1.0,1.0,0,Middle Market
+R027,Client 027,Energy,7,1.0,1.0,1.0,0,Business Banking
+R028,Client 028,Healthcare,4,1.0,1.0,1.0,0,Middle Market
+R029,Client 029,Wholesale Trade,4,1.0,1.0,1.0,0,Business Banking
+R030,Client 030,Food Distribution,8,1.0,1.0,1.0,0,Business Banking
+R031,Client 031,Energy,4,1.0,1.0,1.0,0,Middle Market
+R032,Client 032,Commercial Real Estate,4,1.0,1.0,1.0,0,Business Banking
+R033,Client 033,Transportation & Logistics,4,1.0,1.0,1.0,0,Business Banking
+R034,Client 034,Education,3,1.0,1.0,1.0,0,Middle Market
+R035,Client 035,Construction,2,1.0,1.0,1.0,0,Business Banking
+R036,Client 036,Retail,3,1.0,1.0,1.0,0,Business Banking
+R037,Client 037,Commercial Real Estate,4,1.0,1.0,1.0,0,Middle Market
+R038,Client 038,Construction,3,1.0,1.0,1.0,0,Middle Market
+R039,Client 039,Energy,6,1.0,1.0,1.0,0,Middle Market
+R040,Client 040,Food Distribution,6,1.0,1.0,1.0,0,Business Banking
+R041,Client 041,Food Distribution,5,1.0,1.0,1.0,0,Middle Market
+R042,Client 042,Transportation & Logistics,4,1.0,1.0,1.0,0,Middle Market
+R043,Client 043,Healthcare,5,1.0,1.0,1.0,0,Middle Market
+R044,Client 044,Energy,7,1.0,1.0,1.0,0,Middle Market
+R045,Client 045,Wholesale Trade,7,1.0,1.0,1.0,0,Business Banking
+R046,Client 046,Industrial Manufacturing,3,1.0,1.0,1.0,0,Middle Market
+R047,Client 047,Wholesale Trade,4,1.0,1.0,1.0,0,Business Banking
+R048,Client 048,Construction,4,1.0,1.0,1.0,0,Business Banking
+R049,Client 049,Technology,4,1.0,1.0,1.0,0,Business Banking
+R050,Client 050,Retail,5,1.0,1.0,1.0,0,Middle Market
+R051,Client 051,Healthcare,5,1.0,1.0,1.0,0,Business Banking
+R052,Client 052,Construction,3,1.0,1.0,1.0,0,Business Banking
+R053,Client 053,Professional Services,5,1.0,1.0,1.0,0,Middle Market
+R054,Client 054,Commercial Real Estate,5,1.0,1.0,1.0,0,Business Banking
+R055,Client 055,Industrial Manufacturing,3,1.0,1.0,1.0,0,Business Banking
+R056,Client 056,Education,7,1.0,1.0,1.0,0,Middle Market
+R057,Client 057,Food Distribution,3,1.0,1.0,1.0,0,Business Banking
+R058,Client 058,Wholesale Trade,8,1.0,1.0,1.0,0,Business Banking
+R059,Client 059,Professional Services,3,1.0,1.0,1.0,0,Business Banking
+R060,Client 060,Construction,7,1.0,1.0,1.0,0,Business Banking
+R061,Client 061,Construction,7,1.0,1.0,1.0,0,Business Banking
+R062,Client 062,Transportation & Logistics,9,1.0,1.0,1.0,0,Business Banking
+R063,Client 063,Commercial Real Estate,7,1.0,1.0,1.0,0,Business Banking
+R064,Client 064,Food Distribution,6,1.0,1.0,1.0,0,Business Banking
+R065,Client 065,Food Distribution,6,1.0,1.0,1.0,0,Business Banking
+R066,Client 066,Industrial Manufacturing,6,1.0,1.0,1.0,0,Middle Market
+R067,Client 067,Energy,3,1.0,1.0,1.0,0,Business Banking
+R068,Client 068,Healthcare,5,1.0,1.0,1.0,0,Business Banking
+R069,Client 069,Professional Services,5,1.0,1.0,1.0,0,Middle Market
+R070,Client 070,Professional Services,7,1.0,1.0,1.0,0,Middle Market
+R071,Client 071,Education,5,1.0,1.0,1.0,0,Business Banking
+R072,Client 072,Professional Services,5,1.0,1.0,1.0,0,Middle Market
+R073,Client 073,Commercial Real Estate,6,1.0,1.0,1.0,0,Middle Market
+R074,Client 074,Education,4,1.0,1.0,1.0,0,Business Banking
+R075,Client 075,Commercial Real Estate,3,1.0,1.0,1.0,0,Business Banking
+R076,Client 076,Technology,5,1.0,1.0,1.0,0,Business Banking
+R077,Client 077,Wholesale Trade,5,1.0,1.0,1.0,0,Business Banking
+R078,Client 078,Commercial Real Estate,4,1.0,1.0,1.0,0,Business Banking
+R079,Client 079,Industrial Manufacturing,5,1.0,1.0,1.0,0,Business Banking
+R080,Client 080,Food Distribution,5,1.0,1.0,1.0,0,Middle Market
+R081,Client 081,Construction,4,1.0,1.0,1.0,0,Middle Market
+R082,Client 082,Transportation & Logistics,5,1.0,1.0,1.0,0,Business Banking
+R083,Client 083,Food Distribution,6,1.0,1.0,1.0,0,Middle Market
+R084,Client 084,Healthcare,4,1.0,1.0,1.0,0,Business Banking
+R085,Client 085,Professional Services,8,1.0,1.0,1.0,0,Business Banking
+R086,Client 086,Food Distribution,8,1.0,1.0,1.0,0,Middle Market
+R087,Client 087,Technology,5,1.0,1.0,1.0,0,Middle Market
+R088,Client 088,Transportation & Logistics,4,1.0,1.0,1.0,0,Business Banking
+R089,Client 089,Energy,5,1.0,1.0,1.0,0,Business Banking
+R090,Client 090,Professional Services,7,1.0,1.0,1.0,0,Middle Market
+R091,Client 091,Education,6,1.0,1.0,1.0,0,Business Banking
+R092,Client 092,Food Distribution,7,1.0,1.0,1.0,0,Business Banking
+R093,Client 093,Healthcare,5,1.0,1.0,1.0,0,Business Banking
+R094,Client 094,Construction,6,1.0,1.0,1.0,0,Business Banking
+R095,Client 095,Retail,4,1.0,1.0,1.0,0,Middle Market
+R096,Client 096,Professional Services,6,1.0,1.0,1.0,0,Middle Market
+R097,Client 097,Healthcare,4,1.0,1.0,1.0,0,Business Banking
+R098,Client 098,Technology,6,1.0,1.0,1.0,0,Middle Market
+R099,Client 099,Construction,7,1.0,1.0,1.0,0,Business Banking
+R100,Client 100,Construction,3,1.0,1.0,1.0,0,Business Banking
+R101,Client 101,Food Distribution,6,1.0,1.0,1.0,0,Middle Market
+R102,Client 102,Construction,3,1.0,1.0,1.0,0,Business Banking
+R103,Client 103,Wholesale Trade,6,1.0,1.0,1.0,0,Middle Market
+R104,Client 104,Commercial Real Estate,3,1.0,1.0,1.0,0,Business Banking
+R105,Client 105,Wholesale Trade,8,1.0,1.0,1.0,0,Middle Market
+R106,Client 106,Technology,3,1.0,1.0,1.0,0,Business Banking
+R107,Client 107,Transportation & Logistics,8,1.0,1.0,1.0,0,Business Banking
+R108,Client 108,Professional Services,7,1.0,1.0,1.0,0,Business Banking
+R109,Client 109,Retail,6,1.0,1.0,1.0,0,Business Banking
+R110,Client 110,Healthcare,6,1.0,1.0,1.0,0,Business Banking
+R111,Client 111,Construction,7,1.0,1.0,1.0,0,Business Banking
+R112,Client 112,Transportation & Logistics,8,1.0,1.0,1.0,0,Business Banking
+R113,Client 113,Construction,4,1.0,1.0,1.0,0,Business Banking
+R114,Client 114,Industrial Manufacturing,6,1.0,1.0,1.0,0,Business Banking
+R115,Client 115,Construction,3,1.0,1.0,1.0,0,Business Banking
+R116,Client 116,Construction,6,1.0,1.0,1.0,0,Middle Market
+R117,Client 117,Construction,4,1.0,1.0,1.0,0,Business Banking
+R118,Client 118,Retail,5,1.0,1.0,1.0,0,Business Banking
+R119,Client 119,Food Distribution,5,1.0,1.0,1.0,0,Business Banking
+R120,Client 120,Professional Services,5,1.0,1.0,1.0,0,Middle Market
+R121,Client 121,Technology,5,1.0,1.0,1.0,0,Business Banking
+R122,Client 122,Construction,6,1.0,1.0,1.0,0,Business Banking
+R123,Client 123,Energy,7,1.0,1.0,1.0,0,Business Banking
+R124,Client 124,Food Distribution,5,1.0,1.0,1.0,0,Middle Market
+R125,Client 125,Energy,6,1.0,1.0,1.0,0,Business Banking
+R126,Client 126,Energy,8,1.0,1.0,1.0,0,Middle Market
+R127,Client 127,Industrial Manufacturing,3,1.0,1.0,1.0,0,Middle Market
+R128,Client 128,Healthcare,3,1.0,1.0,1.0,0,Business Banking
+R129,Client 129,Transportation & Logistics,3,1.0,1.0,1.0,0,Business Banking
+R130,Client 130,Healthcare,6,1.0,1.0,1.0,0,Middle Market
+R131,Client 131,Food Distribution,5,1.0,1.0,1.0,0,Business Banking
+R132,Client 132,Professional Services,6,1.0,1.0,1.0,0,Business Banking
+R133,Client 133,Retail,6,1.0,1.0,1.0,0,Business Banking
+R134,Client 134,Food Distribution,4,1.0,1.0,1.0,0,Business Banking
+R135,Client 135,Wholesale Trade,7,1.0,1.0,1.0,0,Business Banking
+R136,Client 136,Energy,6,1.0,1.0,1.0,0,Business Banking
+R137,Client 137,Industrial Manufacturing,4,1.0,1.0,1.0,0,Business Banking
+R138,Client 138,Construction,5,1.0,1.0,1.0,0,Business Banking
+R139,Client 139,Energy,4,1.0,1.0,1.0,0,Business Banking
+R140,Client 140,Retail,4,1.0,1.0,1.0,0,Middle Market
+R141,Client 141,Energy,4,1.0,1.0,1.0,0,Business Banking
+R142,Client 142,Energy,8,1.0,1.0,1.0,0,Business Banking
+R143,Client 143,Healthcare,5,1.0,1.0,1.0,0,Business Banking
+R144,Client 144,Energy,5,1.0,1.0,1.0,0,Middle Market
+R145,Client 145,Construction,6,1.0,1.0,1.0,0,Middle Market
+R146,Client 146,Technology,5,1.0,1.0,1.0,0,Business Banking
+R147,Client 147,Retail,8,1.0,1.0,1.0,0,Middle Market
+R148,Client 148,Industrial Manufacturing,6,1.0,1.0,1.0,0,Business Banking
+R149,Client 149,Commercial Real Estate,5,1.0,1.0,1.0,0,Business Banking
+R150,Client 150,Food Distribution,5,1.0,1.0,1.0,0,Business Banking
+R151,Client 151,Education,9,1.0,1.0,1.0,0,Business Banking
+R152,Client 152,Transportation & Logistics,6,1.0,1.0,1.0,0,Business Banking
+R153,Client 153,Technology,8,1.0,1.0,1.0,0,Business Banking
+R154,Client 154,Commercial Real Estate,3,1.0,1.0,1.0,0,Business Banking
+R155,Client 155,Education,7,1.0,1.0,1.0,0,Business Banking
+R156,Client 156,Wholesale Trade,6,1.0,1.0,1.0,0,Business Banking
+R157,Client 157,Industrial Manufacturing,3,1.0,1.0,1.0,0,Business Banking
+R158,Client 158,Transportation & Logistics,5,1.0,1.0,1.0,0,Business Banking
+R159,Client 159,Construction,6,1.0,1.0,1.0,0,Business Banking
+R160,Client 160,Industrial Manufacturing,2,1.0,1.0,1.0,0,Middle Market
+R161,Client 161,Wholesale Trade,5,1.0,1.0,1.0,0,Business Banking
+R162,Client 162,Technology,7,1.0,1.0,1.0,0,Business Banking
+R163,Client 163,Education,4,1.0,1.0,1.0,0,Middle Market
+R164,Client 164,Technology,5,1.0,1.0,1.0,0,Middle Market
+R165,Client 165,Food Distribution,5,1.0,1.0,1.0,0,Business Banking
+R166,Client 166,Retail,4,1.0,1.0,1.0,0,Business Banking
+R167,Client 167,Healthcare,8,1.0,1.0,1.0,0,Business Banking
+R168,Client 168,Energy,6,1.0,1.0,1.0,0,Middle Market
+R169,Client 169,Energy,3,1.0,1.0,1.0,0,Middle Market
+R170,Client 170,Construction,9,1.0,1.0,1.0,0,Business Banking
+R171,Client 171,Education,7,1.0,1.0,1.0,0,Business Banking
+R172,Client 172,Retail,4,1.0,1.0,1.0,0,Middle Market
+R173,Client 173,Commercial Real Estate,7,1.0,1.0,1.0,0,Middle Market
+R174,Client 174,Commercial Real Estate,3,1.0,1.0,1.0,0,Middle Market
+R175,Client 175,Food Distribution,9,1.0,1.0,1.0,0,Business Banking
+R176,Client 176,Construction,6,1.0,1.0,1.0,0,Business Banking
+R177,Client 177,Technology,6,1.0,1.0,1.0,0,Middle Market
+R178,Client 178,Transportation & Logistics,3,1.0,1.0,1.0,0,Middle Market
+R179,Client 179,Commercial Real Estate,7,1.0,1.0,1.0,0,Business Banking
+R180,Client 180,Industrial Manufacturing,2,1.0,1.0,1.0,0,Business Banking
+R181,Client 181,Healthcare,4,1.0,1.0,1.0,0,Business Banking
+R182,Client 182,Healthcare,4,1.0,1.0,1.0,0,Business Banking
+R183,Client 183,Construction,6,1.0,1.0,1.0,0,Middle Market
+R184,Client 184,Professional Services,4,1.0,1.0,1.0,0,Middle Market
+R185,Client 185,Professional Services,8,1.0,1.0,1.0,0,Middle Market
+R186,Client 186,Food Distribution,6,1.0,1.0,1.0,0,Business Banking
+R187,Client 187,Professional Services,2,1.0,1.0,1.0,0,Business Banking
+R188,Client 188,Healthcare,2,1.0,1.0,1.0,0,Business Banking
+R189,Client 189,Wholesale Trade,3,1.0,1.0,1.0,0,Business Banking
+R190,Client 190,Energy,6,1.0,1.0,1.0,0,Business Banking
+R191,Client 191,Education,7,1.0,1.0,1.0,0,Business Banking
+R192,Client 192,Healthcare,4,1.0,1.0,1.0,0,Middle Market
+R193,Client 193,Food Distribution,7,1.0,1.0,1.0,0,Middle Market
+R194,Client 194,Professional Services,3,1.0,1.0,1.0,0,Business Banking
+R195,Client 195,Food Distribution,7,1.0,1.0,1.0,0,Business Banking
+R196,Client 196,Food Distribution,8,1.0,1.0,1.0,0,Middle Market
+R197,Client 197,Healthcare,6,1.0,1.0,1.0,0,Business Banking
+R198,Client 198,Commercial Real Estate,6,1.0,1.0,1.0,0,Business Banking
+R199,Client 199,Transportation & Logistics,7,1.0,1.0,1.0,0,Business Banking
+R200,Client 200,Technology,3,1.0,1.0,1.0,0,Middle Market
+R201,Client 201,Professional Services,4,1.0,1.0,1.0,0,Middle Market
+R202,Client 202,Retail,3,1.0,1.0,1.0,0,Middle Market
+R203,Client 203,Retail,5,1.0,1.0,1.0,0,Business Banking
+R204,Client 204,Commercial Real Estate,6,1.0,1.0,1.0,0,Business Banking
+R205,Client 205,Education,6,1.0,1.0,1.0,0,Business Banking
+R206,Client 206,Healthcare,7,1.0,1.0,1.0,0,Middle Market
+R207,Client 207,Commercial Real Estate,4,1.0,1.0,1.0,0,Business Banking
+R208,Client 208,Healthcare,6,1.0,1.0,1.0,0,Business Banking
+R209,Client 209,Commercial Real Estate,4,1.0,1.0,1.0,0,Business Banking
+R210,Client 210,Education,4,1.0,1.0,1.0,0,Business Banking
+R211,Client 211,Commercial Real Estate,6,1.0,1.0,1.0,0,Middle Market
+R212,Client 212,Wholesale Trade,9,1.0,1.0,1.0,0,Business Banking
+R213,Client 213,Food Distribution,6,1.0,1.0,1.0,0,Middle Market
+R214,Client 214,Professional Services,3,1.0,1.0,1.0,0,Business Banking
+R215,Client 215,Food Distribution,6,1.0,1.0,1.0,0,Middle Market
+R216,Client 216,Technology,3,1.0,1.0,1.0,0,Middle Market
+R217,Client 217,Construction,7,1.0,1.0,1.0,0,Business Banking
+R218,Client 218,Education,6,1.0,1.0,1.0,0,Middle Market
+R219,Client 219,Technology,4,1.0,1.0,1.0,0,Business Banking
+R220,Client 220,Construction,3,1.0,1.0,1.0,0,Business Banking
+R221,Client 221,Technology,4,1.0,1.0,1.0,0,Middle Market
+R222,Client 222,Professional Services,9,1.0,1.0,1.0,0,Business Banking
+R223,Client 223,Construction,5,1.0,1.0,1.0,0,Business Banking
+R224,Client 224,Food Distribution,6,1.0,1.0,1.0,0,Business Banking
+R225,Client 225,Professional Services,6,1.0,1.0,1.0,0,Business Banking
+R226,Client 226,Technology,5,1.0,1.0,1.0,0,Business Banking
+R227,Client 227,Industrial Manufacturing,4,1.0,1.0,1.0,0,Middle Market
+R228,Client 228,Healthcare,8,1.0,1.0,1.0,0,Middle Market
+R229,Client 229,Food Distribution,4,1.0,1.0,1.0,0,Middle Market
+R230,Client 230,Wholesale Trade,5,1.0,1.0,1.0,0,Business Banking
+R231,Client 231,Healthcare,6,1.0,1.0,1.0,0,Business Banking
+R232,Client 232,Food Distribution,6,1.0,1.0,1.0,0,Business Banking
+R233,Client 233,Professional Services,8,1.0,1.0,1.0,0,Business Banking
+R234,Client 234,Transportation & Logistics,4,1.0,1.0,1.0,0,Business Banking
+R235,Client 235,Professional Services,5,1.0,1.0,1.0,0,Business Banking
+R236,Client 236,Technology,5,1.0,1.0,1.0,0,Business Banking
+R237,Client 237,Construction,5,1.0,1.0,1.0,0,Business Banking
+R238,Client 238,Energy,3,1.0,1.0,1.0,0,Middle Market
+R239,Client 239,Energy,3,1.0,1.0,1.0,0,Middle Market
+R240,Client 240,Transportation & Logistics,4,1.0,1.0,1.0,0,Business Banking
+R241,Client 241,Food Distribution,4,1.0,1.0,1.0,0,Business Banking
+R242,Client 242,Wholesale Trade,5,1.0,1.0,1.0,0,Business Banking
+R243,Client 243,Industrial Manufacturing,6,1.0,1.0,1.0,0,Middle Market
+R244,Client 244,Construction,6,1.0,1.0,1.0,0,Business Banking
+R245,Client 245,Food Distribution,5,1.0,1.0,1.0,0,Middle Market
+R246,Client 246,Professional Services,5,1.0,1.0,1.0,0,Middle Market
+R247,Client 247,Retail,4,1.0,1.0,1.0,0,Middle Market
+R248,Client 248,Food Distribution,5,1.0,1.0,1.0,0,Middle Market
+R249,Client 249,Technology,4,1.0,1.0,1.0,0,Business Banking
+R250,Client 250,Retail,2,1.0,1.0,1.0,0,Business Banking
+R251,Client 251,Healthcare,5,1.0,1.0,1.0,0,Business Banking
+R252,Client 252,Retail,5,1.0,1.0,1.0,0,Business Banking
+R253,Client 253,Healthcare,4,1.0,1.0,1.0,0,Business Banking
+R254,Client 254,Retail,5,1.0,1.0,1.0,0,Business Banking
+R255,Client 255,Retail,5,1.0,1.0,1.0,0,Middle Market
+R256,Client 256,Healthcare,6,1.0,1.0,1.0,0,Business Banking
+R257,Client 257,Construction,6,1.0,1.0,1.0,0,Business Banking
+R258,Client 258,Commercial Real Estate,6,1.0,1.0,1.0,0,Business Banking
+R259,Client 259,Construction,4,1.0,1.0,1.0,0,Business Banking
+R260,Client 260,Industrial Manufacturing,6,1.0,1.0,1.0,0,Middle Market
+R261,Client 261,Transportation & Logistics,5,1.0,1.0,1.0,0,Business Banking
+R262,Client 262,Food Distribution,5,1.0,1.0,1.0,0,Business Banking
+R263,Client 263,Transportation & Logistics,6,1.0,1.0,1.0,0,Middle Market
+R264,Client 264,Technology,5,1.0,1.0,1.0,0,Business Banking
+R265,Client 265,Retail,5,1.0,1.0,1.0,0,Business Banking
+R266,Client 266,Healthcare,6,1.0,1.0,1.0,0,Business Banking
+R267,Client 267,Professional Services,7,1.0,1.0,1.0,0,Business Banking
+R268,Client 268,Healthcare,8,1.0,1.0,1.0,0,Business Banking
+R269,Client 269,Transportation & Logistics,5,1.0,1.0,1.0,0,Middle Market
+R270,Client 270,Retail,5,1.0,1.0,1.0,0,Business Banking
+R271,Client 271,Construction,7,1.0,1.0,1.0,0,Business Banking
+R272,Client 272,Transportation & Logistics,4,1.0,1.0,1.0,0,Business Banking
+R273,Client 273,Technology,7,1.0,1.0,1.0,0,Middle Market
+R274,Client 274,Education,5,1.0,1.0,1.0,0,Business Banking
+R275,Client 275,Education,3,1.0,1.0,1.0,0,Middle Market
+R276,Client 276,Energy,3,1.0,1.0,1.0,0,Middle Market
+R277,Client 277,Food Distribution,7,1.0,1.0,1.0,0,Business Banking
+R278,Client 278,Commercial Real Estate,3,1.0,1.0,1.0,0,Middle Market
+R279,Client 279,Retail,4,1.0,1.0,1.0,0,Middle Market
+R280,Client 280,Retail,4,1.0,1.0,1.0,0,Business Banking
+R281,Client 281,Technology,4,1.0,1.0,1.0,0,Business Banking
+R282,Client 282,Industrial Manufacturing,4,1.0,1.0,1.0,0,Business Banking
+R283,Client 283,Healthcare,6,1.0,1.0,1.0,0,Business Banking
+R284,Client 284,Education,2,1.0,1.0,1.0,0,Business Banking
+R285,Client 285,Food Distribution,7,1.0,1.0,1.0,0,Business Banking
+R286,Client 286,Food Distribution,7,1.0,1.0,1.0,0,Business Banking
+R287,Client 287,Food Distribution,5,1.0,1.0,1.0,0,Business Banking
+R288,Client 288,Construction,4,1.0,1.0,1.0,0,Business Banking
+R289,Client 289,Industrial Manufacturing,6,1.0,1.0,1.0,0,Business Banking
+R290,Client 290,Industrial Manufacturing,3,1.0,1.0,1.0,0,Business Banking
+R291,Client 291,Technology,5,1.0,1.0,1.0,0,Middle Market
+R292,Client 292,Food Distribution,8,1.0,1.0,1.0,0,Business Banking
+R293,Client 293,Professional Services,9,1.0,1.0,1.0,0,Business Banking
+R294,Client 294,Food Distribution,6,1.0,1.0,1.0,0,Middle Market
+R295,Client 295,Food Distribution,4,1.0,1.0,1.0,0,Business Banking
+R296,Client 296,Education,6,1.0,1.0,1.0,0,Business Banking
+R297,Client 297,Healthcare,6,1.0,1.0,1.0,0,Business Banking
+R298,Client 298,Energy,5,1.0,1.0,1.0,0,Business Banking
+R299,Client 299,Energy,6,1.0,1.0,1.0,0,Business Banking
+R300,Client 300,Food Distribution,2,1.0,1.0,1.0,0,Business Banking
+R301,Client 301,Construction,4,1.0,1.0,1.0,0,Business Banking
+R302,Client 302,Technology,5,1.0,1.0,1.0,0,Business Banking
+R303,Client 303,Education,4,1.0,1.0,1.0,0,Business Banking
+R304,Client 304,Technology,4,1.0,1.0,1.0,0,Business Banking
+R305,Client 305,Energy,7,1.0,1.0,1.0,0,Business Banking
+R306,Client 306,Energy,9,1.0,1.0,1.0,0,Business Banking
+R307,Client 307,Wholesale Trade,5,1.0,1.0,1.0,0,Business Banking
+R308,Client 308,Food Distribution,7,1.0,1.0,1.0,0,Business Banking
+R309,Client 309,Technology,9,1.0,1.0,1.0,0,Business Banking
+R310,Client 310,Industrial Manufacturing,4,1.0,1.0,1.0,0,Business Banking
+R311,Client 311,Commercial Real Estate,5,1.0,1.0,1.0,0,Business Banking
+R312,Client 312,Construction,5,1.0,1.0,1.0,0,Business Banking
+R313,Client 313,Industrial Manufacturing,3,1.0,1.0,1.0,0,Business Banking
+R314,Client 314,Wholesale Trade,6,1.0,1.0,1.0,0,Business Banking
+R315,Client 315,Energy,5,1.0,1.0,1.0,0,Middle Market
+R316,Client 316,Healthcare,5,1.0,1.0,1.0,0,Middle Market
+R317,Client 317,Technology,4,1.0,1.0,1.0,0,Business Banking
+R318,Client 318,Energy,4,1.0,1.0,1.0,0,Business Banking
+R319,Client 319,Technology,7,1.0,1.0,1.0,0,Business Banking
+R320,Client 320,Healthcare,3,1.0,1.0,1.0,0,Middle Market
+R321,Client 321,Retail,4,1.0,1.0,1.0,0,Business Banking
+R322,Client 322,Professional Services,4,1.0,1.0,1.0,0,Middle Market
+R323,Client 323,Healthcare,5,1.0,1.0,1.0,0,Business Banking
+R324,Client 324,Technology,5,1.0,1.0,1.0,0,Business Banking
+R325,Client 325,Transportation & Logistics,5,1.0,1.0,1.0,0,Middle Market
+R326,Client 326,Retail,3,1.0,1.0,1.0,0,Business Banking
+R327,Client 327,Professional Services,4,1.0,1.0,1.0,0,Middle Market
+R328,Client 328,Professional Services,7,1.0,1.0,1.0,0,Middle Market
+R329,Client 329,Education,6,1.0,1.0,1.0,0,Middle Market
+R330,Client 330,Construction,6,1.0,1.0,1.0,0,Middle Market
+R331,Client 331,Technology,6,1.0,1.0,1.0,0,Business Banking
+R332,Client 332,Healthcare,6,1.0,1.0,1.0,0,Business Banking
+R333,Client 333,Retail,3,1.0,1.0,1.0,0,Middle Market
+R334,Client 334,Wholesale Trade,5,1.0,1.0,1.0,0,Business Banking
+R335,Client 335,Education,5,1.0,1.0,1.0,0,Business Banking
+R336,Client 336,Transportation & Logistics,4,1.0,1.0,1.0,0,Business Banking
+R337,Client 337,Transportation & Logistics,7,1.0,1.0,1.0,0,Business Banking
+R338,Client 338,Industrial Manufacturing,5,1.0,1.0,1.0,0,Middle Market
+R339,Client 339,Healthcare,6,1.0,1.0,1.0,0,Business Banking
+R340,Client 340,Energy,7,1.0,1.0,1.0,0,Business Banking
+R341,Client 341,Energy,5,1.0,1.0,1.0,0,Business Banking
+R342,Client 342,Commercial Real Estate,7,1.0,1.0,1.0,0,Business Banking
+R343,Client 343,Technology,5,1.0,1.0,1.0,0,Business Banking
+R344,Client 344,Construction,7,1.0,1.0,1.0,0,Middle Market
+R345,Client 345,Food Distribution,5,1.0,1.0,1.0,0,Business Banking
+R346,Client 346,Construction,5,1.0,1.0,1.0,0,Business Banking
+R347,Client 347,Education,5,1.0,1.0,1.0,0,Business Banking
+R348,Client 348,Technology,3,1.0,1.0,1.0,0,Business Banking
+R349,Client 349,Transportation & Logistics,5,1.0,1.0,1.0,0,Business Banking
+R350,Client 350,Education,8,1.0,1.0,1.0,0,Business Banking
+R351,Client 351,Retail,6,1.0,1.0,1.0,0,Business Banking
+R352,Client 352,Technology,4,1.0,1.0,1.0,0,Business Banking
+R353,Client 353,Retail,4,1.0,1.0,1.0,0,Business Banking
+R354,Client 354,Energy,4,1.0,1.0,1.0,0,Business Banking
+R355,Client 355,Wholesale Trade,2,1.0,1.0,1.0,0,Business Banking
+R356,Client 356,Technology,8,1.0,1.0,1.0,0,Middle Market
+R357,Client 357,Education,5,1.0,1.0,1.0,0,Business Banking
+R358,Client 358,Education,4,1.0,1.0,1.0,0,Business Banking
+R359,Client 359,Transportation & Logistics,6,1.0,1.0,1.0,0,Business Banking
+R360,Client 360,Healthcare,2,1.0,1.0,1.0,0,Business Banking
+R361,Client 361,Energy,4,1.0,1.0,1.0,0,Business Banking
+R362,Client 362,Industrial Manufacturing,6,1.0,1.0,1.0,0,Business Banking
+R363,Client 363,Technology,6,1.0,1.0,1.0,0,Business Banking
+R364,Client 364,Food Distribution,9,1.0,1.0,1.0,0,Business Banking
+R365,Client 365,Education,6,1.0,1.0,1.0,0,Business Banking
+R366,Client 366,Education,5,1.0,1.0,1.0,0,Middle Market
+R367,Client 367,Healthcare,6,1.0,1.0,1.0,0,Business Banking
+R368,Client 368,Wholesale Trade,7,1.0,1.0,1.0,0,Middle Market
+R369,Client 369,Healthcare,6,1.0,1.0,1.0,0,Middle Market
+R370,Client 370,Professional Services,8,1.0,1.0,1.0,0,Business Banking
+R371,Client 371,Wholesale Trade,6,1.0,1.0,1.0,0,Business Banking
+R372,Client 372,Wholesale Trade,7,1.0,1.0,1.0,0,Middle Market
+R373,Client 373,Transportation & Logistics,3,1.0,1.0,1.0,0,Business Banking
+R374,Client 374,Wholesale Trade,6,1.0,1.0,1.0,0,Business Banking
+R375,Client 375,Healthcare,5,1.0,1.0,1.0,0,Middle Market
+R376,Client 376,Energy,5,1.0,1.0,1.0,0,Middle Market
+R377,Client 377,Food Distribution,6,1.0,1.0,1.0,0,Business Banking
+R378,Client 378,Technology,8,1.0,1.0,1.0,0,Business Banking
+R379,Client 379,Industrial Manufacturing,9,1.0,1.0,1.0,0,Business Banking
+R380,Client 380,Construction,4,1.0,1.0,1.0,0,Middle Market
+R381,Client 381,Commercial Real Estate,6,1.0,1.0,1.0,0,Business Banking
+R382,Client 382,Retail,6,1.0,1.0,1.0,0,Middle Market
+R383,Client 383,Commercial Real Estate,5,1.0,1.0,1.0,0,Business Banking
+R384,Client 384,Commercial Real Estate,3,1.0,1.0,1.0,0,Business Banking
+R385,Client 385,Wholesale Trade,3,1.0,1.0,1.0,0,Middle Market
+R386,Client 386,Healthcare,6,1.0,1.0,1.0,0,Middle Market
+R387,Client 387,Professional Services,5,1.0,1.0,1.0,0,Business Banking
+R388,Client 388,Professional Services,9,1.0,1.0,1.0,0,Business Banking
+R389,Client 389,Commercial Real Estate,5,1.0,1.0,1.0,0,Business Banking
+R390,Client 390,Technology,9,1.0,1.0,1.0,0,Business Banking
+R391,Client 391,Industrial Manufacturing,5,1.0,1.0,1.0,0,Middle Market
+R392,Client 392,Education,7,1.0,1.0,1.0,0,Middle Market
+R393,Client 393,Education,3,1.0,1.0,1.0,0,Business Banking
+R394,Client 394,Transportation & Logistics,5,1.0,1.0,1.0,0,Middle Market
+R395,Client 395,Industrial Manufacturing,7,1.0,1.0,1.0,0,Business Banking
+R396,Client 396,Healthcare,8,1.0,1.0,1.0,0,Business Banking
+R397,Client 397,Industrial Manufacturing,7,1.0,1.0,1.0,0,Middle Market
+R398,Client 398,Construction,2,1.0,1.0,1.0,0,Business Banking
+R399,Client 399,Wholesale Trade,5,1.0,1.0,1.0,0,Middle Market
+R400,Client 400,Healthcare,3,1.0,1.0,1.0,0,Business Banking
+R401,Client 401,Professional Services,3,1.0,1.0,1.0,0,Business Banking
+R402,Client 402,Transportation & Logistics,6,1.0,1.0,1.0,0,Business Banking
+R403,Client 403,Commercial Real Estate,6,1.0,1.0,1.0,0,Business Banking
+R404,Client 404,Retail,6,1.0,1.0,1.0,0,Business Banking
+R405,Client 405,Professional Services,7,1.0,1.0,1.0,0,Business Banking
+R406,Client 406,Wholesale Trade,6,1.0,1.0,1.0,0,Business Banking
+R407,Client 407,Industrial Manufacturing,7,1.0,1.0,1.0,0,Business Banking
+R408,Client 408,Transportation & Logistics,3,1.0,1.0,1.0,0,Middle Market
+R409,Client 409,Technology,4,1.0,1.0,1.0,0,Business Banking
+R410,Client 410,Technology,6,1.0,1.0,1.0,0,Business Banking
+R411,Client 411,Education,7,1.0,1.0,1.0,0,Business Banking
+R412,Client 412,Construction,2,1.0,1.0,1.0,0,Business Banking
+R413,Client 413,Technology,5,1.0,1.0,1.0,0,Business Banking
+R414,Client 414,Education,6,1.0,1.0,1.0,0,Middle Market
+R415,Client 415,Food Distribution,2,1.0,1.0,1.0,0,Business Banking
+R416,Client 416,Energy,5,1.0,1.0,1.0,0,Business Banking
+R417,Client 417,Food Distribution,7,1.0,1.0,1.0,0,Business Banking
+R418,Client 418,Healthcare,6,1.0,1.0,1.0,0,Business Banking
+R419,Client 419,Education,4,1.0,1.0,1.0,0,Business Banking
+R420,Client 420,Industrial Manufacturing,7,1.0,1.0,1.0,0,Business Banking
+R421,Client 421,Transportation & Logistics,5,1.0,1.0,1.0,0,Business Banking
+R422,Client 422,Transportation & Logistics,7,1.0,1.0,1.0,0,Business Banking
+R423,Client 423,Technology,4,1.0,1.0,1.0,0,Business Banking
+R424,Client 424,Healthcare,6,1.0,1.0,1.0,0,Business Banking
+R425,Client 425,Industrial Manufacturing,5,1.0,1.0,1.0,0,Business Banking
+R426,Client 426,Professional Services,4,1.0,1.0,1.0,0,Middle Market
+R427,Client 427,Education,7,1.0,1.0,1.0,0,Business Banking
+R428,Client 428,Healthcare,4,1.0,1.0,1.0,0,Middle Market
+R429,Client 429,Technology,3,1.0,1.0,1.0,0,Middle Market
+R430,Client 430,Energy,5,1.0,1.0,1.0,0,Business Banking
+R431,Client 431,Education,6,1.0,1.0,1.0,0,Middle Market
+R432,Client 432,Professional Services,7,1.0,1.0,1.0,0,Middle Market
+R433,Client 433,Construction,9,1.0,1.0,1.0,0,Middle Market
+R434,Client 434,Energy,4,1.0,1.0,1.0,0,Business Banking
+R435,Client 435,Food Distribution,5,1.0,1.0,1.0,0,Business Banking
+R436,Client 436,Transportation & Logistics,3,1.0,1.0,1.0,0,Middle Market
+R437,Client 437,Wholesale Trade,5,1.0,1.0,1.0,0,Business Banking
+R438,Client 438,Construction,9,1.0,1.0,1.0,0,Business Banking
+R439,Client 439,Industrial Manufacturing,6,1.0,1.0,1.0,0,Middle Market
+R440,Client 440,Professional Services,6,1.0,1.0,1.0,0,Middle Market
+R441,Client 441,Healthcare,5,1.0,1.0,1.0,0,Business Banking
+R442,Client 442,Professional Services,8,1.0,1.0,1.0,0,Business Banking
+R443,Client 443,Construction,5,1.0,1.0,1.0,0,Business Banking
+R444,Client 444,Healthcare,3,1.0,1.0,1.0,0,Business Banking
+R445,Client 445,Food Distribution,5,1.0,1.0,1.0,0,Middle Market
+R446,Client 446,Healthcare,3,1.0,1.0,1.0,0,Business Banking
+R447,Client 447,Energy,4,1.0,1.0,1.0,0,Business Banking
+R448,Client 448,Education,2,1.0,1.0,1.0,0,Middle Market
+R449,Client 449,Industrial Manufacturing,5,1.0,1.0,1.0,0,Business Banking
+R450,Client 450,Commercial Real Estate,6,1.0,1.0,1.0,0,Business Banking
+R451,Client 451,Education,5,1.0,1.0,1.0,0,Business Banking
+R452,Client 452,Technology,5,1.0,1.0,1.0,0,Business Banking
+R453,Client 453,Healthcare,8,1.0,1.0,1.0,0,Business Banking
+R454,Client 454,Food Distribution,6,1.0,1.0,1.0,0,Middle Market
+R455,Client 455,Energy,5,1.0,1.0,1.0,0,Middle Market
+R456,Client 456,Retail,4,1.0,1.0,1.0,0,Business Banking
+R457,Client 457,Technology,7,1.0,1.0,1.0,0,Middle Market
+R458,Client 458,Education,4,1.0,1.0,1.0,0,Middle Market
+R459,Client 459,Energy,4,1.0,1.0,1.0,0,Middle Market
+R460,Client 460,Technology,7,1.0,1.0,1.0,0,Middle Market
+R461,Client 461,Education,5,1.0,1.0,1.0,0,Business Banking
+R462,Client 462,Education,6,1.0,1.0,1.0,0,Business Banking
+R463,Client 463,Food Distribution,6,1.0,1.0,1.0,0,Business Banking
+R464,Client 464,Industrial Manufacturing,6,1.0,1.0,1.0,0,Middle Market
+R465,Client 465,Retail,4,1.0,1.0,1.0,0,Business Banking
+R466,Client 466,Energy,4,1.0,1.0,1.0,0,Business Banking
+R467,Client 467,Healthcare,4,1.0,1.0,1.0,0,Business Banking
+R468,Client 468,Retail,4,1.0,1.0,1.0,0,Business Banking
+R469,Client 469,Wholesale Trade,7,1.0,1.0,1.0,0,Business Banking
+R470,Client 470,Healthcare,4,1.0,1.0,1.0,0,Business Banking
+R471,Client 471,Professional Services,5,1.0,1.0,1.0,0,Middle Market
+R472,Client 472,Healthcare,7,1.0,1.0,1.0,0,Middle Market
+R473,Client 473,Professional Services,6,1.0,1.0,1.0,0,Business Banking
+R474,Client 474,Food Distribution,5,1.0,1.0,1.0,0,Middle Market
+R475,Client 475,Industrial Manufacturing,5,1.0,1.0,1.0,0,Business Banking
+R476,Client 476,Education,9,1.0,1.0,1.0,0,Business Banking
+R477,Client 477,Healthcare,6,1.0,1.0,1.0,0,Business Banking
+R478,Client 478,Retail,7,1.0,1.0,1.0,0,Business Banking
+R479,Client 479,Transportation & Logistics,7,1.0,1.0,1.0,0,Business Banking
+R480,Client 480,Education,6,1.0,1.0,1.0,0,Middle Market
+R481,Client 481,Professional Services,4,1.0,1.0,1.0,0,Middle Market
+R482,Client 482,Construction,5,1.0,1.0,1.0,0,Business Banking
+R483,Client 483,Food Distribution,3,1.0,1.0,1.0,0,Business Banking
+R484,Client 484,Food Distribution,6,1.0,1.0,1.0,0,Middle Market
+R485,Client 485,Retail,8,1.0,1.0,1.0,0,Business Banking
+R486,Client 486,Construction,5,1.0,1.0,1.0,0,Business Banking
+R487,Client 487,Wholesale Trade,5,1.0,1.0,1.0,0,Business Banking
+R488,Client 488,Industrial Manufacturing,2,1.0,1.0,1.0,0,Business Banking
+R489,Client 489,Retail,8,1.0,1.0,1.0,0,Business Banking
+R490,Client 490,Healthcare,3,1.0,1.0,1.0,0,Middle Market
+R491,Client 491,Technology,3,1.0,1.0,1.0,0,Business Banking
+R492,Client 492,Construction,4,1.0,1.0,1.0,0,Business Banking
+R493,Client 493,Technology,3,1.0,1.0,1.0,0,Business Banking
+R494,Client 494,Construction,5,1.0,1.0,1.0,0,Business Banking
+R495,Client 495,Food Distribution,5,1.0,1.0,1.0,0,Middle Market
+R496,Client 496,Transportation & Logistics,4,1.0,1.0,1.0,0,Middle Market
+R497,Client 497,Commercial Real Estate,3,1.0,1.0,1.0,0,Middle Market
+R498,Client 498,Energy,3,1.0,1.0,1.0,0,Business Banking
+R499,Client 499,Construction,5,1.0,1.0,1.0,0,Business Banking
+R500,Client 500,Retail,3,1.0,1.0,1.0,0,Middle Market

@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Commercial Lending RAROC</title>
+<meta name="description" content="Synthetic commercial banking portfolio: relationship RAROC across loans, revolvers, derivatives, deposits and payments.">
+<style>
+:root {
+  color-scheme: light;
+  --page: #f9f9f7; --surface: #fcfcfb; --ink: #0b0b0b; --ink-2: #52514e; --muted: #898781;
+  --grid: #e1e0d9; --axis: #c3c2b7; --border: rgba(11,11,11,0.10);
+  --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; --s4: #eda100; --s5: #e87ba4;
+  --good: #0ca30c; --good-text: #006300; --warning: #fab219; --critical: #d03b3b;
+  --hurdle: #0b0b0b;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --page: #0d0d0d; --surface: #1a1a19; --ink: #ffffff; --ink-2: #c3c2b7; --muted: #898781;
+    --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,0.10);
+    --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181;
+    --good-text: #0ca30c; --hurdle: #ffffff;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --page: #0d0d0d; --surface: #1a1a19; --ink: #ffffff; --ink-2: #c3c2b7; --muted: #898781;
+  --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,0.10);
+  --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181;
+  --good-text: #0ca30c; --hurdle: #ffffff;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--page); color: var(--ink);
+  font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+main { max-width: 1120px; margin: 0 auto; padding: 32px 16px 64px; }
+header h1 { font-size: 28px; margin: 0 0 4px; letter-spacing: -0.01em; }
+header p { margin: 0; color: var(--ink-2); max-width: 760px; }
+.meta { font-size: 13px; color: var(--muted); margin-top: 8px; }
+h2 { font-size: 18px; margin: 40px 0 4px; }
+.sub { color: var(--ink-2); margin: 0 0 16px; font-size: 14px; max-width: 760px; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin-top: 24px; }
+.tile { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; }
+.tile .label { font-size: 13px; color: var(--ink-2); }
+.tile .value { font-size: 26px; font-weight: 600; margin-top: 2px; }
+.tile .note { font-size: 12px; color: var(--muted); }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 16px; position: relative; }
+.legend { display: flex; flex-wrap: wrap; gap: 16px; font-size: 13px; color: var(--ink-2); margin-bottom: 8px; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.sw { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+.sw.dot { border-radius: 50%; }
+.sw.line { width: 14px; height: 0; border-top: 2px dashed var(--hurdle); border-radius: 0; }
+svg { display: block; width: 100%; height: auto; overflow: visible; }
+svg text { fill: var(--ink-2); font-size: 12px; }
+svg .tick { fill: var(--muted); font-variant-numeric: tabular-nums; }
+.tip { position: absolute; pointer-events: none; background: var(--surface); color: var(--ink);
+  border: 1px solid var(--border); box-shadow: 0 4px 16px rgba(0,0,0,.12); border-radius: 8px;
+  padding: 8px 10px; font-size: 13px; opacity: 0; transition: opacity .1s; white-space: nowrap; z-index: 2; }
+.tip b { display: block; margin-bottom: 2px; }
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; font-variant-numeric: tabular-nums; }
+th, td { padding: 8px 10px; text-align: right; border-bottom: 1px solid var(--grid); white-space: nowrap; }
+th:first-child, td:first-child { text-align: left; }
+th { color: var(--ink-2); font-weight: 600; }
+.status { display: inline-flex; align-items: center; gap: 5px; }
+.status i { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+details { margin-top: 12px; }
+summary { cursor: pointer; color: var(--ink-2); font-size: 13px; }
+.grid2 { display: grid; grid-template-columns: 1fr; gap: 16px; }
+footer { margin-top: 48px; font-size: 13px; color: var(--muted); }
+footer a { color: var(--s1); }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Commercial Lending Portfolio: RAROC</h1>
+    <p>Synthetic book of 1,000 term loans, 2,000 revolvers, 20 interest rate derivatives, 2,000 deposit accounts and 2,000 payments services across 500 client relationships. The focus is the 10 key relationships, where deposits and treasury management decide whether the credit earns its capital.</p>
+    <div class="meta" id="meta"></div>
+  </header>
+
+  <section class="tiles" id="tiles"></section>
+
+  <h2>RAROC by product</h2>
+  <p class="sub">Credit products carry nearly all the capital. Revolvers fall below the 12% hurdle on their own. Deposits and payments use little capital, so their stand-alone RAROC is very high.</p>
+  <div class="card"><svg id="product"></svg></div>
+
+  <h2>Key relationships: lending vs. full relationship RAROC</h2>
+  <p class="sub">Each row runs from credit-only RAROC to full relationship RAROC. The gap is the value of deposits and payments. Relationships under 15% go on the pricing watch list.</p>
+  <div class="card">
+    <div class="legend">
+      <span><i class="sw dot" style="background:var(--s1)"></i>Lending RAROC (loans, revolvers, IRDs)</span>
+      <span><i class="sw dot" style="background:var(--s2)"></i>Relationship RAROC (all products)</span>
+      <span><i class="sw line"></i>12% hurdle</span>
+    </div>
+    <svg id="dumbbell"></svg>
+  </div>
+
+  <h2>Where key-relationship revenue comes from</h2>
+  <p class="sub">Share of annual revenue by product. Keystone and Blue Mesa rely mostly on credit, which is why their RAROC sits closest to the hurdle.</p>
+  <div class="card">
+    <div class="legend" id="mixLegend"></div>
+    <svg id="mix"></svg>
+  </div>
+
+  <h2>Key relationship scorecard</h2>
+  <div class="card table-wrap"><table id="keyTable"></table></div>
+
+  <h2>Deal pricing examples</h2>
+  <p class="sub">The pricing engine solves for the spread that earns the hurdle. It gives a stand-alone floor, a relationship floor and a cost floor, and recommends the higher of the relationship and cost floors.</p>
+  <div class="card table-wrap"><table id="dealTable"></table></div>
+
+  <footer>All data is synthetic and generated with a fixed seed; it represents no real institution or client. Source, methodology, API and AI pricing copilot on <a href="https://github.com/ketibak-ai/commercial-lending-raroc" id="repoLink">GitHub</a>.</footer>
+</main>
+<div class="tip" id="tip"></div>
+<script>
+const D = {"as_of": "2026-09-30", "hurdle": 0.12, "summary": {"as_of": "2026-09-30", "hurdle_rate": 0.12, "by_product": [{"product": "Deposit", "accounts": 2000.0, "exposure": 4015743400.0, "total_revenue": 76330623.5258, "opex": 6023615.1, "expected_loss": 0.0, "economic_capital": 27565147.6747, "net_income": 54239882.6245, "eva": 50932064.9036, "raroc": 1.9677}, {"product": "Interest Rate Derivative", "accounts": 20.0, "exposure": 1376500000.0, "total_revenue": 1991790.0, "opex": 500000.0, "expected_loss": 95120.34, "economic_capital": 3746932.4016, "net_income": 1171104.1837, "eva": 721472.2955, "raroc": 0.3126}, {"product": "Payments", "accounts": 2000.0, "exposure": 35713891.08, "total_revenue": 33863851.0644, "opex": 19642640.094, "expected_loss": 178569.4554, "economic_capital": 5079577.6597, "net_income": 10821035.9937, "eva": 10211486.6746, "raroc": 2.1303}, {"product": "Revolver", "accounts": 2000.0, "exposure": 5843714000.0, "total_revenue": 55409789.1083, "opex": 20452999.0, "expected_loss": 17056272.0052, "economic_capital": 235033977.5063, "net_income": 20481487.9402, "eva": -7722589.3606, "raroc": 0.0871}, {"product": "Term Loan", "accounts": 1000.0, "exposure": 4617491000.0, "total_revenue": 96748664.5538, "opex": 20778709.5, "expected_loss": 13573759.115, "economic_capital": 248625323.4959, "net_income": 54695885.879, "eva": 24860847.0595, "raroc": 0.22}, {"product": "Total Portfolio", "accounts": 7020.0, "exposure": null, "total_revenue": 264344718.2523, "opex": 67397963.694, "expected_loss": 30903720.9156, "economic_capital": 520050958.7382, "net_income": 141409396.6211, "eva": 79003281.5725, "raroc": 0.2719}], "relationships_total": 500, "relationships_below_hurdle": 50}, "key": [{"relationship_id": "R004", "name": "Summit Ridge Software", "industry": "Technology", "rating": 4, "total_revenue": 11663137.9452, "economic_capital": 7880933.7796, "net_income": 6669098.5605, "eva": 5723386.5069, "raroc": 0.8462, "lending_raroc": 0.2139, "ancillary_uplift": 0.6323, "meets_hurdle": true, "watch_list": false}, {"relationship_id": "R002", "name": "Harborview Health Partners", "industry": "Healthcare", "rating": 3, "total_revenue": 12287768.2179, "economic_capital": 15876813.9215, "net_income": 6509572.3593, "eva": 4604354.6887, "raroc": 0.41, "lending_raroc": 0.1625, "ancillary_uplift": 0.2476, "meets_hurdle": true, "watch_list": false}, {"relationship_id": "R006", "name": "Prairie Harvest Foods", "industry": "Food Distribution", "rating": 5, "total_revenue": 12685578.3413, "economic_capital": 17987389.4705, "net_income": 7112675.6228, "eva": 4954188.8863, "raroc": 0.3954, "lending_raroc": 0.2014, "ancillary_uplift": 0.194, "meets_hurdle": true, "watch_list": false}, {"relationship_id": "R001", "name": "Northwind Manufacturing Group", "industry": "Industrial Manufacturing", "rating": 4, "total_revenue": 12918752.0779, "economic_capital": 19077898.2024, "net_income": 7465853.6015, "eva": 5176505.8172, "raroc": 0.3913, "lending_raroc": 0.2141, "ancillary_uplift": 0.1773, "meets_hurdle": true, "watch_list": false}, {"relationship_id": "R010", "name": "Greenfield Agri Cooperative", "industry": "Agriculture", "rating": 5, "total_revenue": 8722656.5775, "economic_capital": 15065509.2033, "net_income": 5343501.3542, "eva": 3535640.2498, "raroc": 0.3547, "lending_raroc": 0.1771, "ancillary_uplift": 0.1776, "meets_hurdle": true, "watch_list": false}, {"relationship_id": "R003", "name": "Cascade Logistics Holdings", "industry": "Transportation & Logistics", "rating": 5, "total_revenue": 8443482.3319, "economic_capital": 13315519.6091, "net_income": 4536385.6399, "eva": 2938523.2868, "raroc": 0.3407, "lending_raroc": 0.1549, "ancillary_uplift": 0.1858, "meets_hurdle": true, "watch_list": false}, {"relationship_id": "R008", "name": "Lakeshore Retail Brands", "industry": "Retail", "rating": 6, "total_revenue": 12314382.7086, "economic_capital": 19470772.8738, "net_income": 6456326.6633, "eva": 4119833.9184, "raroc": 0.3316, "lending_raroc": 0.1363, "ancillary_uplift": 0.1953, "meets_hurdle": true, "watch_list": false}, {"relationship_id": "R009", "name": "Aurora Aerospace Components", "industry": "Aerospace & Defense", "rating": 4, "total_revenue": 8116012.1504, "economic_capital": 15545825.4526, "net_income": 4564671.3403, "eva": 2699172.286, "raroc": 0.2936, "lending_raroc": 0.1602, "ancillary_uplift": 0.1334, "meets_hurdle": true, "watch_list": false}, {"relationship_id": "R005", "name": "Keystone Commercial Properties", "industry": "Commercial Real Estate", "rating": 5, "total_revenue": 14601925.9124, "economic_capital": 39949423.9879, "net_income": 8184367.0523, "eva": 3390436.1738, "raroc": 0.2049, "lending_raroc": 0.1855, "ancillary_uplift": 0.0193, "meets_hurdle": true, "watch_list": false}, {"relationship_id": "R007", "name": "Blue Mesa Energy Services", "industry": "Energy", "rating": 7, "total_revenue": 11778431.4594, "economic_capital": 43311918.5873, "net_income": 5237859.698, "eva": 40429.4675, "raroc": 0.1209, "lending_raroc": 0.1036, "ancillary_uplift": 0.0173, "meets_hurdle": true, "watch_list": true}], "mix": [{"relationship_id": "R004", "Deposit": 6428815.163499999, "Interest Rate Derivative": 0.0, "Payments": 3158781.0936000003, "Revolver": 884080.5033333333, "Term Loan": 1191461.1847619046}, {"relationship_id": "R002", "Deposit": 4522691.21375, "Interest Rate Derivative": 214800.0, "Payments": 3444698.6856, "Revolver": 993053.4950000001, "Term Loan": 3112524.8235714287}, {"relationship_id": "R006", "Deposit": 4159198.33425, "Interest Rate Derivative": 342600.0, "Payments": 2899514.9628, "Revolver": 904032.9016666666, "Term Loan": 4380232.142619047}, {"relationship_id": "R001", "Deposit": 4501808.151249999, "Interest Rate Derivative": 154100.0, "Payments": 1564945.374, "Revolver": 1214812.8783333334, "Term Loan": 5483085.6742857145}, {"relationship_id": "R010", "Deposit": 3960802.67575, "Interest Rate Derivative": 116000.0, "Payments": 415769.0832, "Revolver": 644220.0533333332, "Term Loan": 3585864.765238095}, {"relationship_id": "R003", "Deposit": 2833019.72375, "Interest Rate Derivative": 216630.0, "Payments": 2044845.576, "Revolver": 1481200.3433333333, "Term Loan": 1867786.6888095238}, {"relationship_id": "R008", "Deposit": 4144818.326, "Interest Rate Derivative": 56300.0, "Payments": 3519913.9176, "Revolver": 1258872.7899999998, "Term Loan": 3334477.675}, {"relationship_id": "R009", "Deposit": 2859472.49125, "Interest Rate Derivative": 74040.0, "Payments": 642855.5472, "Revolver": 1545567.645, "Term Loan": 2994076.4669047617}, {"relationship_id": "R005", "Deposit": 1109338.7787499998, "Interest Rate Derivative": 610880.0, "Payments": 223214.9796, "Revolver": 3160999.7399999998, "Term Loan": 9497492.41404762}, {"relationship_id": "R007", "Deposit": 717870.3240000003, "Interest Rate Derivative": 206440.0, "Payments": 1107173.1156000001, "Revolver": 4828716.743333333, "Term Loan": 4918231.276428572}], "deals": [{"relationship": "Summit Ridge Software", "product": "Term Loan", "amount": 25000000.0, "tenor_yrs": 5, "rating": 4, "standalone_bps": 119, "relationship_bps": 0, "cost_floor_bps": 78, "recommended_bps": 78, "concession_bps": 41.9, "deal_raroc": 0.047}, {"relationship": "Keystone Commercial Properties", "product": "Term Loan", "amount": 60000000.0, "tenor_yrs": 7, "rating": 5, "standalone_bps": 161, "relationship_bps": 0, "cost_floor_bps": 88, "recommended_bps": 88, "concession_bps": 73.1, "deal_raroc": 0.0375}, {"relationship": "Blue Mesa Energy Services", "product": "Revolver", "amount": 40000000.0, "tenor_yrs": 3, "rating": 7, "standalone_bps": 566, "relationship_bps": 521, "cost_floor_bps": 142, "recommended_bps": 521, "concession_bps": 45.1, "deal_raroc": 0.1077}, {"relationship": "Harborview Health Partners", "product": "Revolver", "amount": 30000000.0, "tenor_yrs": 3, "rating": 3, "standalone_bps": 99, "relationship_bps": 0, "cost_floor_bps": 74, "recommended_bps": 74, "concession_bps": 25.5, "deal_raroc": 0.0788}, {"relationship": "Lakeshore Retail Brands", "product": "Term Loan", "amount": 15000000.0, "tenor_yrs": 5, "rating": 6, "standalone_bps": 171, "relationship_bps": 0, "cost_floor_bps": 97, "recommended_bps": 97, "concession_bps": 74.0, "deal_raroc": 0.0402}]};
+const $ = s => document.querySelector(s);
+const pct = (v, d = 1) => (v * 100).toFixed(d) + "%";
+const money = v => {
+  const a = Math.abs(v);
+  if (a >= 1e9) return "$" + (v / 1e9).toFixed(2) + "B";
+  if (a >= 1e6) return "$" + (v / 1e6).toFixed(1) + "M";
+  if (a >= 1e3) return "$" + (v / 1e3).toFixed(0) + "K";
+  return "$" + v.toFixed(0);
+};
+const NS = "http://www.w3.org/2000/svg";
+function el(tag, attrs, parent, text) {
+  const e = document.createElementNS(NS, tag);
+  for (const k in attrs) e.setAttribute(k, attrs[k]);
+  if (text != null) e.textContent = text;
+  if (parent) parent.appendChild(e);
+  return e;
+}
+const tip = $("#tip");
+function showTip(evt, html) {
+  tip.innerHTML = html; tip.style.opacity = 1;
+  const x = Math.min(evt.pageX + 14, window.scrollX + document.documentElement.clientWidth - tip.offsetWidth - 8);
+  tip.style.left = x + "px"; tip.style.top = (evt.pageY + 14) + "px";
+}
+const hideTip = () => tip.style.opacity = 0;
+
+// ---- meta + tiles --------------------------------------------------------------
+$("#meta").textContent = `As of ${D.as_of} · Hurdle ${pct(D.hurdle, 0)} · Tax 24% · IRB 99.9% economic capital`;
+const tot = D.summary.by_product.find(r => r.product === "Total Portfolio");
+const keyBelow = D.key.filter(r => r.watch_list).length;
+[
+  ["Portfolio RAROC", pct(tot.raroc), "vs. 12% hurdle"],
+  ["Net income (after tax)", money(tot.net_income), "annualised"],
+  ["Economic capital", money(tot.economic_capital), "credit + operational"],
+  ["EVA", money(tot.eva), "net income − 12% × capital"],
+  ["Relationships below hurdle", D.summary.relationships_below_hurdle + " / " + D.summary.relationships_total, keyBelow + " key relationship(s) on watch list"],
+].forEach(([l, v, n]) => {
+  const t = document.createElement("div"); t.className = "tile";
+  t.innerHTML = `<div class="label">${l}</div><div class="value">${v}</div><div class="note">${n}</div>`;
+  $("#tiles").appendChild(t);
+});
+
+// ---- product RAROC bars ----------------------------------------------------------
+(function () {
+  const rows = D.summary.by_product.filter(r => r.product !== "Total Portfolio")
+    .sort((a, b) => a.raroc - b.raroc);
+  const W = 1000, rowH = 40, top = 8, left = 190, right = 80, H = top + rows.length * rowH + 28;
+  const svg = $("#product"); svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  const max = Math.ceil(Math.max(...rows.map(r => r.raroc)) * 2) / 2;
+  const x = v => left + (v / max) * (W - left - right);
+  for (let t = 0; t <= max + 1e-9; t += 0.5) {
+    el("line", { x1: x(t), x2: x(t), y1: top, y2: H - 24, stroke: "var(--grid)" }, svg);
+    el("text", { x: x(t), y: H - 6, "text-anchor": "middle", class: "tick" }, svg, pct(t, 0));
+  }
+  rows.forEach((r, i) => {
+    const y = top + i * rowH + 10, h = 20;
+    el("text", { x: left - 12, y: y + 15, "text-anchor": "end" }, svg, r.product);
+    const w = Math.max(x(r.raroc) - left, 2);
+    el("path", { d: `M${left},${y} h${w - 4} a4,4 0 0 1 4,4 v${h - 8} a4,4 0 0 1 -4,4 h${-(w - 4)} z`, fill: "var(--s1)" }, svg);
+    el("text", { x: left + w + 8, y: y + 15, style: "fill:var(--ink)" }, svg, pct(r.raroc));
+    const hit = el("rect", { x: 0, y: y - 8, width: W, height: rowH, fill: "transparent" }, svg);
+    hit.addEventListener("mousemove", e => showTip(e, `<b>${r.product}</b>RAROC ${pct(r.raroc)}<br>${r.accounts} accounts · capital ${money(r.economic_capital)}<br>Net income ${money(r.net_income)} · EVA ${money(r.eva)}`));
+    hit.addEventListener("mouseleave", hideTip);
+  });
+  el("line", { x1: x(D.hurdle), x2: x(D.hurdle), y1: top - 4, y2: H - 24, stroke: "var(--hurdle)", "stroke-width": 1.5, "stroke-dasharray": "4 3" }, svg);
+  el("text", { x: x(D.hurdle) + 6, y: top + 4, class: "tick" }, svg, "12% hurdle");
+})();
+
+// ---- dumbbell: lending vs relationship RAROC --------------------------------------
+(function () {
+  const rows = D.key;
+  const W = 1000, rowH = 34, top = 8, left = 240, right = 60, H = top + rows.length * rowH + 28;
+  const svg = $("#dumbbell"); svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  const max = Math.ceil(Math.max(...rows.map(r => r.raroc)) * 10) / 10;
+  const x = v => left + (Math.max(v, 0) / max) * (W - left - right);
+  for (let t = 0; t <= max + 1e-9; t += 0.1) {
+    el("line", { x1: x(t), x2: x(t), y1: top, y2: H - 24, stroke: "var(--grid)" }, svg);
+    el("text", { x: x(t), y: H - 6, "text-anchor": "middle", class: "tick" }, svg, pct(t, 0));
+  }
+  el("line", { x1: x(D.hurdle), x2: x(D.hurdle), y1: top - 4, y2: H - 24, stroke: "var(--hurdle)", "stroke-width": 1.5, "stroke-dasharray": "4 3" }, svg);
+  rows.forEach((r, i) => {
+    const y = top + i * rowH + rowH / 2;
+    el("text", { x: left - 12, y: y + 4, "text-anchor": "end", style: r.watch_list ? "fill:var(--ink);font-weight:600" : "" }, svg, (r.watch_list ? "⚠ " : "") + r.name);
+    el("line", { x1: x(r.lending_raroc), x2: x(r.raroc), y1: y, y2: y, stroke: "var(--axis)", "stroke-width": 3 }, svg);
+    el("circle", { cx: x(r.lending_raroc), cy: y, r: 6, fill: "var(--s1)", stroke: "var(--surface)", "stroke-width": 2 }, svg);
+    el("circle", { cx: x(r.raroc), cy: y, r: 6, fill: "var(--s2)", stroke: "var(--surface)", "stroke-width": 2 }, svg);
+    el("text", { x: x(r.raroc) + 12, y: y + 4, style: "fill:var(--ink)" }, svg, pct(r.raroc));
+    const hit = el("rect", { x: 0, y: y - rowH / 2, width: W, height: rowH, fill: "transparent" }, svg);
+    hit.addEventListener("mousemove", e => showTip(e, `<b>${r.name}</b>Relationship RAROC ${pct(r.raroc)}<br>Lending-only RAROC ${pct(r.lending_raroc)}<br>Ancillary uplift +${pct(r.ancillary_uplift)}<br>EVA ${money(r.eva)}${r.watch_list ? "<br>⚠ Pricing watch list (&lt;15%)" : ""}`));
+    hit.addEventListener("mouseleave", hideTip);
+  });
+})();
+
+// ---- revenue mix: 100% stacked bars ----------------------------------------------
+(function () {
+  const prods = [["Term Loan", "--s1"], ["Revolver", "--s2"], ["Interest Rate Derivative", "--s3"], ["Deposit", "--s4"], ["Payments", "--s5"]];
+  prods.forEach(([p, c]) => $("#mixLegend").insertAdjacentHTML("beforeend", `<span><i class="sw" style="background:var(${c})"></i>${p}</span>`));
+  const names = Object.fromEntries(D.key.map(r => [r.relationship_id, r.name]));
+  const W = 1000, rowH = 30, left = 240, right = 20, top = 4, H = top + D.mix.length * rowH + 24;
+  const svg = $("#mix"); svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  const span = W - left - right;
+  [0, .25, .5, .75, 1].forEach(t => el("text", { x: left + t * span, y: H - 4, "text-anchor": "middle", class: "tick" }, svg, pct(t, 0)));
+  D.mix.forEach((r, i) => {
+    const y = top + i * rowH + 5, h = 20;
+    const total = prods.reduce((s, [p]) => s + Math.max(r[p] || 0, 0), 0);
+    el("text", { x: left - 12, y: y + 15, "text-anchor": "end" }, svg, names[r.relationship_id]);
+    let cx = left;
+    prods.forEach(([p, c]) => {
+      const v = Math.max(r[p] || 0, 0), w = v / total * span;
+      if (w <= 0) return;
+      const seg = el("rect", { x: cx + 1, y, width: Math.max(w - 2, 0.5), height: h, rx: 3, fill: `var(${c})` }, svg);
+      seg.addEventListener("mousemove", e => showTip(e, `<b>${names[r.relationship_id]}</b>${p}: ${money(v)} (${pct(v / total)})`));
+      seg.addEventListener("mouseleave", hideTip);
+      cx += w;
+    });
+  });
+})();
+
+// ---- tables -------------------------------------------------------------------------
+(function () {
+  const t = $("#keyTable");
+  t.innerHTML = `<thead><tr><th>Relationship</th><th>Industry</th><th>Rating</th><th>Revenue</th><th>Econ. capital</th><th>Net income</th><th>EVA</th><th>Lending RAROC</th><th>Relationship RAROC</th><th>Status</th></tr></thead>`;
+  const tb = t.appendChild(document.createElement("tbody"));
+  D.key.forEach(r => {
+    const st = r.raroc < D.hurdle ? ["var(--critical)", "Below hurdle"] : r.watch_list ? ["var(--warning)", "Watch list"] : ["var(--good)", "Meets hurdle"];
+    tb.insertAdjacentHTML("beforeend", `<tr><td>${r.name}</td><td>${r.industry}</td><td>${r.rating}</td><td>${money(r.total_revenue)}</td><td>${money(r.economic_capital)}</td><td>${money(r.net_income)}</td><td>${money(r.eva)}</td><td>${pct(r.lending_raroc)}</td><td><b>${pct(r.raroc)}</b></td><td><span class="status"><i style="background:${st[0]}"></i>${st[1]}</span></td></tr>`);
+  });
+  const d = $("#dealTable");
+  d.innerHTML = `<thead><tr><th>Relationship</th><th>Product</th><th>Amount</th><th>Tenor</th><th>Rating</th><th>Stand-alone floor</th><th>Relationship floor</th><th>Cost floor</th><th>Recommended</th><th>Concession</th><th>Deal RAROC</th></tr></thead>`;
+  const db = d.appendChild(document.createElement("tbody"));
+  D.deals.forEach(r => db.insertAdjacentHTML("beforeend", `<tr><td>${r.relationship}</td><td>${r.product}</td><td>${money(r.amount)}</td><td>${r.tenor_yrs}y</td><td>${r.rating}</td><td>${r.standalone_bps} bps</td><td>${r.relationship_bps > 0 ? r.relationship_bps + " bps" : "not binding"}</td><td>${r.cost_floor_bps} bps</td><td><b>${r.recommended_bps} bps</b></td><td>${r.concession_bps.toFixed(0)} bps</td><td>${pct(r.deal_raroc)}</td></tr>`));
+})();
+</script>
+</body>
+</html>

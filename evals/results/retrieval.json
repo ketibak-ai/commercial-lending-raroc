@@ -1,0 +1,205 @@
+{
+  "summary": {
+    "cases": 18,
+    "hit@1": 0.944,
+    "hit@3": 1.0
+  },
+  "rows": [
+    {
+      "query": "Who approves a deal priced 40 bps below the relationship floor?",
+      "expected": "Pricing Exceptions and Approvals",
+      "retrieved": [
+        "Commercial Loan Pricing Policy \u00a7 Pricing Exceptions and Approvals",
+        "Commercial Loan Pricing Policy \u00a7 Cost Floor",
+        "Commercial Loan Pricing Policy \u00a7 Relationship Pricing Concessions"
+      ],
+      "hit@1": true,
+      "hit@3": true
+    },
+    {
+      "query": "Can a loan be priced below the cost floor if deposits are large?",
+      "expected": "Cost Floor",
+      "retrieved": [
+        "Commercial Loan Pricing Policy \u00a7 Cost Floor",
+        "Commercial Loan Pricing Policy \u00a7 Pricing Floors",
+        "Commercial Loan Pricing Policy \u00a7 Pricing Exceptions and Approvals"
+      ],
+      "hit@1": true,
+      "hit@3": true
+    },
+    {
+      "query": "Can promised future deposits justify a pricing concession?",
+      "expected": "Relationship Pricing Concessions",
+      "retrieved": [
+        "Commercial Loan Pricing Policy \u00a7 Relationship Pricing Concessions",
+        "Deposit Funds Transfer Pricing Policy \u00a7 Deposit Pricing Guidance",
+        "Commercial Loan Pricing Policy \u00a7 Cost Floor"
+      ],
+      "hit@1": true,
+      "hit@3": true
+    },
+    {
+      "query": "What is the hurdle rate?",
+      "expected": "Hurdle Rate",
+      "retrieved": [
+        "RAROC Methodology \u00a7 Hurdle Rate",
+        "Commercial Loan Pricing Policy \u00a7 Pricing Floors",
+        "Commercial Loan Pricing Policy \u00a7 Revolving Credit Facilities"
+      ],
+      "hit@1": true,
+      "hit@3": true
+    },
+    {
+      "query": "How is exposure at default calculated for a revolver?",
+      "expected": "Exposure at Default",
+      "retrieved": [
+        "RAROC Methodology \u00a7 Exposure at Default",
+        "Interest Rate Derivatives Policy \u00a7 Counterparty Credit Risk",
+        "RAROC Methodology \u00a7 Relationship RAROC"
+      ],
+      "hit@1": true,
+      "hit@3": true
+    },
+    {
+      "query": "What credit conversion factor applies to undrawn commitments?",
+      "expected": "Exposure at Default",
+      "retrieved": [
+        "Commercial Loan Pricing Policy \u00a7 Revolving Credit Facilities",
+        "RAROC Methodology \u00a7 Exposure at Default",
+        "Interest Rate Derivatives Policy \u00a7 Counterparty Credit Risk"
+      ],
+      "hit@1": false,
+      "hit@3": true
+    },
+    {
+      "query": "Runoff haircut for operating deposits",
+      "expected": "Deposit Types and Runoff",
+      "retrieved": [
+        "Deposit Funds Transfer Pricing Policy \u00a7 Deposit Types and Runoff",
+        "Deposit Funds Transfer Pricing Policy \u00a7 Deposit Pricing Guidance",
+        "Treasury Management and Payments \u00a7 Role in Relationship Pricing"
+      ],
+      "hit@1": true,
+      "hit@3": true
+    },
+    {
+      "query": "How do deposits get FTP credit?",
+      "expected": "FTP Credit for Deposits",
+      "retrieved": [
+        "Deposit Funds Transfer Pricing Policy \u00a7 FTP Credit for Deposits",
+        "Deposit Funds Transfer Pricing Policy \u00a7 Deposit Pricing Guidance",
+        "RAROC Methodology \u00a7 Definition"
+      ],
+      "hit@1": true,
+      "hit@3": true
+    },
+    {
+      "query": "When does a relationship go on the pricing watch list?",
+      "expected": "Repricing and Watch List",
+      "retrieved": [
+        "Commercial Loan Pricing Policy \u00a7 Repricing and Watch List",
+        "Commercial Loan Pricing Policy \u00a7 Relationship Pricing Concessions",
+        "Commercial Loan Pricing Policy \u00a7 Cost Floor"
+      ],
+      "hit@1": true,
+      "hit@3": true
+    },
+    {
+      "query": "How is counterparty exposure on swaps measured?",
+      "expected": "Counterparty Credit Risk",
+      "retrieved": [
+        "Interest Rate Derivatives Policy \u00a7 Counterparty Credit Risk",
+        "Interest Rate Derivatives Policy \u00a7 Permitted Products",
+        "RAROC Methodology \u00a7 Exposure at Default"
+      ],
+      "hit@1": true,
+      "hit@3": true
+    },
+    {
+      "query": "Does the bank keep market risk on client swaps?",
+      "expected": "Market Risk",
+      "retrieved": [
+        "Interest Rate Derivatives Policy \u00a7 Market Risk",
+        "Interest Rate Derivatives Policy \u00a7 Permitted Products",
+        "Treasury Management and Payments \u00a7 Role in Relationship Pricing"
+      ],
+      "hit@1": true,
+      "hit@3": true
+    },
+    {
+      "query": "What is the cost-to-income ratio for payments?",
+      "expected": "Profitability",
+      "retrieved": [
+        "Treasury Management and Payments \u00a7 Profitability",
+        "RAROC Methodology \u00a7 Hurdle Rate",
+        "RAROC Methodology \u00a7 Relationship RAROC"
+      ],
+      "hit@1": true,
+      "hit@3": true
+    },
+    {
+      "query": "How does the earnings credit rate affect fee income?",
+      "expected": "Earnings Credit Rate",
+      "retrieved": [
+        "Deposit Funds Transfer Pricing Policy \u00a7 Earnings Credit Rate",
+        "Treasury Management and Payments \u00a7 Profitability",
+        "Deposit Funds Transfer Pricing Policy \u00a7 FTP Credit for Deposits"
+      ],
+      "hit@1": true,
+      "hit@3": true
+    },
+    {
+      "query": "What confidence level is used for economic capital?",
+      "expected": "Economic Capital",
+      "retrieved": [
+        "RAROC Methodology \u00a7 Economic Capital",
+        "RAROC Methodology \u00a7 Definition",
+        "Interest Rate Derivatives Policy \u00a7 Relationship Value"
+      ],
+      "hit@1": true,
+      "hit@3": true
+    },
+    {
+      "query": "How is expected loss calculated?",
+      "expected": "Expected Loss",
+      "retrieved": [
+        "RAROC Methodology \u00a7 Expected Loss",
+        "RAROC Methodology \u00a7 Economic Capital",
+        "RAROC Methodology \u00a7 Definition"
+      ],
+      "hit@1": true,
+      "hit@3": true
+    },
+    {
+      "query": "What is ancillary uplift?",
+      "expected": "Relationship RAROC",
+      "retrieved": [
+        "RAROC Methodology \u00a7 Relationship RAROC"
+      ],
+      "hit@1": true,
+      "hit@3": true
+    },
+    {
+      "query": "How are unused fees on revolvers treated?",
+      "expected": "Revolving Credit Facilities",
+      "retrieved": [
+        "Commercial Loan Pricing Policy \u00a7 Revolving Credit Facilities",
+        "Commercial Loan Pricing Policy \u00a7 Repricing and Watch List",
+        "RAROC Methodology \u00a7 Relationship RAROC"
+      ],
+      "hit@1": true,
+      "hit@3": true
+    },
+    {
+      "query": "Which derivative products can clients buy?",
+      "expected": "Permitted Products",
+      "retrieved": [
+        "Interest Rate Derivatives Policy \u00a7 Permitted Products",
+        "RAROC Methodology \u00a7 Relationship RAROC",
+        "Interest Rate Derivatives Policy \u00a7 Market Risk"
+      ],
+      "hit@1": true,
+      "hit@3": true
+    }
+  ]
+}

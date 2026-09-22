@@ -1,0 +1,21 @@
+account_id,relationship_id,product,sub_type,notional,tenor_yrs,remaining_yrs,mtm,sales_credit_bps,rating
+IRD001,R001,Interest Rate Derivative,Collar,41000000.0,5.0,4.7,125900.0,12.0,4
+IRD002,R001,Interest Rate Derivative,Pay-Fixed Swap,34800000.0,7.0,4.23,349400.0,10.0,4
+IRD003,R001,Interest Rate Derivative,Pay-Fixed Swap,70100000.0,5.0,3.66,-1244000.0,10.0,4
+IRD004,R002,Interest Rate Derivative,Pay-Fixed Swap,56600000.0,10.0,6.51,1188400.0,20.0,3
+IRD005,R002,Interest Rate Derivative,Interest Rate Cap,50800000.0,5.0,2.38,455100.0,20.0,3
+IRD006,R003,Interest Rate Derivative,Collar,72800000.0,3.0,1.2,524800.0,8.0,5
+IRD007,R003,Interest Rate Derivative,Pay-Fixed Swap,118300000.0,7.0,4.55,1242200.0,8.0,5
+IRD008,R003,Interest Rate Derivative,Collar,42500000.0,10.0,3.05,785800.0,15.0,5
+IRD009,R005,Interest Rate Derivative,Pay-Fixed Swap,116200000.0,7.0,2.92,905200.0,20.0,5
+IRD010,R005,Interest Rate Derivative,Pay-Fixed Swap,67600000.0,10.0,3.2,125700.0,15.0,5
+IRD011,R005,Interest Rate Derivative,Interest Rate Cap,67600000.0,7.0,3.83,93300.0,8.0,5
+IRD012,R005,Interest Rate Derivative,Pay-Fixed Swap,111500000.0,3.0,2.51,757100.0,20.0,5
+IRD013,R006,Interest Rate Derivative,Pay-Fixed Swap,119800000.0,10.0,4.61,1115400.0,15.0,5
+IRD014,R006,Interest Rate Derivative,Pay-Fixed Swap,108600000.0,10.0,8.24,84300.0,15.0,5
+IRD015,R007,Interest Rate Derivative,Pay-Fixed Swap,74000000.0,3.0,1.79,-839900.0,20.0,7
+IRD016,R007,Interest Rate Derivative,Pay-Fixed Swap,16500000.0,3.0,1.82,-28300.0,20.0,7
+IRD017,R007,Interest Rate Derivative,Interest Rate Cap,31800000.0,10.0,8.38,-497300.0,8.0,7
+IRD018,R008,Interest Rate Derivative,Pay-Fixed Swap,56300000.0,7.0,6.4,138200.0,10.0,6
+IRD019,R009,Interest Rate Derivative,Pay-Fixed Swap,61700000.0,7.0,4.71,-1056700.0,12.0,4
+IRD020,R010,Interest Rate Derivative,Pay-Fixed Swap,58000000.0,3.0,2.83,-428300.0,20.0,5

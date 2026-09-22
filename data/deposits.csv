@@ -1,0 +1,2001 @@
+account_id,relationship_id,product,sub_type,deposit_type,balance,rate_paid,tenor_yrs
+DP00001,R344,Deposit,Commercial CD,Time Deposit,2425100.0,0.0343,0.5
+DP00002,R440,Deposit,Money Market / Sweep,Non-Operating,2601500.0,0.0342,0.0
+DP00003,R261,Deposit,Analyzed DDA,Operating,1012200.0,0.009,0.0
+DP00004,R334,Deposit,Analyzed DDA,Operating,1095300.0,0.0071,0.0
+DP00005,R040,Deposit,Analyzed DDA,Operating,1359400.0,0.0112,0.0
+DP00006,R071,Deposit,Money Market / Sweep,Non-Operating,5922400.0,0.031,0.0
+DP00007,R004,Deposit,Analyzed DDA,Operating,8978100.0,0.0115,0.0
+DP00008,R460,Deposit,Analyzed DDA,Operating,1932400.0,0.0019,0.0
+DP00009,R067,Deposit,Commercial CD,Time Deposit,303800.0,0.0391,1.0
+DP00010,R268,Deposit,Commercial CD,Time Deposit,659400.0,0.0386,1.0
+DP00011,R272,Deposit,Money Market / Sweep,Non-Operating,1533500.0,0.0244,0.0
+DP00012,R370,Deposit,Analyzed DDA,Operating,143000.0,0.0014,0.0
+DP00013,R300,Deposit,Money Market / Sweep,Non-Operating,1702800.0,0.0321,0.0
+DP00014,R238,Deposit,Commercial CD,Time Deposit,947000.0,0.0403,1.0
+DP00015,R429,Deposit,Analyzed DDA,Operating,1150700.0,0.0018,0.0
+DP00016,R451,Deposit,Analyzed DDA,Operating,815000.0,0.0079,0.0
+DP00017,R004,Deposit,Commercial CD,Time Deposit,2380300.0,0.0378,0.5
+DP00018,R059,Deposit,Analyzed DDA,Operating,765300.0,0.0048,0.0
+DP00019,R375,Deposit,Money Market / Sweep,Non-Operating,458500.0,0.0272,0.0
+DP00020,R483,Deposit,Money Market / Sweep,Non-Operating,1161400.0,0.0314,0.0
+DP00021,R020,Deposit,Analyzed DDA,Operating,588400.0,0.0091,0.0
+DP00022,R420,Deposit,Analyzed DDA,Operating,481900.0,0.0062,0.0
+DP00023,R129,Deposit,Money Market / Sweep,Non-Operating,636600.0,0.0313,0.0
+DP00024,R419,Deposit,Money Market / Sweep,Non-Operating,474000.0,0.0255,0.0
+DP00025,R351,Deposit,Commercial CD,Time Deposit,752200.0,0.0368,0.5
+DP00026,R004,Deposit,Analyzed DDA,Operating,3276100.0,0.0019,0.0
+DP00027,R090,Deposit,Commercial CD,Time Deposit,1084800.0,0.0361,1.0
+DP00028,R204,Deposit,Analyzed DDA,Operating,82600.0,0.008,0.0
+DP00029,R028,Deposit,Analyzed DDA,Operating,5681100.0,0.0117,0.0
+DP00030,R218,Deposit,Commercial CD,Time Deposit,453500.0,0.0341,1.0
+DP00031,R398,Deposit,Analyzed DDA,Operating,2433000.0,0.0062,0.0
+DP00032,R324,Deposit,Analyzed DDA,Operating,379600.0,0.0024,0.0
+DP00033,R470,Deposit,Analyzed DDA,Operating,1634300.0,0.0066,0.0
+DP00034,R446,Deposit,Money Market / Sweep,Non-Operating,1371500.0,0.0317,0.0
+DP00035,R279,Deposit,Money Market / Sweep,Non-Operating,3798100.0,0.025,0.0
+DP00036,R465,Deposit,Commercial CD,Time Deposit,506700.0,0.0384,1.0
+DP00037,R280,Deposit,Analyzed DDA,Operating,146500.0,0.0061,0.0
+DP00038,R413,Deposit,Analyzed DDA,Operating,403200.0,0.0083,0.0
+DP00039,R077,Deposit,Analyzed DDA,Operating,353200.0,0.0112,0.0
+DP00040,R433,Deposit,Commercial CD,Time Deposit,1310100.0,0.0399,2.0
+DP00041,R166,Deposit,Money Market / Sweep,Non-Operating,141700.0,0.0305,0.0
+DP00042,R216,Deposit,Analyzed DDA,Operating,1089800.0,0.0031,0.0
+DP00043,R002,Deposit,Analyzed DDA,Operating,216800.0,0.0017,0.0
+DP00044,R323,Deposit,Analyzed DDA,Operating,358200.0,0.0019,0.0
+DP00045,R416,Deposit,Money Market / Sweep,Non-Operating,548500.0,0.0337,0.0
+DP00046,R010,Deposit,Analyzed DDA,Operating,1844100.0,0.0007,0.0
+DP00047,R150,Deposit,Money Market / Sweep,Non-Operating,369200.0,0.0296,0.0
+DP00048,R323,Deposit,Analyzed DDA,Operating,569100.0,0.0058,0.0
+DP00049,R077,Deposit,Analyzed DDA,Operating,1331700.0,0.0086,0.0
+DP00050,R431,Deposit,Money Market / Sweep,Non-Operating,4165800.0,0.0351,0.0
+DP00051,R435,Deposit,Money Market / Sweep,Non-Operating,656400.0,0.0343,0.0
+DP00052,R482,Deposit,Analyzed DDA,Operating,469700.0,0.0018,0.0
+DP00053,R001,Deposit,Money Market / Sweep,Non-Operating,5749400.0,0.0323,0.0
+DP00054,R293,Deposit,Commercial CD,Time Deposit,2925900.0,0.0354,2.0
+DP00055,R261,Deposit,Money Market / Sweep,Non-Operating,798600.0,0.0278,0.0
+DP00056,R021,Deposit,Money Market / Sweep,Non-Operating,627700.0,0.0334,0.0
+DP00057,R231,Deposit,Money Market / Sweep,Non-Operating,1414200.0,0.0233,0.0
+DP00058,R468,Deposit,Analyzed DDA,Operating,507500.0,0.0009,0.0
+DP00059,R478,Deposit,Analyzed DDA,Operating,206000.0,0.0001,0.0
+DP00060,R484,Deposit,Analyzed DDA,Operating,2296600.0,0.011,0.0
+DP00061,R004,Deposit,Analyzed DDA,Operating,4779200.0,0.0096,0.0
+DP00062,R242,Deposit,Money Market / Sweep,Non-Operating,388700.0,0.0316,0.0
+DP00063,R450,Deposit,Money Market / Sweep,Non-Operating,833100.0,0.0347,0.0
+DP00064,R102,Deposit,Analyzed DDA,Operating,79000.0,0.0089,0.0
+DP00065,R458,Deposit,Commercial CD,Time Deposit,845000.0,0.0334,2.0
+DP00066,R198,Deposit,Commercial CD,Time Deposit,200900.0,0.036,2.0
+DP00067,R259,Deposit,Analyzed DDA,Operating,222900.0,0.0108,0.0
+DP00068,R078,Deposit,Analyzed DDA,Operating,414700.0,0.0083,0.0
+DP00069,R466,Deposit,Analyzed DDA,Operating,194700.0,0.0073,0.0
+DP00070,R400,Deposit,Commercial CD,Time Deposit,2587300.0,0.0354,1.0
+DP00071,R384,Deposit,Money Market / Sweep,Non-Operating,759800.0,0.0298,0.0
+DP00072,R331,Deposit,Money Market / Sweep,Non-Operating,218600.0,0.0249,0.0
+DP00073,R045,Deposit,Commercial CD,Time Deposit,84900.0,0.0394,2.0
+DP00074,R497,Deposit,Money Market / Sweep,Non-Operating,809600.0,0.0339,0.0
+DP00075,R004,Deposit,Commercial CD,Time Deposit,2898600.0,0.037,2.0
+DP00076,R305,Deposit,Analyzed DDA,Operating,256300.0,0.0015,0.0
+DP00077,R071,Deposit,Analyzed DDA,Operating,6148100.0,0.0009,0.0
+DP00078,R478,Deposit,Analyzed DDA,Operating,92500.0,0.0102,0.0
+DP00079,R481,Deposit,Commercial CD,Time Deposit,1527000.0,0.0374,0.5
+DP00080,R163,Deposit,Analyzed DDA,Operating,1274200.0,0.005,0.0
+DP00081,R339,Deposit,Analyzed DDA,Operating,377000.0,0.0065,0.0
+DP00082,R476,Deposit,Money Market / Sweep,Non-Operating,69500.0,0.0271,0.0
+DP00083,R088,Deposit,Analyzed DDA,Operating,463400.0,0.011,0.0
+DP00084,R420,Deposit,Money Market / Sweep,Non-Operating,579300.0,0.0326,0.0
+DP00085,R234,Deposit,Analyzed DDA,Operating,983500.0,0.0023,0.0
+DP00086,R205,Deposit,Analyzed DDA,Operating,784200.0,0.0109,0.0
+DP00087,R070,Deposit,Analyzed DDA,Operating,4906300.0,0.006,0.0
+DP00088,R372,Deposit,Money Market / Sweep,Non-Operating,187500.0,0.0294,0.0
+DP00089,R442,Deposit,Analyzed DDA,Operating,382400.0,0.002,0.0
+DP00090,R472,Deposit,Analyzed DDA,Operating,17757000.0,0.0108,0.0
+DP00091,R257,Deposit,Money Market / Sweep,Non-Operating,1396200.0,0.0248,0.0
+DP00092,R270,Deposit,Analyzed DDA,Operating,113100.0,0.0056,0.0
+DP00093,R288,Deposit,Analyzed DDA,Operating,528200.0,0.0003,0.0
+DP00094,R390,Deposit,Analyzed DDA,Operating,169700.0,0.0003,0.0
+DP00095,R412,Deposit,Commercial CD,Time Deposit,314200.0,0.0396,2.0
+DP00096,R362,Deposit,Commercial CD,Time Deposit,3572700.0,0.0358,2.0
+DP00097,R012,Deposit,Analyzed DDA,Operating,3784000.0,0.0054,0.0
+DP00098,R131,Deposit,Money Market / Sweep,Non-Operating,105800.0,0.0353,0.0
+DP00099,R323,Deposit,Analyzed DDA,Operating,225000.0,0.0032,0.0
+DP00100,R261,Deposit,Analyzed DDA,Operating,484100.0,0.0026,0.0
+DP00101,R134,Deposit,Analyzed DDA,Operating,371300.0,0.0122,0.0
+DP00102,R437,Deposit,Commercial CD,Time Deposit,661600.0,0.0367,1.0
+DP00103,R008,Deposit,Money Market / Sweep,Non-Operating,1858100.0,0.0301,0.0
+DP00104,R351,Deposit,Money Market / Sweep,Non-Operating,335400.0,0.0324,0.0
+DP00105,R349,Deposit,Analyzed DDA,Operating,220400.0,0.0009,0.0
+DP00106,R078,Deposit,Money Market / Sweep,Non-Operating,334900.0,0.0297,0.0
+DP00107,R128,Deposit,Analyzed DDA,Operating,977800.0,0.0123,0.0
+DP00108,R196,Deposit,Analyzed DDA,Operating,1952300.0,0.0105,0.0
+DP00109,R313,Deposit,Commercial CD,Time Deposit,239900.0,0.0354,2.0
+DP00110,R205,Deposit,Commercial CD,Time Deposit,1500700.0,0.0377,2.0
+DP00111,R303,Deposit,Commercial CD,Time Deposit,1401300.0,0.0383,2.0
+DP00112,R003,Deposit,Money Market / Sweep,Non-Operating,4026200.0,0.0311,0.0
+DP00113,R319,Deposit,Money Market / Sweep,Non-Operating,373700.0,0.0261,0.0
+DP00114,R381,Deposit,Analyzed DDA,Operating,2818500.0,0.0115,0.0
+DP00115,R095,Deposit,Commercial CD,Time Deposit,7236900.0,0.036,0.5
+DP00116,R188,Deposit,Analyzed DDA,Operating,106300.0,0.0098,0.0
+DP00117,R458,Deposit,Analyzed DDA,Operating,4790200.0,0.0068,0.0
+DP00118,R407,Deposit,Analyzed DDA,Operating,2711400.0,0.0021,0.0
+DP00119,R070,Deposit,Money Market / Sweep,Non-Operating,2798000.0,0.0233,0.0
+DP00120,R221,Deposit,Analyzed DDA,Operating,909700.0,0.0096,0.0
+DP00121,R350,Deposit,Money Market / Sweep,Non-Operating,342300.0,0.0355,0.0
+DP00122,R450,Deposit,Money Market / Sweep,Non-Operating,2675900.0,0.0347,0.0
+DP00123,R461,Deposit,Analyzed DDA,Operating,1115300.0,0.0022,0.0
+DP00124,R103,Deposit,Commercial CD,Time Deposit,2508100.0,0.0344,2.0
+DP00125,R231,Deposit,Money Market / Sweep,Non-Operating,4985100.0,0.0228,0.0
+DP00126,R169,Deposit,Analyzed DDA,Operating,529700.0,0.0026,0.0
+DP00127,R039,Deposit,Analyzed DDA,Operating,1325200.0,0.0111,0.0
+DP00128,R242,Deposit,Money Market / Sweep,Non-Operating,584900.0,0.0316,0.0
+DP00129,R341,Deposit,Analyzed DDA,Operating,391400.0,0.0106,0.0
+DP00130,R281,Deposit,Analyzed DDA,Operating,76800.0,0.0109,0.0
+DP00131,R358,Deposit,Commercial CD,Time Deposit,1319900.0,0.0358,1.0
+DP00132,R082,Deposit,Analyzed DDA,Operating,228200.0,0.0038,0.0
+DP00133,R306,Deposit,Analyzed DDA,Operating,224100.0,0.0062,0.0
+DP00134,R150,Deposit,Analyzed DDA,Operating,337800.0,0.0002,0.0
+DP00135,R079,Deposit,Analyzed DDA,Operating,384200.0,0.0102,0.0
+DP00136,R404,Deposit,Analyzed DDA,Operating,428300.0,0.01,0.0
+DP00137,R001,Deposit,Analyzed DDA,Operating,10566000.0,0.0064,0.0
+DP00138,R490,Deposit,Money Market / Sweep,Non-Operating,4669800.0,0.0226,0.0
+DP00139,R247,Deposit,Money Market / Sweep,Non-Operating,1119600.0,0.0267,0.0
+DP00140,R138,Deposit,Analyzed DDA,Operating,265900.0,0.0009,0.0
+DP00141,R002,Deposit,Commercial CD,Time Deposit,3544900.0,0.0388,2.0
+DP00142,R071,Deposit,Analyzed DDA,Operating,197900.0,0.0117,0.0
+DP00143,R471,Deposit,Analyzed DDA,Operating,1410500.0,0.0009,0.0
+DP00144,R460,Deposit,Money Market / Sweep,Non-Operating,563400.0,0.0313,0.0
+DP00145,R386,Deposit,Money Market / Sweep,Non-Operating,12176400.0,0.0336,0.0
+DP00146,R442,Deposit,Commercial CD,Time Deposit,549700.0,0.0393,0.5
+DP00147,R305,Deposit,Money Market / Sweep,Non-Operating,282500.0,0.0333,0.0
+DP00148,R148,Deposit,Commercial CD,Time Deposit,979700.0,0.0362,1.0
+DP00149,R403,Deposit,Analyzed DDA,Operating,141100.0,0.0068,0.0
+DP00150,R332,Deposit,Analyzed DDA,Operating,237400.0,0.0075,0.0
+DP00151,R004,Deposit,Analyzed DDA,Operating,6157800.0,0.0054,0.0
+DP00152,R145,Deposit,Money Market / Sweep,Non-Operating,1661400.0,0.0321,0.0
+DP00153,R108,Deposit,Analyzed DDA,Operating,1380500.0,0.0002,0.0
+DP00154,R127,Deposit,Analyzed DDA,Operating,94700.0,0.0033,0.0
+DP00155,R004,Deposit,Commercial CD,Time Deposit,9134500.0,0.0385,0.5
+DP00156,R447,Deposit,Money Market / Sweep,Non-Operating,280900.0,0.0245,0.0
+DP00157,R055,Deposit,Analyzed DDA,Operating,150100.0,0.002,0.0
+DP00158,R290,Deposit,Analyzed DDA,Operating,86300.0,0.0099,0.0
+DP00159,R125,Deposit,Money Market / Sweep,Non-Operating,277500.0,0.0275,0.0
+DP00160,R165,Deposit,Commercial CD,Time Deposit,2371800.0,0.041,2.0
+DP00161,R166,Deposit,Money Market / Sweep,Non-Operating,1274800.0,0.0308,0.0
+DP00162,R242,Deposit,Analyzed DDA,Operating,2479400.0,0.009,0.0
+DP00163,R379,Deposit,Analyzed DDA,Operating,431600.0,0.001,0.0
+DP00164,R349,Deposit,Analyzed DDA,Operating,538200.0,0.0093,0.0
+DP00165,R303,Deposit,Commercial CD,Time Deposit,99700.0,0.0355,1.0
+DP00166,R343,Deposit,Money Market / Sweep,Non-Operating,99700.0,0.0247,0.0
+DP00167,R321,Deposit,Money Market / Sweep,Non-Operating,417700.0,0.0291,0.0
+DP00168,R333,Deposit,Analyzed DDA,Operating,366400.0,0.0094,0.0
+DP00169,R195,Deposit,Analyzed DDA,Operating,205200.0,0.0052,0.0
+DP00170,R154,Deposit,Money Market / Sweep,Non-Operating,505100.0,0.0297,0.0
+DP00171,R337,Deposit,Money Market / Sweep,Non-Operating,1726300.0,0.0284,0.0
+DP00172,R094,Deposit,Analyzed DDA,Operating,488500.0,0.0023,0.0
+DP00173,R407,Deposit,Money Market / Sweep,Non-Operating,124100.0,0.0246,0.0
+DP00174,R080,Deposit,Analyzed DDA,Operating,234700.0,0.0025,0.0
+DP00175,R007,Deposit,Money Market / Sweep,Non-Operating,4544100.0,0.023,0.0
+DP00176,R372,Deposit,Money Market / Sweep,Non-Operating,773500.0,0.0339,0.0
+DP00177,R426,Deposit,Analyzed DDA,Operating,1629800.0,0.0104,0.0
+DP00178,R252,Deposit,Money Market / Sweep,Non-Operating,394400.0,0.0332,0.0
+DP00179,R077,Deposit,Analyzed DDA,Operating,450800.0,0.0066,0.0
+DP00180,R328,Deposit,Analyzed DDA,Operating,4825200.0,0.0072,0.0
+DP00181,R400,Deposit,Commercial CD,Time Deposit,1387200.0,0.0394,2.0
+DP00182,R150,Deposit,Commercial CD,Time Deposit,699400.0,0.0398,1.0
+DP00183,R213,Deposit,Analyzed DDA,Operating,592800.0,0.0032,0.0
+DP00184,R270,Deposit,Money Market / Sweep,Non-Operating,278700.0,0.0332,0.0
+DP00185,R492,Deposit,Analyzed DDA,Operating,1037600.0,0.0114,0.0
+DP00186,R384,Deposit,Money Market / Sweep,Non-Operating,1777200.0,0.0359,0.0
+DP00187,R404,Deposit,Analyzed DDA,Operating,135300.0,0.0103,0.0
+DP00188,R442,Deposit,Analyzed DDA,Operating,2228200.0,0.0102,0.0
+DP00189,R114,Deposit,Analyzed DDA,Operating,221800.0,0.0,0.0
+DP00190,R015,Deposit,Commercial CD,Time Deposit,944100.0,0.0401,2.0
+DP00191,R264,Deposit,Commercial CD,Time Deposit,7962300.0,0.035,1.0
+DP00192,R288,Deposit,Analyzed DDA,Operating,98700.0,0.0097,0.0
+DP00193,R306,Deposit,Money Market / Sweep,Non-Operating,801600.0,0.0353,0.0
+DP00194,R312,Deposit,Analyzed DDA,Operating,353400.0,0.0045,0.0
+DP00195,R389,Deposit,Analyzed DDA,Operating,756500.0,0.0076,0.0
+DP00196,R186,Deposit,Analyzed DDA,Operating,260500.0,0.0038,0.0
+DP00197,R228,Deposit,Money Market / Sweep,Non-Operating,121600.0,0.0233,0.0
+DP00198,R324,Deposit,Analyzed DDA,Operating,227600.0,0.0032,0.0
+DP00199,R216,Deposit,Analyzed DDA,Operating,2053000.0,0.0044,0.0
+DP00200,R488,Deposit,Commercial CD,Time Deposit,1864300.0,0.0346,1.0
+DP00201,R185,Deposit,Analyzed DDA,Operating,2176700.0,0.0013,0.0
+DP00202,R246,Deposit,Analyzed DDA,Operating,6328300.0,0.0062,0.0
+DP00203,R172,Deposit,Commercial CD,Time Deposit,885900.0,0.0365,2.0
+DP00204,R207,Deposit,Money Market / Sweep,Non-Operating,272200.0,0.0358,0.0
+DP00205,R454,Deposit,Analyzed DDA,Operating,2044900.0,0.0015,0.0
+DP00206,R006,Deposit,Analyzed DDA,Operating,2770200.0,0.0005,0.0
+DP00207,R065,Deposit,Money Market / Sweep,Non-Operating,1486100.0,0.0338,0.0
+DP00208,R010,Deposit,Analyzed DDA,Operating,988400.0,0.0057,0.0
+DP00209,R494,Deposit,Money Market / Sweep,Non-Operating,1146100.0,0.0271,0.0
+DP00210,R442,Deposit,Analyzed DDA,Operating,1618800.0,0.0094,0.0
+DP00211,R295,Deposit,Money Market / Sweep,Non-Operating,696800.0,0.0347,0.0
+DP00212,R360,Deposit,Analyzed DDA,Operating,1204900.0,0.0026,0.0
+DP00213,R081,Deposit,Analyzed DDA,Operating,758100.0,0.0113,0.0
+DP00214,R150,Deposit,Money Market / Sweep,Non-Operating,210600.0,0.0342,0.0
+DP00215,R004,Deposit,Analyzed DDA,Operating,5732400.0,0.0118,0.0
+DP00216,R333,Deposit,Money Market / Sweep,Non-Operating,704700.0,0.0293,0.0
+DP00217,R136,Deposit,Commercial CD,Time Deposit,653200.0,0.0372,2.0
+DP00218,R392,Deposit,Money Market / Sweep,Non-Operating,1961800.0,0.0343,0.0
+DP00219,R483,Deposit,Analyzed DDA,Operating,452100.0,0.0017,0.0
+DP00220,R052,Deposit,Commercial CD,Time Deposit,641400.0,0.0363,1.0
+DP00221,R212,Deposit,Analyzed DDA,Operating,912400.0,0.0053,0.0
+DP00222,R006,Deposit,Analyzed DDA,Operating,3647000.0,0.0049,0.0
+DP00223,R238,Deposit,Analyzed DDA,Operating,900700.0,0.007,0.0
+DP00224,R095,Deposit,Money Market / Sweep,Non-Operating,3303300.0,0.0296,0.0
+DP00225,R274,Deposit,Analyzed DDA,Operating,635700.0,0.0042,0.0
+DP00226,R037,Deposit,Analyzed DDA,Operating,2278100.0,0.0042,0.0
+DP00227,R001,Deposit,Analyzed DDA,Operating,7217500.0,0.0076,0.0
+DP00228,R199,Deposit,Analyzed DDA,Operating,561100.0,0.0009,0.0
+DP00229,R283,Deposit,Money Market / Sweep,Non-Operating,342800.0,0.0337,0.0
+DP00230,R455,Deposit,Analyzed DDA,Operating,783000.0,0.01,0.0
+DP00231,R473,Deposit,Money Market / Sweep,Non-Operating,442700.0,0.0257,0.0
+DP00232,R068,Deposit,Analyzed DDA,Operating,783000.0,0.0094,0.0
+DP00233,R006,Deposit,Commercial CD,Time Deposit,6836900.0,0.0335,0.5
+DP00234,R006,Deposit,Analyzed DDA,Operating,4654500.0,0.0109,0.0
+DP00235,R040,Deposit,Analyzed DDA,Operating,687900.0,0.0061,0.0
+DP00236,R494,Deposit,Analyzed DDA,Operating,160300.0,0.0098,0.0
+DP00237,R008,Deposit,Commercial CD,Time Deposit,2533300.0,0.0343,0.5
+DP00238,R343,Deposit,Money Market / Sweep,Non-Operating,946100.0,0.0311,0.0
+DP00239,R318,Deposit,Analyzed DDA,Operating,210200.0,0.0011,0.0
+DP00240,R039,Deposit,Analyzed DDA,Operating,1671200.0,0.0003,0.0
+DP00241,R163,Deposit,Analyzed DDA,Operating,1527800.0,0.0063,0.0
+DP00242,R175,Deposit,Analyzed DDA,Operating,431600.0,0.0015,0.0
+DP00243,R098,Deposit,Money Market / Sweep,Non-Operating,2860700.0,0.0291,0.0
+DP00244,R262,Deposit,Analyzed DDA,Operating,607000.0,0.0097,0.0
+DP00245,R008,Deposit,Analyzed DDA,Operating,1217100.0,0.0069,0.0
+DP00246,R137,Deposit,Money Market / Sweep,Non-Operating,810400.0,0.0242,0.0
+DP00247,R004,Deposit,Analyzed DDA,Operating,2427400.0,0.0098,0.0
+DP00248,R488,Deposit,Analyzed DDA,Operating,123700.0,0.006,0.0
+DP00249,R119,Deposit,Analyzed DDA,Operating,1016000.0,0.0123,0.0
+DP00250,R383,Deposit,Commercial CD,Time Deposit,147800.0,0.0348,2.0
+DP00251,R213,Deposit,Money Market / Sweep,Non-Operating,1017800.0,0.0316,0.0
+DP00252,R373,Deposit,Money Market / Sweep,Non-Operating,648700.0,0.0308,0.0
+DP00253,R300,Deposit,Money Market / Sweep,Non-Operating,449500.0,0.0265,0.0
+DP00254,R416,Deposit,Analyzed DDA,Operating,259100.0,0.0012,0.0
+DP00255,R065,Deposit,Analyzed DDA,Operating,179100.0,0.0058,0.0
+DP00256,R220,Deposit,Analyzed DDA,Operating,226200.0,0.0071,0.0
+DP00257,R060,Deposit,Analyzed DDA,Operating,164700.0,0.0101,0.0
+DP00258,R269,Deposit,Money Market / Sweep,Non-Operating,1278600.0,0.0323,0.0
+DP00259,R490,Deposit,Analyzed DDA,Operating,841100.0,0.003,0.0
+DP00260,R245,Deposit,Analyzed DDA,Operating,365500.0,0.0034,0.0
+DP00261,R462,Deposit,Analyzed DDA,Operating,362200.0,0.0085,0.0
+DP00262,R393,Deposit,Money Market / Sweep,Non-Operating,254200.0,0.0353,0.0
+DP00263,R051,Deposit,Money Market / Sweep,Non-Operating,632400.0,0.0226,0.0
+DP00264,R181,Deposit,Money Market / Sweep,Non-Operating,694700.0,0.0245,0.0
+DP00265,R004,Deposit,Analyzed DDA,Operating,15423500.0,0.003,0.0
+DP00266,R403,Deposit,Commercial CD,Time Deposit,924500.0,0.0348,0.5
+DP00267,R204,Deposit,Commercial CD,Time Deposit,162900.0,0.0387,0.5
+DP00268,R108,Deposit,Money Market / Sweep,Non-Operating,55100.0,0.0326,0.0
+DP00269,R455,Deposit,Money Market / Sweep,Non-Operating,317800.0,0.0297,0.0
+DP00270,R261,Deposit,Analyzed DDA,Operating,292600.0,0.006,0.0
+DP00271,R210,Deposit,Money Market / Sweep,Non-Operating,96900.0,0.0232,0.0
+DP00272,R167,Deposit,Commercial CD,Time Deposit,261200.0,0.0364,0.5
+DP00273,R246,Deposit,Analyzed DDA,Operating,1498600.0,0.0026,0.0
+DP00274,R037,Deposit,Analyzed DDA,Operating,826200.0,0.0105,0.0
+DP00275,R276,Deposit,Analyzed DDA,Operating,1917500.0,0.0007,0.0
+DP00276,R282,Deposit,Commercial CD,Time Deposit,263200.0,0.0345,0.5
+DP00277,R207,Deposit,Analyzed DDA,Operating,225800.0,0.0099,0.0
+DP00278,R391,Deposit,Commercial CD,Time Deposit,8006700.0,0.0354,0.5
+DP00279,R484,Deposit,Money Market / Sweep,Non-Operating,1403900.0,0.0267,0.0
+DP00280,R004,Deposit,Analyzed DDA,Operating,4508400.0,0.0101,0.0
+DP00281,R131,Deposit,Money Market / Sweep,Non-Operating,1125100.0,0.0269,0.0
+DP00282,R127,Deposit,Analyzed DDA,Operating,3488000.0,0.0074,0.0
+DP00283,R245,Deposit,Analyzed DDA,Operating,1006200.0,0.0033,0.0
+DP00284,R419,Deposit,Analyzed DDA,Operating,1376600.0,0.008,0.0
+DP00285,R301,Deposit,Money Market / Sweep,Non-Operating,308800.0,0.0351,0.0
+DP00286,R095,Deposit,Analyzed DDA,Operating,4008900.0,0.0027,0.0
+DP00287,R377,Deposit,Analyzed DDA,Operating,140800.0,0.0019,0.0
+DP00288,R022,Deposit,Commercial CD,Time Deposit,355900.0,0.0367,1.0
+DP00289,R141,Deposit,Analyzed DDA,Operating,604300.0,0.0118,0.0
+DP00290,R247,Deposit,Commercial CD,Time Deposit,2081500.0,0.0378,0.5
+DP00291,R103,Deposit,Analyzed DDA,Operating,624200.0,0.0061,0.0
+DP00292,R004,Deposit,Money Market / Sweep,Non-Operating,775000.0,0.0346,0.0
+DP00293,R465,Deposit,Analyzed DDA,Operating,766400.0,0.0102,0.0
+DP00294,R448,Deposit,Analyzed DDA,Operating,1180100.0,0.0092,0.0
+DP00295,R462,Deposit,Money Market / Sweep,Non-Operating,327200.0,0.0309,0.0
+DP00296,R242,Deposit,Commercial CD,Time Deposit,2529600.0,0.0398,0.5
+DP00297,R071,Deposit,Analyzed DDA,Operating,360800.0,0.0033,0.0
+DP00298,R173,Deposit,Analyzed DDA,Operating,865300.0,0.0102,0.0
+DP00299,R496,Deposit,Money Market / Sweep,Non-Operating,239800.0,0.0279,0.0
+DP00300,R230,Deposit,Commercial CD,Time Deposit,163800.0,0.0387,1.0
+DP00301,R357,Deposit,Money Market / Sweep,Non-Operating,1161200.0,0.0296,0.0
+DP00302,R439,Deposit,Analyzed DDA,Operating,702500.0,0.0069,0.0
+DP00303,R304,Deposit,Analyzed DDA,Operating,906800.0,0.002,0.0
+DP00304,R427,Deposit,Commercial CD,Time Deposit,132800.0,0.0371,2.0
+DP00305,R480,Deposit,Analyzed DDA,Operating,608400.0,0.0084,0.0
+DP00306,R306,Deposit,Analyzed DDA,Operating,197700.0,0.0028,0.0
+DP00307,R008,Deposit,Money Market / Sweep,Non-Operating,6492800.0,0.0355,0.0
+DP00308,R005,Deposit,Analyzed DDA,Operating,3260900.0,0.0043,0.0
+DP00309,R093,Deposit,Analyzed DDA,Operating,159300.0,0.0073,0.0
+DP00310,R009,Deposit,Money Market / Sweep,Non-Operating,8235100.0,0.0347,0.0
+DP00311,R035,Deposit,Commercial CD,Time Deposit,792900.0,0.0336,2.0
+DP00312,R489,Deposit,Commercial CD,Time Deposit,679800.0,0.0353,0.5
+DP00313,R294,Deposit,Analyzed DDA,Operating,1949400.0,0.0051,0.0
+DP00314,R172,Deposit,Commercial CD,Time Deposit,617700.0,0.0344,0.5
+DP00315,R260,Deposit,Money Market / Sweep,Non-Operating,5108200.0,0.0282,0.0
+DP00316,R327,Deposit,Analyzed DDA,Operating,1311600.0,0.001,0.0
+DP00317,R182,Deposit,Analyzed DDA,Operating,632300.0,0.0066,0.0
+DP00318,R143,Deposit,Commercial CD,Time Deposit,709300.0,0.0377,0.5
+DP00319,R442,Deposit,Analyzed DDA,Operating,188000.0,0.0023,0.0
+DP00320,R010,Deposit,Analyzed DDA,Operating,26851400.0,0.0076,0.0
+DP00321,R179,Deposit,Money Market / Sweep,Non-Operating,470800.0,0.0254,0.0
+DP00322,R001,Deposit,Money Market / Sweep,Non-Operating,4167500.0,0.027,0.0
+DP00323,R181,Deposit,Analyzed DDA,Operating,320200.0,0.0115,0.0
+DP00324,R428,Deposit,Money Market / Sweep,Non-Operating,4582500.0,0.033,0.0
+DP00325,R477,Deposit,Money Market / Sweep,Non-Operating,1593300.0,0.0248,0.0
+DP00326,R002,Deposit,Money Market / Sweep,Non-Operating,4721900.0,0.0235,0.0
+DP00327,R254,Deposit,Money Market / Sweep,Non-Operating,111700.0,0.0304,0.0
+DP00328,R239,Deposit,Analyzed DDA,Operating,1231000.0,0.0081,0.0
+DP00329,R003,Deposit,Commercial CD,Time Deposit,3777000.0,0.0387,1.0
+DP00330,R497,Deposit,Money Market / Sweep,Non-Operating,923700.0,0.026,0.0
+DP00331,R021,Deposit,Analyzed DDA,Operating,180900.0,0.0058,0.0
+DP00332,R278,Deposit,Analyzed DDA,Operating,306700.0,0.0099,0.0
+DP00333,R002,Deposit,Money Market / Sweep,Non-Operating,17550300.0,0.036,0.0
+DP00334,R026,Deposit,Analyzed DDA,Operating,3046100.0,0.0098,0.0
+DP00335,R455,Deposit,Analyzed DDA,Operating,1501900.0,0.0049,0.0
+DP00336,R306,Deposit,Analyzed DDA,Operating,252600.0,0.0,0.0
+DP00337,R004,Deposit,Money Market / Sweep,Non-Operating,5777900.0,0.0321,0.0
+DP00338,R445,Deposit,Analyzed DDA,Operating,1779600.0,0.0068,0.0
+DP00339,R248,Deposit,Money Market / Sweep,Non-Operating,971500.0,0.0285,0.0
+DP00340,R005,Deposit,Money Market / Sweep,Non-Operating,5951300.0,0.0262,0.0
+DP00341,R479,Deposit,Analyzed DDA,Operating,807400.0,0.0107,0.0
+DP00342,R067,Deposit,Commercial CD,Time Deposit,961800.0,0.0365,2.0
+DP00343,R068,Deposit,Analyzed DDA,Operating,199000.0,0.0047,0.0
+DP00344,R010,Deposit,Money Market / Sweep,Non-Operating,6204000.0,0.0259,0.0
+DP00345,R441,Deposit,Analyzed DDA,Operating,1570200.0,0.0107,0.0
+DP00346,R002,Deposit,Money Market / Sweep,Non-Operating,5421100.0,0.0317,0.0
+DP00347,R198,Deposit,Commercial CD,Time Deposit,4401200.0,0.0409,2.0
+DP00348,R454,Deposit,Analyzed DDA,Operating,1211500.0,0.0008,0.0
+DP00349,R064,Deposit,Commercial CD,Time Deposit,86800.0,0.0382,0.5
+DP00350,R008,Deposit,Analyzed DDA,Operating,1724700.0,0.0058,0.0
+DP00351,R005,Deposit,Money Market / Sweep,Non-Operating,2064000.0,0.0312,0.0
+DP00352,R295,Deposit,Analyzed DDA,Operating,845600.0,0.0012,0.0
+DP00353,R157,Deposit,Analyzed DDA,Operating,1111300.0,0.0086,0.0
+DP00354,R203,Deposit,Money Market / Sweep,Non-Operating,554200.0,0.0301,0.0
+DP00355,R302,Deposit,Analyzed DDA,Operating,648100.0,0.0004,0.0
+DP00356,R346,Deposit,Commercial CD,Time Deposit,3282900.0,0.0378,1.0
+DP00357,R413,Deposit,Money Market / Sweep,Non-Operating,210700.0,0.0243,0.0
+DP00358,R334,Deposit,Money Market / Sweep,Non-Operating,449700.0,0.0262,0.0
+DP00359,R437,Deposit,Analyzed DDA,Operating,307700.0,0.004,0.0
+DP00360,R044,Deposit,Commercial CD,Time Deposit,448600.0,0.0401,2.0
+DP00361,R048,Deposit,Commercial CD,Time Deposit,63800.0,0.0395,0.5
+DP00362,R149,Deposit,Money Market / Sweep,Non-Operating,1768600.0,0.0295,0.0
+DP00363,R156,Deposit,Analyzed DDA,Operating,225300.0,0.0066,0.0
+DP00364,R381,Deposit,Analyzed DDA,Operating,376500.0,0.012,0.0
+DP00365,R225,Deposit,Analyzed DDA,Operating,744000.0,0.0073,0.0
+DP00366,R011,Deposit,Money Market / Sweep,Non-Operating,147100.0,0.035,0.0
+DP00367,R015,Deposit,Analyzed DDA,Operating,210000.0,0.0061,0.0
+DP00368,R002,Deposit,Analyzed DDA,Operating,3943900.0,0.0112,0.0
+DP00369,R116,Deposit,Analyzed DDA,Operating,936100.0,0.0083,0.0
+DP00370,R269,Deposit,Analyzed DDA,Operating,405100.0,0.0119,0.0
+DP00371,R147,Deposit,Money Market / Sweep,Non-Operating,2663000.0,0.0256,0.0
+DP00372,R183,Deposit,Money Market / Sweep,Non-Operating,912100.0,0.0301,0.0
+DP00373,R124,Deposit,Commercial CD,Time Deposit,1663700.0,0.0408,1.0
+DP00374,R079,Deposit,Analyzed DDA,Operating,512000.0,0.0103,0.0
+DP00375,R340,Deposit,Analyzed DDA,Operating,1275400.0,0.0124,0.0
+DP00376,R377,Deposit,Analyzed DDA,Operating,688500.0,0.0038,0.0
+DP00377,R218,Deposit,Money Market / Sweep,Non-Operating,612400.0,0.031,0.0
+DP00378,R002,Deposit,Commercial CD,Time Deposit,12885900.0,0.0333,1.0
+DP00379,R151,Deposit,Analyzed DDA,Operating,301300.0,0.0107,0.0
+DP00380,R053,Deposit,Analyzed DDA,Operating,643000.0,0.0073,0.0
+DP00381,R004,Deposit,Commercial CD,Time Deposit,1540200.0,0.0394,1.0
+DP00382,R002,Deposit,Money Market / Sweep,Non-Operating,386900.0,0.0335,0.0
+DP00383,R347,Deposit,Analyzed DDA,Operating,263200.0,0.0023,0.0
+DP00384,R082,Deposit,Analyzed DDA,Operating,719200.0,0.0057,0.0
+DP00385,R008,Deposit,Analyzed DDA,Operating,1032600.0,0.001,0.0
+DP00386,R292,Deposit,Analyzed DDA,Operating,2670500.0,0.0121,0.0
+DP00387,R166,Deposit,Money Market / Sweep,Non-Operating,51500.0,0.0314,0.0
+DP00388,R441,Deposit,Money Market / Sweep,Non-Operating,221000.0,0.0278,0.0
+DP00389,R047,Deposit,Analyzed DDA,Operating,109300.0,0.0022,0.0
+DP00390,R151,Deposit,Money Market / Sweep,Non-Operating,1211400.0,0.0346,0.0
+DP00391,R176,Deposit,Analyzed DDA,Operating,928800.0,0.0116,0.0
+DP00392,R403,Deposit,Analyzed DDA,Operating,370700.0,0.0086,0.0
+DP00393,R137,Deposit,Analyzed DDA,Operating,116700.0,0.0009,0.0
+DP00394,R375,Deposit,Analyzed DDA,Operating,437700.0,0.011,0.0
+DP00395,R006,Deposit,Commercial CD,Time Deposit,5175400.0,0.0388,0.5
+DP00396,R055,Deposit,Analyzed DDA,Operating,246000.0,0.0033,0.0
+DP00397,R481,Deposit,Analyzed DDA,Operating,827200.0,0.0091,0.0
+DP00398,R367,Deposit,Money Market / Sweep,Non-Operating,449300.0,0.0312,0.0
+DP00399,R263,Deposit,Analyzed DDA,Operating,960500.0,0.0083,0.0
+DP00400,R354,Deposit,Analyzed DDA,Operating,84100.0,0.0001,0.0
+DP00401,R181,Deposit,Analyzed DDA,Operating,127800.0,0.0031,0.0
+DP00402,R045,Deposit,Analyzed DDA,Operating,130900.0,0.0043,0.0
+DP00403,R268,Deposit,Analyzed DDA,Operating,233700.0,0.005,0.0
+DP00404,R306,Deposit,Money Market / Sweep,Non-Operating,529300.0,0.0274,0.0
+DP00405,R192,Deposit,Analyzed DDA,Operating,1523800.0,0.0084,0.0
+DP00406,R175,Deposit,Analyzed DDA,Operating,1584500.0,0.0111,0.0
+DP00407,R262,Deposit,Money Market / Sweep,Non-Operating,118400.0,0.0259,0.0
+DP00408,R354,Deposit,Analyzed DDA,Operating,657100.0,0.01,0.0
+DP00409,R110,Deposit,Analyzed DDA,Operating,220300.0,0.0025,0.0
+DP00410,R446,Deposit,Analyzed DDA,Operating,3487500.0,0.0064,0.0
+DP00411,R284,Deposit,Analyzed DDA,Operating,435100.0,0.0114,0.0
+DP00412,R444,Deposit,Money Market / Sweep,Non-Operating,275800.0,0.0274,0.0
+DP00413,R001,Deposit,Analyzed DDA,Operating,5302800.0,0.0029,0.0
+DP00414,R372,Deposit,Analyzed DDA,Operating,1767100.0,0.0033,0.0
+DP00415,R416,Deposit,Analyzed DDA,Operating,330800.0,0.0076,0.0
+DP00416,R452,Deposit,Money Market / Sweep,Non-Operating,876000.0,0.0257,0.0
+DP00417,R225,Deposit,Analyzed DDA,Operating,2190300.0,0.006,0.0
+DP00418,R018,Deposit,Analyzed DDA,Operating,1211500.0,0.007,0.0
+DP00419,R321,Deposit,Analyzed DDA,Operating,416800.0,0.008,0.0
+DP00420,R190,Deposit,Analyzed DDA,Operating,2858600.0,0.0106,0.0
+DP00421,R109,Deposit,Analyzed DDA,Operating,783300.0,0.0036,0.0
+DP00422,R424,Deposit,Analyzed DDA,Operating,161400.0,0.0078,0.0
+DP00423,R169,Deposit,Analyzed DDA,Operating,1532900.0,0.0116,0.0
+DP00424,R228,Deposit,Commercial CD,Time Deposit,1168300.0,0.0333,0.5
+DP00425,R347,Deposit,Money Market / Sweep,Non-Operating,281500.0,0.0355,0.0
+DP00426,R213,Deposit,Analyzed DDA,Operating,1987000.0,0.0014,0.0
+DP00427,R105,Deposit,Money Market / Sweep,Non-Operating,221600.0,0.0236,0.0
+DP00428,R005,Deposit,Analyzed DDA,Operating,20026300.0,0.0115,0.0
+DP00429,R472,Deposit,Money Market / Sweep,Non-Operating,2675700.0,0.0299,0.0
+DP00430,R331,Deposit,Money Market / Sweep,Non-Operating,76700.0,0.0342,0.0
+DP00431,R246,Deposit,Money Market / Sweep,Non-Operating,2644200.0,0.0273,0.0
+DP00432,R390,Deposit,Analyzed DDA,Operating,753500.0,0.0081,0.0
+DP00433,R002,Deposit,Money Market / Sweep,Non-Operating,17448000.0,0.0271,0.0
+DP00434,R293,Deposit,Money Market / Sweep,Non-Operating,2712100.0,0.0339,0.0
+DP00435,R406,Deposit,Money Market / Sweep,Non-Operating,3209800.0,0.0288,0.0
+DP00436,R447,Deposit,Analyzed DDA,Operating,366400.0,0.003,0.0
+DP00437,R491,Deposit,Analyzed DDA,Operating,830700.0,0.012,0.0
+DP00438,R443,Deposit,Analyzed DDA,Operating,299200.0,0.0055,0.0
+DP00439,R019,Deposit,Analyzed DDA,Operating,3860100.0,0.0053,0.0
+DP00440,R331,Deposit,Analyzed DDA,Operating,55700.0,0.0118,0.0
+DP00441,R219,Deposit,Analyzed DDA,Operating,135100.0,0.0015,0.0
+DP00442,R221,Deposit,Analyzed DDA,Operating,940300.0,0.0014,0.0
+DP00443,R365,Deposit,Analyzed DDA,Operating,455400.0,0.0054,0.0
+DP00444,R268,Deposit,Analyzed DDA,Operating,569600.0,0.0073,0.0
+DP00445,R315,Deposit,Analyzed DDA,Operating,5189500.0,0.0064,0.0
+DP00446,R283,Deposit,Commercial CD,Time Deposit,252500.0,0.0368,0.5
+DP00447,R030,Deposit,Analyzed DDA,Operating,132900.0,0.0124,0.0
+DP00448,R006,Deposit,Money Market / Sweep,Non-Operating,2735700.0,0.0269,0.0
+DP00449,R280,Deposit,Analyzed DDA,Operating,263800.0,0.0021,0.0
+DP00450,R358,Deposit,Analyzed DDA,Operating,841000.0,0.0069,0.0
+DP00451,R319,Deposit,Analyzed DDA,Operating,2222600.0,0.0119,0.0
+DP00452,R177,Deposit,Analyzed DDA,Operating,6093900.0,0.0035,0.0
+DP00453,R491,Deposit,Commercial CD,Time Deposit,1437800.0,0.0347,0.5
+DP00454,R214,Deposit,Analyzed DDA,Operating,273700.0,0.0029,0.0
+DP00455,R310,Deposit,Analyzed DDA,Operating,411400.0,0.0121,0.0
+DP00456,R253,Deposit,Money Market / Sweep,Non-Operating,739500.0,0.0244,0.0
+DP00457,R399,Deposit,Money Market / Sweep,Non-Operating,671400.0,0.0314,0.0
+DP00458,R295,Deposit,Money Market / Sweep,Non-Operating,245700.0,0.0267,0.0
+DP00459,R490,Deposit,Analyzed DDA,Operating,2110100.0,0.0075,0.0
+DP00460,R096,Deposit,Commercial CD,Time Deposit,370800.0,0.041,2.0
+DP00461,R427,Deposit,Analyzed DDA,Operating,1442300.0,0.0071,0.0
+DP00462,R471,Deposit,Analyzed DDA,Operating,971200.0,0.001,0.0
+DP00463,R261,Deposit,Money Market / Sweep,Non-Operating,830500.0,0.027,0.0
+DP00464,R479,Deposit,Commercial CD,Time Deposit,594800.0,0.036,2.0
+DP00465,R475,Deposit,Commercial CD,Time Deposit,1695300.0,0.0408,2.0
+DP00466,R268,Deposit,Analyzed DDA,Operating,57600.0,0.0091,0.0
+DP00467,R048,Deposit,Commercial CD,Time Deposit,1705900.0,0.0396,1.0
+DP00468,R217,Deposit,Analyzed DDA,Operating,1668200.0,0.004,0.0
+DP00469,R396,Deposit,Commercial CD,Time Deposit,640800.0,0.0354,0.5
+DP00470,R061,Deposit,Money Market / Sweep,Non-Operating,814600.0,0.0283,0.0
+DP00471,R004,Deposit,Analyzed DDA,Operating,7317800.0,0.0105,0.0
+DP00472,R004,Deposit,Analyzed DDA,Operating,1637000.0,0.0045,0.0
+DP00473,R004,Deposit,Money Market / Sweep,Non-Operating,4254900.0,0.032,0.0
+DP00474,R296,Deposit,Analyzed DDA,Operating,1177800.0,0.008,0.0
+DP00475,R063,Deposit,Commercial CD,Time Deposit,80900.0,0.0374,2.0
+DP00476,R297,Deposit,Commercial CD,Time Deposit,774700.0,0.0408,0.5
+DP00477,R495,Deposit,Money Market / Sweep,Non-Operating,1583000.0,0.0358,0.0
+DP00478,R190,Deposit,Analyzed DDA,Operating,905800.0,0.0019,0.0
+DP00479,R065,Deposit,Money Market / Sweep,Non-Operating,135600.0,0.0311,0.0
+DP00480,R195,Deposit,Money Market / Sweep,Non-Operating,229900.0,0.0284,0.0
+DP00481,R430,Deposit,Analyzed DDA,Operating,119700.0,0.0049,0.0
+DP00482,R123,Deposit,Analyzed DDA,Operating,118500.0,0.0122,0.0
+DP00483,R177,Deposit,Money Market / Sweep,Non-Operating,3330700.0,0.0256,0.0
+DP00484,R304,Deposit,Analyzed DDA,Operating,268400.0,0.0088,0.0
+DP00485,R369,Deposit,Analyzed DDA,Operating,748200.0,0.0032,0.0
+DP00486,R473,Deposit,Analyzed DDA,Operating,1439500.0,0.0004,0.0
+DP00487,R025,Deposit,Analyzed DDA,Operating,343100.0,0.0012,0.0
+DP00488,R128,Deposit,Analyzed DDA,Operating,1267900.0,0.0013,0.0
+DP00489,R077,Deposit,Analyzed DDA,Operating,169400.0,0.0037,0.0
+DP00490,R152,Deposit,Money Market / Sweep,Non-Operating,342100.0,0.0304,0.0
+DP00491,R435,Deposit,Commercial CD,Time Deposit,195500.0,0.0349,1.0
+DP00492,R245,Deposit,Money Market / Sweep,Non-Operating,2509700.0,0.0293,0.0
+DP00493,R443,Deposit,Analyzed DDA,Operating,393300.0,0.0009,0.0
+DP00494,R051,Deposit,Analyzed DDA,Operating,1004800.0,0.0121,0.0
+DP00495,R184,Deposit,Analyzed DDA,Operating,1690700.0,0.0021,0.0
+DP00496,R277,Deposit,Money Market / Sweep,Non-Operating,69100.0,0.0232,0.0
+DP00497,R304,Deposit,Commercial CD,Time Deposit,371400.0,0.0395,1.0
+DP00498,R094,Deposit,Commercial CD,Time Deposit,104200.0,0.0337,0.5
+DP00499,R183,Deposit,Analyzed DDA,Operating,2051900.0,0.0028,0.0
+DP00500,R340,Deposit,Analyzed DDA,Operating,842700.0,0.0083,0.0
+DP00501,R345,Deposit,Money Market / Sweep,Non-Operating,934800.0,0.023,0.0
+DP00502,R421,Deposit,Commercial CD,Time Deposit,427800.0,0.0355,0.5
+DP00503,R389,Deposit,Commercial CD,Time Deposit,94600.0,0.0385,2.0
+DP00504,R287,Deposit,Commercial CD,Time Deposit,596500.0,0.0354,2.0
+DP00505,R356,Deposit,Analyzed DDA,Operating,2180200.0,0.0074,0.0
+DP00506,R247,Deposit,Money Market / Sweep,Non-Operating,1208900.0,0.0353,0.0
+DP00507,R052,Deposit,Analyzed DDA,Operating,526800.0,0.007,0.0
+DP00508,R402,Deposit,Analyzed DDA,Operating,73200.0,0.0045,0.0
+DP00509,R345,Deposit,Money Market / Sweep,Non-Operating,516800.0,0.0251,0.0
+DP00510,R379,Deposit,Analyzed DDA,Operating,434000.0,0.0017,0.0
+DP00511,R095,Deposit,Analyzed DDA,Operating,431500.0,0.0042,0.0
+DP00512,R494,Deposit,Analyzed DDA,Operating,820300.0,0.0096,0.0
+DP00513,R008,Deposit,Analyzed DDA,Operating,2458800.0,0.0028,0.0
+DP00514,R213,Deposit,Analyzed DDA,Operating,1824700.0,0.0039,0.0
+DP00515,R078,Deposit,Money Market / Sweep,Non-Operating,788000.0,0.0356,0.0
+DP00516,R135,Deposit,Analyzed DDA,Operating,672000.0,0.0089,0.0
+DP00517,R119,Deposit,Money Market / Sweep,Non-Operating,126500.0,0.0258,0.0
+DP00518,R188,Deposit,Money Market / Sweep,Non-Operating,329400.0,0.023,0.0
+DP00519,R207,Deposit,Analyzed DDA,Operating,4067900.0,0.0069,0.0
+DP00520,R184,Deposit,Money Market / Sweep,Non-Operating,5858000.0,0.033,0.0
+DP00521,R366,Deposit,Analyzed DDA,Operating,3342800.0,0.0083,0.0
+DP00522,R477,Deposit,Commercial CD,Time Deposit,636300.0,0.0358,2.0
+DP00523,R084,Deposit,Commercial CD,Time Deposit,180100.0,0.0369,2.0
+DP00524,R484,Deposit,Commercial CD,Time Deposit,1233700.0,0.0383,2.0
+DP00525,R004,Deposit,Analyzed DDA,Operating,2641900.0,0.0055,0.0
+DP00526,R322,Deposit,Money Market / Sweep,Non-Operating,1333200.0,0.0335,0.0
+DP00527,R325,Deposit,Analyzed DDA,Operating,341600.0,0.005,0.0
+DP00528,R016,Deposit,Commercial CD,Time Deposit,3768900.0,0.0376,1.0
+DP00529,R404,Deposit,Analyzed DDA,Operating,32900.0,0.002,0.0
+DP00530,R397,Deposit,Money Market / Sweep,Non-Operating,3419100.0,0.0242,0.0
+DP00531,R002,Deposit,Analyzed DDA,Operating,9680900.0,0.008,0.0
+DP00532,R099,Deposit,Money Market / Sweep,Non-Operating,4955500.0,0.0354,0.0
+DP00533,R247,Deposit,Money Market / Sweep,Non-Operating,1130300.0,0.0314,0.0
+DP00534,R272,Deposit,Analyzed DDA,Operating,287600.0,0.0112,0.0
+DP00535,R257,Deposit,Analyzed DDA,Operating,545500.0,0.0011,0.0
+DP00536,R001,Deposit,Money Market / Sweep,Non-Operating,7055100.0,0.0311,0.0
+DP00537,R363,Deposit,Commercial CD,Time Deposit,441900.0,0.0378,0.5
+DP00538,R278,Deposit,Analyzed DDA,Operating,444500.0,0.0051,0.0
+DP00539,R003,Deposit,Money Market / Sweep,Non-Operating,7046000.0,0.034,0.0
+DP00540,R037,Deposit,Analyzed DDA,Operating,1450100.0,0.0057,0.0
+DP00541,R448,Deposit,Analyzed DDA,Operating,529500.0,0.0003,0.0
+DP00542,R268,Deposit,Analyzed DDA,Operating,95300.0,0.0065,0.0
+DP00543,R482,Deposit,Money Market / Sweep,Non-Operating,5712100.0,0.025,0.0
+DP00544,R470,Deposit,Analyzed DDA,Operating,1111500.0,0.0093,0.0
+DP00545,R241,Deposit,Commercial CD,Time Deposit,846200.0,0.0344,0.5
+DP00546,R393,Deposit,Analyzed DDA,Operating,431100.0,0.0009,0.0
+DP00547,R305,Deposit,Money Market / Sweep,Non-Operating,964300.0,0.0332,0.0
+DP00548,R002,Deposit,Analyzed DDA,Operating,1407300.0,0.0075,0.0
+DP00549,R420,Deposit,Money Market / Sweep,Non-Operating,590400.0,0.029,0.0
+DP00550,R258,Deposit,Analyzed DDA,Operating,616700.0,0.0106,0.0
+DP00551,R172,Deposit,Analyzed DDA,Operating,519300.0,0.0034,0.0
+DP00552,R374,Deposit,Analyzed DDA,Operating,435700.0,0.0071,0.0
+DP00553,R100,Deposit,Money Market / Sweep,Non-Operating,320100.0,0.023,0.0
+DP00554,R261,Deposit,Money Market / Sweep,Non-Operating,225300.0,0.0281,0.0
+DP00555,R383,Deposit,Analyzed DDA,Operating,282200.0,0.0055,0.0
+DP00556,R431,Deposit,Analyzed DDA,Operating,263300.0,0.0124,0.0
+DP00557,R250,Deposit,Analyzed DDA,Operating,1400000.0,0.0018,0.0
+DP00558,R249,Deposit,Analyzed DDA,Operating,2307100.0,0.0072,0.0
+DP00559,R010,Deposit,Analyzed DDA,Operating,1596200.0,0.0046,0.0
+DP00560,R038,Deposit,Analyzed DDA,Operating,4402900.0,0.0006,0.0
+DP00561,R349,Deposit,Analyzed DDA,Operating,468400.0,0.0095,0.0
+DP00562,R249,Deposit,Analyzed DDA,Operating,478800.0,0.0025,0.0
+DP00563,R347,Deposit,Analyzed DDA,Operating,132400.0,0.0112,0.0
+DP00564,R500,Deposit,Money Market / Sweep,Non-Operating,830700.0,0.0282,0.0
+DP00565,R090,Deposit,Money Market / Sweep,Non-Operating,2472100.0,0.0304,0.0
+DP00566,R476,Deposit,Money Market / Sweep,Non-Operating,182400.0,0.0273,0.0
+DP00567,R481,Deposit,Analyzed DDA,Operating,691100.0,0.0104,0.0
+DP00568,R370,Deposit,Analyzed DDA,Operating,291000.0,0.0047,0.0
+DP00569,R309,Deposit,Analyzed DDA,Operating,16000.0,0.0032,0.0
+DP00570,R083,Deposit,Money Market / Sweep,Non-Operating,2014900.0,0.0257,0.0
+DP00571,R350,Deposit,Commercial CD,Time Deposit,914500.0,0.0404,2.0
+DP00572,R484,Deposit,Money Market / Sweep,Non-Operating,2089400.0,0.026,0.0
+DP00573,R131,Deposit,Commercial CD,Time Deposit,1241700.0,0.0389,1.0
+DP00574,R355,Deposit,Analyzed DDA,Operating,310300.0,0.0006,0.0
+DP00575,R009,Deposit,Analyzed DDA,Operating,24658300.0,0.0019,0.0
+DP00576,R036,Deposit,Analyzed DDA,Operating,207800.0,0.0054,0.0
+DP00577,R001,Deposit,Analyzed DDA,Operating,3220200.0,0.0026,0.0
+DP00578,R208,Deposit,Analyzed DDA,Operating,350100.0,0.0097,0.0
+DP00579,R460,Deposit,Commercial CD,Time Deposit,1748200.0,0.0356,1.0
+DP00580,R023,Deposit,Analyzed DDA,Operating,380600.0,0.0075,0.0
+DP00581,R122,Deposit,Commercial CD,Time Deposit,436400.0,0.0344,2.0
+DP00582,R035,Deposit,Commercial CD,Time Deposit,245400.0,0.0348,2.0
+DP00583,R057,Deposit,Money Market / Sweep,Non-Operating,312000.0,0.0246,0.0
+DP00584,R039,Deposit,Commercial CD,Time Deposit,155400.0,0.0392,1.0
+DP00585,R108,Deposit,Analyzed DDA,Operating,1079100.0,0.0079,0.0
+DP00586,R217,Deposit,Commercial CD,Time Deposit,174100.0,0.0389,2.0
+DP00587,R429,Deposit,Money Market / Sweep,Non-Operating,888400.0,0.0262,0.0
+DP00588,R219,Deposit,Money Market / Sweep,Non-Operating,167600.0,0.0259,0.0
+DP00589,R006,Deposit,Money Market / Sweep,Non-Operating,7125000.0,0.0299,0.0
+DP00590,R010,Deposit,Commercial CD,Time Deposit,2341000.0,0.0365,0.5
+DP00591,R353,Deposit,Commercial CD,Time Deposit,42000.0,0.0379,0.5
+DP00592,R393,Deposit,Analyzed DDA,Operating,640500.0,0.0117,0.0
+DP00593,R084,Deposit,Analyzed DDA,Operating,229100.0,0.0089,0.0
+DP00594,R167,Deposit,Analyzed DDA,Operating,472500.0,0.0013,0.0
+DP00595,R001,Deposit,Money Market / Sweep,Non-Operating,9263800.0,0.0284,0.0
+DP00596,R370,Deposit,Analyzed DDA,Operating,180200.0,0.005,0.0
+DP00597,R162,Deposit,Money Market / Sweep,Non-Operating,459700.0,0.0266,0.0
+DP00598,R074,Deposit,Analyzed DDA,Operating,223600.0,0.0079,0.0
+DP00599,R405,Deposit,Commercial CD,Time Deposit,1297400.0,0.0335,2.0
+DP00600,R478,Deposit,Money Market / Sweep,Non-Operating,523400.0,0.0303,0.0
+DP00601,R075,Deposit,Analyzed DDA,Operating,472600.0,0.0003,0.0
+DP00602,R349,Deposit,Analyzed DDA,Operating,139800.0,0.0018,0.0
+DP00603,R281,Deposit,Money Market / Sweep,Non-Operating,1024100.0,0.0354,0.0
+DP00604,R419,Deposit,Analyzed DDA,Operating,1162700.0,0.0086,0.0
+DP00605,R009,Deposit,Analyzed DDA,Operating,1873500.0,0.0079,0.0
+DP00606,R264,Deposit,Commercial CD,Time Deposit,564100.0,0.0371,1.0
+DP00607,R001,Deposit,Money Market / Sweep,Non-Operating,7256700.0,0.0241,0.0
+DP00608,R364,Deposit,Commercial CD,Time Deposit,4444400.0,0.0399,2.0
+DP00609,R114,Deposit,Analyzed DDA,Operating,715200.0,0.0012,0.0
+DP00610,R135,Deposit,Money Market / Sweep,Non-Operating,483500.0,0.0273,0.0
+DP00611,R376,Deposit,Commercial CD,Time Deposit,1241900.0,0.0355,2.0
+DP00612,R212,Deposit,Money Market / Sweep,Non-Operating,439300.0,0.0304,0.0
+DP00613,R187,Deposit,Commercial CD,Time Deposit,1041800.0,0.0379,2.0
+DP00614,R090,Deposit,Money Market / Sweep,Non-Operating,600600.0,0.0302,0.0
+DP00615,R480,Deposit,Analyzed DDA,Operating,3687500.0,0.0022,0.0
+DP00616,R459,Deposit,Analyzed DDA,Operating,310700.0,0.0061,0.0
+DP00617,R332,Deposit,Money Market / Sweep,Non-Operating,941800.0,0.0253,0.0
+DP00618,R016,Deposit,Commercial CD,Time Deposit,3732500.0,0.0358,0.5
+DP00619,R254,Deposit,Money Market / Sweep,Non-Operating,1083100.0,0.0313,0.0
+DP00620,R485,Deposit,Analyzed DDA,Operating,633800.0,0.0024,0.0
+DP00621,R077,Deposit,Money Market / Sweep,Non-Operating,717900.0,0.0228,0.0
+DP00622,R096,Deposit,Money Market / Sweep,Non-Operating,972500.0,0.0315,0.0
+DP00623,R169,Deposit,Analyzed DDA,Operating,471100.0,0.0089,0.0
+DP00624,R410,Deposit,Money Market / Sweep,Non-Operating,620900.0,0.0281,0.0
+DP00625,R393,Deposit,Commercial CD,Time Deposit,518200.0,0.0395,0.5
+DP00626,R025,Deposit,Analyzed DDA,Operating,1218200.0,0.0116,0.0
+DP00627,R076,Deposit,Analyzed DDA,Operating,420000.0,0.0091,0.0
+DP00628,R443,Deposit,Analyzed DDA,Operating,567000.0,0.0121,0.0
+DP00629,R006,Deposit,Analyzed DDA,Operating,5372800.0,0.0084,0.0
+DP00630,R421,Deposit,Money Market / Sweep,Non-Operating,857300.0,0.0255,0.0
+DP00631,R325,Deposit,Commercial CD,Time Deposit,3746700.0,0.035,0.5
+DP00632,R004,Deposit,Money Market / Sweep,Non-Operating,1553000.0,0.0326,0.0
+DP00633,R439,Deposit,Commercial CD,Time Deposit,2927000.0,0.0402,2.0
+DP00634,R004,Deposit,Money Market / Sweep,Non-Operating,3364800.0,0.0332,0.0
+DP00635,R330,Deposit,Analyzed DDA,Operating,2759100.0,0.0021,0.0
+DP00636,R365,Deposit,Analyzed DDA,Operating,2121500.0,0.008,0.0
+DP00637,R392,Deposit,Analyzed DDA,Operating,176200.0,0.0032,0.0
+DP00638,R310,Deposit,Analyzed DDA,Operating,1629200.0,0.0054,0.0
+DP00639,R356,Deposit,Analyzed DDA,Operating,1289000.0,0.0107,0.0
+DP00640,R043,Deposit,Money Market / Sweep,Non-Operating,616800.0,0.0357,0.0
+DP00641,R037,Deposit,Analyzed DDA,Operating,936800.0,0.0118,0.0
+DP00642,R077,Deposit,Analyzed DDA,Operating,172400.0,0.0044,0.0
+DP00643,R476,Deposit,Analyzed DDA,Operating,803500.0,0.0035,0.0
+DP00644,R428,Deposit,Commercial CD,Time Deposit,515500.0,0.0345,0.5
+DP00645,R171,Deposit,Analyzed DDA,Operating,1612800.0,0.0122,0.0
+DP00646,R003,Deposit,Money Market / Sweep,Non-Operating,8051400.0,0.0244,0.0
+DP00647,R026,Deposit,Analyzed DDA,Operating,1821100.0,0.0115,0.0
+DP00648,R145,Deposit,Analyzed DDA,Operating,189400.0,0.0043,0.0
+DP00649,R019,Deposit,Analyzed DDA,Operating,386600.0,0.0036,0.0
+DP00650,R067,Deposit,Analyzed DDA,Operating,446400.0,0.0096,0.0
+DP00651,R029,Deposit,Analyzed DDA,Operating,471400.0,0.0077,0.0
+DP00652,R236,Deposit,Analyzed DDA,Operating,1238000.0,0.0066,0.0
+DP00653,R241,Deposit,Money Market / Sweep,Non-Operating,26300.0,0.0346,0.0
+DP00654,R436,Deposit,Analyzed DDA,Operating,679200.0,0.0058,0.0
+DP00655,R133,Deposit,Analyzed DDA,Operating,1117100.0,0.0104,0.0
+DP00656,R005,Deposit,Analyzed DDA,Operating,2876900.0,0.0019,0.0
+DP00657,R159,Deposit,Commercial CD,Time Deposit,303100.0,0.0399,1.0
+DP00658,R394,Deposit,Analyzed DDA,Operating,289400.0,0.0001,0.0
+DP00659,R102,Deposit,Money Market / Sweep,Non-Operating,1394000.0,0.0348,0.0
+DP00660,R005,Deposit,Money Market / Sweep,Non-Operating,2481700.0,0.0342,0.0
+DP00661,R009,Deposit,Analyzed DDA,Operating,12032700.0,0.0084,0.0
+DP00662,R002,Deposit,Analyzed DDA,Operating,17456000.0,0.0124,0.0
+DP00663,R050,Deposit,Money Market / Sweep,Non-Operating,5416300.0,0.0227,0.0
+DP00664,R143,Deposit,Commercial CD,Time Deposit,468200.0,0.0334,0.5
+DP00665,R184,Deposit,Commercial CD,Time Deposit,894100.0,0.0377,2.0
+DP00666,R400,Deposit,Analyzed DDA,Operating,278400.0,0.011,0.0
+DP00667,R042,Deposit,Analyzed DDA,Operating,10387700.0,0.0002,0.0
+DP00668,R048,Deposit,Analyzed DDA,Operating,391300.0,0.0058,0.0
+DP00669,R244,Deposit,Analyzed DDA,Operating,1386600.0,0.0051,0.0
+DP00670,R165,Deposit,Commercial CD,Time Deposit,783500.0,0.036,0.5
+DP00671,R210,Deposit,Analyzed DDA,Operating,320500.0,0.0023,0.0
+DP00672,R443,Deposit,Analyzed DDA,Operating,375500.0,0.0003,0.0
+DP00673,R487,Deposit,Analyzed DDA,Operating,1579400.0,0.0079,0.0
+DP00674,R089,Deposit,Commercial CD,Time Deposit,499000.0,0.0384,1.0
+DP00675,R414,Deposit,Analyzed DDA,Operating,921700.0,0.004,0.0
+DP00676,R159,Deposit,Analyzed DDA,Operating,215800.0,0.0067,0.0
+DP00677,R417,Deposit,Analyzed DDA,Operating,666100.0,0.0075,0.0
+DP00678,R493,Deposit,Analyzed DDA,Operating,288600.0,0.0044,0.0
+DP00679,R371,Deposit,Analyzed DDA,Operating,875900.0,0.0053,0.0
+DP00680,R103,Deposit,Commercial CD,Time Deposit,18475100.0,0.0397,2.0
+DP00681,R357,Deposit,Money Market / Sweep,Non-Operating,812000.0,0.0275,0.0
+DP00682,R189,Deposit,Money Market / Sweep,Non-Operating,2938100.0,0.0323,0.0
+DP00683,R404,Deposit,Analyzed DDA,Operating,236700.0,0.0081,0.0
+DP00684,R239,Deposit,Analyzed DDA,Operating,2875600.0,0.0053,0.0
+DP00685,R008,Deposit,Money Market / Sweep,Non-Operating,14147800.0,0.0332,0.0
+DP00686,R313,Deposit,Analyzed DDA,Operating,1922200.0,0.0088,0.0
+DP00687,R024,Deposit,Money Market / Sweep,Non-Operating,1738400.0,0.0303,0.0
+DP00688,R412,Deposit,Money Market / Sweep,Non-Operating,491800.0,0.034,0.0
+DP00689,R108,Deposit,Analyzed DDA,Operating,1177700.0,0.0117,0.0
+DP00690,R235,Deposit,Analyzed DDA,Operating,174800.0,0.0112,0.0
+DP00691,R324,Deposit,Commercial CD,Time Deposit,2412800.0,0.0398,0.5
+DP00692,R401,Deposit,Commercial CD,Time Deposit,186700.0,0.0393,1.0
+DP00693,R397,Deposit,Analyzed DDA,Operating,5085600.0,0.0078,0.0
+DP00694,R203,Deposit,Analyzed DDA,Operating,1373300.0,0.0045,0.0
+DP00695,R328,Deposit,Money Market / Sweep,Non-Operating,4093800.0,0.033,0.0
+DP00696,R327,Deposit,Money Market / Sweep,Non-Operating,11448500.0,0.0227,0.0
+DP00697,R457,Deposit,Analyzed DDA,Operating,4156500.0,0.0093,0.0
+DP00698,R152,Deposit,Commercial CD,Time Deposit,128400.0,0.0359,0.5
+DP00699,R033,Deposit,Commercial CD,Time Deposit,872400.0,0.0369,0.5
+DP00700,R108,Deposit,Analyzed DDA,Operating,73100.0,0.0049,0.0
+DP00701,R017,Deposit,Analyzed DDA,Operating,1324600.0,0.0047,0.0
+DP00702,R049,Deposit,Analyzed DDA,Operating,317000.0,0.0053,0.0
+DP00703,R015,Deposit,Commercial CD,Time Deposit,915300.0,0.0364,2.0
+DP00704,R448,Deposit,Money Market / Sweep,Non-Operating,637200.0,0.0307,0.0
+DP00705,R293,Deposit,Commercial CD,Time Deposit,218900.0,0.0382,0.5
+DP00706,R188,Deposit,Money Market / Sweep,Non-Operating,798400.0,0.032,0.0
+DP00707,R071,Deposit,Money Market / Sweep,Non-Operating,1565900.0,0.025,0.0
+DP00708,R251,Deposit,Analyzed DDA,Operating,484900.0,0.0039,0.0
+DP00709,R315,Deposit,Analyzed DDA,Operating,14810300.0,0.0082,0.0
+DP00710,R008,Deposit,Commercial CD,Time Deposit,2859500.0,0.0385,1.0
+DP00711,R300,Deposit,Analyzed DDA,Operating,954500.0,0.0063,0.0
+DP00712,R314,Deposit,Commercial CD,Time Deposit,680400.0,0.0368,1.0
+DP00713,R325,Deposit,Analyzed DDA,Operating,1030000.0,0.0025,0.0
+DP00714,R100,Deposit,Money Market / Sweep,Non-Operating,1795100.0,0.0264,0.0
+DP00715,R429,Deposit,Money Market / Sweep,Non-Operating,595700.0,0.0277,0.0
+DP00716,R113,Deposit,Analyzed DDA,Operating,60700.0,0.0124,0.0
+DP00717,R189,Deposit,Analyzed DDA,Operating,426400.0,0.0027,0.0
+DP00718,R170,Deposit,Commercial CD,Time Deposit,374100.0,0.0384,1.0
+DP00719,R336,Deposit,Analyzed DDA,Operating,1400000.0,0.0051,0.0
+DP00720,R084,Deposit,Analyzed DDA,Operating,138600.0,0.0062,0.0
+DP00721,R038,Deposit,Money Market / Sweep,Non-Operating,2449700.0,0.0237,0.0
+DP00722,R318,Deposit,Money Market / Sweep,Non-Operating,723500.0,0.0255,0.0
+DP00723,R008,Deposit,Money Market / Sweep,Non-Operating,5566300.0,0.0323,0.0
+DP00724,R004,Deposit,Analyzed DDA,Operating,11450200.0,0.0047,0.0
+DP00725,R010,Deposit,Analyzed DDA,Operating,3937200.0,0.0093,0.0
+DP00726,R473,Deposit,Analyzed DDA,Operating,509600.0,0.0088,0.0
+DP00727,R156,Deposit,Commercial CD,Time Deposit,758800.0,0.0374,2.0
+DP00728,R002,Deposit,Commercial CD,Time Deposit,3639900.0,0.0406,1.0
+DP00729,R015,Deposit,Money Market / Sweep,Non-Operating,125000.0,0.0308,0.0
+DP00730,R001,Deposit,Analyzed DDA,Operating,2673700.0,0.0024,0.0
+DP00731,R306,Deposit,Commercial CD,Time Deposit,373300.0,0.0342,1.0
+DP00732,R048,Deposit,Analyzed DDA,Operating,275600.0,0.0025,0.0
+DP00733,R433,Deposit,Analyzed DDA,Operating,1057400.0,0.0117,0.0
+DP00734,R423,Deposit,Analyzed DDA,Operating,578800.0,0.0063,0.0
+DP00735,R415,Deposit,Money Market / Sweep,Non-Operating,367800.0,0.033,0.0
+DP00736,R001,Deposit,Analyzed DDA,Operating,9467900.0,0.0038,0.0
+DP00737,R344,Deposit,Analyzed DDA,Operating,3462000.0,0.0056,0.0
+DP00738,R109,Deposit,Money Market / Sweep,Non-Operating,44800.0,0.027,0.0
+DP00739,R228,Deposit,Money Market / Sweep,Non-Operating,346200.0,0.028,0.0
+DP00740,R496,Deposit,Analyzed DDA,Operating,131000.0,0.0071,0.0
+DP00741,R460,Deposit,Analyzed DDA,Operating,1103500.0,0.0012,0.0
+DP00742,R006,Deposit,Money Market / Sweep,Non-Operating,2880400.0,0.0254,0.0
+DP00743,R044,Deposit,Analyzed DDA,Operating,1687500.0,0.0037,0.0
+DP00744,R306,Deposit,Analyzed DDA,Operating,1123200.0,0.0059,0.0
+DP00745,R436,Deposit,Commercial CD,Time Deposit,1390300.0,0.0403,2.0
+DP00746,R019,Deposit,Money Market / Sweep,Non-Operating,794000.0,0.0319,0.0
+DP00747,R418,Deposit,Analyzed DDA,Operating,481600.0,0.0012,0.0
+DP00748,R004,Deposit,Money Market / Sweep,Non-Operating,2459700.0,0.0323,0.0
+DP00749,R063,Deposit,Money Market / Sweep,Non-Operating,110400.0,0.028,0.0
+DP00750,R379,Deposit,Analyzed DDA,Operating,1260500.0,0.0085,0.0
+DP00751,R360,Deposit,Money Market / Sweep,Non-Operating,739500.0,0.0326,0.0
+DP00752,R002,Deposit,Money Market / Sweep,Non-Operating,17164700.0,0.0321,0.0
+DP00753,R170,Deposit,Analyzed DDA,Operating,140400.0,0.0079,0.0
+DP00754,R227,Deposit,Analyzed DDA,Operating,288700.0,0.0045,0.0
+DP00755,R421,Deposit,Analyzed DDA,Operating,189700.0,0.0122,0.0
+DP00756,R344,Deposit,Money Market / Sweep,Non-Operating,2162200.0,0.033,0.0
+DP00757,R417,Deposit,Money Market / Sweep,Non-Operating,1141800.0,0.0238,0.0
+DP00758,R463,Deposit,Money Market / Sweep,Non-Operating,644000.0,0.0258,0.0
+DP00759,R002,Deposit,Analyzed DDA,Operating,4653200.0,0.0061,0.0
+DP00760,R078,Deposit,Money Market / Sweep,Non-Operating,1136800.0,0.0281,0.0
+DP00761,R328,Deposit,Money Market / Sweep,Non-Operating,916500.0,0.0348,0.0
+DP00762,R024,Deposit,Analyzed DDA,Operating,1391100.0,0.0105,0.0
+DP00763,R430,Deposit,Commercial CD,Time Deposit,3520800.0,0.0344,2.0
+DP00764,R282,Deposit,Analyzed DDA,Operating,167100.0,0.0122,0.0
+DP00765,R161,Deposit,Analyzed DDA,Operating,375200.0,0.005,0.0
+DP00766,R009,Deposit,Money Market / Sweep,Non-Operating,1004100.0,0.0315,0.0
+DP00767,R220,Deposit,Money Market / Sweep,Non-Operating,184200.0,0.0298,0.0
+DP00768,R175,Deposit,Analyzed DDA,Operating,716200.0,0.0053,0.0
+DP00769,R115,Deposit,Analyzed DDA,Operating,89600.0,0.0115,0.0
+DP00770,R149,Deposit,Money Market / Sweep,Non-Operating,221800.0,0.0281,0.0
+DP00771,R168,Deposit,Analyzed DDA,Operating,4161600.0,0.0067,0.0
+DP00772,R203,Deposit,Money Market / Sweep,Non-Operating,604800.0,0.0236,0.0
+DP00773,R008,Deposit,Money Market / Sweep,Non-Operating,8687900.0,0.0331,0.0
+DP00774,R010,Deposit,Analyzed DDA,Operating,1105600.0,0.0076,0.0
+DP00775,R153,Deposit,Money Market / Sweep,Non-Operating,517600.0,0.0259,0.0
+DP00776,R112,Deposit,Analyzed DDA,Operating,3191200.0,0.0017,0.0
+DP00777,R302,Deposit,Money Market / Sweep,Non-Operating,249500.0,0.0353,0.0
+DP00778,R122,Deposit,Analyzed DDA,Operating,296900.0,0.0009,0.0
+DP00779,R037,Deposit,Analyzed DDA,Operating,2596000.0,0.0017,0.0
+DP00780,R358,Deposit,Analyzed DDA,Operating,196700.0,0.0047,0.0
+DP00781,R398,Deposit,Analyzed DDA,Operating,991000.0,0.005,0.0
+DP00782,R252,Deposit,Money Market / Sweep,Non-Operating,80200.0,0.0348,0.0
+DP00783,R090,Deposit,Analyzed DDA,Operating,128300.0,0.001,0.0
+DP00784,R115,Deposit,Analyzed DDA,Operating,662400.0,0.0112,0.0
+DP00785,R027,Deposit,Commercial CD,Time Deposit,181600.0,0.0389,1.0
+DP00786,R100,Deposit,Analyzed DDA,Operating,274700.0,0.0121,0.0
+DP00787,R321,Deposit,Analyzed DDA,Operating,1162200.0,0.011,0.0
+DP00788,R410,Deposit,Analyzed DDA,Operating,902900.0,0.0062,0.0
+DP00789,R500,Deposit,Money Market / Sweep,Non-Operating,425300.0,0.0243,0.0
+DP00790,R004,Deposit,Analyzed DDA,Operating,6777800.0,0.0032,0.0
+DP00791,R283,Deposit,Analyzed DDA,Operating,358200.0,0.0124,0.0
+DP00792,R083,Deposit,Money Market / Sweep,Non-Operating,2202000.0,0.0347,0.0
+DP00793,R382,Deposit,Analyzed DDA,Operating,1422100.0,0.0105,0.0
+DP00794,R412,Deposit,Commercial CD,Time Deposit,107500.0,0.0336,1.0
+DP00795,R099,Deposit,Analyzed DDA,Operating,237100.0,0.0028,0.0
+DP00796,R257,Deposit,Analyzed DDA,Operating,43400.0,0.0116,0.0
+DP00797,R489,Deposit,Money Market / Sweep,Non-Operating,582100.0,0.0312,0.0
+DP00798,R410,Deposit,Analyzed DDA,Operating,719300.0,0.0057,0.0
+DP00799,R004,Deposit,Analyzed DDA,Operating,1992700.0,0.0119,0.0
+DP00800,R080,Deposit,Analyzed DDA,Operating,1292500.0,0.0074,0.0
+DP00801,R010,Deposit,Analyzed DDA,Operating,1521800.0,0.0049,0.0
+DP00802,R137,Deposit,Commercial CD,Time Deposit,1699000.0,0.0353,1.0
+DP00803,R184,Deposit,Commercial CD,Time Deposit,401000.0,0.0351,0.5
+DP00804,R454,Deposit,Analyzed DDA,Operating,1063200.0,0.0097,0.0
+DP00805,R168,Deposit,Analyzed DDA,Operating,396100.0,0.0026,0.0
+DP00806,R366,Deposit,Commercial CD,Time Deposit,1835100.0,0.0363,1.0
+DP00807,R380,Deposit,Money Market / Sweep,Non-Operating,4097900.0,0.0319,0.0
+DP00808,R280,Deposit,Money Market / Sweep,Non-Operating,60700.0,0.0247,0.0
+DP00809,R091,Deposit,Money Market / Sweep,Non-Operating,930200.0,0.0227,0.0
+DP00810,R003,Deposit,Analyzed DDA,Operating,20603800.0,0.0106,0.0
+DP00811,R292,Deposit,Analyzed DDA,Operating,550300.0,0.0003,0.0
+DP00812,R129,Deposit,Commercial CD,Time Deposit,246300.0,0.035,2.0
+DP00813,R372,Deposit,Analyzed DDA,Operating,1396800.0,0.0004,0.0
+DP00814,R218,Deposit,Money Market / Sweep,Non-Operating,840900.0,0.0331,0.0
+DP00815,R179,Deposit,Commercial CD,Time Deposit,3448600.0,0.0405,1.0
+DP00816,R466,Deposit,Analyzed DDA,Operating,1114800.0,0.0031,0.0
+DP00817,R281,Deposit,Commercial CD,Time Deposit,1190200.0,0.0349,2.0
+DP00818,R496,Deposit,Analyzed DDA,Operating,12519900.0,0.0012,0.0
+DP00819,R287,Deposit,Commercial CD,Time Deposit,1855600.0,0.0364,2.0
+DP00820,R003,Deposit,Analyzed DDA,Operating,3569900.0,0.006,0.0
+DP00821,R130,Deposit,Analyzed DDA,Operating,1488300.0,0.0092,0.0
+DP00822,R397,Deposit,Money Market / Sweep,Non-Operating,15364500.0,0.033,0.0
+DP00823,R151,Deposit,Commercial CD,Time Deposit,230900.0,0.0374,0.5
+DP00824,R154,Deposit,Money Market / Sweep,Non-Operating,407400.0,0.0331,0.0
+DP00825,R002,Deposit,Money Market / Sweep,Non-Operating,1463800.0,0.0302,0.0
+DP00826,R074,Deposit,Commercial CD,Time Deposit,78500.0,0.0376,0.5
+DP00827,R163,Deposit,Money Market / Sweep,Non-Operating,602000.0,0.0334,0.0
+DP00828,R387,Deposit,Commercial CD,Time Deposit,204600.0,0.0353,1.0
+DP00829,R437,Deposit,Analyzed DDA,Operating,258900.0,0.0073,0.0
+DP00830,R360,Deposit,Analyzed DDA,Operating,892200.0,0.0056,0.0
+DP00831,R104,Deposit,Analyzed DDA,Operating,478000.0,0.0071,0.0
+DP00832,R100,Deposit,Commercial CD,Time Deposit,1329300.0,0.0355,2.0
+DP00833,R010,Deposit,Analyzed DDA,Operating,4687500.0,0.0102,0.0
+DP00834,R085,Deposit,Analyzed DDA,Operating,578500.0,0.0094,0.0
+DP00835,R465,Deposit,Analyzed DDA,Operating,361400.0,0.0023,0.0
+DP00836,R219,Deposit,Analyzed DDA,Operating,3389300.0,0.0111,0.0
+DP00837,R267,Deposit,Money Market / Sweep,Non-Operating,316700.0,0.0271,0.0
+DP00838,R189,Deposit,Analyzed DDA,Operating,1209700.0,0.0058,0.0
+DP00839,R318,Deposit,Commercial CD,Time Deposit,148300.0,0.0387,1.0
+DP00840,R366,Deposit,Commercial CD,Time Deposit,1137500.0,0.0407,0.5
+DP00841,R006,Deposit,Money Market / Sweep,Non-Operating,30009000.0,0.0242,0.0
+DP00842,R466,Deposit,Analyzed DDA,Operating,959500.0,0.0033,0.0
+DP00843,R261,Deposit,Commercial CD,Time Deposit,119300.0,0.036,2.0
+DP00844,R010,Deposit,Analyzed DDA,Operating,1436300.0,0.0117,0.0
+DP00845,R190,Deposit,Analyzed DDA,Operating,2400800.0,0.0101,0.0
+DP00846,R459,Deposit,Analyzed DDA,Operating,1585100.0,0.0021,0.0
+DP00847,R413,Deposit,Analyzed DDA,Operating,367300.0,0.0074,0.0
+DP00848,R004,Deposit,Money Market / Sweep,Non-Operating,1849500.0,0.0283,0.0
+DP00849,R395,Deposit,Analyzed DDA,Operating,352100.0,0.001,0.0
+DP00850,R112,Deposit,Money Market / Sweep,Non-Operating,1988800.0,0.0307,0.0
+DP00851,R101,Deposit,Money Market / Sweep,Non-Operating,720500.0,0.0328,0.0
+DP00852,R226,Deposit,Analyzed DDA,Operating,264900.0,0.0011,0.0
+DP00853,R166,Deposit,Analyzed DDA,Operating,880900.0,0.0034,0.0
+DP00854,R002,Deposit,Money Market / Sweep,Non-Operating,1425100.0,0.0324,0.0
+DP00855,R010,Deposit,Analyzed DDA,Operating,1582400.0,0.0072,0.0
+DP00856,R398,Deposit,Analyzed DDA,Operating,486700.0,0.0095,0.0
+DP00857,R246,Deposit,Money Market / Sweep,Non-Operating,1497300.0,0.0349,0.0
+DP00858,R035,Deposit,Analyzed DDA,Operating,215300.0,0.0098,0.0
+DP00859,R010,Deposit,Analyzed DDA,Operating,6469500.0,0.0022,0.0
+DP00860,R004,Deposit,Analyzed DDA,Operating,5016500.0,0.0045,0.0
+DP00861,R434,Deposit,Money Market / Sweep,Non-Operating,67200.0,0.0255,0.0
+DP00862,R031,Deposit,Analyzed DDA,Operating,3167000.0,0.0057,0.0
+DP00863,R001,Deposit,Money Market / Sweep,Non-Operating,2280400.0,0.0349,0.0
+DP00864,R004,Deposit,Analyzed DDA,Operating,9024900.0,0.0092,0.0
+DP00865,R252,Deposit,Analyzed DDA,Operating,3870400.0,0.0026,0.0
+DP00866,R021,Deposit,Commercial CD,Time Deposit,452300.0,0.0372,1.0
+DP00867,R472,Deposit,Money Market / Sweep,Non-Operating,761400.0,0.0334,0.0
+DP00868,R195,Deposit,Commercial CD,Time Deposit,1920300.0,0.0341,0.5
+DP00869,R008,Deposit,Analyzed DDA,Operating,1741600.0,0.0115,0.0
+DP00870,R125,Deposit,Analyzed DDA,Operating,3209500.0,0.0095,0.0
+DP00871,R483,Deposit,Money Market / Sweep,Non-Operating,304300.0,0.0266,0.0
+DP00872,R004,Deposit,Commercial CD,Time Deposit,2153300.0,0.0372,2.0
+DP00873,R406,Deposit,Money Market / Sweep,Non-Operating,5152900.0,0.0266,0.0
+DP00874,R051,Deposit,Money Market / Sweep,Non-Operating,695400.0,0.0282,0.0
+DP00875,R009,Deposit,Money Market / Sweep,Non-Operating,20407300.0,0.0316,0.0
+DP00876,R230,Deposit,Analyzed DDA,Operating,471200.0,0.0102,0.0
+DP00877,R360,Deposit,Money Market / Sweep,Non-Operating,438800.0,0.0316,0.0
+DP00878,R004,Deposit,Money Market / Sweep,Non-Operating,216300.0,0.0235,0.0
+DP00879,R008,Deposit,Analyzed DDA,Operating,11085500.0,0.0047,0.0
+DP00880,R355,Deposit,Analyzed DDA,Operating,711000.0,0.0044,0.0
+DP00881,R319,Deposit,Analyzed DDA,Operating,432500.0,0.003,0.0
+DP00882,R315,Deposit,Analyzed DDA,Operating,2622600.0,0.0013,0.0
+DP00883,R193,Deposit,Analyzed DDA,Operating,1507700.0,0.006,0.0
+DP00884,R420,Deposit,Analyzed DDA,Operating,188300.0,0.0062,0.0
+DP00885,R028,Deposit,Money Market / Sweep,Non-Operating,2085300.0,0.032,0.0
+DP00886,R074,Deposit,Analyzed DDA,Operating,399700.0,0.0075,0.0
+DP00887,R200,Deposit,Analyzed DDA,Operating,3044500.0,0.0045,0.0
+DP00888,R294,Deposit,Money Market / Sweep,Non-Operating,1096400.0,0.0297,0.0
+DP00889,R010,Deposit,Analyzed DDA,Operating,2522500.0,0.0064,0.0
+DP00890,R002,Deposit,Analyzed DDA,Operating,2339000.0,0.0039,0.0
+DP00891,R405,Deposit,Commercial CD,Time Deposit,199800.0,0.039,0.5
+DP00892,R097,Deposit,Money Market / Sweep,Non-Operating,286800.0,0.035,0.0
+DP00893,R008,Deposit,Money Market / Sweep,Non-Operating,6207900.0,0.0346,0.0
+DP00894,R369,Deposit,Money Market / Sweep,Non-Operating,685600.0,0.0279,0.0
+DP00895,R439,Deposit,Analyzed DDA,Operating,447900.0,0.0003,0.0
+DP00896,R391,Deposit,Analyzed DDA,Operating,3195300.0,0.0096,0.0
+DP00897,R320,Deposit,Analyzed DDA,Operating,1263800.0,0.0121,0.0
+DP00898,R205,Deposit,Analyzed DDA,Operating,1042600.0,0.0016,0.0
+DP00899,R067,Deposit,Commercial CD,Time Deposit,388000.0,0.0384,0.5
+DP00900,R008,Deposit,Money Market / Sweep,Non-Operating,2275400.0,0.0289,0.0
+DP00901,R078,Deposit,Money Market / Sweep,Non-Operating,84600.0,0.0257,0.0
+DP00902,R419,Deposit,Money Market / Sweep,Non-Operating,156300.0,0.0231,0.0
+DP00903,R481,Deposit,Money Market / Sweep,Non-Operating,606300.0,0.0288,0.0
+DP00904,R486,Deposit,Analyzed DDA,Operating,640600.0,0.0115,0.0
+DP00905,R181,Deposit,Commercial CD,Time Deposit,433700.0,0.0335,0.5
+DP00906,R335,Deposit,Money Market / Sweep,Non-Operating,173500.0,0.0311,0.0
+DP00907,R002,Deposit,Money Market / Sweep,Non-Operating,249900.0,0.0297,0.0
+DP00908,R153,Deposit,Analyzed DDA,Operating,768200.0,0.0012,0.0
+DP00909,R289,Deposit,Analyzed DDA,Operating,1163100.0,0.0117,0.0
+DP00910,R183,Deposit,Analyzed DDA,Operating,3807500.0,0.012,0.0
+DP00911,R342,Deposit,Analyzed DDA,Operating,184300.0,0.0092,0.0
+DP00912,R221,Deposit,Money Market / Sweep,Non-Operating,4051500.0,0.0288,0.0
+DP00913,R080,Deposit,Commercial CD,Time Deposit,2555600.0,0.0377,1.0
+DP00914,R450,Deposit,Money Market / Sweep,Non-Operating,847800.0,0.024,0.0
+DP00915,R092,Deposit,Analyzed DDA,Operating,263000.0,0.0019,0.0
+DP00916,R470,Deposit,Analyzed DDA,Operating,423600.0,0.0037,0.0
+DP00917,R159,Deposit,Analyzed DDA,Operating,3019800.0,0.0013,0.0
+DP00918,R225,Deposit,Analyzed DDA,Operating,2588300.0,0.0046,0.0
+DP00919,R269,Deposit,Analyzed DDA,Operating,1382600.0,0.0093,0.0
+DP00920,R264,Deposit,Analyzed DDA,Operating,585900.0,0.0111,0.0
+DP00921,R456,Deposit,Analyzed DDA,Operating,53900.0,0.0046,0.0
+DP00922,R090,Deposit,Analyzed DDA,Operating,4836700.0,0.0077,0.0
+DP00923,R395,Deposit,Analyzed DDA,Operating,1019500.0,0.0074,0.0
+DP00924,R020,Deposit,Commercial CD,Time Deposit,683000.0,0.0369,0.5
+DP00925,R061,Deposit,Commercial CD,Time Deposit,264800.0,0.0383,1.0
+DP00926,R442,Deposit,Money Market / Sweep,Non-Operating,516900.0,0.0265,0.0
+DP00927,R003,Deposit,Analyzed DDA,Operating,17456000.0,0.0009,0.0
+DP00928,R325,Deposit,Analyzed DDA,Operating,2083900.0,0.0044,0.0
+DP00929,R132,Deposit,Money Market / Sweep,Non-Operating,6721600.0,0.0317,0.0
+DP00930,R339,Deposit,Money Market / Sweep,Non-Operating,1088900.0,0.0354,0.0
+DP00931,R331,Deposit,Money Market / Sweep,Non-Operating,193000.0,0.0303,0.0
+DP00932,R406,Deposit,Money Market / Sweep,Non-Operating,320700.0,0.0228,0.0
+DP00933,R009,Deposit,Analyzed DDA,Operating,1982000.0,0.0079,0.0
+DP00934,R013,Deposit,Commercial CD,Time Deposit,1140400.0,0.0383,2.0
+DP00935,R293,Deposit,Money Market / Sweep,Non-Operating,1533000.0,0.023,0.0
+DP00936,R084,Deposit,Analyzed DDA,Operating,2691100.0,0.0001,0.0
+DP00937,R465,Deposit,Analyzed DDA,Operating,346900.0,0.0002,0.0
+DP00938,R003,Deposit,Money Market / Sweep,Non-Operating,6436200.0,0.0279,0.0
+DP00939,R433,Deposit,Analyzed DDA,Operating,5221000.0,0.0093,0.0
+DP00940,R496,Deposit,Analyzed DDA,Operating,6835400.0,0.0086,0.0
+DP00941,R051,Deposit,Money Market / Sweep,Non-Operating,141300.0,0.0349,0.0
+DP00942,R324,Deposit,Money Market / Sweep,Non-Operating,899200.0,0.0266,0.0
+DP00943,R463,Deposit,Commercial CD,Time Deposit,146700.0,0.0344,1.0
+DP00944,R133,Deposit,Analyzed DDA,Operating,265000.0,0.0099,0.0
+DP00945,R008,Deposit,Commercial CD,Time Deposit,1091000.0,0.0366,1.0
+DP00946,R389,Deposit,Analyzed DDA,Operating,259900.0,0.0023,0.0
+DP00947,R399,Deposit,Commercial CD,Time Deposit,340500.0,0.0373,1.0
+DP00948,R004,Deposit,Analyzed DDA,Operating,1236100.0,0.0012,0.0
+DP00949,R109,Deposit,Analyzed DDA,Operating,195800.0,0.0082,0.0
+DP00950,R093,Deposit,Commercial CD,Time Deposit,654900.0,0.037,1.0
+DP00951,R004,Deposit,Analyzed DDA,Operating,4169600.0,0.0105,0.0
+DP00952,R192,Deposit,Money Market / Sweep,Non-Operating,280300.0,0.0316,0.0
+DP00953,R235,Deposit,Analyzed DDA,Operating,7501200.0,0.0025,0.0
+DP00954,R215,Deposit,Analyzed DDA,Operating,890300.0,0.012,0.0
+DP00955,R383,Deposit,Money Market / Sweep,Non-Operating,128000.0,0.0301,0.0
+DP00956,R311,Deposit,Analyzed DDA,Operating,866100.0,0.0039,0.0
+DP00957,R375,Deposit,Money Market / Sweep,Non-Operating,1444400.0,0.0353,0.0
+DP00958,R416,Deposit,Analyzed DDA,Operating,214600.0,0.011,0.0
+DP00959,R047,Deposit,Money Market / Sweep,Non-Operating,714800.0,0.0299,0.0
+DP00960,R004,Deposit,Money Market / Sweep,Non-Operating,2057500.0,0.027,0.0
+DP00961,R004,Deposit,Analyzed DDA,Operating,2998900.0,0.0116,0.0
+DP00962,R436,Deposit,Analyzed DDA,Operating,6283300.0,0.0093,0.0
+DP00963,R007,Deposit,Money Market / Sweep,Non-Operating,4560700.0,0.0258,0.0
+DP00964,R008,Deposit,Analyzed DDA,Operating,7448800.0,0.0119,0.0
+DP00965,R006,Deposit,Money Market / Sweep,Non-Operating,2391200.0,0.0323,0.0
+DP00966,R254,Deposit,Commercial CD,Time Deposit,563800.0,0.0355,2.0
+DP00967,R008,Deposit,Analyzed DDA,Operating,1864700.0,0.0062,0.0
+DP00968,R162,Deposit,Analyzed DDA,Operating,214100.0,0.0112,0.0
+DP00969,R269,Deposit,Commercial CD,Time Deposit,960700.0,0.0355,2.0
+DP00970,R001,Deposit,Commercial CD,Time Deposit,2012600.0,0.037,2.0
+DP00971,R001,Deposit,Analyzed DDA,Operating,11381200.0,0.0107,0.0
+DP00972,R259,Deposit,Money Market / Sweep,Non-Operating,863100.0,0.0254,0.0
+DP00973,R056,Deposit,Analyzed DDA,Operating,146600.0,0.0021,0.0
+DP00974,R107,Deposit,Money Market / Sweep,Non-Operating,2712400.0,0.034,0.0
+DP00975,R051,Deposit,Analyzed DDA,Operating,918300.0,0.0104,0.0
+DP00976,R170,Deposit,Analyzed DDA,Operating,1519300.0,0.0026,0.0
+DP00977,R145,Deposit,Analyzed DDA,Operating,1223000.0,0.0018,0.0
+DP00978,R004,Deposit,Analyzed DDA,Operating,904700.0,0.0113,0.0
+DP00979,R080,Deposit,Analyzed DDA,Operating,386100.0,0.0101,0.0
+DP00980,R140,Deposit,Analyzed DDA,Operating,8000700.0,0.005,0.0
+DP00981,R286,Deposit,Commercial CD,Time Deposit,95000.0,0.0332,1.0
+DP00982,R485,Deposit,Analyzed DDA,Operating,114000.0,0.0054,0.0
+DP00983,R427,Deposit,Money Market / Sweep,Non-Operating,313700.0,0.0324,0.0
+DP00984,R355,Deposit,Analyzed DDA,Operating,121100.0,0.0123,0.0
+DP00985,R136,Deposit,Commercial CD,Time Deposit,824300.0,0.0342,2.0
+DP00986,R482,Deposit,Analyzed DDA,Operating,890900.0,0.008,0.0
+DP00987,R426,Deposit,Analyzed DDA,Operating,2194500.0,0.0051,0.0
+DP00988,R206,Deposit,Money Market / Sweep,Non-Operating,785200.0,0.0259,0.0
+DP00989,R318,Deposit,Analyzed DDA,Operating,645600.0,0.0036,0.0
+DP00990,R128,Deposit,Analyzed DDA,Operating,2878400.0,0.0054,0.0
+DP00991,R309,Deposit,Analyzed DDA,Operating,115300.0,0.0078,0.0
+DP00992,R390,Deposit,Analyzed DDA,Operating,1477500.0,0.0102,0.0
+DP00993,R040,Deposit,Analyzed DDA,Operating,1085100.0,0.01,0.0
+DP00994,R401,Deposit,Money Market / Sweep,Non-Operating,435400.0,0.0327,0.0
+DP00995,R459,Deposit,Analyzed DDA,Operating,1713700.0,0.0067,0.0
+DP00996,R437,Deposit,Analyzed DDA,Operating,691000.0,0.0047,0.0
+DP00997,R065,Deposit,Analyzed DDA,Operating,182200.0,0.0076,0.0
+DP00998,R215,Deposit,Analyzed DDA,Operating,283700.0,0.011,0.0
+DP00999,R004,Deposit,Analyzed DDA,Operating,9978600.0,0.0097,0.0
+DP01000,R499,Deposit,Analyzed DDA,Operating,139300.0,0.0041,0.0
+DP01001,R258,Deposit,Analyzed DDA,Operating,162100.0,0.0092,0.0
+DP01002,R201,Deposit,Commercial CD,Time Deposit,866500.0,0.0374,0.5
+DP01003,R310,Deposit,Analyzed DDA,Operating,642900.0,0.0016,0.0
+DP01004,R001,Deposit,Analyzed DDA,Operating,2446300.0,0.0028,0.0
+DP01005,R114,Deposit,Money Market / Sweep,Non-Operating,234500.0,0.032,0.0
+DP01006,R325,Deposit,Analyzed DDA,Operating,3762300.0,0.0064,0.0
+DP01007,R162,Deposit,Analyzed DDA,Operating,346600.0,0.005,0.0
+DP01008,R151,Deposit,Commercial CD,Time Deposit,217700.0,0.0357,1.0
+DP01009,R079,Deposit,Money Market / Sweep,Non-Operating,717700.0,0.0342,0.0
+DP01010,R001,Deposit,Analyzed DDA,Operating,4273800.0,0.0065,0.0
+DP01011,R293,Deposit,Analyzed DDA,Operating,497800.0,0.0034,0.0
+DP01012,R008,Deposit,Money Market / Sweep,Non-Operating,6279900.0,0.0342,0.0
+DP01013,R403,Deposit,Analyzed DDA,Operating,421600.0,0.0064,0.0
+DP01014,R322,Deposit,Commercial CD,Time Deposit,3377000.0,0.0336,0.5
+DP01015,R002,Deposit,Analyzed DDA,Operating,966100.0,0.0049,0.0
+DP01016,R309,Deposit,Analyzed DDA,Operating,1673600.0,0.0095,0.0
+DP01017,R006,Deposit,Analyzed DDA,Operating,1617300.0,0.0035,0.0
+DP01018,R154,Deposit,Money Market / Sweep,Non-Operating,94100.0,0.0336,0.0
+DP01019,R358,Deposit,Money Market / Sweep,Non-Operating,219900.0,0.034,0.0
+DP01020,R179,Deposit,Money Market / Sweep,Non-Operating,341000.0,0.0312,0.0
+DP01021,R345,Deposit,Analyzed DDA,Operating,231900.0,0.0024,0.0
+DP01022,R319,Deposit,Money Market / Sweep,Non-Operating,184200.0,0.0351,0.0
+DP01023,R490,Deposit,Commercial CD,Time Deposit,3986200.0,0.039,0.5
+DP01024,R001,Deposit,Analyzed DDA,Operating,1687600.0,0.0125,0.0
+DP01025,R204,Deposit,Analyzed DDA,Operating,50600.0,0.0029,0.0
+DP01026,R251,Deposit,Analyzed DDA,Operating,340700.0,0.0089,0.0
+DP01027,R432,Deposit,Money Market / Sweep,Non-Operating,11219600.0,0.0353,0.0
+DP01028,R343,Deposit,Analyzed DDA,Operating,166900.0,0.001,0.0
+DP01029,R075,Deposit,Analyzed DDA,Operating,196700.0,0.0003,0.0
+DP01030,R100,Deposit,Money Market / Sweep,Non-Operating,323000.0,0.031,0.0
+DP01031,R475,Deposit,Money Market / Sweep,Non-Operating,2265700.0,0.0255,0.0
+DP01032,R424,Deposit,Analyzed DDA,Operating,337600.0,0.0073,0.0
+DP01033,R389,Deposit,Money Market / Sweep,Non-Operating,173800.0,0.0309,0.0
+DP01034,R003,Deposit,Money Market / Sweep,Non-Operating,5795000.0,0.023,0.0
+DP01035,R311,Deposit,Analyzed DDA,Operating,645500.0,0.0012,0.0
+DP01036,R159,Deposit,Analyzed DDA,Operating,786900.0,0.0085,0.0
+DP01037,R089,Deposit,Analyzed DDA,Operating,167200.0,0.0098,0.0
+DP01038,R122,Deposit,Money Market / Sweep,Non-Operating,275000.0,0.0317,0.0
+DP01039,R010,Deposit,Money Market / Sweep,Non-Operating,12423600.0,0.0352,0.0
+DP01040,R264,Deposit,Money Market / Sweep,Non-Operating,728100.0,0.0225,0.0
+DP01041,R414,Deposit,Analyzed DDA,Operating,3257500.0,0.0056,0.0
+DP01042,R257,Deposit,Analyzed DDA,Operating,458200.0,0.0101,0.0
+DP01043,R055,Deposit,Analyzed DDA,Operating,1391000.0,0.0086,0.0
+DP01044,R004,Deposit,Analyzed DDA,Operating,5403700.0,0.0063,0.0
+DP01045,R004,Deposit,Money Market / Sweep,Non-Operating,2387800.0,0.0264,0.0
+DP01046,R304,Deposit,Commercial CD,Time Deposit,1019300.0,0.0373,2.0
+DP01047,R003,Deposit,Analyzed DDA,Operating,1680100.0,0.0065,0.0
+DP01048,R297,Deposit,Money Market / Sweep,Non-Operating,2264200.0,0.033,0.0
+DP01049,R342,Deposit,Analyzed DDA,Operating,1325500.0,0.0103,0.0
+DP01050,R470,Deposit,Money Market / Sweep,Non-Operating,360900.0,0.0347,0.0
+DP01051,R354,Deposit,Money Market / Sweep,Non-Operating,402000.0,0.0279,0.0
+DP01052,R340,Deposit,Money Market / Sweep,Non-Operating,552100.0,0.0232,0.0
+DP01053,R324,Deposit,Commercial CD,Time Deposit,406900.0,0.0375,0.5
+DP01054,R071,Deposit,Commercial CD,Time Deposit,1808800.0,0.0381,1.0
+DP01055,R179,Deposit,Analyzed DDA,Operating,282200.0,0.0104,0.0
+DP01056,R293,Deposit,Commercial CD,Time Deposit,107600.0,0.0331,2.0
+DP01057,R004,Deposit,Money Market / Sweep,Non-Operating,3112000.0,0.0286,0.0
+DP01058,R199,Deposit,Analyzed DDA,Operating,1026600.0,0.0007,0.0
+DP01059,R002,Deposit,Analyzed DDA,Operating,11118400.0,0.0086,0.0
+DP01060,R003,Deposit,Commercial CD,Time Deposit,4516500.0,0.0351,0.5
+DP01061,R027,Deposit,Commercial CD,Time Deposit,256600.0,0.041,0.5
+DP01062,R198,Deposit,Analyzed DDA,Operating,462800.0,0.002,0.0
+DP01063,R159,Deposit,Analyzed DDA,Operating,251200.0,0.0027,0.0
+DP01064,R009,Deposit,Analyzed DDA,Operating,402000.0,0.0049,0.0
+DP01065,R471,Deposit,Analyzed DDA,Operating,618900.0,0.0079,0.0
+DP01066,R146,Deposit,Money Market / Sweep,Non-Operating,805800.0,0.0323,0.0
+DP01067,R494,Deposit,Analyzed DDA,Operating,369000.0,0.0099,0.0
+DP01068,R058,Deposit,Money Market / Sweep,Non-Operating,355300.0,0.0309,0.0
+DP01069,R001,Deposit,Analyzed DDA,Operating,12191800.0,0.0101,0.0
+DP01070,R201,Deposit,Money Market / Sweep,Non-Operating,553400.0,0.0242,0.0
+DP01071,R004,Deposit,Money Market / Sweep,Non-Operating,1695100.0,0.0322,0.0
+DP01072,R092,Deposit,Commercial CD,Time Deposit,673400.0,0.0378,1.0
+DP01073,R003,Deposit,Analyzed DDA,Operating,1978000.0,0.0088,0.0
+DP01074,R394,Deposit,Analyzed DDA,Operating,708500.0,0.0111,0.0
+DP01075,R032,Deposit,Analyzed DDA,Operating,2277100.0,0.0043,0.0
+DP01076,R058,Deposit,Commercial CD,Time Deposit,165600.0,0.0383,1.0
+DP01077,R297,Deposit,Commercial CD,Time Deposit,232500.0,0.0382,1.0
+DP01078,R082,Deposit,Analyzed DDA,Operating,750200.0,0.0024,0.0
+DP01079,R002,Deposit,Analyzed DDA,Operating,3838300.0,0.0125,0.0
+DP01080,R489,Deposit,Money Market / Sweep,Non-Operating,122500.0,0.03,0.0
+DP01081,R486,Deposit,Money Market / Sweep,Non-Operating,2879700.0,0.0333,0.0
+DP01082,R004,Deposit,Money Market / Sweep,Non-Operating,1821500.0,0.0341,0.0
+DP01083,R008,Deposit,Analyzed DDA,Operating,3153100.0,0.0123,0.0
+DP01084,R149,Deposit,Commercial CD,Time Deposit,748600.0,0.0371,0.5
+DP01085,R477,Deposit,Analyzed DDA,Operating,4204000.0,0.0062,0.0
+DP01086,R039,Deposit,Money Market / Sweep,Non-Operating,963200.0,0.0284,0.0
+DP01087,R067,Deposit,Analyzed DDA,Operating,192900.0,0.0052,0.0
+DP01088,R304,Deposit,Analyzed DDA,Operating,795600.0,0.0062,0.0
+DP01089,R136,Deposit,Analyzed DDA,Operating,3903200.0,0.0089,0.0
+DP01090,R358,Deposit,Analyzed DDA,Operating,554100.0,0.0056,0.0
+DP01091,R279,Deposit,Commercial CD,Time Deposit,1090700.0,0.0369,0.5
+DP01092,R234,Deposit,Money Market / Sweep,Non-Operating,715300.0,0.0259,0.0
+DP01093,R323,Deposit,Commercial CD,Time Deposit,60700.0,0.0385,0.5
+DP01094,R009,Deposit,Money Market / Sweep,Non-Operating,2179100.0,0.0324,0.0
+DP01095,R001,Deposit,Analyzed DDA,Operating,649600.0,0.008,0.0
+DP01096,R402,Deposit,Money Market / Sweep,Non-Operating,337400.0,0.0309,0.0
+DP01097,R299,Deposit,Money Market / Sweep,Non-Operating,289600.0,0.035,0.0
+DP01098,R009,Deposit,Commercial CD,Time Deposit,288300.0,0.0331,0.5
+DP01099,R223,Deposit,Analyzed DDA,Operating,578600.0,0.0106,0.0
+DP01100,R299,Deposit,Analyzed DDA,Operating,897400.0,0.001,0.0
+DP01101,R299,Deposit,Money Market / Sweep,Non-Operating,398600.0,0.0291,0.0
+DP01102,R282,Deposit,Money Market / Sweep,Non-Operating,104900.0,0.0315,0.0
+DP01103,R092,Deposit,Analyzed DDA,Operating,1714100.0,0.0023,0.0
+DP01104,R375,Deposit,Analyzed DDA,Operating,9673900.0,0.0056,0.0
+DP01105,R460,Deposit,Analyzed DDA,Operating,2165100.0,0.0117,0.0
+DP01106,R104,Deposit,Money Market / Sweep,Non-Operating,339400.0,0.0328,0.0
+DP01107,R438,Deposit,Analyzed DDA,Operating,343900.0,0.0098,0.0
+DP01108,R147,Deposit,Money Market / Sweep,Non-Operating,2238100.0,0.0271,0.0
+DP01109,R331,Deposit,Analyzed DDA,Operating,529200.0,0.0051,0.0
+DP01110,R241,Deposit,Analyzed DDA,Operating,747700.0,0.0057,0.0
+DP01111,R330,Deposit,Analyzed DDA,Operating,2275500.0,0.0051,0.0
+DP01112,R184,Deposit,Analyzed DDA,Operating,693600.0,0.0103,0.0
+DP01113,R182,Deposit,Analyzed DDA,Operating,212400.0,0.0102,0.0
+DP01114,R225,Deposit,Money Market / Sweep,Non-Operating,365400.0,0.0333,0.0
+DP01115,R456,Deposit,Analyzed DDA,Operating,772000.0,0.0087,0.0
+DP01116,R021,Deposit,Analyzed DDA,Operating,101700.0,0.0066,0.0
+DP01117,R180,Deposit,Money Market / Sweep,Non-Operating,384800.0,0.025,0.0
+DP01118,R008,Deposit,Analyzed DDA,Operating,3888200.0,0.0006,0.0
+DP01119,R290,Deposit,Analyzed DDA,Operating,297300.0,0.0042,0.0
+DP01120,R252,Deposit,Money Market / Sweep,Non-Operating,1966800.0,0.0358,0.0
+DP01121,R002,Deposit,Analyzed DDA,Operating,13817800.0,0.0075,0.0
+DP01122,R342,Deposit,Analyzed DDA,Operating,732900.0,0.0026,0.0
+DP01123,R124,Deposit,Analyzed DDA,Operating,8522200.0,0.0066,0.0
+DP01124,R140,Deposit,Analyzed DDA,Operating,3492500.0,0.0122,0.0
+DP01125,R171,Deposit,Analyzed DDA,Operating,553100.0,0.0005,0.0
+DP01126,R395,Deposit,Commercial CD,Time Deposit,300200.0,0.0336,0.5
+DP01127,R138,Deposit,Analyzed DDA,Operating,325800.0,0.0017,0.0
+DP01128,R158,Deposit,Money Market / Sweep,Non-Operating,707600.0,0.0302,0.0
+DP01129,R494,Deposit,Money Market / Sweep,Non-Operating,333500.0,0.0226,0.0
+DP01130,R228,Deposit,Analyzed DDA,Operating,318300.0,0.0113,0.0
+DP01131,R210,Deposit,Analyzed DDA,Operating,330500.0,0.004,0.0
+DP01132,R268,Deposit,Analyzed DDA,Operating,1351600.0,0.012,0.0
+DP01133,R004,Deposit,Analyzed DDA,Operating,307200.0,0.0001,0.0
+DP01134,R212,Deposit,Commercial CD,Time Deposit,1967400.0,0.0363,1.0
+DP01135,R409,Deposit,Analyzed DDA,Operating,858700.0,0.0033,0.0
+DP01136,R008,Deposit,Analyzed DDA,Operating,3188400.0,0.0025,0.0
+DP01137,R203,Deposit,Analyzed DDA,Operating,644900.0,0.0111,0.0
+DP01138,R004,Deposit,Money Market / Sweep,Non-Operating,10538500.0,0.033,0.0
+DP01139,R159,Deposit,Analyzed DDA,Operating,500100.0,0.0073,0.0
+DP01140,R416,Deposit,Analyzed DDA,Operating,1249000.0,0.0092,0.0
+DP01141,R387,Deposit,Analyzed DDA,Operating,1132600.0,0.0052,0.0
+DP01142,R256,Deposit,Commercial CD,Time Deposit,576300.0,0.0337,0.5
+DP01143,R001,Deposit,Analyzed DDA,Operating,1327400.0,0.0115,0.0
+DP01144,R344,Deposit,Analyzed DDA,Operating,1315900.0,0.0081,0.0
+DP01145,R006,Deposit,Money Market / Sweep,Non-Operating,523400.0,0.0326,0.0
+DP01146,R153,Deposit,Money Market / Sweep,Non-Operating,755300.0,0.028,0.0
+DP01147,R205,Deposit,Analyzed DDA,Operating,317900.0,0.0097,0.0
+DP01148,R396,Deposit,Commercial CD,Time Deposit,261400.0,0.0341,0.5
+DP01149,R010,Deposit,Analyzed DDA,Operating,7763500.0,0.0001,0.0
+DP01150,R347,Deposit,Money Market / Sweep,Non-Operating,135800.0,0.0334,0.0
+DP01151,R379,Deposit,Money Market / Sweep,Non-Operating,541100.0,0.0238,0.0
+DP01152,R217,Deposit,Analyzed DDA,Operating,344300.0,0.0091,0.0
+DP01153,R010,Deposit,Analyzed DDA,Operating,3365300.0,0.011,0.0
+DP01154,R078,Deposit,Analyzed DDA,Operating,642700.0,0.0023,0.0
+DP01155,R275,Deposit,Analyzed DDA,Operating,8986400.0,0.0035,0.0
+DP01156,R231,Deposit,Analyzed DDA,Operating,720500.0,0.002,0.0
+DP01157,R061,Deposit,Commercial CD,Time Deposit,1881200.0,0.036,1.0
+DP01158,R084,Deposit,Analyzed DDA,Operating,1952600.0,0.0055,0.0
+DP01159,R080,Deposit,Analyzed DDA,Operating,3132900.0,0.0013,0.0
+DP01160,R325,Deposit,Analyzed DDA,Operating,229600.0,0.0072,0.0
+DP01161,R004,Deposit,Analyzed DDA,Operating,3171700.0,0.0042,0.0
+DP01162,R225,Deposit,Analyzed DDA,Operating,162500.0,0.0061,0.0
+DP01163,R380,Deposit,Commercial CD,Time Deposit,25430000.0,0.0375,0.5
+DP01164,R010,Deposit,Analyzed DDA,Operating,1477200.0,0.002,0.0
+DP01165,R423,Deposit,Analyzed DDA,Operating,108200.0,0.0056,0.0
+DP01166,R003,Deposit,Analyzed DDA,Operating,252500.0,0.0028,0.0
+DP01167,R440,Deposit,Analyzed DDA,Operating,514800.0,0.0051,0.0
+DP01168,R303,Deposit,Analyzed DDA,Operating,546900.0,0.0048,0.0
+DP01169,R170,Deposit,Analyzed DDA,Operating,1434600.0,0.0118,0.0
+DP01170,R028,Deposit,Analyzed DDA,Operating,497600.0,0.0023,0.0
+DP01171,R265,Deposit,Analyzed DDA,Operating,1560700.0,0.0036,0.0
+DP01172,R463,Deposit,Analyzed DDA,Operating,453800.0,0.0099,0.0
+DP01173,R498,Deposit,Money Market / Sweep,Non-Operating,297700.0,0.0286,0.0
+DP01174,R452,Deposit,Money Market / Sweep,Non-Operating,574900.0,0.0286,0.0
+DP01175,R327,Deposit,Analyzed DDA,Operating,5988500.0,0.0095,0.0
+DP01176,R469,Deposit,Money Market / Sweep,Non-Operating,509000.0,0.0265,0.0
+DP01177,R141,Deposit,Analyzed DDA,Operating,159700.0,0.012,0.0
+DP01178,R082,Deposit,Analyzed DDA,Operating,739200.0,0.0058,0.0
+DP01179,R213,Deposit,Money Market / Sweep,Non-Operating,2182400.0,0.0317,0.0
+DP01180,R003,Deposit,Money Market / Sweep,Non-Operating,3332300.0,0.0251,0.0
+DP01181,R113,Deposit,Analyzed DDA,Operating,1343400.0,0.011,0.0
+DP01182,R007,Deposit,Analyzed DDA,Operating,408500.0,0.0028,0.0
+DP01183,R074,Deposit,Analyzed DDA,Operating,691200.0,0.0069,0.0
+DP01184,R431,Deposit,Analyzed DDA,Operating,3179200.0,0.0051,0.0
+DP01185,R088,Deposit,Analyzed DDA,Operating,113600.0,0.0067,0.0
+DP01186,R488,Deposit,Money Market / Sweep,Non-Operating,109700.0,0.0235,0.0
+DP01187,R224,Deposit,Analyzed DDA,Operating,1312300.0,0.0044,0.0
+DP01188,R417,Deposit,Money Market / Sweep,Non-Operating,1565400.0,0.0301,0.0
+DP01189,R325,Deposit,Commercial CD,Time Deposit,5652200.0,0.0383,1.0
+DP01190,R219,Deposit,Analyzed DDA,Operating,241900.0,0.0034,0.0
+DP01191,R066,Deposit,Analyzed DDA,Operating,1774200.0,0.0076,0.0
+DP01192,R454,Deposit,Analyzed DDA,Operating,2025000.0,0.0019,0.0
+DP01193,R292,Deposit,Money Market / Sweep,Non-Operating,87700.0,0.0292,0.0
+DP01194,R153,Deposit,Commercial CD,Time Deposit,566000.0,0.0387,0.5
+DP01195,R009,Deposit,Commercial CD,Time Deposit,4630400.0,0.0354,2.0
+DP01196,R130,Deposit,Analyzed DDA,Operating,3057500.0,0.0024,0.0
+DP01197,R442,Deposit,Money Market / Sweep,Non-Operating,273100.0,0.0304,0.0
+DP01198,R021,Deposit,Analyzed DDA,Operating,1688900.0,0.0073,0.0
+DP01199,R143,Deposit,Money Market / Sweep,Non-Operating,524100.0,0.0353,0.0
+DP01200,R059,Deposit,Commercial CD,Time Deposit,2673500.0,0.038,1.0
+DP01201,R406,Deposit,Money Market / Sweep,Non-Operating,1020500.0,0.0286,0.0
+DP01202,R262,Deposit,Analyzed DDA,Operating,638500.0,0.0015,0.0
+DP01203,R085,Deposit,Analyzed DDA,Operating,148300.0,0.0085,0.0
+DP01204,R110,Deposit,Money Market / Sweep,Non-Operating,129200.0,0.0285,0.0
+DP01205,R247,Deposit,Analyzed DDA,Operating,7193200.0,0.0084,0.0
+DP01206,R078,Deposit,Analyzed DDA,Operating,1163500.0,0.0109,0.0
+DP01207,R251,Deposit,Money Market / Sweep,Non-Operating,363700.0,0.0245,0.0
+DP01208,R338,Deposit,Money Market / Sweep,Non-Operating,956400.0,0.0305,0.0
+DP01209,R002,Deposit,Money Market / Sweep,Non-Operating,5032000.0,0.0234,0.0
+DP01210,R042,Deposit,Analyzed DDA,Operating,378000.0,0.0069,0.0
+DP01211,R394,Deposit,Money Market / Sweep,Non-Operating,909000.0,0.0269,0.0
+DP01212,R151,Deposit,Money Market / Sweep,Non-Operating,892400.0,0.0268,0.0
+DP01213,R186,Deposit,Analyzed DDA,Operating,1020200.0,0.0089,0.0
+DP01214,R369,Deposit,Analyzed DDA,Operating,1004200.0,0.0095,0.0
+DP01215,R367,Deposit,Money Market / Sweep,Non-Operating,2396300.0,0.0318,0.0
+DP01216,R193,Deposit,Analyzed DDA,Operating,4125800.0,0.0088,0.0
+DP01217,R493,Deposit,Analyzed DDA,Operating,224200.0,0.0046,0.0
+DP01218,R008,Deposit,Analyzed DDA,Operating,1125400.0,0.0026,0.0
+DP01219,R342,Deposit,Money Market / Sweep,Non-Operating,876500.0,0.0244,0.0
+DP01220,R179,Deposit,Analyzed DDA,Operating,308400.0,0.0072,0.0
+DP01221,R061,Deposit,Analyzed DDA,Operating,255000.0,0.0057,0.0
+DP01222,R125,Deposit,Analyzed DDA,Operating,604400.0,0.0105,0.0
+DP01223,R002,Deposit,Analyzed DDA,Operating,8275600.0,0.0019,0.0
+DP01224,R200,Deposit,Analyzed DDA,Operating,3203400.0,0.0051,0.0
+DP01225,R225,Deposit,Analyzed DDA,Operating,511100.0,0.0033,0.0
+DP01226,R059,Deposit,Analyzed DDA,Operating,48800.0,0.0006,0.0
+DP01227,R061,Deposit,Analyzed DDA,Operating,1256200.0,0.0042,0.0
+DP01228,R250,Deposit,Analyzed DDA,Operating,216000.0,0.009,0.0
+DP01229,R360,Deposit,Analyzed DDA,Operating,658400.0,0.0065,0.0
+DP01230,R093,Deposit,Analyzed DDA,Operating,428100.0,0.0052,0.0
+DP01231,R382,Deposit,Analyzed DDA,Operating,13685400.0,0.0059,0.0
+DP01232,R383,Deposit,Analyzed DDA,Operating,3786900.0,0.0039,0.0
+DP01233,R006,Deposit,Analyzed DDA,Operating,2545800.0,0.0015,0.0
+DP01234,R409,Deposit,Analyzed DDA,Operating,126100.0,0.0074,0.0
+DP01235,R048,Deposit,Analyzed DDA,Operating,136300.0,0.0102,0.0
+DP01236,R004,Deposit,Analyzed DDA,Operating,5288300.0,0.0099,0.0
+DP01237,R488,Deposit,Commercial CD,Time Deposit,281900.0,0.0406,0.5
+DP01238,R359,Deposit,Analyzed DDA,Operating,159200.0,0.0054,0.0
+DP01239,R500,Deposit,Money Market / Sweep,Non-Operating,859500.0,0.0284,0.0
+DP01240,R344,Deposit,Analyzed DDA,Operating,2278400.0,0.01,0.0
+DP01241,R132,Deposit,Analyzed DDA,Operating,447300.0,0.0025,0.0
+DP01242,R114,Deposit,Analyzed DDA,Operating,298600.0,0.0017,0.0
+DP01243,R289,Deposit,Analyzed DDA,Operating,338500.0,0.0116,0.0
+DP01244,R201,Deposit,Money Market / Sweep,Non-Operating,1234100.0,0.0308,0.0
+DP01245,R241,Deposit,Analyzed DDA,Operating,604300.0,0.0124,0.0
+DP01246,R443,Deposit,Money Market / Sweep,Non-Operating,640800.0,0.0359,0.0
+DP01247,R078,Deposit,Money Market / Sweep,Non-Operating,93000.0,0.0346,0.0
+DP01248,R421,Deposit,Money Market / Sweep,Non-Operating,571400.0,0.0242,0.0
+DP01249,R283,Deposit,Analyzed DDA,Operating,336800.0,0.0108,0.0
+DP01250,R202,Deposit,Analyzed DDA,Operating,526500.0,0.0022,0.0
+DP01251,R224,Deposit,Money Market / Sweep,Non-Operating,333200.0,0.0281,0.0
+DP01252,R344,Deposit,Analyzed DDA,Operating,4610900.0,0.0006,0.0
+DP01253,R425,Deposit,Money Market / Sweep,Non-Operating,1085800.0,0.0245,0.0
+DP01254,R388,Deposit,Analyzed DDA,Operating,533100.0,0.0091,0.0
+DP01255,R229,Deposit,Money Market / Sweep,Non-Operating,591700.0,0.0265,0.0
+DP01256,R072,Deposit,Money Market / Sweep,Non-Operating,372600.0,0.0336,0.0
+DP01257,R007,Deposit,Analyzed DDA,Operating,1571600.0,0.009,0.0
+DP01258,R445,Deposit,Commercial CD,Time Deposit,1468900.0,0.0359,2.0
+DP01259,R004,Deposit,Money Market / Sweep,Non-Operating,4167100.0,0.0306,0.0
+DP01260,R027,Deposit,Analyzed DDA,Operating,252200.0,0.003,0.0
+DP01261,R346,Deposit,Analyzed DDA,Operating,1163500.0,0.0102,0.0
+DP01262,R207,Deposit,Money Market / Sweep,Non-Operating,710500.0,0.033,0.0
+DP01263,R005,Deposit,Money Market / Sweep,Non-Operating,284400.0,0.0334,0.0
+DP01264,R469,Deposit,Commercial CD,Time Deposit,539500.0,0.04,2.0
+DP01265,R053,Deposit,Money Market / Sweep,Non-Operating,3088700.0,0.0225,0.0
+DP01266,R436,Deposit,Analyzed DDA,Operating,1776600.0,0.0006,0.0
+DP01267,R355,Deposit,Analyzed DDA,Operating,865200.0,0.0046,0.0
+DP01268,R041,Deposit,Analyzed DDA,Operating,1114900.0,0.0107,0.0
+DP01269,R399,Deposit,Analyzed DDA,Operating,1359400.0,0.0106,0.0
+DP01270,R092,Deposit,Commercial CD,Time Deposit,462700.0,0.0338,2.0
+DP01271,R015,Deposit,Money Market / Sweep,Non-Operating,581400.0,0.0286,0.0
+DP01272,R281,Deposit,Commercial CD,Time Deposit,271100.0,0.0331,0.5
+DP01273,R495,Deposit,Money Market / Sweep,Non-Operating,4326500.0,0.036,0.0
+DP01274,R455,Deposit,Money Market / Sweep,Non-Operating,6019800.0,0.0318,0.0
+DP01275,R338,Deposit,Money Market / Sweep,Non-Operating,853200.0,0.0261,0.0
+DP01276,R091,Deposit,Money Market / Sweep,Non-Operating,150300.0,0.0272,0.0
+DP01277,R289,Deposit,Analyzed DDA,Operating,126000.0,0.0093,0.0
+DP01278,R447,Deposit,Money Market / Sweep,Non-Operating,725200.0,0.0282,0.0
+DP01279,R004,Deposit,Analyzed DDA,Operating,7255500.0,0.0001,0.0
+DP01280,R366,Deposit,Commercial CD,Time Deposit,2184600.0,0.0358,0.5
+DP01281,R423,Deposit,Money Market / Sweep,Non-Operating,793600.0,0.0261,0.0
+DP01282,R378,Deposit,Analyzed DDA,Operating,274000.0,0.0085,0.0
+DP01283,R020,Deposit,Analyzed DDA,Operating,66100.0,0.0076,0.0
+DP01284,R331,Deposit,Analyzed DDA,Operating,294200.0,0.0125,0.0
+DP01285,R493,Deposit,Money Market / Sweep,Non-Operating,2528300.0,0.0359,0.0
+DP01286,R260,Deposit,Analyzed DDA,Operating,1890900.0,0.0106,0.0
+DP01287,R288,Deposit,Analyzed DDA,Operating,739500.0,0.0014,0.0
+DP01288,R002,Deposit,Analyzed DDA,Operating,9960900.0,0.0021,0.0
+DP01289,R098,Deposit,Analyzed DDA,Operating,626400.0,0.006,0.0
+DP01290,R098,Deposit,Commercial CD,Time Deposit,1814400.0,0.0333,0.5
+DP01291,R125,Deposit,Money Market / Sweep,Non-Operating,807200.0,0.0227,0.0
+DP01292,R010,Deposit,Analyzed DDA,Operating,1586300.0,0.0014,0.0
+DP01293,R307,Deposit,Commercial CD,Time Deposit,696000.0,0.0409,0.5
+DP01294,R155,Deposit,Analyzed DDA,Operating,1766600.0,0.0096,0.0
+DP01295,R154,Deposit,Commercial CD,Time Deposit,324000.0,0.0355,0.5
+DP01296,R002,Deposit,Commercial CD,Time Deposit,720000.0,0.0374,0.5
+DP01297,R003,Deposit,Money Market / Sweep,Non-Operating,4790000.0,0.0309,0.0
+DP01298,R001,Deposit,Analyzed DDA,Operating,2090500.0,0.0014,0.0
+DP01299,R009,Deposit,Money Market / Sweep,Non-Operating,4830800.0,0.0316,0.0
+DP01300,R178,Deposit,Analyzed DDA,Operating,625100.0,0.0016,0.0
+DP01301,R099,Deposit,Analyzed DDA,Operating,514100.0,0.0074,0.0
+DP01302,R410,Deposit,Analyzed DDA,Operating,1650200.0,0.0067,0.0
+DP01303,R382,Deposit,Analyzed DDA,Operating,1411200.0,0.0075,0.0
+DP01304,R297,Deposit,Analyzed DDA,Operating,93000.0,0.0103,0.0
+DP01305,R307,Deposit,Commercial CD,Time Deposit,704300.0,0.0384,2.0
+DP01306,R100,Deposit,Analyzed DDA,Operating,493400.0,0.0055,0.0
+DP01307,R111,Deposit,Analyzed DDA,Operating,598600.0,0.0007,0.0
+DP01308,R281,Deposit,Analyzed DDA,Operating,1280000.0,0.0036,0.0
+DP01309,R139,Deposit,Analyzed DDA,Operating,286100.0,0.001,0.0
+DP01310,R141,Deposit,Money Market / Sweep,Non-Operating,362600.0,0.0299,0.0
+DP01311,R499,Deposit,Money Market / Sweep,Non-Operating,172800.0,0.0355,0.0
+DP01312,R337,Deposit,Money Market / Sweep,Non-Operating,586900.0,0.034,0.0
+DP01313,R073,Deposit,Money Market / Sweep,Non-Operating,1715000.0,0.0259,0.0
+DP01314,R002,Deposit,Money Market / Sweep,Non-Operating,3108700.0,0.0323,0.0
+DP01315,R476,Deposit,Analyzed DDA,Operating,1021000.0,0.0019,0.0
+DP01316,R102,Deposit,Analyzed DDA,Operating,171500.0,0.0094,0.0
+DP01317,R006,Deposit,Analyzed DDA,Operating,4576200.0,0.0003,0.0
+DP01318,R128,Deposit,Analyzed DDA,Operating,882300.0,0.0081,0.0
+DP01319,R168,Deposit,Commercial CD,Time Deposit,843900.0,0.0347,0.5
+DP01320,R034,Deposit,Money Market / Sweep,Non-Operating,367400.0,0.0342,0.0
+DP01321,R418,Deposit,Analyzed DDA,Operating,88800.0,0.0036,0.0
+DP01322,R498,Deposit,Analyzed DDA,Operating,564900.0,0.0013,0.0
+DP01323,R130,Deposit,Money Market / Sweep,Non-Operating,7895600.0,0.025,0.0
+DP01324,R004,Deposit,Commercial CD,Time Deposit,2190700.0,0.0408,1.0
+DP01325,R006,Deposit,Commercial CD,Time Deposit,6329700.0,0.0334,0.5
+DP01326,R491,Deposit,Money Market / Sweep,Non-Operating,42800.0,0.0355,0.0
+DP01327,R356,Deposit,Money Market / Sweep,Non-Operating,2107600.0,0.0267,0.0
+DP01328,R131,Deposit,Analyzed DDA,Operating,162900.0,0.0089,0.0
+DP01329,R332,Deposit,Analyzed DDA,Operating,326400.0,0.0013,0.0
+DP01330,R334,Deposit,Analyzed DDA,Operating,523400.0,0.012,0.0
+DP01331,R357,Deposit,Money Market / Sweep,Non-Operating,91900.0,0.0303,0.0
+DP01332,R366,Deposit,Commercial CD,Time Deposit,33714100.0,0.0342,2.0
+DP01333,R157,Deposit,Commercial CD,Time Deposit,264000.0,0.0338,1.0
+DP01334,R204,Deposit,Analyzed DDA,Operating,887500.0,0.0046,0.0
+DP01335,R062,Deposit,Analyzed DDA,Operating,2151900.0,0.0056,0.0
+DP01336,R317,Deposit,Analyzed DDA,Operating,648500.0,0.0055,0.0
+DP01337,R325,Deposit,Analyzed DDA,Operating,425100.0,0.0086,0.0
+DP01338,R004,Deposit,Money Market / Sweep,Non-Operating,4466600.0,0.0282,0.0
+DP01339,R302,Deposit,Money Market / Sweep,Non-Operating,77000.0,0.0315,0.0
+DP01340,R141,Deposit,Commercial CD,Time Deposit,347400.0,0.0401,0.5
+DP01341,R063,Deposit,Analyzed DDA,Operating,2587200.0,0.0051,0.0
+DP01342,R008,Deposit,Money Market / Sweep,Non-Operating,982900.0,0.0334,0.0
+DP01343,R139,Deposit,Commercial CD,Time Deposit,212100.0,0.0354,2.0
+DP01344,R200,Deposit,Money Market / Sweep,Non-Operating,9261600.0,0.0307,0.0
+DP01345,R423,Deposit,Analyzed DDA,Operating,406300.0,0.0101,0.0
+DP01346,R116,Deposit,Analyzed DDA,Operating,593700.0,0.0039,0.0
+DP01347,R268,Deposit,Analyzed DDA,Operating,713800.0,0.0091,0.0
+DP01348,R034,Deposit,Analyzed DDA,Operating,908000.0,0.0032,0.0
+DP01349,R082,Deposit,Analyzed DDA,Operating,32000.0,0.0048,0.0
+DP01350,R002,Deposit,Money Market / Sweep,Non-Operating,1034000.0,0.0291,0.0
+DP01351,R176,Deposit,Analyzed DDA,Operating,3783500.0,0.0094,0.0
+DP01352,R361,Deposit,Analyzed DDA,Operating,671500.0,0.0021,0.0
+DP01353,R077,Deposit,Analyzed DDA,Operating,2090400.0,0.0043,0.0
+DP01354,R004,Deposit,Money Market / Sweep,Non-Operating,1440100.0,0.0354,0.0
+DP01355,R437,Deposit,Analyzed DDA,Operating,457800.0,0.0082,0.0
+DP01356,R480,Deposit,Analyzed DDA,Operating,1225500.0,0.001,0.0
+DP01357,R022,Deposit,Money Market / Sweep,Non-Operating,279800.0,0.0355,0.0
+DP01358,R425,Deposit,Analyzed DDA,Operating,596800.0,0.009,0.0
+DP01359,R024,Deposit,Analyzed DDA,Operating,158600.0,0.0046,0.0
+DP01360,R076,Deposit,Money Market / Sweep,Non-Operating,1621200.0,0.0329,0.0
+DP01361,R013,Deposit,Analyzed DDA,Operating,771800.0,0.0033,0.0
+DP01362,R036,Deposit,Analyzed DDA,Operating,406400.0,0.0075,0.0
+DP01363,R006,Deposit,Money Market / Sweep,Non-Operating,4605300.0,0.0326,0.0
+DP01364,R006,Deposit,Analyzed DDA,Operating,2979000.0,0.0091,0.0
+DP01365,R463,Deposit,Analyzed DDA,Operating,86300.0,0.01,0.0
+DP01366,R123,Deposit,Analyzed DDA,Operating,179600.0,0.0076,0.0
+DP01367,R214,Deposit,Analyzed DDA,Operating,404000.0,0.0046,0.0
+DP01368,R222,Deposit,Analyzed DDA,Operating,339900.0,0.012,0.0
+DP01369,R230,Deposit,Analyzed DDA,Operating,924300.0,0.001,0.0
+DP01370,R270,Deposit,Analyzed DDA,Operating,847100.0,0.0101,0.0
+DP01371,R061,Deposit,Money Market / Sweep,Non-Operating,276300.0,0.0252,0.0
+DP01372,R008,Deposit,Money Market / Sweep,Non-Operating,1548000.0,0.0342,0.0
+DP01373,R139,Deposit,Commercial CD,Time Deposit,1028900.0,0.0366,0.5
+DP01374,R475,Deposit,Analyzed DDA,Operating,584500.0,0.0105,0.0
+DP01375,R430,Deposit,Analyzed DDA,Operating,259800.0,0.0106,0.0
+DP01376,R496,Deposit,Analyzed DDA,Operating,463200.0,0.0103,0.0
+DP01377,R002,Deposit,Analyzed DDA,Operating,2050500.0,0.0057,0.0
+DP01378,R009,Deposit,Analyzed DDA,Operating,5964800.0,0.0049,0.0
+DP01379,R131,Deposit,Analyzed DDA,Operating,2612900.0,0.0065,0.0
+DP01380,R077,Deposit,Money Market / Sweep,Non-Operating,391300.0,0.0262,0.0
+DP01381,R249,Deposit,Analyzed DDA,Operating,210300.0,0.006,0.0
+DP01382,R231,Deposit,Analyzed DDA,Operating,4182300.0,0.0016,0.0
+DP01383,R328,Deposit,Money Market / Sweep,Non-Operating,1000400.0,0.0247,0.0
+DP01384,R219,Deposit,Analyzed DDA,Operating,218600.0,0.0092,0.0
+DP01385,R445,Deposit,Commercial CD,Time Deposit,965600.0,0.033,2.0
+DP01386,R454,Deposit,Money Market / Sweep,Non-Operating,918700.0,0.029,0.0
+DP01387,R296,Deposit,Analyzed DDA,Operating,1723300.0,0.0095,0.0
+DP01388,R143,Deposit,Analyzed DDA,Operating,90700.0,0.0108,0.0
+DP01389,R445,Deposit,Commercial CD,Time Deposit,2629500.0,0.0364,1.0
+DP01390,R005,Deposit,Money Market / Sweep,Non-Operating,3986700.0,0.0342,0.0
+DP01391,R335,Deposit,Commercial CD,Time Deposit,277200.0,0.0399,1.0
+DP01392,R260,Deposit,Analyzed DDA,Operating,1037000.0,0.0106,0.0
+DP01393,R471,Deposit,Money Market / Sweep,Non-Operating,1129300.0,0.0251,0.0
+DP01394,R411,Deposit,Analyzed DDA,Operating,528200.0,0.001,0.0
+DP01395,R424,Deposit,Analyzed DDA,Operating,308000.0,0.0036,0.0
+DP01396,R494,Deposit,Analyzed DDA,Operating,453000.0,0.0013,0.0
+DP01397,R487,Deposit,Money Market / Sweep,Non-Operating,222300.0,0.0299,0.0
+DP01398,R116,Deposit,Analyzed DDA,Operating,12861000.0,0.0001,0.0
+DP01399,R355,Deposit,Money Market / Sweep,Non-Operating,1327000.0,0.0248,0.0
+DP01400,R363,Deposit,Analyzed DDA,Operating,788400.0,0.0054,0.0
+DP01401,R341,Deposit,Commercial CD,Time Deposit,310300.0,0.0369,1.0
+DP01402,R352,Deposit,Analyzed DDA,Operating,1099800.0,0.0093,0.0
+DP01403,R234,Deposit,Commercial CD,Time Deposit,652400.0,0.0339,1.0
+DP01404,R500,Deposit,Money Market / Sweep,Non-Operating,1634500.0,0.0269,0.0
+DP01405,R027,Deposit,Analyzed DDA,Operating,283800.0,0.0098,0.0
+DP01406,R252,Deposit,Money Market / Sweep,Non-Operating,636500.0,0.0297,0.0
+DP01407,R091,Deposit,Money Market / Sweep,Non-Operating,2604500.0,0.0325,0.0
+DP01408,R223,Deposit,Analyzed DDA,Operating,524300.0,0.0004,0.0
+DP01409,R043,Deposit,Analyzed DDA,Operating,1114700.0,0.0095,0.0
+DP01410,R449,Deposit,Commercial CD,Time Deposit,534100.0,0.0346,1.0
+DP01411,R050,Deposit,Commercial CD,Time Deposit,1516000.0,0.0358,1.0
+DP01412,R321,Deposit,Money Market / Sweep,Non-Operating,279900.0,0.0302,0.0
+DP01413,R219,Deposit,Analyzed DDA,Operating,230500.0,0.0115,0.0
+DP01414,R151,Deposit,Analyzed DDA,Operating,1069200.0,0.009,0.0
+DP01415,R017,Deposit,Analyzed DDA,Operating,4843400.0,0.01,0.0
+DP01416,R393,Deposit,Money Market / Sweep,Non-Operating,4662200.0,0.0269,0.0
+DP01417,R299,Deposit,Analyzed DDA,Operating,764900.0,0.0104,0.0
+DP01418,R217,Deposit,Analyzed DDA,Operating,543600.0,0.0052,0.0
+DP01419,R329,Deposit,Money Market / Sweep,Non-Operating,3575300.0,0.0249,0.0
+DP01420,R350,Deposit,Commercial CD,Time Deposit,195100.0,0.0381,2.0
+DP01421,R288,Deposit,Analyzed DDA,Operating,919700.0,0.0076,0.0
+DP01422,R479,Deposit,Analyzed DDA,Operating,1366700.0,0.0114,0.0
+DP01423,R320,Deposit,Analyzed DDA,Operating,4041000.0,0.0119,0.0
+DP01424,R001,Deposit,Analyzed DDA,Operating,21353300.0,0.0002,0.0
+DP01425,R001,Deposit,Analyzed DDA,Operating,2215600.0,0.0029,0.0
+DP01426,R144,Deposit,Analyzed DDA,Operating,886900.0,0.0077,0.0
+DP01427,R174,Deposit,Analyzed DDA,Operating,1170100.0,0.0,0.0
+DP01428,R371,Deposit,Money Market / Sweep,Non-Operating,158500.0,0.033,0.0
+DP01429,R103,Deposit,Analyzed DDA,Operating,2486000.0,0.0025,0.0
+DP01430,R205,Deposit,Money Market / Sweep,Non-Operating,950100.0,0.0337,0.0
+DP01431,R494,Deposit,Analyzed DDA,Operating,848100.0,0.0075,0.0
+DP01432,R161,Deposit,Money Market / Sweep,Non-Operating,561600.0,0.0238,0.0
+DP01433,R121,Deposit,Money Market / Sweep,Non-Operating,1322400.0,0.0232,0.0
+DP01434,R135,Deposit,Money Market / Sweep,Non-Operating,859700.0,0.0245,0.0
+DP01435,R287,Deposit,Analyzed DDA,Operating,264800.0,0.0124,0.0
+DP01436,R229,Deposit,Money Market / Sweep,Non-Operating,76000.0,0.0261,0.0
+DP01437,R013,Deposit,Commercial CD,Time Deposit,347400.0,0.0395,2.0
+DP01438,R198,Deposit,Analyzed DDA,Operating,502900.0,0.0125,0.0
+DP01439,R465,Deposit,Analyzed DDA,Operating,507100.0,0.0068,0.0
+DP01440,R012,Deposit,Analyzed DDA,Operating,1213000.0,0.0085,0.0
+DP01441,R382,Deposit,Commercial CD,Time Deposit,848300.0,0.0378,2.0
+DP01442,R386,Deposit,Analyzed DDA,Operating,622200.0,0.0044,0.0
+DP01443,R083,Deposit,Analyzed DDA,Operating,516500.0,0.0023,0.0
+DP01444,R150,Deposit,Commercial CD,Time Deposit,747200.0,0.0353,2.0
+DP01445,R003,Deposit,Analyzed DDA,Operating,11967700.0,0.0118,0.0
+DP01446,R042,Deposit,Analyzed DDA,Operating,415200.0,0.0004,0.0
+DP01447,R142,Deposit,Money Market / Sweep,Non-Operating,454900.0,0.0336,0.0
+DP01448,R474,Deposit,Analyzed DDA,Operating,3193100.0,0.009,0.0
+DP01449,R053,Deposit,Analyzed DDA,Operating,1201300.0,0.0054,0.0
+DP01450,R302,Deposit,Analyzed DDA,Operating,989700.0,0.0067,0.0
+DP01451,R001,Deposit,Money Market / Sweep,Non-Operating,11849400.0,0.0238,0.0
+DP01452,R338,Deposit,Money Market / Sweep,Non-Operating,2152600.0,0.0349,0.0
+DP01453,R242,Deposit,Analyzed DDA,Operating,294600.0,0.0009,0.0
+DP01454,R493,Deposit,Analyzed DDA,Operating,1801700.0,0.0068,0.0
+DP01455,R443,Deposit,Commercial CD,Time Deposit,370200.0,0.0389,1.0
+DP01456,R057,Deposit,Analyzed DDA,Operating,370200.0,0.0023,0.0
+DP01457,R487,Deposit,Commercial CD,Time Deposit,809400.0,0.0405,1.0
+DP01458,R253,Deposit,Commercial CD,Time Deposit,357800.0,0.0394,1.0
+DP01459,R074,Deposit,Analyzed DDA,Operating,386700.0,0.0074,0.0
+DP01460,R447,Deposit,Money Market / Sweep,Non-Operating,332800.0,0.0344,0.0
+DP01461,R008,Deposit,Money Market / Sweep,Non-Operating,3364500.0,0.0269,0.0
+DP01462,R256,Deposit,Money Market / Sweep,Non-Operating,589000.0,0.0299,0.0
+DP01463,R253,Deposit,Money Market / Sweep,Non-Operating,67300.0,0.0287,0.0
+DP01464,R072,Deposit,Analyzed DDA,Operating,1315700.0,0.0059,0.0
+DP01465,R379,Deposit,Commercial CD,Time Deposit,82800.0,0.0394,0.5
+DP01466,R060,Deposit,Analyzed DDA,Operating,322100.0,0.0061,0.0
+DP01467,R282,Deposit,Money Market / Sweep,Non-Operating,678300.0,0.0276,0.0
+DP01468,R137,Deposit,Commercial CD,Time Deposit,348600.0,0.0395,0.5
+DP01469,R240,Deposit,Analyzed DDA,Operating,976900.0,0.0005,0.0
+DP01470,R361,Deposit,Money Market / Sweep,Non-Operating,684700.0,0.0327,0.0
+DP01471,R282,Deposit,Money Market / Sweep,Non-Operating,56000.0,0.0251,0.0
+DP01472,R262,Deposit,Commercial CD,Time Deposit,1602600.0,0.0344,1.0
+DP01473,R029,Deposit,Analyzed DDA,Operating,620900.0,0.0123,0.0
+DP01474,R360,Deposit,Money Market / Sweep,Non-Operating,273700.0,0.0318,0.0
+DP01475,R119,Deposit,Analyzed DDA,Operating,302400.0,0.0047,0.0
+DP01476,R004,Deposit,Analyzed DDA,Operating,501200.0,0.0009,0.0
+DP01477,R377,Deposit,Analyzed DDA,Operating,601400.0,0.0042,0.0
+DP01478,R208,Deposit,Analyzed DDA,Operating,927600.0,0.0066,0.0
+DP01479,R413,Deposit,Analyzed DDA,Operating,245000.0,0.011,0.0
+DP01480,R485,Deposit,Analyzed DDA,Operating,195700.0,0.0064,0.0
+DP01481,R364,Deposit,Analyzed DDA,Operating,556700.0,0.0123,0.0
+DP01482,R340,Deposit,Analyzed DDA,Operating,1597300.0,0.0046,0.0
+DP01483,R389,Deposit,Commercial CD,Time Deposit,1439800.0,0.0404,0.5
+DP01484,R004,Deposit,Analyzed DDA,Operating,9233600.0,0.0079,0.0
+DP01485,R008,Deposit,Analyzed DDA,Operating,30388400.0,0.0027,0.0
+DP01486,R050,Deposit,Money Market / Sweep,Non-Operating,3656900.0,0.0225,0.0
+DP01487,R002,Deposit,Commercial CD,Time Deposit,12814700.0,0.0382,0.5
+DP01488,R348,Deposit,Money Market / Sweep,Non-Operating,527700.0,0.0292,0.0
+DP01489,R010,Deposit,Analyzed DDA,Operating,2849800.0,0.0031,0.0
+DP01490,R104,Deposit,Analyzed DDA,Operating,1504300.0,0.0124,0.0
+DP01491,R106,Deposit,Analyzed DDA,Operating,181300.0,0.0104,0.0
+DP01492,R002,Deposit,Money Market / Sweep,Non-Operating,6157800.0,0.0358,0.0
+DP01493,R014,Deposit,Analyzed DDA,Operating,263400.0,0.0044,0.0
+DP01494,R053,Deposit,Analyzed DDA,Operating,2037100.0,0.0009,0.0
+DP01495,R373,Deposit,Analyzed DDA,Operating,632300.0,0.0084,0.0
+DP01496,R384,Deposit,Analyzed DDA,Operating,569300.0,0.0003,0.0
+DP01497,R197,Deposit,Analyzed DDA,Operating,475200.0,0.0055,0.0
+DP01498,R289,Deposit,Analyzed DDA,Operating,823800.0,0.0007,0.0
+DP01499,R140,Deposit,Analyzed DDA,Operating,2901100.0,0.007,0.0
+DP01500,R428,Deposit,Analyzed DDA,Operating,358200.0,0.007,0.0
+DP01501,R004,Deposit,Analyzed DDA,Operating,3851900.0,0.0066,0.0
+DP01502,R253,Deposit,Analyzed DDA,Operating,318400.0,0.0089,0.0
+DP01503,R377,Deposit,Money Market / Sweep,Non-Operating,587300.0,0.0349,0.0
+DP01504,R002,Deposit,Analyzed DDA,Operating,2658600.0,0.003,0.0
+DP01505,R004,Deposit,Analyzed DDA,Operating,14425900.0,0.0052,0.0
+DP01506,R201,Deposit,Money Market / Sweep,Non-Operating,1355300.0,0.0328,0.0
+DP01507,R251,Deposit,Analyzed DDA,Operating,1297200.0,0.0015,0.0
+DP01508,R352,Deposit,Analyzed DDA,Operating,186700.0,0.0111,0.0
+DP01509,R201,Deposit,Analyzed DDA,Operating,1095900.0,0.0032,0.0
+DP01510,R003,Deposit,Commercial CD,Time Deposit,2179800.0,0.0409,0.5
+DP01511,R346,Deposit,Analyzed DDA,Operating,717000.0,0.0075,0.0
+DP01512,R338,Deposit,Analyzed DDA,Operating,443700.0,0.0034,0.0
+DP01513,R028,Deposit,Analyzed DDA,Operating,262700.0,0.0051,0.0
+DP01514,R317,Deposit,Money Market / Sweep,Non-Operating,258700.0,0.0225,0.0
+DP01515,R234,Deposit,Analyzed DDA,Operating,847700.0,0.0058,0.0
+DP01516,R156,Deposit,Money Market / Sweep,Non-Operating,215200.0,0.0243,0.0
+DP01517,R356,Deposit,Analyzed DDA,Operating,1892400.0,0.0021,0.0
+DP01518,R033,Deposit,Analyzed DDA,Operating,253200.0,0.0048,0.0
+DP01519,R104,Deposit,Money Market / Sweep,Non-Operating,83800.0,0.0336,0.0
+DP01520,R087,Deposit,Analyzed DDA,Operating,3401500.0,0.0095,0.0
+DP01521,R001,Deposit,Analyzed DDA,Operating,7716000.0,0.0045,0.0
+DP01522,R017,Deposit,Money Market / Sweep,Non-Operating,1394400.0,0.0304,0.0
+DP01523,R030,Deposit,Commercial CD,Time Deposit,504900.0,0.0348,2.0
+DP01524,R318,Deposit,Analyzed DDA,Operating,393000.0,0.0107,0.0
+DP01525,R111,Deposit,Money Market / Sweep,Non-Operating,172200.0,0.0356,0.0
+DP01526,R004,Deposit,Analyzed DDA,Operating,14878700.0,0.0072,0.0
+DP01527,R065,Deposit,Money Market / Sweep,Non-Operating,437400.0,0.0249,0.0
+DP01528,R279,Deposit,Money Market / Sweep,Non-Operating,2083200.0,0.0346,0.0
+DP01529,R141,Deposit,Money Market / Sweep,Non-Operating,293700.0,0.0282,0.0
+DP01530,R145,Deposit,Analyzed DDA,Operating,2259500.0,0.0021,0.0
+DP01531,R006,Deposit,Analyzed DDA,Operating,12668100.0,0.0111,0.0
+DP01532,R171,Deposit,Analyzed DDA,Operating,571400.0,0.0053,0.0
+DP01533,R346,Deposit,Money Market / Sweep,Non-Operating,693700.0,0.0257,0.0
+DP01534,R247,Deposit,Money Market / Sweep,Non-Operating,3491300.0,0.0325,0.0
+DP01535,R057,Deposit,Analyzed DDA,Operating,981200.0,0.0113,0.0
+DP01536,R225,Deposit,Analyzed DDA,Operating,1374100.0,0.0063,0.0
+DP01537,R315,Deposit,Money Market / Sweep,Non-Operating,2000000.0,0.0292,0.0
+DP01538,R004,Deposit,Analyzed DDA,Operating,5552500.0,0.0021,0.0
+DP01539,R008,Deposit,Commercial CD,Time Deposit,5120700.0,0.0346,1.0
+DP01540,R254,Deposit,Analyzed DDA,Operating,1148500.0,0.0066,0.0
+DP01541,R010,Deposit,Money Market / Sweep,Non-Operating,2617400.0,0.0353,0.0
+DP01542,R290,Deposit,Analyzed DDA,Operating,822200.0,0.0027,0.0
+DP01543,R143,Deposit,Analyzed DDA,Operating,4811900.0,0.0009,0.0
+DP01544,R359,Deposit,Commercial CD,Time Deposit,692500.0,0.0357,1.0
+DP01545,R431,Deposit,Money Market / Sweep,Non-Operating,438300.0,0.0273,0.0
+DP01546,R467,Deposit,Analyzed DDA,Operating,361900.0,0.0035,0.0
+DP01547,R282,Deposit,Commercial CD,Time Deposit,899800.0,0.0395,1.0
+DP01548,R386,Deposit,Analyzed DDA,Operating,742100.0,0.0109,0.0
+DP01549,R299,Deposit,Money Market / Sweep,Non-Operating,181900.0,0.0315,0.0
+DP01550,R001,Deposit,Analyzed DDA,Operating,1014800.0,0.0101,0.0
+DP01551,R232,Deposit,Commercial CD,Time Deposit,392700.0,0.0332,0.5
+DP01552,R180,Deposit,Commercial CD,Time Deposit,2423900.0,0.0383,1.0
+DP01553,R130,Deposit,Analyzed DDA,Operating,853100.0,0.0095,0.0
+DP01554,R025,Deposit,Analyzed DDA,Operating,1161200.0,0.004,0.0
+DP01555,R341,Deposit,Money Market / Sweep,Non-Operating,365900.0,0.0287,0.0
+DP01556,R158,Deposit,Analyzed DDA,Operating,328400.0,0.0084,0.0
+DP01557,R046,Deposit,Analyzed DDA,Operating,2433300.0,0.0094,0.0
+DP01558,R093,Deposit,Money Market / Sweep,Non-Operating,104300.0,0.0334,0.0
+DP01559,R003,Deposit,Analyzed DDA,Operating,21398000.0,0.0064,0.0
+DP01560,R238,Deposit,Commercial CD,Time Deposit,2483300.0,0.0374,0.5
+DP01561,R239,Deposit,Money Market / Sweep,Non-Operating,4152400.0,0.024,0.0
+DP01562,R143,Deposit,Analyzed DDA,Operating,373700.0,0.0045,0.0
+DP01563,R134,Deposit,Analyzed DDA,Operating,794600.0,0.0061,0.0
+DP01564,R004,Deposit,Money Market / Sweep,Non-Operating,10244400.0,0.0288,0.0
+DP01565,R104,Deposit,Analyzed DDA,Operating,441700.0,0.009,0.0
+DP01566,R065,Deposit,Commercial CD,Time Deposit,202000.0,0.0367,1.0
+DP01567,R008,Deposit,Analyzed DDA,Operating,1569600.0,0.0119,0.0
+DP01568,R242,Deposit,Analyzed DDA,Operating,316900.0,0.0069,0.0
+DP01569,R139,Deposit,Analyzed DDA,Operating,606900.0,0.0034,0.0
+DP01570,R132,Deposit,Analyzed DDA,Operating,411000.0,0.0005,0.0
+DP01571,R284,Deposit,Analyzed DDA,Operating,296500.0,0.007,0.0
+DP01572,R376,Deposit,Analyzed DDA,Operating,2858500.0,0.0073,0.0
+DP01573,R328,Deposit,Analyzed DDA,Operating,915000.0,0.0087,0.0
+DP01574,R441,Deposit,Analyzed DDA,Operating,266100.0,0.0066,0.0
+DP01575,R008,Deposit,Analyzed DDA,Operating,10312000.0,0.0064,0.0
+DP01576,R274,Deposit,Analyzed DDA,Operating,838800.0,0.0038,0.0
+DP01577,R474,Deposit,Analyzed DDA,Operating,426200.0,0.0024,0.0
+DP01578,R022,Deposit,Analyzed DDA,Operating,127800.0,0.0031,0.0
+DP01579,R297,Deposit,Commercial CD,Time Deposit,159800.0,0.0342,0.5
+DP01580,R486,Deposit,Analyzed DDA,Operating,469100.0,0.0097,0.0
+DP01581,R006,Deposit,Analyzed DDA,Operating,13096900.0,0.0015,0.0
+DP01582,R286,Deposit,Commercial CD,Time Deposit,2056600.0,0.0402,1.0
+DP01583,R009,Deposit,Money Market / Sweep,Non-Operating,8537100.0,0.0265,0.0
+DP01584,R344,Deposit,Analyzed DDA,Operating,9827300.0,0.0005,0.0
+DP01585,R157,Deposit,Commercial CD,Time Deposit,591700.0,0.0364,2.0
+DP01586,R138,Deposit,Commercial CD,Time Deposit,1466200.0,0.0403,1.0
+DP01587,R003,Deposit,Money Market / Sweep,Non-Operating,2276700.0,0.0294,0.0
+DP01588,R274,Deposit,Money Market / Sweep,Non-Operating,102000.0,0.0321,0.0
+DP01589,R219,Deposit,Money Market / Sweep,Non-Operating,355200.0,0.0348,0.0
+DP01590,R406,Deposit,Commercial CD,Time Deposit,426800.0,0.0387,2.0
+DP01591,R019,Deposit,Analyzed DDA,Operating,19242900.0,0.0124,0.0
+DP01592,R188,Deposit,Money Market / Sweep,Non-Operating,483500.0,0.0304,0.0
+DP01593,R407,Deposit,Analyzed DDA,Operating,174800.0,0.0077,0.0
+DP01594,R090,Deposit,Money Market / Sweep,Non-Operating,3807300.0,0.03,0.0
+DP01595,R490,Deposit,Commercial CD,Time Deposit,678900.0,0.0376,1.0
+DP01596,R462,Deposit,Analyzed DDA,Operating,558300.0,0.0007,0.0
+DP01597,R249,Deposit,Analyzed DDA,Operating,1162900.0,0.0099,0.0
+DP01598,R453,Deposit,Money Market / Sweep,Non-Operating,190500.0,0.0247,0.0
+DP01599,R249,Deposit,Money Market / Sweep,Non-Operating,2205900.0,0.0229,0.0
+DP01600,R401,Deposit,Money Market / Sweep,Non-Operating,1492500.0,0.0343,0.0
+DP01601,R008,Deposit,Commercial CD,Time Deposit,5738600.0,0.0382,0.5
+DP01602,R376,Deposit,Analyzed DDA,Operating,8364200.0,0.0106,0.0
+DP01603,R018,Deposit,Money Market / Sweep,Non-Operating,330000.0,0.0235,0.0
+DP01604,R055,Deposit,Money Market / Sweep,Non-Operating,1070200.0,0.0321,0.0
+DP01605,R248,Deposit,Analyzed DDA,Operating,1917600.0,0.0023,0.0
+DP01606,R005,Deposit,Analyzed DDA,Operating,2129900.0,0.0122,0.0
+DP01607,R348,Deposit,Money Market / Sweep,Non-Operating,263400.0,0.0233,0.0
+DP01608,R010,Deposit,Money Market / Sweep,Non-Operating,30722600.0,0.0236,0.0
+DP01609,R304,Deposit,Money Market / Sweep,Non-Operating,1395100.0,0.0271,0.0
+DP01610,R294,Deposit,Analyzed DDA,Operating,3531700.0,0.0094,0.0
+DP01611,R455,Deposit,Money Market / Sweep,Non-Operating,776500.0,0.0358,0.0
+DP01612,R468,Deposit,Analyzed DDA,Operating,981800.0,0.0073,0.0
+DP01613,R004,Deposit,Analyzed DDA,Operating,2789600.0,0.0073,0.0
+DP01614,R076,Deposit,Money Market / Sweep,Non-Operating,2642400.0,0.0231,0.0
+DP01615,R385,Deposit,Money Market / Sweep,Non-Operating,4880200.0,0.0291,0.0
+DP01616,R009,Deposit,Money Market / Sweep,Non-Operating,10107300.0,0.0234,0.0
+DP01617,R106,Deposit,Analyzed DDA,Operating,1095700.0,0.007,0.0
+DP01618,R004,Deposit,Money Market / Sweep,Non-Operating,3691900.0,0.0358,0.0
+DP01619,R006,Deposit,Commercial CD,Time Deposit,6560700.0,0.0333,1.0
+DP01620,R008,Deposit,Analyzed DDA,Operating,18826400.0,0.0073,0.0
+DP01621,R151,Deposit,Analyzed DDA,Operating,771300.0,0.0036,0.0
+DP01622,R400,Deposit,Commercial CD,Time Deposit,208700.0,0.0357,0.5
+DP01623,R437,Deposit,Analyzed DDA,Operating,1696600.0,0.0032,0.0
+DP01624,R013,Deposit,Money Market / Sweep,Non-Operating,245200.0,0.0342,0.0
+DP01625,R244,Deposit,Money Market / Sweep,Non-Operating,469600.0,0.0272,0.0
+DP01626,R050,Deposit,Analyzed DDA,Operating,903600.0,0.0112,0.0
+DP01627,R004,Deposit,Commercial CD,Time Deposit,296700.0,0.0393,0.5
+DP01628,R491,Deposit,Analyzed DDA,Operating,576300.0,0.0088,0.0
+DP01629,R217,Deposit,Analyzed DDA,Operating,4248000.0,0.0054,0.0
+DP01630,R448,Deposit,Analyzed DDA,Operating,1998200.0,0.0016,0.0
+DP01631,R007,Deposit,Commercial CD,Time Deposit,78040600.0,0.0349,0.5
+DP01632,R293,Deposit,Analyzed DDA,Operating,415000.0,0.0026,0.0
+DP01633,R004,Deposit,Money Market / Sweep,Non-Operating,5029800.0,0.0331,0.0
+DP01634,R008,Deposit,Analyzed DDA,Operating,3631700.0,0.0057,0.0
+DP01635,R444,Deposit,Analyzed DDA,Operating,513800.0,0.0046,0.0
+DP01636,R399,Deposit,Analyzed DDA,Operating,2100700.0,0.0049,0.0
+DP01637,R416,Deposit,Analyzed DDA,Operating,2190100.0,0.005,0.0
+DP01638,R484,Deposit,Analyzed DDA,Operating,627100.0,0.0002,0.0
+DP01639,R240,Deposit,Analyzed DDA,Operating,487900.0,0.0046,0.0
+DP01640,R258,Deposit,Analyzed DDA,Operating,895300.0,0.0049,0.0
+DP01641,R359,Deposit,Analyzed DDA,Operating,1739800.0,0.0074,0.0
+DP01642,R007,Deposit,Money Market / Sweep,Non-Operating,465900.0,0.0303,0.0
+DP01643,R174,Deposit,Analyzed DDA,Operating,358400.0,0.0022,0.0
+DP01644,R461,Deposit,Analyzed DDA,Operating,503700.0,0.0073,0.0
+DP01645,R137,Deposit,Analyzed DDA,Operating,1481400.0,0.0004,0.0
+DP01646,R018,Deposit,Commercial CD,Time Deposit,299100.0,0.0358,1.0
+DP01647,R165,Deposit,Money Market / Sweep,Non-Operating,944200.0,0.0309,0.0
+DP01648,R354,Deposit,Commercial CD,Time Deposit,3495700.0,0.0395,2.0
+DP01649,R041,Deposit,Analyzed DDA,Operating,1466100.0,0.0023,0.0
+DP01650,R434,Deposit,Money Market / Sweep,Non-Operating,385000.0,0.0333,0.0
+DP01651,R359,Deposit,Analyzed DDA,Operating,775300.0,0.0057,0.0
+DP01652,R088,Deposit,Money Market / Sweep,Non-Operating,579100.0,0.0322,0.0
+DP01653,R057,Deposit,Analyzed DDA,Operating,624300.0,0.0086,0.0
+DP01654,R036,Deposit,Money Market / Sweep,Non-Operating,403700.0,0.0318,0.0
+DP01655,R049,Deposit,Commercial CD,Time Deposit,374000.0,0.0346,0.5
+DP01656,R334,Deposit,Money Market / Sweep,Non-Operating,177100.0,0.0303,0.0
+DP01657,R225,Deposit,Analyzed DDA,Operating,893100.0,0.011,0.0
+DP01658,R004,Deposit,Money Market / Sweep,Non-Operating,1425000.0,0.0239,0.0
+DP01659,R002,Deposit,Money Market / Sweep,Non-Operating,1780300.0,0.0301,0.0
+DP01660,R374,Deposit,Analyzed DDA,Operating,146000.0,0.011,0.0
+DP01661,R190,Deposit,Analyzed DDA,Operating,349100.0,0.002,0.0
+DP01662,R493,Deposit,Money Market / Sweep,Non-Operating,496400.0,0.0307,0.0
+DP01663,R393,Deposit,Analyzed DDA,Operating,161100.0,0.0048,0.0
+DP01664,R387,Deposit,Analyzed DDA,Operating,370600.0,0.0037,0.0
+DP01665,R205,Deposit,Commercial CD,Time Deposit,568600.0,0.0405,1.0
+DP01666,R110,Deposit,Commercial CD,Time Deposit,100700.0,0.0352,0.5
+DP01667,R159,Deposit,Analyzed DDA,Operating,226300.0,0.0082,0.0
+DP01668,R481,Deposit,Commercial CD,Time Deposit,8819200.0,0.0358,1.0
+DP01669,R057,Deposit,Commercial CD,Time Deposit,238100.0,0.0342,0.5
+DP01670,R087,Deposit,Money Market / Sweep,Non-Operating,2946700.0,0.0347,0.0
+DP01671,R243,Deposit,Money Market / Sweep,Non-Operating,873500.0,0.0236,0.0
+DP01672,R408,Deposit,Commercial CD,Time Deposit,1772500.0,0.0394,2.0
+DP01673,R282,Deposit,Money Market / Sweep,Non-Operating,217900.0,0.0242,0.0
+DP01674,R407,Deposit,Analyzed DDA,Operating,72200.0,0.0006,0.0
+DP01675,R025,Deposit,Analyzed DDA,Operating,311200.0,0.0123,0.0
+DP01676,R194,Deposit,Analyzed DDA,Operating,752400.0,0.0072,0.0
+DP01677,R087,Deposit,Analyzed DDA,Operating,2859200.0,0.008,0.0
+DP01678,R415,Deposit,Analyzed DDA,Operating,558100.0,0.0071,0.0
+DP01679,R143,Deposit,Analyzed DDA,Operating,222300.0,0.0086,0.0
+DP01680,R171,Deposit,Analyzed DDA,Operating,1214000.0,0.0082,0.0
+DP01681,R094,Deposit,Analyzed DDA,Operating,235000.0,0.01,0.0
+DP01682,R002,Deposit,Commercial CD,Time Deposit,2081700.0,0.0376,2.0
+DP01683,R005,Deposit,Analyzed DDA,Operating,1512400.0,0.002,0.0
+DP01684,R331,Deposit,Money Market / Sweep,Non-Operating,316800.0,0.0282,0.0
+DP01685,R047,Deposit,Money Market / Sweep,Non-Operating,359900.0,0.0228,0.0
+DP01686,R009,Deposit,Commercial CD,Time Deposit,5404600.0,0.0377,1.0
+DP01687,R223,Deposit,Analyzed DDA,Operating,125000.0,0.004,0.0
+DP01688,R342,Deposit,Analyzed DDA,Operating,305200.0,0.0029,0.0
+DP01689,R393,Deposit,Money Market / Sweep,Non-Operating,217200.0,0.0316,0.0
+DP01690,R250,Deposit,Money Market / Sweep,Non-Operating,741700.0,0.0355,0.0
+DP01691,R004,Deposit,Money Market / Sweep,Non-Operating,5454600.0,0.0262,0.0
+DP01692,R453,Deposit,Analyzed DDA,Operating,172800.0,0.0023,0.0
+DP01693,R162,Deposit,Analyzed DDA,Operating,791300.0,0.0105,0.0
+DP01694,R324,Deposit,Analyzed DDA,Operating,459000.0,0.0118,0.0
+DP01695,R428,Deposit,Money Market / Sweep,Non-Operating,3207400.0,0.0299,0.0
+DP01696,R450,Deposit,Analyzed DDA,Operating,253500.0,0.0074,0.0
+DP01697,R372,Deposit,Analyzed DDA,Operating,2618800.0,0.0084,0.0
+DP01698,R047,Deposit,Money Market / Sweep,Non-Operating,1148700.0,0.0233,0.0
+DP01699,R272,Deposit,Analyzed DDA,Operating,518200.0,0.0107,0.0
+DP01700,R083,Deposit,Analyzed DDA,Operating,11823800.0,0.0082,0.0
+DP01701,R223,Deposit,Analyzed DDA,Operating,790700.0,0.0066,0.0
+DP01702,R328,Deposit,Money Market / Sweep,Non-Operating,8457700.0,0.0251,0.0
+DP01703,R010,Deposit,Money Market / Sweep,Non-Operating,50188000.0,0.0234,0.0
+DP01704,R182,Deposit,Analyzed DDA,Operating,90800.0,0.0011,0.0
+DP01705,R010,Deposit,Analyzed DDA,Operating,12750600.0,0.0091,0.0
+DP01706,R181,Deposit,Commercial CD,Time Deposit,810600.0,0.0379,1.0
+DP01707,R078,Deposit,Analyzed DDA,Operating,617000.0,0.0012,0.0
+DP01708,R188,Deposit,Analyzed DDA,Operating,249800.0,0.0055,0.0
+DP01709,R109,Deposit,Commercial CD,Time Deposit,198400.0,0.0386,1.0
+DP01710,R455,Deposit,Analyzed DDA,Operating,506200.0,0.0004,0.0
+DP01711,R044,Deposit,Commercial CD,Time Deposit,13404300.0,0.0391,0.5
+DP01712,R045,Deposit,Money Market / Sweep,Non-Operating,787500.0,0.0301,0.0
+DP01713,R401,Deposit,Money Market / Sweep,Non-Operating,124200.0,0.0247,0.0
+DP01714,R393,Deposit,Money Market / Sweep,Non-Operating,168800.0,0.03,0.0
+DP01715,R376,Deposit,Analyzed DDA,Operating,191500.0,0.0076,0.0
+DP01716,R390,Deposit,Commercial CD,Time Deposit,1591600.0,0.0374,2.0
+DP01717,R349,Deposit,Analyzed DDA,Operating,506100.0,0.003,0.0
+DP01718,R107,Deposit,Analyzed DDA,Operating,804800.0,0.0021,0.0
+DP01719,R284,Deposit,Analyzed DDA,Operating,484900.0,0.0002,0.0
+DP01720,R465,Deposit,Analyzed DDA,Operating,1247900.0,0.006,0.0
+DP01721,R160,Deposit,Analyzed DDA,Operating,975700.0,0.0023,0.0
+DP01722,R310,Deposit,Analyzed DDA,Operating,649900.0,0.0081,0.0
+DP01723,R079,Deposit,Analyzed DDA,Operating,636200.0,0.0069,0.0
+DP01724,R116,Deposit,Commercial CD,Time Deposit,454700.0,0.0377,1.0
+DP01725,R475,Deposit,Money Market / Sweep,Non-Operating,234700.0,0.0238,0.0
+DP01726,R450,Deposit,Analyzed DDA,Operating,357300.0,0.0045,0.0
+DP01727,R411,Deposit,Analyzed DDA,Operating,666800.0,0.0037,0.0
+DP01728,R399,Deposit,Money Market / Sweep,Non-Operating,5816500.0,0.0341,0.0
+DP01729,R271,Deposit,Money Market / Sweep,Non-Operating,543000.0,0.0275,0.0
+DP01730,R094,Deposit,Analyzed DDA,Operating,443100.0,0.0062,0.0
+DP01731,R008,Deposit,Commercial CD,Time Deposit,5495400.0,0.0343,1.0
+DP01732,R005,Deposit,Analyzed DDA,Operating,3444800.0,0.0088,0.0
+DP01733,R273,Deposit,Analyzed DDA,Operating,1418500.0,0.0034,0.0
+DP01734,R202,Deposit,Analyzed DDA,Operating,6607400.0,0.006,0.0
+DP01735,R396,Deposit,Commercial CD,Time Deposit,387000.0,0.0333,1.0
+DP01736,R005,Deposit,Money Market / Sweep,Non-Operating,5237600.0,0.0232,0.0
+DP01737,R498,Deposit,Money Market / Sweep,Non-Operating,253800.0,0.033,0.0
+DP01738,R001,Deposit,Analyzed DDA,Operating,14221700.0,0.0088,0.0
+DP01739,R329,Deposit,Analyzed DDA,Operating,583300.0,0.0065,0.0
+DP01740,R162,Deposit,Analyzed DDA,Operating,450100.0,0.0086,0.0
+DP01741,R379,Deposit,Analyzed DDA,Operating,1292000.0,0.0011,0.0
+DP01742,R078,Deposit,Commercial CD,Time Deposit,203500.0,0.0395,0.5
+DP01743,R140,Deposit,Money Market / Sweep,Non-Operating,3456200.0,0.0258,0.0
+DP01744,R337,Deposit,Analyzed DDA,Operating,62300.0,0.0049,0.0
+DP01745,R468,Deposit,Commercial CD,Time Deposit,162300.0,0.037,2.0
+DP01746,R159,Deposit,Analyzed DDA,Operating,440200.0,0.0065,0.0
+DP01747,R407,Deposit,Analyzed DDA,Operating,5383300.0,0.0048,0.0
+DP01748,R428,Deposit,Analyzed DDA,Operating,1678200.0,0.0052,0.0
+DP01749,R135,Deposit,Commercial CD,Time Deposit,571500.0,0.0399,2.0
+DP01750,R002,Deposit,Analyzed DDA,Operating,12700600.0,0.0008,0.0
+DP01751,R394,Deposit,Analyzed DDA,Operating,489600.0,0.0105,0.0
+DP01752,R400,Deposit,Analyzed DDA,Operating,23300.0,0.0007,0.0
+DP01753,R004,Deposit,Commercial CD,Time Deposit,22823200.0,0.0409,2.0
+DP01754,R199,Deposit,Analyzed DDA,Operating,885400.0,0.0101,0.0
+DP01755,R216,Deposit,Money Market / Sweep,Non-Operating,929600.0,0.0232,0.0
+DP01756,R377,Deposit,Commercial CD,Time Deposit,512200.0,0.04,1.0
+DP01757,R103,Deposit,Money Market / Sweep,Non-Operating,4155400.0,0.0319,0.0
+DP01758,R127,Deposit,Analyzed DDA,Operating,1275100.0,0.0012,0.0
+DP01759,R112,Deposit,Analyzed DDA,Operating,559100.0,0.0076,0.0
+DP01760,R009,Deposit,Analyzed DDA,Operating,30853900.0,0.0086,0.0
+DP01761,R010,Deposit,Money Market / Sweep,Non-Operating,1162300.0,0.0301,0.0
+DP01762,R240,Deposit,Money Market / Sweep,Non-Operating,811300.0,0.0344,0.0
+DP01763,R081,Deposit,Analyzed DDA,Operating,427500.0,0.0012,0.0
+DP01764,R288,Deposit,Analyzed DDA,Operating,2309200.0,0.0097,0.0
+DP01765,R371,Deposit,Analyzed DDA,Operating,648400.0,0.0088,0.0
+DP01766,R168,Deposit,Analyzed DDA,Operating,730100.0,0.0114,0.0
+DP01767,R135,Deposit,Analyzed DDA,Operating,107900.0,0.0102,0.0
+DP01768,R272,Deposit,Commercial CD,Time Deposit,340800.0,0.036,0.5
+DP01769,R002,Deposit,Analyzed DDA,Operating,4852800.0,0.012,0.0
+DP01770,R197,Deposit,Analyzed DDA,Operating,1540500.0,0.0106,0.0
+DP01771,R150,Deposit,Analyzed DDA,Operating,162000.0,0.01,0.0
+DP01772,R004,Deposit,Commercial CD,Time Deposit,1767000.0,0.0407,0.5
+DP01773,R418,Deposit,Analyzed DDA,Operating,294200.0,0.0094,0.0
+DP01774,R001,Deposit,Money Market / Sweep,Non-Operating,1856600.0,0.0296,0.0
+DP01775,R198,Deposit,Analyzed DDA,Operating,289100.0,0.012,0.0
+DP01776,R001,Deposit,Money Market / Sweep,Non-Operating,1566400.0,0.0325,0.0
+DP01777,R001,Deposit,Analyzed DDA,Operating,6117000.0,0.0032,0.0
+DP01778,R237,Deposit,Commercial CD,Time Deposit,298400.0,0.0382,2.0
+DP01779,R004,Deposit,Money Market / Sweep,Non-Operating,4074400.0,0.0249,0.0
+DP01780,R007,Deposit,Analyzed DDA,Operating,5464300.0,0.006,0.0
+DP01781,R140,Deposit,Money Market / Sweep,Non-Operating,365300.0,0.0306,0.0
+DP01782,R456,Deposit,Analyzed DDA,Operating,875700.0,0.0027,0.0
+DP01783,R011,Deposit,Analyzed DDA,Operating,596400.0,0.0029,0.0
+DP01784,R002,Deposit,Analyzed DDA,Operating,4974900.0,0.0038,0.0
+DP01785,R004,Deposit,Money Market / Sweep,Non-Operating,3527600.0,0.0244,0.0
+DP01786,R328,Deposit,Money Market / Sweep,Non-Operating,1108200.0,0.0357,0.0
+DP01787,R046,Deposit,Money Market / Sweep,Non-Operating,1531200.0,0.0331,0.0
+DP01788,R002,Deposit,Analyzed DDA,Operating,4435500.0,0.0068,0.0
+DP01789,R398,Deposit,Analyzed DDA,Operating,148600.0,0.0001,0.0
+DP01790,R004,Deposit,Commercial CD,Time Deposit,19476900.0,0.0345,1.0
+DP01791,R304,Deposit,Analyzed DDA,Operating,241200.0,0.0105,0.0
+DP01792,R025,Deposit,Analyzed DDA,Operating,517000.0,0.0021,0.0
+DP01793,R116,Deposit,Money Market / Sweep,Non-Operating,4652800.0,0.0264,0.0
+DP01794,R164,Deposit,Commercial CD,Time Deposit,1031000.0,0.0382,0.5
+DP01795,R254,Deposit,Analyzed DDA,Operating,613000.0,0.0012,0.0
+DP01796,R125,Deposit,Analyzed DDA,Operating,54100.0,0.0028,0.0
+DP01797,R141,Deposit,Money Market / Sweep,Non-Operating,66700.0,0.0298,0.0
+DP01798,R287,Deposit,Analyzed DDA,Operating,471500.0,0.0026,0.0
+DP01799,R234,Deposit,Commercial CD,Time Deposit,584600.0,0.036,0.5
+DP01800,R314,Deposit,Analyzed DDA,Operating,1462000.0,0.0113,0.0
+DP01801,R351,Deposit,Analyzed DDA,Operating,1077700.0,0.0028,0.0
+DP01802,R121,Deposit,Analyzed DDA,Operating,98400.0,0.0116,0.0
+DP01803,R331,Deposit,Analyzed DDA,Operating,1719300.0,0.0069,0.0
+DP01804,R325,Deposit,Analyzed DDA,Operating,441200.0,0.0065,0.0
+DP01805,R078,Deposit,Analyzed DDA,Operating,1146200.0,0.0084,0.0
+DP01806,R196,Deposit,Commercial CD,Time Deposit,923600.0,0.0346,0.5
+DP01807,R006,Deposit,Analyzed DDA,Operating,60930000.0,0.012,0.0
+DP01808,R207,Deposit,Analyzed DDA,Operating,268000.0,0.0,0.0
+DP01809,R326,Deposit,Analyzed DDA,Operating,449200.0,0.005,0.0
+DP01810,R240,Deposit,Analyzed DDA,Operating,566600.0,0.0022,0.0
+DP01811,R149,Deposit,Money Market / Sweep,Non-Operating,379500.0,0.0225,0.0
+DP01812,R002,Deposit,Analyzed DDA,Operating,1487000.0,0.0018,0.0
+DP01813,R160,Deposit,Analyzed DDA,Operating,13149400.0,0.0089,0.0
+DP01814,R325,Deposit,Money Market / Sweep,Non-Operating,787900.0,0.0253,0.0
+DP01815,R084,Deposit,Analyzed DDA,Operating,253400.0,0.0105,0.0
+DP01816,R294,Deposit,Money Market / Sweep,Non-Operating,1300700.0,0.0358,0.0
+DP01817,R050,Deposit,Money Market / Sweep,Non-Operating,1760400.0,0.0359,0.0
+DP01818,R195,Deposit,Analyzed DDA,Operating,243900.0,0.0053,0.0
+DP01819,R472,Deposit,Analyzed DDA,Operating,3765100.0,0.0085,0.0
+DP01820,R445,Deposit,Analyzed DDA,Operating,1690500.0,0.0001,0.0
+DP01821,R414,Deposit,Commercial CD,Time Deposit,1480500.0,0.0358,1.0
+DP01822,R005,Deposit,Money Market / Sweep,Non-Operating,7042900.0,0.0358,0.0
+DP01823,R044,Deposit,Commercial CD,Time Deposit,621100.0,0.0352,1.0
+DP01824,R091,Deposit,Money Market / Sweep,Non-Operating,269500.0,0.0296,0.0
+DP01825,R183,Deposit,Commercial CD,Time Deposit,1419400.0,0.0331,2.0
+DP01826,R448,Deposit,Analyzed DDA,Operating,3677400.0,0.0047,0.0
+DP01827,R006,Deposit,Money Market / Sweep,Non-Operating,3158300.0,0.0315,0.0
+DP01828,R233,Deposit,Analyzed DDA,Operating,352200.0,0.0078,0.0
+DP01829,R388,Deposit,Commercial CD,Time Deposit,58700.0,0.0378,0.5
+DP01830,R426,Deposit,Commercial CD,Time Deposit,725200.0,0.0365,2.0
+DP01831,R275,Deposit,Money Market / Sweep,Non-Operating,278500.0,0.0279,0.0
+DP01832,R099,Deposit,Money Market / Sweep,Non-Operating,119100.0,0.0242,0.0
+DP01833,R046,Deposit,Commercial CD,Time Deposit,2091800.0,0.0383,1.0
+DP01834,R368,Deposit,Analyzed DDA,Operating,40090200.0,0.01,0.0
+DP01835,R136,Deposit,Analyzed DDA,Operating,587400.0,0.001,0.0
+DP01836,R001,Deposit,Money Market / Sweep,Non-Operating,5622000.0,0.0287,0.0
+DP01837,R497,Deposit,Money Market / Sweep,Non-Operating,678300.0,0.0298,0.0
+DP01838,R413,Deposit,Analyzed DDA,Operating,169500.0,0.0044,0.0
+DP01839,R196,Deposit,Analyzed DDA,Operating,11340900.0,0.0107,0.0
+DP01840,R426,Deposit,Analyzed DDA,Operating,648500.0,0.0105,0.0
+DP01841,R192,Deposit,Commercial CD,Time Deposit,196400.0,0.0347,0.5
+DP01842,R008,Deposit,Money Market / Sweep,Non-Operating,5152500.0,0.0231,0.0
+DP01843,R245,Deposit,Money Market / Sweep,Non-Operating,944100.0,0.023,0.0
+DP01844,R344,Deposit,Analyzed DDA,Operating,2633000.0,0.0095,0.0
+DP01845,R148,Deposit,Analyzed DDA,Operating,2319300.0,0.0033,0.0
+DP01846,R179,Deposit,Analyzed DDA,Operating,699500.0,0.0023,0.0
+DP01847,R236,Deposit,Analyzed DDA,Operating,606900.0,0.0062,0.0
+DP01848,R302,Deposit,Analyzed DDA,Operating,935500.0,0.0094,0.0
+DP01849,R389,Deposit,Analyzed DDA,Operating,7230900.0,0.0063,0.0
+DP01850,R288,Deposit,Analyzed DDA,Operating,4721700.0,0.003,0.0
+DP01851,R228,Deposit,Analyzed DDA,Operating,1057900.0,0.0109,0.0
+DP01852,R168,Deposit,Money Market / Sweep,Non-Operating,3751200.0,0.0243,0.0
+DP01853,R006,Deposit,Money Market / Sweep,Non-Operating,24047100.0,0.0283,0.0
+DP01854,R449,Deposit,Analyzed DDA,Operating,967600.0,0.0009,0.0
+DP01855,R163,Deposit,Commercial CD,Time Deposit,1357900.0,0.039,1.0
+DP01856,R051,Deposit,Analyzed DDA,Operating,294000.0,0.0077,0.0
+DP01857,R015,Deposit,Commercial CD,Time Deposit,533800.0,0.0401,1.0
+DP01858,R194,Deposit,Analyzed DDA,Operating,154700.0,0.0059,0.0
+DP01859,R241,Deposit,Analyzed DDA,Operating,1184100.0,0.0038,0.0
+DP01860,R102,Deposit,Analyzed DDA,Operating,1943700.0,0.0111,0.0
+DP01861,R008,Deposit,Commercial CD,Time Deposit,2710100.0,0.0378,0.5
+DP01862,R002,Deposit,Commercial CD,Time Deposit,2568700.0,0.0332,2.0
+DP01863,R047,Deposit,Analyzed DDA,Operating,168200.0,0.0067,0.0
+DP01864,R126,Deposit,Money Market / Sweep,Non-Operating,2314600.0,0.025,0.0
+DP01865,R337,Deposit,Analyzed DDA,Operating,478400.0,0.0016,0.0
+DP01866,R046,Deposit,Money Market / Sweep,Non-Operating,342600.0,0.0358,0.0
+DP01867,R292,Deposit,Analyzed DDA,Operating,8922500.0,0.0122,0.0
+DP01868,R005,Deposit,Money Market / Sweep,Non-Operating,680900.0,0.0347,0.0
+DP01869,R410,Deposit,Analyzed DDA,Operating,114600.0,0.006,0.0
+DP01870,R322,Deposit,Money Market / Sweep,Non-Operating,3712800.0,0.0268,0.0
+DP01871,R112,Deposit,Analyzed DDA,Operating,933100.0,0.0011,0.0
+DP01872,R297,Deposit,Money Market / Sweep,Non-Operating,236800.0,0.0316,0.0
+DP01873,R358,Deposit,Analyzed DDA,Operating,222000.0,0.0009,0.0
+DP01874,R361,Deposit,Analyzed DDA,Operating,764600.0,0.0048,0.0
+DP01875,R234,Deposit,Analyzed DDA,Operating,705900.0,0.0051,0.0
+DP01876,R175,Deposit,Analyzed DDA,Operating,239300.0,0.0075,0.0
+DP01877,R276,Deposit,Analyzed DDA,Operating,3920200.0,0.0052,0.0
+DP01878,R067,Deposit,Analyzed DDA,Operating,856900.0,0.012,0.0
+DP01879,R351,Deposit,Analyzed DDA,Operating,1840700.0,0.01,0.0
+DP01880,R134,Deposit,Analyzed DDA,Operating,460200.0,0.012,0.0
+DP01881,R369,Deposit,Analyzed DDA,Operating,3262400.0,0.0065,0.0
+DP01882,R333,Deposit,Analyzed DDA,Operating,1154900.0,0.0038,0.0
+DP01883,R008,Deposit,Analyzed DDA,Operating,6924100.0,0.0123,0.0
+DP01884,R090,Deposit,Analyzed DDA,Operating,2075300.0,0.001,0.0
+DP01885,R402,Deposit,Money Market / Sweep,Non-Operating,1129500.0,0.0273,0.0
+DP01886,R002,Deposit,Money Market / Sweep,Non-Operating,6776300.0,0.0316,0.0
+DP01887,R276,Deposit,Analyzed DDA,Operating,219500.0,0.0101,0.0
+DP01888,R066,Deposit,Analyzed DDA,Operating,775500.0,0.0097,0.0
+DP01889,R446,Deposit,Money Market / Sweep,Non-Operating,525600.0,0.0347,0.0
+DP01890,R350,Deposit,Analyzed DDA,Operating,771100.0,0.0098,0.0
+DP01891,R161,Deposit,Analyzed DDA,Operating,1103500.0,0.0011,0.0
+DP01892,R292,Deposit,Analyzed DDA,Operating,837200.0,0.0047,0.0
+DP01893,R003,Deposit,Commercial CD,Time Deposit,1992200.0,0.0341,2.0
+DP01894,R445,Deposit,Analyzed DDA,Operating,3634200.0,0.0123,0.0
+DP01895,R094,Deposit,Analyzed DDA,Operating,215400.0,0.0059,0.0
+DP01896,R286,Deposit,Analyzed DDA,Operating,1710700.0,0.0006,0.0
+DP01897,R323,Deposit,Analyzed DDA,Operating,1828800.0,0.0032,0.0
+DP01898,R357,Deposit,Analyzed DDA,Operating,478800.0,0.0106,0.0
+DP01899,R123,Deposit,Commercial CD,Time Deposit,253000.0,0.0361,2.0
+DP01900,R479,Deposit,Analyzed DDA,Operating,241100.0,0.0116,0.0
+DP01901,R312,Deposit,Money Market / Sweep,Non-Operating,162000.0,0.0279,0.0
+DP01902,R246,Deposit,Commercial CD,Time Deposit,576800.0,0.0377,2.0
+DP01903,R006,Deposit,Analyzed DDA,Operating,3365100.0,0.005,0.0
+DP01904,R009,Deposit,Analyzed DDA,Operating,2303700.0,0.0092,0.0
+DP01905,R306,Deposit,Analyzed DDA,Operating,96700.0,0.0103,0.0
+DP01906,R291,Deposit,Money Market / Sweep,Non-Operating,894700.0,0.0295,0.0
+DP01907,R326,Deposit,Analyzed DDA,Operating,530800.0,0.0063,0.0
+DP01908,R273,Deposit,Analyzed DDA,Operating,1033700.0,0.0041,0.0
+DP01909,R090,Deposit,Analyzed DDA,Operating,593000.0,0.0057,0.0
+DP01910,R005,Deposit,Analyzed DDA,Operating,368900.0,0.0036,0.0
+DP01911,R357,Deposit,Analyzed DDA,Operating,1520600.0,0.0042,0.0
+DP01912,R086,Deposit,Analyzed DDA,Operating,1394700.0,0.0034,0.0
+DP01913,R099,Deposit,Money Market / Sweep,Non-Operating,666600.0,0.0239,0.0
+DP01914,R454,Deposit,Commercial CD,Time Deposit,1738600.0,0.0333,2.0
+DP01915,R348,Deposit,Commercial CD,Time Deposit,795400.0,0.0386,0.5
+DP01916,R379,Deposit,Analyzed DDA,Operating,615200.0,0.0115,0.0
+DP01917,R399,Deposit,Analyzed DDA,Operating,1601400.0,0.0049,0.0
+DP01918,R315,Deposit,Analyzed DDA,Operating,3113000.0,0.0082,0.0
+DP01919,R048,Deposit,Analyzed DDA,Operating,1286000.0,0.0121,0.0
+DP01920,R249,Deposit,Commercial CD,Time Deposit,1928900.0,0.0388,0.5
+DP01921,R195,Deposit,Money Market / Sweep,Non-Operating,210500.0,0.0246,0.0
+DP01922,R202,Deposit,Analyzed DDA,Operating,1862100.0,0.0121,0.0
+DP01923,R148,Deposit,Money Market / Sweep,Non-Operating,97100.0,0.0251,0.0
+DP01924,R063,Deposit,Analyzed DDA,Operating,298900.0,0.001,0.0
+DP01925,R166,Deposit,Money Market / Sweep,Non-Operating,397200.0,0.0301,0.0
+DP01926,R173,Deposit,Analyzed DDA,Operating,3044000.0,0.0037,0.0
+DP01927,R019,Deposit,Commercial CD,Time Deposit,1289800.0,0.0389,0.5
+DP01928,R112,Deposit,Commercial CD,Time Deposit,947900.0,0.0409,0.5
+DP01929,R065,Deposit,Analyzed DDA,Operating,342500.0,0.0017,0.0
+DP01930,R091,Deposit,Money Market / Sweep,Non-Operating,271400.0,0.0281,0.0
+DP01931,R284,Deposit,Analyzed DDA,Operating,216900.0,0.0053,0.0
+DP01932,R275,Deposit,Money Market / Sweep,Non-Operating,2895000.0,0.0348,0.0
+DP01933,R287,Deposit,Analyzed DDA,Operating,331300.0,0.0033,0.0
+DP01934,R303,Deposit,Commercial CD,Time Deposit,42700.0,0.0348,0.5
+DP01935,R302,Deposit,Commercial CD,Time Deposit,913400.0,0.0389,1.0
+DP01936,R455,Deposit,Analyzed DDA,Operating,572900.0,0.001,0.0
+DP01937,R216,Deposit,Analyzed DDA,Operating,1760300.0,0.0084,0.0
+DP01938,R010,Deposit,Money Market / Sweep,Non-Operating,1303200.0,0.0323,0.0
+DP01939,R478,Deposit,Analyzed DDA,Operating,490900.0,0.0067,0.0
+DP01940,R378,Deposit,Analyzed DDA,Operating,27400.0,0.01,0.0
+DP01941,R089,Deposit,Analyzed DDA,Operating,467700.0,0.0023,0.0
+DP01942,R353,Deposit,Analyzed DDA,Operating,201600.0,0.0026,0.0
+DP01943,R074,Deposit,Analyzed DDA,Operating,136100.0,0.0113,0.0
+DP01944,R004,Deposit,Analyzed DDA,Operating,8654800.0,0.0093,0.0
+DP01945,R197,Deposit,Analyzed DDA,Operating,429600.0,0.0033,0.0
+DP01946,R488,Deposit,Analyzed DDA,Operating,378900.0,0.009,0.0
+DP01947,R383,Deposit,Money Market / Sweep,Non-Operating,234400.0,0.025,0.0
+DP01948,R143,Deposit,Analyzed DDA,Operating,1183200.0,0.0077,0.0
+DP01949,R003,Deposit,Analyzed DDA,Operating,2609600.0,0.0098,0.0
+DP01950,R097,Deposit,Commercial CD,Time Deposit,2141300.0,0.0357,1.0
+DP01951,R443,Deposit,Commercial CD,Time Deposit,1654100.0,0.0405,0.5
+DP01952,R108,Deposit,Analyzed DDA,Operating,2011700.0,0.0042,0.0
+DP01953,R065,Deposit,Money Market / Sweep,Non-Operating,1273400.0,0.0338,0.0
+DP01954,R010,Deposit,Analyzed DDA,Operating,2198200.0,0.0045,0.0
+DP01955,R010,Deposit,Money Market / Sweep,Non-Operating,4247700.0,0.0256,0.0
+DP01956,R128,Deposit,Analyzed DDA,Operating,394800.0,0.0075,0.0
+DP01957,R170,Deposit,Analyzed DDA,Operating,1118300.0,0.0106,0.0
+DP01958,R281,Deposit,Commercial CD,Time Deposit,478600.0,0.0409,0.5
+DP01959,R266,Deposit,Money Market / Sweep,Non-Operating,379200.0,0.0264,0.0
+DP01960,R204,Deposit,Analyzed DDA,Operating,2538800.0,0.0098,0.0
+DP01961,R357,Deposit,Commercial CD,Time Deposit,348600.0,0.0353,2.0
+DP01962,R146,Deposit,Analyzed DDA,Operating,259000.0,0.0125,0.0
+DP01963,R095,Deposit,Analyzed DDA,Operating,970800.0,0.0083,0.0
+DP01964,R310,Deposit,Analyzed DDA,Operating,1411800.0,0.0112,0.0
+DP01965,R001,Deposit,Money Market / Sweep,Non-Operating,4863300.0,0.0265,0.0
+DP01966,R361,Deposit,Money Market / Sweep,Non-Operating,765000.0,0.0303,0.0
+DP01967,R380,Deposit,Analyzed DDA,Operating,1837300.0,0.0042,0.0
+DP01968,R232,Deposit,Analyzed DDA,Operating,54000.0,0.0121,0.0
+DP01969,R129,Deposit,Analyzed DDA,Operating,166100.0,0.0018,0.0
+DP01970,R002,Deposit,Analyzed DDA,Operating,3050100.0,0.0094,0.0
+DP01971,R035,Deposit,Analyzed DDA,Operating,662600.0,0.0079,0.0
+DP01972,R239,Deposit,Analyzed DDA,Operating,542200.0,0.0106,0.0
+DP01973,R202,Deposit,Money Market / Sweep,Non-Operating,525800.0,0.0357,0.0
+DP01974,R286,Deposit,Money Market / Sweep,Non-Operating,353900.0,0.0333,0.0
+DP01975,R343,Deposit,Analyzed DDA,Operating,1822000.0,0.0032,0.0
+DP01976,R025,Deposit,Analyzed DDA,Operating,56200.0,0.0104,0.0
+DP01977,R004,Deposit,Money Market / Sweep,Non-Operating,284300.0,0.0278,0.0
+DP01978,R421,Deposit,Analyzed DDA,Operating,2742900.0,0.0082,0.0
+DP01979,R037,Deposit,Money Market / Sweep,Non-Operating,314100.0,0.0283,0.0
+DP01980,R274,Deposit,Analyzed DDA,Operating,322500.0,0.0102,0.0
+DP01981,R003,Deposit,Analyzed DDA,Operating,898700.0,0.0056,0.0
+DP01982,R261,Deposit,Analyzed DDA,Operating,357400.0,0.0101,0.0
+DP01983,R323,Deposit,Commercial CD,Time Deposit,422100.0,0.0404,1.0
+DP01984,R422,Deposit,Analyzed DDA,Operating,2421400.0,0.0077,0.0
+DP01985,R052,Deposit,Analyzed DDA,Operating,994400.0,0.0013,0.0
+DP01986,R154,Deposit,Analyzed DDA,Operating,134100.0,0.0012,0.0
+DP01987,R301,Deposit,Money Market / Sweep,Non-Operating,71800.0,0.0337,0.0
+DP01988,R264,Deposit,Money Market / Sweep,Non-Operating,797200.0,0.0272,0.0
+DP01989,R221,Deposit,Analyzed DDA,Operating,863000.0,0.0022,0.0
+DP01990,R014,Deposit,Analyzed DDA,Operating,234700.0,0.0075,0.0
+DP01991,R008,Deposit,Analyzed DDA,Operating,13180100.0,0.0098,0.0
+DP01992,R010,Deposit,Analyzed DDA,Operating,695900.0,0.0075,0.0
+DP01993,R363,Deposit,Analyzed DDA,Operating,335300.0,0.0056,0.0
+DP01994,R002,Deposit,Analyzed DDA,Operating,7573900.0,0.0104,0.0
+DP01995,R003,Deposit,Money Market / Sweep,Non-Operating,1238200.0,0.0254,0.0
+DP01996,R275,Deposit,Money Market / Sweep,Non-Operating,5314200.0,0.0345,0.0
+DP01997,R244,Deposit,Commercial CD,Time Deposit,175900.0,0.0378,0.5
+DP01998,R235,Deposit,Analyzed DDA,Operating,450800.0,0.0081,0.0
+DP01999,R450,Deposit,Money Market / Sweep,Non-Operating,241800.0,0.0235,0.0
+DP02000,R263,Deposit,Commercial CD,Time Deposit,93700.0,0.0397,1.0

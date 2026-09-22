@@ -1,0 +1,1001 @@
+account_id,relationship_id,product,sub_type,balance,tenor_yrs,remaining_yrs,rate_type,spread,orig_fee_pct,rating,collateral,commitment
+TL00001,R202,Term Loan,C&I Term,4105000.0,5.0,3.18,Floating,0.02,0.0075,4,Senior Secured,4105000.0
+TL00002,R105,Term Loan,C&I Term,1669000.0,5.0,4.26,Floating,0.0277,0.01,8,Senior Secured,1669000.0
+TL00003,R005,Term Loan,CRE Term,13356000.0,3.0,2.62,Floating,0.0239,0.01,6,Real Estate,13356000.0
+TL00004,R030,Term Loan,C&I Term,1362000.0,10.0,6.7,Floating,0.0265,0.0075,8,Unsecured,1362000.0
+TL00005,R258,Term Loan,CRE Term,853000.0,3.0,2.92,Floating,0.0232,0.0025,7,Real Estate,853000.0
+TL00006,R222,Term Loan,CRE Term,1258000.0,3.0,2.33,Floating,0.0359,0.01,10,Real Estate,1258000.0
+TL00007,R115,Term Loan,Equipment Finance,1464000.0,7.0,5.19,Fixed,0.0161,0.005,3,Senior Secured,1464000.0
+TL00008,R218,Term Loan,C&I Term,2409000.0,7.0,3.42,Floating,0.0229,0.01,5,Senior Secured,2409000.0
+TL00009,R205,Term Loan,CRE Term,1186000.0,5.0,1.01,Fixed,0.0262,0.005,7,Real Estate,1186000.0
+TL00010,R053,Term Loan,CRE Term,1764000.0,5.0,1.96,Fixed,0.0269,0.0075,5,Real Estate,1764000.0
+TL00011,R193,Term Loan,C&I Term,25761000.0,3.0,2.43,Floating,0.031,0.005,8,Senior Secured,25761000.0
+TL00012,R488,Term Loan,CRE Term,3068000.0,3.0,2.3,Floating,0.0172,0.005,3,Real Estate,3068000.0
+TL00013,R450,Term Loan,C&I Term,1636000.0,5.0,2.32,Fixed,0.0227,0.0025,5,Senior Secured,1636000.0
+TL00014,R076,Term Loan,Equipment Finance,3358000.0,5.0,3.5,Fixed,0.0247,0.0075,5,Senior Secured,3358000.0
+TL00015,R399,Term Loan,C&I Term,810000.0,5.0,1.78,Floating,0.0208,0.005,4,Senior Secured,810000.0
+TL00016,R103,Term Loan,Equipment Finance,510000.0,3.0,1.23,Fixed,0.0233,0.01,5,Senior Secured,510000.0
+TL00017,R151,Term Loan,CRE Term,955000.0,7.0,6.71,Fixed,0.038,0.005,10,Real Estate,955000.0
+TL00018,R489,Term Loan,C&I Term,436000.0,7.0,3.71,Floating,0.0288,0.01,9,Unsecured,436000.0
+TL00019,R213,Term Loan,CRE Term,3264000.0,3.0,1.19,Fixed,0.0233,0.005,7,Real Estate,3264000.0
+TL00020,R308,Term Loan,C&I Term,1550000.0,3.0,1.77,Floating,0.0304,0.005,8,Senior Secured,1550000.0
+TL00021,R083,Term Loan,CRE Term,8237000.0,5.0,2.55,Fixed,0.0245,0.0025,6,Real Estate,8237000.0
+TL00022,R420,Term Loan,CRE Term,529000.0,7.0,5.49,Fixed,0.0292,0.0075,7,Real Estate,529000.0
+TL00023,R003,Term Loan,C&I Term,15084000.0,7.0,6.79,Floating,0.021,0.0025,6,Senior Secured,15084000.0
+TL00024,R178,Term Loan,C&I Term,3990000.0,7.0,4.71,Floating,0.0181,0.005,3,Senior Secured,3990000.0
+TL00025,R002,Term Loan,CRE Term,14468000.0,5.0,3.36,Floating,0.0094,0.01,3,Real Estate,14468000.0
+TL00026,R260,Term Loan,C&I Term,2602000.0,3.0,1.48,Fixed,0.025,0.0075,6,Senior Secured,2602000.0
+TL00027,R121,Term Loan,Equipment Finance,3976000.0,5.0,3.26,Floating,0.0188,0.0075,5,Senior Secured,3976000.0
+TL00028,R208,Term Loan,CRE Term,1210000.0,3.0,1.37,Fixed,0.0288,0.01,7,Real Estate,1210000.0
+TL00029,R281,Term Loan,CRE Term,5436000.0,7.0,1.41,Floating,0.0147,0.01,4,Real Estate,5436000.0
+TL00030,R271,Term Loan,C&I Term,699000.0,3.0,2.68,Floating,0.0287,0.01,7,Senior Secured,699000.0
+TL00031,R452,Term Loan,CRE Term,2382000.0,5.0,2.72,Fixed,0.0157,0.0075,4,Real Estate,2382000.0
+TL00032,R401,Term Loan,Equipment Finance,1253000.0,5.0,2.97,Floating,0.0128,0.005,2,Senior Secured,1253000.0
+TL00033,R358,Term Loan,C&I Term,1012000.0,5.0,1.33,Floating,0.0216,0.0025,4,Senior Secured,1012000.0
+TL00034,R275,Term Loan,C&I Term,6541000.0,5.0,4.35,Floating,0.0172,0.005,3,Senior Secured,6541000.0
+TL00035,R236,Term Loan,C&I Term,1035000.0,5.0,1.68,Floating,0.0181,0.0075,5,Unsecured,1035000.0
+TL00036,R086,Term Loan,C&I Term,469000.0,10.0,5.28,Floating,0.0317,0.005,9,Senior Secured,469000.0
+TL00037,R008,Term Loan,CRE Term,945000.0,7.0,6.11,Floating,0.0171,0.0075,6,Real Estate,945000.0
+TL00038,R132,Term Loan,C&I Term,3639000.0,7.0,3.96,Floating,0.0236,0.0025,7,Senior Secured,3639000.0
+TL00039,R498,Term Loan,CRE Term,3518000.0,5.0,4.72,Floating,0.0169,0.0025,3,Real Estate,3518000.0
+TL00040,R041,Term Loan,C&I Term,17853000.0,5.0,1.84,Floating,0.0236,0.005,5,Unsecured,17853000.0
+TL00041,R307,Term Loan,C&I Term,1296000.0,5.0,3.86,Floating,0.0261,0.0025,6,Unsecured,1296000.0
+TL00042,R103,Term Loan,C&I Term,1402000.0,5.0,4.91,Floating,0.0237,0.01,5,Senior Secured,1402000.0
+TL00043,R262,Term Loan,Equipment Finance,940000.0,5.0,3.2,Fixed,0.0222,0.005,5,Senior Secured,940000.0
+TL00044,R390,Term Loan,CRE Term,1327000.0,5.0,3.77,Floating,0.0355,0.005,10,Real Estate,1327000.0
+TL00045,R004,Term Loan,C&I Term,4895000.0,3.0,1.54,Floating,0.0147,0.005,4,Unsecured,4895000.0
+TL00046,R025,Term Loan,CRE Term,4916000.0,3.0,2.4,Floating,0.0267,0.005,7,Real Estate,4916000.0
+TL00047,R270,Term Loan,C&I Term,7887000.0,7.0,6.49,Fixed,0.0161,0.01,4,Senior Secured,7887000.0
+TL00048,R121,Term Loan,C&I Term,1928000.0,3.0,2.29,Fixed,0.0201,0.0075,5,Senior Secured,1928000.0
+TL00049,R066,Term Loan,C&I Term,3910000.0,5.0,4.74,Fixed,0.0252,0.0025,6,Senior Secured,3910000.0
+TL00050,R094,Term Loan,Equipment Finance,467000.0,5.0,3.35,Fixed,0.0247,0.0025,6,Senior Secured,467000.0
+TL00051,R005,Term Loan,CRE Term,37753000.0,3.0,1.99,Floating,0.0285,0.0025,6,Real Estate,37753000.0
+TL00052,R264,Term Loan,CRE Term,1398000.0,7.0,3.11,Fixed,0.0188,0.005,5,Real Estate,1398000.0
+TL00053,R105,Term Loan,C&I Term,3130000.0,3.0,2.3,Floating,0.0303,0.0075,8,Unsecured,3130000.0
+TL00054,R127,Term Loan,C&I Term,5796000.0,7.0,6.34,Fixed,0.013,0.01,3,Senior Secured,5796000.0
+TL00055,R001,Term Loan,CRE Term,6858000.0,7.0,5.02,Fixed,0.0185,0.005,5,Real Estate,6858000.0
+TL00056,R313,Term Loan,C&I Term,1479000.0,3.0,1.16,Fixed,0.0129,0.0025,2,Senior Secured,1479000.0
+TL00057,R045,Term Loan,Equipment Finance,415000.0,3.0,1.91,Floating,0.0299,0.0025,7,Senior Secured,415000.0
+TL00058,R311,Term Loan,CRE Term,3137000.0,5.0,4.02,Fixed,0.0183,0.005,4,Real Estate,3137000.0
+TL00059,R398,Term Loan,C&I Term,1209000.0,5.0,4.76,Floating,0.0133,0.005,2,Unsecured,1209000.0
+TL00060,R140,Term Loan,CRE Term,9967000.0,3.0,0.98,Floating,0.0183,0.0075,4,Real Estate,9967000.0
+TL00061,R242,Term Loan,Equipment Finance,1119000.0,10.0,3.02,Floating,0.0187,0.0025,5,Senior Secured,1119000.0
+TL00062,R247,Term Loan,C&I Term,3537000.0,3.0,1.59,Floating,0.0206,0.0025,5,Senior Secured,3537000.0
+TL00063,R481,Term Loan,CRE Term,1495000.0,7.0,2.1,Floating,0.0184,0.0075,4,Real Estate,1495000.0
+TL00064,R377,Term Loan,Equipment Finance,2414000.0,3.0,2.95,Floating,0.0224,0.005,5,Senior Secured,2414000.0
+TL00065,R234,Term Loan,C&I Term,652000.0,10.0,5.39,Floating,0.018,0.005,3,Unsecured,652000.0
+TL00066,R280,Term Loan,Equipment Finance,891000.0,3.0,1.88,Floating,0.0188,0.0025,4,Senior Secured,891000.0
+TL00067,R008,Term Loan,C&I Term,10966000.0,5.0,1.91,Floating,0.024,0.0025,7,Senior Secured,10966000.0
+TL00068,R071,Term Loan,CRE Term,1449000.0,5.0,2.8,Floating,0.0179,0.005,5,Real Estate,1449000.0
+TL00069,R152,Term Loan,CRE Term,336000.0,3.0,2.96,Fixed,0.0291,0.005,7,Real Estate,336000.0
+TL00070,R006,Term Loan,CRE Term,9109000.0,7.0,4.14,Floating,0.0189,0.01,5,Real Estate,9109000.0
+TL00071,R047,Term Loan,C&I Term,2484000.0,5.0,1.04,Fixed,0.0213,0.01,4,Unsecured,2484000.0
+TL00072,R367,Term Loan,CRE Term,971000.0,5.0,1.97,Floating,0.0255,0.005,5,Real Estate,971000.0
+TL00073,R253,Term Loan,C&I Term,1098000.0,5.0,4.91,Floating,0.0189,0.005,4,Unsecured,1098000.0
+TL00074,R035,Term Loan,C&I Term,1497000.0,5.0,4.96,Floating,0.0112,0.005,2,Senior Secured,1497000.0
+TL00075,R399,Term Loan,C&I Term,3566000.0,3.0,1.11,Floating,0.025,0.0075,6,Unsecured,3566000.0
+TL00076,R432,Term Loan,CRE Term,1730000.0,3.0,2.08,Floating,0.0287,0.005,7,Real Estate,1730000.0
+TL00077,R170,Term Loan,C&I Term,1277000.0,3.0,0.78,Floating,0.0326,0.01,9,Unsecured,1277000.0
+TL00078,R226,Term Loan,C&I Term,2912000.0,5.0,3.31,Floating,0.0208,0.01,5,Senior Secured,2912000.0
+TL00079,R238,Term Loan,Equipment Finance,1701000.0,3.0,0.9,Floating,0.018,0.005,3,Senior Secured,1701000.0
+TL00080,R289,Term Loan,C&I Term,974000.0,10.0,8.55,Floating,0.029,0.0025,7,Senior Secured,974000.0
+TL00081,R431,Term Loan,C&I Term,1306000.0,5.0,4.76,Floating,0.0241,0.0025,6,Unsecured,1306000.0
+TL00082,R189,Term Loan,C&I Term,2792000.0,5.0,1.69,Fixed,0.0097,0.01,2,Senior Secured,2792000.0
+TL00083,R440,Term Loan,C&I Term,3663000.0,5.0,2.85,Floating,0.0289,0.005,7,Senior Secured,3663000.0
+TL00084,R397,Term Loan,CRE Term,1998000.0,5.0,1.41,Floating,0.0287,0.005,8,Real Estate,1998000.0
+TL00085,R378,Term Loan,C&I Term,1415000.0,5.0,2.36,Floating,0.0283,0.0075,7,Senior Secured,1415000.0
+TL00086,R493,Term Loan,C&I Term,502000.0,5.0,1.26,Floating,0.0198,0.01,4,Senior Secured,502000.0
+TL00087,R126,Term Loan,Equipment Finance,1725000.0,5.0,2.06,Floating,0.0287,0.005,9,Senior Secured,1725000.0
+TL00088,R039,Term Loan,Equipment Finance,1227000.0,5.0,4.96,Floating,0.028,0.005,7,Senior Secured,1227000.0
+TL00089,R444,Term Loan,CRE Term,560000.0,5.0,1.18,Floating,0.0179,0.01,3,Real Estate,560000.0
+TL00090,R185,Term Loan,Equipment Finance,11683000.0,10.0,8.87,Floating,0.0322,0.0025,8,Senior Secured,11683000.0
+TL00091,R470,Term Loan,Equipment Finance,731000.0,3.0,0.79,Floating,0.0197,0.01,4,Senior Secured,731000.0
+TL00092,R407,Term Loan,C&I Term,1909000.0,5.0,3.12,Floating,0.0229,0.0075,7,Senior Secured,1909000.0
+TL00093,R275,Term Loan,CRE Term,2020000.0,3.0,1.69,Floating,0.0198,0.0025,3,Real Estate,2020000.0
+TL00094,R269,Term Loan,CRE Term,7242000.0,5.0,4.73,Fixed,0.0232,0.0025,5,Real Estate,7242000.0
+TL00095,R107,Term Loan,C&I Term,579000.0,7.0,2.51,Floating,0.0276,0.0075,8,Senior Secured,579000.0
+TL00096,R433,Term Loan,C&I Term,4070000.0,3.0,1.03,Floating,0.0314,0.01,9,Senior Secured,4070000.0
+TL00097,R243,Term Loan,C&I Term,4115000.0,5.0,3.99,Floating,0.0256,0.0025,6,Senior Secured,4115000.0
+TL00098,R126,Term Loan,CRE Term,25394000.0,5.0,3.9,Fixed,0.0295,0.0075,7,Real Estate,25394000.0
+TL00099,R068,Term Loan,CRE Term,2177000.0,3.0,2.28,Fixed,0.0182,0.01,4,Real Estate,2177000.0
+TL00100,R194,Term Loan,CRE Term,818000.0,10.0,2.21,Fixed,0.0215,0.0075,4,Real Estate,818000.0
+TL00101,R418,Term Loan,C&I Term,2274000.0,5.0,2.04,Floating,0.0233,0.0075,7,Unsecured,2274000.0
+TL00102,R007,Term Loan,C&I Term,60610000.0,7.0,6.1,Floating,0.0222,0.0025,7,Senior Secured,60610000.0
+TL00103,R005,Term Loan,CRE Term,2975000.0,5.0,3.4,Fixed,0.012,0.0075,4,Real Estate,2975000.0
+TL00104,R022,Term Loan,CRE Term,670000.0,10.0,6.82,Floating,0.0256,0.0075,7,Real Estate,670000.0
+TL00105,R360,Term Loan,Equipment Finance,1088000.0,5.0,2.18,Fixed,0.0148,0.0025,1,Senior Secured,1088000.0
+TL00106,R188,Term Loan,Equipment Finance,942000.0,5.0,2.04,Floating,0.0189,0.005,2,Senior Secured,942000.0
+TL00107,R002,Term Loan,Equipment Finance,8396000.0,7.0,6.7,Floating,0.0153,0.01,3,Senior Secured,8396000.0
+TL00108,R198,Term Loan,Equipment Finance,463000.0,5.0,3.91,Floating,0.0206,0.01,5,Senior Secured,463000.0
+TL00109,R396,Term Loan,Equipment Finance,4042000.0,5.0,1.51,Floating,0.0328,0.0025,9,Senior Secured,4042000.0
+TL00110,R456,Term Loan,C&I Term,421000.0,10.0,9.5,Fixed,0.0206,0.0075,4,Senior Secured,421000.0
+TL00111,R112,Term Loan,C&I Term,1120000.0,5.0,3.33,Floating,0.0267,0.0075,8,Senior Secured,1120000.0
+TL00112,R009,Term Loan,C&I Term,25295000.0,7.0,3.27,Floating,0.0163,0.0075,4,Senior Secured,25295000.0
+TL00113,R497,Term Loan,C&I Term,3850000.0,5.0,2.59,Floating,0.0174,0.0075,2,Senior Secured,3850000.0
+TL00114,R303,Term Loan,C&I Term,601000.0,7.0,5.46,Fixed,0.0168,0.01,4,Senior Secured,601000.0
+TL00115,R211,Term Loan,C&I Term,1341000.0,7.0,3.51,Floating,0.0231,0.005,6,Unsecured,1341000.0
+TL00116,R022,Term Loan,Equipment Finance,1094000.0,5.0,3.31,Fixed,0.0278,0.0075,7,Senior Secured,1094000.0
+TL00117,R333,Term Loan,C&I Term,2153000.0,5.0,3.84,Fixed,0.0201,0.0075,4,Senior Secured,2153000.0
+TL00118,R087,Term Loan,Equipment Finance,4648000.0,3.0,1.07,Floating,0.0206,0.0075,5,Senior Secured,4648000.0
+TL00119,R450,Term Loan,CRE Term,428000.0,5.0,4.78,Fixed,0.0224,0.01,5,Real Estate,428000.0
+TL00120,R443,Term Loan,CRE Term,2520000.0,7.0,3.39,Fixed,0.0237,0.0025,5,Real Estate,2520000.0
+TL00121,R005,Term Loan,CRE Term,12018000.0,5.0,2.68,Floating,0.0255,0.01,6,Real Estate,12018000.0
+TL00122,R294,Term Loan,C&I Term,4591000.0,3.0,2.28,Floating,0.0247,0.0075,6,Unsecured,4591000.0
+TL00123,R073,Term Loan,CRE Term,12493000.0,5.0,3.44,Floating,0.0221,0.01,5,Real Estate,12493000.0
+TL00124,R054,Term Loan,C&I Term,926000.0,5.0,2.76,Floating,0.0288,0.005,6,Unsecured,926000.0
+TL00125,R043,Term Loan,Equipment Finance,2207000.0,7.0,5.04,Floating,0.0208,0.005,5,Senior Secured,2207000.0
+TL00126,R258,Term Loan,C&I Term,848000.0,3.0,2.77,Fixed,0.0189,0.0025,5,Senior Secured,848000.0
+TL00127,R208,Term Loan,C&I Term,1127000.0,5.0,4.2,Floating,0.0256,0.01,6,Unsecured,1127000.0
+TL00128,R498,Term Loan,CRE Term,1222000.0,7.0,6.02,Floating,0.0193,0.01,3,Real Estate,1222000.0
+TL00129,R005,Term Loan,CRE Term,5637000.0,10.0,4.07,Floating,0.0215,0.005,6,Real Estate,5637000.0
+TL00130,R206,Term Loan,C&I Term,782000.0,3.0,1.61,Floating,0.0276,0.0025,7,Unsecured,782000.0
+TL00131,R079,Term Loan,CRE Term,839000.0,10.0,6.43,Floating,0.0186,0.0075,5,Real Estate,839000.0
+TL00132,R249,Term Loan,C&I Term,1753000.0,5.0,1.18,Floating,0.0193,0.0075,4,Senior Secured,1753000.0
+TL00133,R433,Term Loan,CRE Term,4399000.0,7.0,5.71,Floating,0.0365,0.0075,9,Real Estate,4399000.0
+TL00134,R275,Term Loan,C&I Term,10298000.0,3.0,1.38,Floating,0.0135,0.0025,3,Senior Secured,10298000.0
+TL00135,R008,Term Loan,C&I Term,52369000.0,5.0,2.13,Floating,0.0201,0.01,5,Senior Secured,52369000.0
+TL00136,R089,Term Loan,C&I Term,2414000.0,5.0,2.04,Fixed,0.0212,0.005,5,Unsecured,2414000.0
+TL00137,R006,Term Loan,C&I Term,33114000.0,5.0,2.13,Floating,0.0179,0.0075,5,Unsecured,33114000.0
+TL00138,R096,Term Loan,C&I Term,7284000.0,5.0,2.35,Floating,0.0284,0.01,7,Unsecured,7284000.0
+TL00139,R010,Term Loan,C&I Term,43028000.0,5.0,3.42,Floating,0.0208,0.0075,5,Senior Secured,43028000.0
+TL00140,R069,Term Loan,C&I Term,17339000.0,5.0,3.33,Fixed,0.0233,0.0025,5,Unsecured,17339000.0
+TL00141,R005,Term Loan,CRE Term,23450000.0,3.0,1.21,Floating,0.0173,0.01,5,Real Estate,23450000.0
+TL00142,R408,Term Loan,CRE Term,6941000.0,5.0,1.83,Floating,0.0125,0.0075,3,Real Estate,6941000.0
+TL00143,R435,Term Loan,C&I Term,1116000.0,3.0,2.58,Floating,0.0257,0.01,6,Senior Secured,1116000.0
+TL00144,R435,Term Loan,CRE Term,1272000.0,10.0,2.74,Floating,0.0181,0.0075,4,Real Estate,1272000.0
+TL00145,R007,Term Loan,Equipment Finance,8362000.0,10.0,6.1,Floating,0.0305,0.01,7,Senior Secured,8362000.0
+TL00146,R001,Term Loan,C&I Term,18010000.0,5.0,3.08,Floating,0.0217,0.01,4,Unsecured,18010000.0
+TL00147,R153,Term Loan,Equipment Finance,739000.0,3.0,1.98,Floating,0.0356,0.0025,8,Senior Secured,739000.0
+TL00148,R431,Term Loan,C&I Term,3385000.0,3.0,2.73,Fixed,0.0226,0.0025,6,Senior Secured,3385000.0
+TL00149,R002,Term Loan,C&I Term,1665000.0,5.0,3.5,Floating,0.0185,0.0025,4,Senior Secured,1665000.0
+TL00150,R095,Term Loan,CRE Term,15654000.0,7.0,6.85,Fixed,0.0188,0.01,3,Real Estate,15654000.0
+TL00151,R410,Term Loan,CRE Term,1102000.0,5.0,4.49,Floating,0.0297,0.0025,7,Real Estate,1102000.0
+TL00152,R004,Term Loan,Equipment Finance,15774000.0,3.0,1.12,Floating,0.0141,0.005,4,Senior Secured,15774000.0
+TL00153,R160,Term Loan,C&I Term,12661000.0,3.0,1.18,Floating,0.017,0.01,2,Unsecured,12661000.0
+TL00154,R258,Term Loan,CRE Term,1672000.0,3.0,1.43,Floating,0.025,0.005,6,Real Estate,1672000.0
+TL00155,R442,Term Loan,C&I Term,4175000.0,7.0,3.59,Floating,0.0281,0.0025,7,Unsecured,4175000.0
+TL00156,R005,Term Loan,CRE Term,4057000.0,5.0,3.21,Fixed,0.0163,0.005,5,Real Estate,4057000.0
+TL00157,R344,Term Loan,C&I Term,26848000.0,5.0,1.93,Floating,0.0294,0.0025,7,Senior Secured,26848000.0
+TL00158,R385,Term Loan,Equipment Finance,9412000.0,5.0,1.89,Floating,0.0159,0.005,3,Senior Secured,9412000.0
+TL00159,R180,Term Loan,C&I Term,1554000.0,10.0,5.05,Floating,0.015,0.0075,2,Senior Secured,1554000.0
+TL00160,R002,Term Loan,Equipment Finance,34260000.0,5.0,3.69,Floating,0.0139,0.0075,3,Senior Secured,34260000.0
+TL00161,R420,Term Loan,CRE Term,516000.0,7.0,5.25,Floating,0.0283,0.0075,7,Real Estate,516000.0
+TL00162,R421,Term Loan,CRE Term,1044000.0,7.0,6.87,Floating,0.0221,0.0025,5,Real Estate,1044000.0
+TL00163,R392,Term Loan,CRE Term,12524000.0,5.0,1.81,Floating,0.0298,0.01,7,Real Estate,12524000.0
+TL00164,R009,Term Loan,Equipment Finance,2460000.0,7.0,3.6,Floating,0.0118,0.005,3,Senior Secured,2460000.0
+TL00165,R254,Term Loan,C&I Term,2059000.0,5.0,4.86,Floating,0.0186,0.005,5,Senior Secured,2059000.0
+TL00166,R008,Term Loan,C&I Term,16771000.0,7.0,5.26,Floating,0.0197,0.0075,5,Senior Secured,16771000.0
+TL00167,R005,Term Loan,CRE Term,52948000.0,3.0,2.02,Floating,0.0165,0.0025,5,Real Estate,52948000.0
+TL00168,R467,Term Loan,C&I Term,371000.0,5.0,3.16,Floating,0.0161,0.005,4,Senior Secured,371000.0
+TL00169,R201,Term Loan,C&I Term,14296000.0,3.0,0.78,Fixed,0.014,0.005,3,Senior Secured,14296000.0
+TL00170,R245,Term Loan,C&I Term,2521000.0,3.0,2.74,Fixed,0.0257,0.0025,6,Senior Secured,2521000.0
+TL00171,R009,Term Loan,C&I Term,7662000.0,3.0,2.1,Floating,0.0174,0.01,4,Senior Secured,7662000.0
+TL00172,R182,Term Loan,C&I Term,495000.0,5.0,3.29,Floating,0.0113,0.005,3,Unsecured,495000.0
+TL00173,R007,Term Loan,C&I Term,4589000.0,5.0,3.16,Fixed,0.0252,0.0025,7,Senior Secured,4589000.0
+TL00174,R073,Term Loan,Equipment Finance,5447000.0,5.0,2.57,Floating,0.0279,0.005,6,Senior Secured,5447000.0
+TL00175,R005,Term Loan,CRE Term,4500000.0,5.0,2.02,Floating,0.0168,0.01,5,Real Estate,4500000.0
+TL00176,R113,Term Loan,Equipment Finance,2377000.0,10.0,8.04,Floating,0.019,0.0075,4,Senior Secured,2377000.0
+TL00177,R131,Term Loan,Equipment Finance,774000.0,10.0,6.08,Floating,0.0248,0.0075,5,Senior Secured,774000.0
+TL00178,R411,Term Loan,C&I Term,498000.0,3.0,0.68,Fixed,0.0326,0.01,8,Unsecured,498000.0
+TL00179,R364,Term Loan,CRE Term,862000.0,5.0,2.6,Fixed,0.036,0.0025,9,Real Estate,862000.0
+TL00180,R189,Term Loan,CRE Term,1721000.0,5.0,4.71,Fixed,0.0097,0.0075,3,Real Estate,1721000.0
+TL00181,R004,Term Loan,CRE Term,8776000.0,7.0,3.49,Fixed,0.0175,0.005,3,Real Estate,8776000.0
+TL00182,R357,Term Loan,C&I Term,1351000.0,5.0,2.65,Floating,0.0238,0.0075,5,Senior Secured,1351000.0
+TL00183,R402,Term Loan,C&I Term,2295000.0,7.0,4.89,Fixed,0.0312,0.01,6,Senior Secured,2295000.0
+TL00184,R268,Term Loan,C&I Term,3126000.0,3.0,2.52,Floating,0.0286,0.0025,8,Senior Secured,3126000.0
+TL00185,R277,Term Loan,CRE Term,1026000.0,5.0,3.67,Floating,0.0262,0.0025,8,Real Estate,1026000.0
+TL00186,R001,Term Loan,Equipment Finance,4752000.0,7.0,6.16,Floating,0.0178,0.01,5,Senior Secured,4752000.0
+TL00187,R156,Term Loan,CRE Term,1397000.0,5.0,1.46,Floating,0.0271,0.005,7,Real Estate,1397000.0
+TL00188,R002,Term Loan,CRE Term,15966000.0,7.0,6.58,Floating,0.0128,0.005,2,Real Estate,15966000.0
+TL00189,R186,Term Loan,Equipment Finance,409000.0,3.0,2.77,Floating,0.0249,0.0025,5,Senior Secured,409000.0
+TL00190,R403,Term Loan,CRE Term,645000.0,3.0,1.85,Floating,0.0276,0.005,7,Real Estate,645000.0
+TL00191,R176,Term Loan,C&I Term,740000.0,3.0,2.1,Floating,0.0244,0.0025,6,Senior Secured,740000.0
+TL00192,R187,Term Loan,Equipment Finance,1113000.0,3.0,1.11,Floating,0.0123,0.0025,1,Senior Secured,1113000.0
+TL00193,R390,Term Loan,C&I Term,715000.0,3.0,1.68,Floating,0.0328,0.0025,9,Unsecured,715000.0
+TL00194,R203,Term Loan,C&I Term,2315000.0,5.0,1.81,Floating,0.0242,0.0025,6,Senior Secured,2315000.0
+TL00195,R010,Term Loan,CRE Term,3034000.0,5.0,1.09,Floating,0.022,0.01,5,Real Estate,3034000.0
+TL00196,R128,Term Loan,Equipment Finance,372000.0,7.0,6.89,Fixed,0.0169,0.01,2,Senior Secured,372000.0
+TL00197,R392,Term Loan,C&I Term,3020000.0,5.0,2.04,Floating,0.0305,0.01,7,Senior Secured,3020000.0
+TL00198,R437,Term Loan,C&I Term,1142000.0,3.0,2.02,Floating,0.019,0.0025,4,Senior Secured,1142000.0
+TL00199,R320,Term Loan,C&I Term,1232000.0,7.0,3.08,Floating,0.0113,0.005,3,Senior Secured,1232000.0
+TL00200,R403,Term Loan,C&I Term,809000.0,3.0,1.49,Fixed,0.0218,0.005,5,Unsecured,809000.0
+TL00201,R179,Term Loan,C&I Term,954000.0,7.0,3.63,Floating,0.0259,0.0075,7,Unsecured,954000.0
+TL00202,R069,Term Loan,CRE Term,2880000.0,3.0,1.4,Floating,0.0219,0.0025,5,Real Estate,2880000.0
+TL00203,R409,Term Loan,Equipment Finance,1485000.0,5.0,3.55,Floating,0.0205,0.0025,5,Senior Secured,1485000.0
+TL00204,R492,Term Loan,C&I Term,774000.0,7.0,6.78,Fixed,0.0193,0.01,4,Senior Secured,774000.0
+TL00205,R044,Term Loan,C&I Term,12865000.0,5.0,2.71,Fixed,0.0252,0.005,7,Senior Secured,12865000.0
+TL00206,R291,Term Loan,C&I Term,5829000.0,5.0,4.89,Floating,0.0162,0.01,4,Senior Secured,5829000.0
+TL00207,R379,Term Loan,C&I Term,689000.0,7.0,5.14,Floating,0.0365,0.0025,9,Unsecured,689000.0
+TL00208,R315,Term Loan,CRE Term,4254000.0,3.0,2.06,Floating,0.0198,0.01,5,Real Estate,4254000.0
+TL00209,R106,Term Loan,CRE Term,1452000.0,7.0,2.73,Floating,0.0138,0.0075,2,Real Estate,1452000.0
+TL00210,R458,Term Loan,CRE Term,10423000.0,7.0,1.75,Fixed,0.0218,0.01,4,Real Estate,10423000.0
+TL00211,R091,Term Loan,C&I Term,813000.0,10.0,8.82,Fixed,0.0301,0.0075,7,Senior Secured,813000.0
+TL00212,R370,Term Loan,CRE Term,2429000.0,5.0,3.3,Fixed,0.0326,0.01,8,Real Estate,2429000.0
+TL00213,R158,Term Loan,C&I Term,1360000.0,5.0,2.66,Fixed,0.023,0.005,5,Unsecured,1360000.0
+TL00214,R481,Term Loan,C&I Term,13008000.0,7.0,5.95,Floating,0.024,0.005,5,Senior Secured,13008000.0
+TL00215,R413,Term Loan,Equipment Finance,3693000.0,5.0,2.24,Fixed,0.0256,0.0025,5,Senior Secured,3693000.0
+TL00216,R144,Term Loan,CRE Term,4618000.0,5.0,4.13,Floating,0.0233,0.0025,5,Real Estate,4618000.0
+TL00217,R319,Term Loan,Equipment Finance,1066000.0,3.0,1.39,Floating,0.026,0.01,8,Senior Secured,1066000.0
+TL00218,R165,Term Loan,Equipment Finance,1972000.0,3.0,2.81,Floating,0.0181,0.005,4,Senior Secured,1972000.0
+TL00219,R372,Term Loan,CRE Term,3414000.0,5.0,2.07,Floating,0.0323,0.0025,8,Real Estate,3414000.0
+TL00220,R404,Term Loan,Equipment Finance,5043000.0,3.0,0.93,Fixed,0.0234,0.005,6,Senior Secured,5043000.0
+TL00221,R173,Term Loan,C&I Term,4200000.0,3.0,2.28,Fixed,0.0319,0.005,7,Unsecured,4200000.0
+TL00222,R385,Term Loan,C&I Term,2851000.0,3.0,0.99,Fixed,0.0192,0.0075,4,Senior Secured,2851000.0
+TL00223,R009,Term Loan,C&I Term,7585000.0,10.0,9.59,Fixed,0.0172,0.0025,4,Senior Secured,7585000.0
+TL00224,R005,Term Loan,CRE Term,4152000.0,3.0,2.17,Floating,0.0206,0.0025,4,Real Estate,4152000.0
+TL00225,R050,Term Loan,C&I Term,6157000.0,3.0,1.15,Floating,0.0217,0.0075,5,Senior Secured,6157000.0
+TL00226,R076,Term Loan,C&I Term,682000.0,5.0,1.84,Fixed,0.0226,0.0025,5,Senior Secured,682000.0
+TL00227,R257,Term Loan,CRE Term,3165000.0,3.0,2.82,Floating,0.03,0.005,7,Real Estate,3165000.0
+TL00228,R301,Term Loan,CRE Term,467000.0,10.0,6.86,Fixed,0.0185,0.0075,5,Real Estate,467000.0
+TL00229,R224,Term Loan,CRE Term,1456000.0,10.0,9.15,Floating,0.0243,0.0075,6,Real Estate,1456000.0
+TL00230,R396,Term Loan,C&I Term,3300000.0,5.0,1.44,Floating,0.0355,0.0025,9,Senior Secured,3300000.0
+TL00231,R232,Term Loan,CRE Term,235000.0,5.0,4.7,Floating,0.0252,0.0075,6,Real Estate,235000.0
+TL00232,R364,Term Loan,C&I Term,6608000.0,5.0,3.08,Floating,0.0371,0.0025,9,Senior Secured,6608000.0
+TL00233,R201,Term Loan,C&I Term,2807000.0,3.0,2.2,Fixed,0.0183,0.0025,5,Senior Secured,2807000.0
+TL00234,R388,Term Loan,C&I Term,1472000.0,5.0,2.49,Fixed,0.0292,0.0025,9,Unsecured,1472000.0
+TL00235,R246,Term Loan,C&I Term,6230000.0,3.0,0.74,Floating,0.0241,0.0075,5,Senior Secured,6230000.0
+TL00236,R131,Term Loan,C&I Term,2350000.0,3.0,2.9,Floating,0.0244,0.0075,5,Senior Secured,2350000.0
+TL00237,R342,Term Loan,Equipment Finance,1637000.0,5.0,4.98,Floating,0.0273,0.0075,7,Senior Secured,1637000.0
+TL00238,R325,Term Loan,CRE Term,8760000.0,3.0,1.47,Floating,0.0232,0.0025,5,Real Estate,8760000.0
+TL00239,R360,Term Loan,CRE Term,1992000.0,3.0,2.87,Floating,0.0157,0.005,2,Real Estate,1992000.0
+TL00240,R434,Term Loan,C&I Term,5378000.0,5.0,1.67,Floating,0.0146,0.0025,3,Senior Secured,5378000.0
+TL00241,R324,Term Loan,Equipment Finance,1997000.0,5.0,1.62,Floating,0.0176,0.005,4,Senior Secured,1997000.0
+TL00242,R126,Term Loan,CRE Term,18991000.0,3.0,0.78,Floating,0.0283,0.0025,7,Real Estate,18991000.0
+TL00243,R417,Term Loan,C&I Term,2703000.0,3.0,1.54,Floating,0.0301,0.0075,7,Senior Secured,2703000.0
+TL00244,R201,Term Loan,CRE Term,930000.0,3.0,0.73,Fixed,0.0165,0.01,4,Real Estate,930000.0
+TL00245,R372,Term Loan,C&I Term,31854000.0,3.0,1.55,Floating,0.0301,0.01,8,Senior Secured,31854000.0
+TL00246,R010,Term Loan,C&I Term,6920000.0,7.0,2.17,Floating,0.0174,0.0025,5,Unsecured,6920000.0
+TL00247,R054,Term Loan,C&I Term,4350000.0,10.0,7.84,Fixed,0.0232,0.0025,5,Senior Secured,4350000.0
+TL00248,R383,Term Loan,CRE Term,1343000.0,5.0,4.33,Fixed,0.0222,0.0025,5,Real Estate,1343000.0
+TL00249,R240,Term Loan,C&I Term,3073000.0,5.0,3.75,Fixed,0.0152,0.01,3,Unsecured,3073000.0
+TL00250,R359,Term Loan,C&I Term,758000.0,7.0,2.52,Floating,0.0281,0.01,6,Senior Secured,758000.0
+TL00251,R420,Term Loan,C&I Term,2169000.0,5.0,4.07,Floating,0.0265,0.0025,7,Senior Secured,2169000.0
+TL00252,R033,Term Loan,Equipment Finance,1074000.0,3.0,1.2,Fixed,0.0215,0.01,5,Senior Secured,1074000.0
+TL00253,R388,Term Loan,C&I Term,4650000.0,3.0,2.42,Floating,0.0322,0.0075,10,Unsecured,4650000.0
+TL00254,R491,Term Loan,C&I Term,1867000.0,5.0,3.27,Floating,0.0176,0.0025,4,Senior Secured,1867000.0
+TL00255,R024,Term Loan,C&I Term,2780000.0,5.0,2.47,Fixed,0.0179,0.005,3,Senior Secured,2780000.0
+TL00256,R229,Term Loan,Equipment Finance,698000.0,3.0,0.8,Floating,0.0202,0.005,4,Senior Secured,698000.0
+TL00257,R001,Term Loan,CRE Term,10231000.0,5.0,4.31,Fixed,0.0189,0.01,4,Real Estate,10231000.0
+TL00258,R055,Term Loan,Equipment Finance,1826000.0,5.0,4.76,Fixed,0.018,0.0025,3,Senior Secured,1826000.0
+TL00259,R090,Term Loan,C&I Term,4717000.0,5.0,3.66,Floating,0.0302,0.0025,6,Senior Secured,4717000.0
+TL00260,R006,Term Loan,C&I Term,23638000.0,5.0,4.86,Fixed,0.0183,0.0075,5,Unsecured,23638000.0
+TL00261,R401,Term Loan,CRE Term,981000.0,7.0,6.63,Floating,0.0098,0.005,2,Real Estate,981000.0
+TL00262,R005,Term Loan,CRE Term,11393000.0,5.0,1.78,Fixed,0.0153,0.005,5,Real Estate,11393000.0
+TL00263,R131,Term Loan,Equipment Finance,3383000.0,3.0,2.35,Fixed,0.0204,0.01,5,Senior Secured,3383000.0
+TL00264,R073,Term Loan,Equipment Finance,637000.0,3.0,1.44,Fixed,0.0198,0.01,5,Senior Secured,637000.0
+TL00265,R044,Term Loan,C&I Term,6320000.0,7.0,4.13,Floating,0.028,0.0075,7,Unsecured,6320000.0
+TL00266,R065,Term Loan,Equipment Finance,1007000.0,5.0,1.63,Fixed,0.0309,0.01,7,Senior Secured,1007000.0
+TL00267,R303,Term Loan,CRE Term,634000.0,3.0,2.94,Fixed,0.0232,0.01,4,Real Estate,634000.0
+TL00268,R436,Term Loan,C&I Term,5163000.0,5.0,3.9,Floating,0.0207,0.0075,4,Senior Secured,5163000.0
+TL00269,R462,Term Loan,C&I Term,3510000.0,7.0,2.89,Floating,0.0332,0.01,7,Senior Secured,3510000.0
+TL00270,R134,Term Loan,C&I Term,3019000.0,7.0,3.48,Floating,0.0213,0.0025,5,Unsecured,3019000.0
+TL00271,R213,Term Loan,Equipment Finance,3540000.0,7.0,3.77,Fixed,0.0209,0.0025,6,Senior Secured,3540000.0
+TL00272,R010,Term Loan,C&I Term,22077000.0,5.0,3.99,Floating,0.0242,0.01,6,Senior Secured,22077000.0
+TL00273,R107,Term Loan,C&I Term,2633000.0,5.0,4.7,Floating,0.0288,0.0025,9,Senior Secured,2633000.0
+TL00274,R400,Term Loan,CRE Term,1226000.0,5.0,2.29,Fixed,0.0175,0.0075,4,Real Estate,1226000.0
+TL00275,R470,Term Loan,C&I Term,755000.0,3.0,1.73,Fixed,0.0207,0.005,4,Senior Secured,755000.0
+TL00276,R152,Term Loan,C&I Term,791000.0,7.0,4.72,Fixed,0.0247,0.01,6,Unsecured,791000.0
+TL00277,R093,Term Loan,CRE Term,2570000.0,5.0,2.57,Floating,0.0217,0.0075,5,Real Estate,2570000.0
+TL00278,R295,Term Loan,C&I Term,1271000.0,3.0,1.81,Floating,0.0192,0.0025,5,Senior Secured,1271000.0
+TL00279,R200,Term Loan,C&I Term,1708000.0,7.0,1.99,Floating,0.0194,0.005,4,Unsecured,1708000.0
+TL00280,R475,Term Loan,C&I Term,342000.0,5.0,1.67,Floating,0.0247,0.0075,5,Senior Secured,342000.0
+TL00281,R253,Term Loan,C&I Term,2558000.0,3.0,1.56,Fixed,0.0166,0.01,3,Senior Secured,2558000.0
+TL00282,R393,Term Loan,C&I Term,849000.0,5.0,4.66,Floating,0.0145,0.01,3,Senior Secured,849000.0
+TL00283,R438,Term Loan,CRE Term,1713000.0,7.0,3.36,Floating,0.0303,0.01,9,Real Estate,1713000.0
+TL00284,R363,Term Loan,Equipment Finance,3545000.0,10.0,4.0,Floating,0.023,0.01,6,Senior Secured,3545000.0
+TL00285,R090,Term Loan,C&I Term,1384000.0,5.0,3.97,Floating,0.0288,0.01,7,Unsecured,1384000.0
+TL00286,R155,Term Loan,Equipment Finance,1268000.0,10.0,9.59,Fixed,0.0287,0.0075,7,Senior Secured,1268000.0
+TL00287,R494,Term Loan,CRE Term,1147000.0,7.0,3.97,Fixed,0.0174,0.005,4,Real Estate,1147000.0
+TL00288,R433,Term Loan,CRE Term,5345000.0,7.0,1.45,Floating,0.0279,0.0075,9,Real Estate,5345000.0
+TL00289,R278,Term Loan,CRE Term,10629000.0,7.0,5.25,Floating,0.0177,0.01,3,Real Estate,10629000.0
+TL00290,R490,Term Loan,CRE Term,1362000.0,5.0,2.66,Floating,0.0144,0.005,3,Real Estate,1362000.0
+TL00291,R331,Term Loan,Equipment Finance,2074000.0,7.0,5.17,Floating,0.0295,0.01,7,Senior Secured,2074000.0
+TL00292,R254,Term Loan,C&I Term,3001000.0,5.0,2.11,Fixed,0.0175,0.0075,4,Senior Secured,3001000.0
+TL00293,R052,Term Loan,CRE Term,1133000.0,7.0,1.41,Floating,0.0141,0.0025,3,Real Estate,1133000.0
+TL00294,R348,Term Loan,C&I Term,1178000.0,3.0,1.43,Floating,0.017,0.01,3,Senior Secured,1178000.0
+TL00295,R142,Term Loan,C&I Term,1838000.0,7.0,5.35,Fixed,0.0393,0.01,9,Unsecured,1838000.0
+TL00296,R003,Term Loan,CRE Term,14437000.0,10.0,5.14,Floating,0.0231,0.0075,6,Real Estate,14437000.0
+TL00297,R116,Term Loan,C&I Term,6285000.0,5.0,1.88,Floating,0.0253,0.0025,6,Senior Secured,6285000.0
+TL00298,R493,Term Loan,C&I Term,2060000.0,10.0,5.71,Floating,0.0175,0.0025,3,Senior Secured,2060000.0
+TL00299,R071,Term Loan,C&I Term,599000.0,5.0,4.01,Floating,0.0178,0.01,5,Senior Secured,599000.0
+TL00300,R090,Term Loan,C&I Term,8710000.0,3.0,0.89,Floating,0.025,0.0025,7,Unsecured,8710000.0
+TL00301,R383,Term Loan,CRE Term,3344000.0,3.0,2.26,Fixed,0.0131,0.005,4,Real Estate,3344000.0
+TL00302,R378,Term Loan,CRE Term,1526000.0,7.0,5.14,Fixed,0.0349,0.0075,8,Real Estate,1526000.0
+TL00303,R459,Term Loan,C&I Term,1194000.0,5.0,2.48,Floating,0.0232,0.0025,4,Senior Secured,1194000.0
+TL00304,R009,Term Loan,C&I Term,9995000.0,5.0,4.88,Floating,0.0179,0.01,4,Unsecured,9995000.0
+TL00305,R001,Term Loan,C&I Term,12800000.0,5.0,4.58,Floating,0.0156,0.0075,4,Senior Secured,12800000.0
+TL00306,R005,Term Loan,CRE Term,4385000.0,5.0,2.26,Floating,0.0147,0.0025,5,Real Estate,4385000.0
+TL00307,R323,Term Loan,CRE Term,986000.0,5.0,1.12,Floating,0.0217,0.005,5,Real Estate,986000.0
+TL00308,R432,Term Loan,CRE Term,1277000.0,7.0,3.13,Floating,0.0351,0.005,8,Real Estate,1277000.0
+TL00309,R009,Term Loan,C&I Term,17810000.0,7.0,2.55,Floating,0.0153,0.0025,4,Senior Secured,17810000.0
+TL00310,R357,Term Loan,C&I Term,1501000.0,7.0,4.46,Fixed,0.018,0.01,4,Unsecured,1501000.0
+TL00311,R042,Term Loan,Equipment Finance,1057000.0,5.0,4.67,Fixed,0.015,0.005,4,Senior Secured,1057000.0
+TL00312,R380,Term Loan,CRE Term,5225000.0,10.0,8.96,Floating,0.0229,0.0075,4,Real Estate,5225000.0
+TL00313,R114,Term Loan,C&I Term,1257000.0,3.0,1.33,Fixed,0.0276,0.0075,7,Senior Secured,1257000.0
+TL00314,R018,Term Loan,C&I Term,1987000.0,5.0,2.71,Floating,0.0178,0.0025,5,Senior Secured,1987000.0
+TL00315,R356,Term Loan,C&I Term,2884000.0,3.0,0.69,Fixed,0.0311,0.0075,9,Senior Secured,2884000.0
+TL00316,R040,Term Loan,Equipment Finance,692000.0,5.0,3.18,Floating,0.0218,0.005,6,Senior Secured,692000.0
+TL00317,R483,Term Loan,C&I Term,710000.0,5.0,1.25,Floating,0.0163,0.0025,3,Unsecured,710000.0
+TL00318,R008,Term Loan,C&I Term,7123000.0,7.0,6.66,Floating,0.0253,0.005,7,Unsecured,7123000.0
+TL00319,R268,Term Loan,Equipment Finance,1335000.0,5.0,4.47,Floating,0.0293,0.0075,8,Senior Secured,1335000.0
+TL00320,R068,Term Loan,CRE Term,1480000.0,3.0,1.11,Floating,0.0241,0.0025,5,Real Estate,1480000.0
+TL00321,R108,Term Loan,C&I Term,1129000.0,5.0,3.8,Floating,0.0308,0.01,8,Senior Secured,1129000.0
+TL00322,R458,Term Loan,C&I Term,2811000.0,10.0,6.54,Floating,0.0249,0.0075,5,Senior Secured,2811000.0
+TL00323,R002,Term Loan,C&I Term,8271000.0,5.0,4.21,Floating,0.0117,0.005,3,Senior Secured,8271000.0
+TL00324,R406,Term Loan,CRE Term,9775000.0,3.0,1.74,Floating,0.0326,0.0075,6,Real Estate,9775000.0
+TL00325,R251,Term Loan,C&I Term,710000.0,5.0,1.77,Floating,0.0236,0.005,6,Senior Secured,710000.0
+TL00326,R040,Term Loan,Equipment Finance,841000.0,5.0,3.56,Floating,0.0227,0.0075,6,Senior Secured,841000.0
+TL00327,R162,Term Loan,Equipment Finance,18334000.0,5.0,1.32,Floating,0.0224,0.0025,6,Senior Secured,18334000.0
+TL00328,R134,Term Loan,CRE Term,1841000.0,5.0,3.34,Floating,0.0189,0.0075,4,Real Estate,1841000.0
+TL00329,R469,Term Loan,CRE Term,436000.0,5.0,1.85,Floating,0.0207,0.0025,6,Real Estate,436000.0
+TL00330,R388,Term Loan,C&I Term,2580000.0,5.0,3.74,Fixed,0.0369,0.0025,10,Senior Secured,2580000.0
+TL00331,R466,Term Loan,C&I Term,635000.0,5.0,4.31,Floating,0.0118,0.005,3,Senior Secured,635000.0
+TL00332,R326,Term Loan,CRE Term,2721000.0,3.0,0.86,Floating,0.0198,0.0025,4,Real Estate,2721000.0
+TL00333,R019,Term Loan,C&I Term,3332000.0,10.0,5.2,Floating,0.0132,0.005,3,Unsecured,3332000.0
+TL00334,R059,Term Loan,C&I Term,925000.0,5.0,3.93,Floating,0.0156,0.0025,3,Unsecured,925000.0
+TL00335,R495,Term Loan,C&I Term,14291000.0,5.0,1.65,Floating,0.0237,0.0025,5,Senior Secured,14291000.0
+TL00336,R320,Term Loan,C&I Term,6205000.0,3.0,1.96,Floating,0.0252,0.0025,4,Unsecured,6205000.0
+TL00337,R295,Term Loan,C&I Term,2864000.0,5.0,3.69,Fixed,0.0167,0.01,4,Senior Secured,2864000.0
+TL00338,R224,Term Loan,CRE Term,1862000.0,7.0,3.39,Floating,0.0246,0.0075,6,Real Estate,1862000.0
+TL00339,R100,Term Loan,Equipment Finance,921000.0,3.0,2.6,Floating,0.012,0.0025,2,Senior Secured,921000.0
+TL00340,R088,Term Loan,CRE Term,2144000.0,3.0,1.83,Floating,0.0172,0.0025,4,Real Estate,2144000.0
+TL00341,R005,Term Loan,CRE Term,28827000.0,3.0,2.1,Floating,0.0212,0.01,6,Real Estate,28827000.0
+TL00342,R130,Term Loan,C&I Term,4393000.0,5.0,1.56,Fixed,0.0299,0.0075,7,Senior Secured,4393000.0
+TL00343,R028,Term Loan,Equipment Finance,16670000.0,10.0,2.19,Floating,0.0182,0.01,4,Senior Secured,16670000.0
+TL00344,R222,Term Loan,CRE Term,2596000.0,5.0,1.2,Floating,0.039,0.0025,9,Real Estate,2596000.0
+TL00345,R158,Term Loan,C&I Term,1558000.0,5.0,4.62,Fixed,0.0232,0.005,5,Unsecured,1558000.0
+TL00346,R010,Term Loan,Equipment Finance,13398000.0,7.0,6.34,Floating,0.0169,0.0025,5,Senior Secured,13398000.0
+TL00347,R053,Term Loan,C&I Term,4402000.0,7.0,5.92,Floating,0.0213,0.005,5,Unsecured,4402000.0
+TL00348,R010,Term Loan,C&I Term,4027000.0,3.0,1.08,Fixed,0.0144,0.0025,4,Senior Secured,4027000.0
+TL00349,R286,Term Loan,C&I Term,1223000.0,3.0,1.86,Floating,0.0298,0.0025,7,Senior Secured,1223000.0
+TL00350,R111,Term Loan,C&I Term,1569000.0,5.0,4.18,Floating,0.0237,0.0075,7,Unsecured,1569000.0
+TL00351,R005,Term Loan,CRE Term,7854000.0,7.0,5.18,Fixed,0.0162,0.01,5,Real Estate,7854000.0
+TL00352,R314,Term Loan,CRE Term,1723000.0,7.0,2.05,Floating,0.0263,0.0075,7,Real Estate,1723000.0
+TL00353,R191,Term Loan,Equipment Finance,1337000.0,7.0,6.42,Floating,0.0295,0.01,7,Senior Secured,1337000.0
+TL00354,R096,Term Loan,C&I Term,7325000.0,7.0,2.3,Floating,0.0281,0.01,6,Senior Secured,7325000.0
+TL00355,R290,Term Loan,CRE Term,2235000.0,5.0,1.69,Floating,0.0229,0.01,4,Real Estate,2235000.0
+TL00356,R296,Term Loan,C&I Term,1503000.0,5.0,4.6,Floating,0.0263,0.0025,6,Senior Secured,1503000.0
+TL00357,R046,Term Loan,Equipment Finance,1321000.0,3.0,1.76,Floating,0.0164,0.005,3,Senior Secured,1321000.0
+TL00358,R061,Term Loan,C&I Term,5508000.0,7.0,3.49,Floating,0.0298,0.0075,7,Senior Secured,5508000.0
+TL00359,R367,Term Loan,C&I Term,1174000.0,5.0,3.21,Fixed,0.0193,0.01,5,Senior Secured,1174000.0
+TL00360,R163,Term Loan,CRE Term,3697000.0,5.0,4.93,Floating,0.0148,0.01,4,Real Estate,3697000.0
+TL00361,R356,Term Loan,CRE Term,2999000.0,3.0,0.89,Fixed,0.0317,0.0075,8,Real Estate,2999000.0
+TL00362,R117,Term Loan,CRE Term,890000.0,7.0,5.64,Fixed,0.0197,0.005,5,Real Estate,890000.0
+TL00363,R144,Term Loan,CRE Term,13565000.0,7.0,3.27,Fixed,0.022,0.005,5,Real Estate,13565000.0
+TL00364,R378,Term Loan,CRE Term,3985000.0,7.0,2.06,Fixed,0.0337,0.0025,9,Real Estate,3985000.0
+TL00365,R211,Term Loan,C&I Term,5628000.0,3.0,1.61,Fixed,0.0256,0.005,6,Unsecured,5628000.0
+TL00366,R231,Term Loan,C&I Term,1206000.0,10.0,6.39,Floating,0.0245,0.0025,5,Senior Secured,1206000.0
+TL00367,R010,Term Loan,C&I Term,17979000.0,7.0,2.55,Floating,0.02,0.01,5,Senior Secured,17979000.0
+TL00368,R010,Term Loan,C&I Term,11623000.0,7.0,3.67,Fixed,0.0189,0.0025,5,Senior Secured,11623000.0
+TL00369,R001,Term Loan,C&I Term,9410000.0,7.0,4.96,Floating,0.0155,0.005,4,Senior Secured,9410000.0
+TL00370,R073,Term Loan,C&I Term,5169000.0,10.0,6.61,Floating,0.0253,0.01,6,Unsecured,5169000.0
+TL00371,R086,Term Loan,C&I Term,2771000.0,10.0,7.79,Fixed,0.0291,0.01,8,Senior Secured,2771000.0
+TL00372,R096,Term Loan,CRE Term,4826000.0,5.0,4.35,Floating,0.0245,0.005,6,Real Estate,4826000.0
+TL00373,R138,Term Loan,C&I Term,1548000.0,5.0,2.64,Floating,0.0287,0.005,5,Senior Secured,1548000.0
+TL00374,R376,Term Loan,CRE Term,6389000.0,5.0,2.69,Floating,0.0227,0.0075,5,Real Estate,6389000.0
+TL00375,R218,Term Loan,CRE Term,2404000.0,7.0,4.18,Floating,0.0261,0.01,6,Real Estate,2404000.0
+TL00376,R039,Term Loan,C&I Term,6961000.0,5.0,3.27,Floating,0.0232,0.01,6,Senior Secured,6961000.0
+TL00377,R073,Term Loan,C&I Term,1910000.0,3.0,0.86,Floating,0.0276,0.0075,6,Senior Secured,1910000.0
+TL00378,R444,Term Loan,CRE Term,832000.0,3.0,1.35,Fixed,0.0185,0.005,3,Real Estate,832000.0
+TL00379,R463,Term Loan,CRE Term,861000.0,10.0,3.38,Floating,0.0269,0.005,6,Real Estate,861000.0
+TL00380,R101,Term Loan,C&I Term,1673000.0,7.0,3.56,Floating,0.0255,0.0075,6,Unsecured,1673000.0
+TL00381,R005,Term Loan,CRE Term,24691000.0,10.0,9.79,Fixed,0.0222,0.01,5,Real Estate,24691000.0
+TL00382,R229,Term Loan,CRE Term,1817000.0,5.0,3.33,Fixed,0.0226,0.0025,4,Real Estate,1817000.0
+TL00383,R109,Term Loan,CRE Term,752000.0,7.0,3.8,Floating,0.0229,0.01,5,Real Estate,752000.0
+TL00384,R116,Term Loan,C&I Term,10768000.0,7.0,4.57,Floating,0.0247,0.005,6,Senior Secured,10768000.0
+TL00385,R002,Term Loan,C&I Term,6941000.0,5.0,3.68,Floating,0.0152,0.0025,3,Senior Secured,6941000.0
+TL00386,R005,Term Loan,CRE Term,9425000.0,3.0,1.64,Fixed,0.0186,0.0025,6,Real Estate,9425000.0
+TL00387,R368,Term Loan,C&I Term,1755000.0,10.0,5.58,Floating,0.026,0.005,7,Senior Secured,1755000.0
+TL00388,R421,Term Loan,Equipment Finance,2560000.0,3.0,2.28,Floating,0.0221,0.0025,5,Senior Secured,2560000.0
+TL00389,R423,Term Loan,C&I Term,2588000.0,5.0,1.24,Fixed,0.0122,0.0025,3,Senior Secured,2588000.0
+TL00390,R059,Term Loan,CRE Term,2375000.0,7.0,4.42,Floating,0.0187,0.005,3,Real Estate,2375000.0
+TL00391,R189,Term Loan,C&I Term,2021000.0,7.0,4.47,Floating,0.0142,0.01,3,Senior Secured,2021000.0
+TL00392,R286,Term Loan,C&I Term,1394000.0,5.0,4.03,Fixed,0.0294,0.0075,8,Unsecured,1394000.0
+TL00393,R018,Term Loan,Equipment Finance,864000.0,7.0,6.9,Fixed,0.0217,0.0025,5,Senior Secured,864000.0
+TL00394,R263,Term Loan,C&I Term,2055000.0,3.0,2.51,Floating,0.0279,0.0075,7,Unsecured,2055000.0
+TL00395,R114,Term Loan,Equipment Finance,3690000.0,7.0,4.22,Floating,0.0241,0.005,6,Senior Secured,3690000.0
+TL00396,R396,Term Loan,C&I Term,2424000.0,3.0,1.01,Floating,0.0276,0.0075,7,Senior Secured,2424000.0
+TL00397,R378,Term Loan,Equipment Finance,755000.0,7.0,4.69,Floating,0.0277,0.0025,7,Senior Secured,755000.0
+TL00398,R073,Term Loan,Equipment Finance,4072000.0,7.0,6.07,Floating,0.0239,0.0025,6,Senior Secured,4072000.0
+TL00399,R294,Term Loan,CRE Term,3102000.0,3.0,2.84,Fixed,0.0231,0.005,6,Real Estate,3102000.0
+TL00400,R106,Term Loan,C&I Term,533000.0,3.0,2.58,Floating,0.0193,0.01,3,Unsecured,533000.0
+TL00401,R259,Term Loan,CRE Term,1516000.0,7.0,2.46,Floating,0.0141,0.0075,4,Real Estate,1516000.0
+TL00402,R374,Term Loan,CRE Term,943000.0,3.0,2.31,Floating,0.0245,0.0025,6,Real Estate,943000.0
+TL00403,R470,Term Loan,Equipment Finance,614000.0,3.0,2.71,Fixed,0.0182,0.01,4,Senior Secured,614000.0
+TL00404,R442,Term Loan,C&I Term,403000.0,5.0,3.72,Floating,0.0316,0.01,8,Unsecured,403000.0
+TL00405,R176,Term Loan,C&I Term,376000.0,10.0,7.49,Floating,0.0214,0.0075,6,Senior Secured,376000.0
+TL00406,R087,Term Loan,C&I Term,2930000.0,5.0,3.0,Floating,0.021,0.0075,5,Senior Secured,2930000.0
+TL00407,R286,Term Loan,CRE Term,1228000.0,5.0,3.55,Floating,0.0247,0.0025,6,Real Estate,1228000.0
+TL00408,R179,Term Loan,Equipment Finance,653000.0,10.0,4.36,Fixed,0.0305,0.0075,7,Senior Secured,653000.0
+TL00409,R325,Term Loan,C&I Term,6638000.0,5.0,1.36,Fixed,0.023,0.01,5,Senior Secured,6638000.0
+TL00410,R289,Term Loan,CRE Term,1248000.0,5.0,4.31,Floating,0.022,0.005,6,Real Estate,1248000.0
+TL00411,R058,Term Loan,Equipment Finance,2086000.0,5.0,4.77,Floating,0.0266,0.0025,7,Senior Secured,2086000.0
+TL00412,R183,Term Loan,C&I Term,3407000.0,5.0,4.43,Fixed,0.03,0.01,7,Senior Secured,3407000.0
+TL00413,R002,Term Loan,C&I Term,5837000.0,5.0,2.34,Floating,0.0116,0.0075,3,Unsecured,5837000.0
+TL00414,R329,Term Loan,CRE Term,4321000.0,7.0,1.92,Fixed,0.0248,0.0075,6,Real Estate,4321000.0
+TL00415,R417,Term Loan,CRE Term,479000.0,3.0,1.27,Floating,0.025,0.0075,6,Real Estate,479000.0
+TL00416,R222,Term Loan,C&I Term,2024000.0,7.0,6.12,Floating,0.0352,0.0025,10,Unsecured,2024000.0
+TL00417,R401,Term Loan,Equipment Finance,621000.0,3.0,2.17,Floating,0.0233,0.0025,3,Senior Secured,621000.0
+TL00418,R186,Term Loan,CRE Term,2741000.0,5.0,4.87,Floating,0.0268,0.01,7,Real Estate,2741000.0
+TL00419,R271,Term Loan,Equipment Finance,1003000.0,3.0,1.42,Floating,0.0289,0.01,7,Senior Secured,1003000.0
+TL00420,R100,Term Loan,Equipment Finance,3076000.0,5.0,3.21,Fixed,0.0175,0.0025,4,Senior Secured,3076000.0
+TL00421,R033,Term Loan,Equipment Finance,536000.0,7.0,5.82,Floating,0.0179,0.0075,3,Senior Secured,536000.0
+TL00422,R446,Term Loan,CRE Term,764000.0,5.0,1.94,Floating,0.016,0.0075,2,Real Estate,764000.0
+TL00423,R341,Term Loan,C&I Term,1783000.0,3.0,2.91,Floating,0.0235,0.005,6,Senior Secured,1783000.0
+TL00424,R262,Term Loan,CRE Term,3354000.0,3.0,2.02,Fixed,0.0249,0.0075,6,Real Estate,3354000.0
+TL00425,R062,Term Loan,C&I Term,4988000.0,7.0,1.44,Floating,0.0312,0.01,9,Senior Secured,4988000.0
+TL00426,R106,Term Loan,CRE Term,1359000.0,5.0,1.1,Floating,0.0109,0.01,2,Real Estate,1359000.0
+TL00427,R420,Term Loan,C&I Term,5719000.0,7.0,6.34,Floating,0.0332,0.0025,8,Senior Secured,5719000.0
+TL00428,R305,Term Loan,CRE Term,1043000.0,5.0,3.58,Floating,0.0264,0.005,7,Real Estate,1043000.0
+TL00429,R455,Term Loan,C&I Term,9500000.0,3.0,2.43,Fixed,0.019,0.01,6,Senior Secured,9500000.0
+TL00430,R150,Term Loan,C&I Term,619000.0,7.0,5.79,Floating,0.0294,0.0025,6,Senior Secured,619000.0
+TL00431,R463,Term Loan,C&I Term,1840000.0,5.0,2.68,Floating,0.0258,0.01,7,Unsecured,1840000.0
+TL00432,R002,Term Loan,CRE Term,1683000.0,3.0,2.52,Fixed,0.0131,0.005,3,Real Estate,1683000.0
+TL00433,R457,Term Loan,CRE Term,1608000.0,10.0,9.5,Floating,0.0319,0.0075,7,Real Estate,1608000.0
+TL00434,R058,Term Loan,C&I Term,1910000.0,3.0,1.01,Floating,0.0302,0.005,8,Senior Secured,1910000.0
+TL00435,R030,Term Loan,Equipment Finance,460000.0,5.0,4.06,Floating,0.0274,0.01,7,Senior Secured,460000.0
+TL00436,R093,Term Loan,Equipment Finance,1850000.0,5.0,2.23,Fixed,0.0191,0.0075,5,Senior Secured,1850000.0
+TL00437,R376,Term Loan,C&I Term,8145000.0,5.0,2.29,Fixed,0.0181,0.0075,5,Senior Secured,8145000.0
+TL00438,R008,Term Loan,CRE Term,7337000.0,7.0,3.71,Floating,0.0239,0.005,7,Real Estate,7337000.0
+TL00439,R064,Term Loan,C&I Term,606000.0,3.0,2.67,Fixed,0.0259,0.0025,6,Senior Secured,606000.0
+TL00440,R124,Term Loan,C&I Term,2699000.0,10.0,2.18,Floating,0.023,0.01,5,Senior Secured,2699000.0
+TL00441,R316,Term Loan,CRE Term,1821000.0,5.0,2.74,Floating,0.0182,0.005,4,Real Estate,1821000.0
+TL00442,R001,Term Loan,C&I Term,10104000.0,10.0,7.44,Floating,0.0176,0.0025,4,Senior Secured,10104000.0
+TL00443,R063,Term Loan,Equipment Finance,1427000.0,7.0,2.02,Floating,0.0232,0.01,7,Senior Secured,1427000.0
+TL00444,R434,Term Loan,Equipment Finance,1029000.0,10.0,8.34,Floating,0.0234,0.0025,5,Senior Secured,1029000.0
+TL00445,R103,Term Loan,Equipment Finance,15056000.0,5.0,4.77,Fixed,0.0254,0.0075,6,Senior Secured,15056000.0
+TL00446,R084,Term Loan,CRE Term,739000.0,5.0,1.36,Floating,0.0243,0.005,4,Real Estate,739000.0
+TL00447,R006,Term Loan,CRE Term,33351000.0,5.0,1.61,Fixed,0.0194,0.01,5,Real Estate,33351000.0
+TL00448,R460,Term Loan,Equipment Finance,1715000.0,7.0,6.85,Floating,0.0226,0.0025,6,Senior Secured,1715000.0
+TL00449,R453,Term Loan,C&I Term,1394000.0,5.0,1.79,Floating,0.0305,0.01,8,Senior Secured,1394000.0
+TL00450,R131,Term Loan,C&I Term,3388000.0,7.0,1.84,Floating,0.0214,0.0025,5,Senior Secured,3388000.0
+TL00451,R009,Term Loan,CRE Term,27086000.0,3.0,2.89,Floating,0.0206,0.01,5,Real Estate,27086000.0
+TL00452,R357,Term Loan,C&I Term,939000.0,7.0,6.4,Floating,0.0251,0.005,6,Unsecured,939000.0
+TL00453,R500,Term Loan,C&I Term,6149000.0,3.0,2.17,Floating,0.0107,0.0025,2,Senior Secured,6149000.0
+TL00454,R164,Term Loan,C&I Term,5525000.0,10.0,6.41,Fixed,0.0181,0.005,5,Senior Secured,5525000.0
+TL00455,R189,Term Loan,CRE Term,854000.0,3.0,2.81,Fixed,0.0173,0.0025,3,Real Estate,854000.0
+TL00456,R203,Term Loan,C&I Term,2152000.0,3.0,2.17,Floating,0.0257,0.005,5,Senior Secured,2152000.0
+TL00457,R118,Term Loan,C&I Term,5834000.0,7.0,5.09,Floating,0.0252,0.0075,6,Senior Secured,5834000.0
+TL00458,R120,Term Loan,C&I Term,5753000.0,7.0,6.12,Floating,0.0214,0.0075,4,Unsecured,5753000.0
+TL00459,R112,Term Loan,C&I Term,2068000.0,7.0,5.06,Fixed,0.0303,0.0075,7,Unsecured,2068000.0
+TL00460,R279,Term Loan,Equipment Finance,6753000.0,10.0,6.03,Floating,0.0229,0.01,5,Senior Secured,6753000.0
+TL00461,R002,Term Loan,C&I Term,3405000.0,5.0,2.56,Floating,0.0154,0.005,4,Senior Secured,3405000.0
+TL00462,R132,Term Loan,CRE Term,1900000.0,7.0,4.22,Floating,0.0255,0.0075,6,Real Estate,1900000.0
+TL00463,R005,Term Loan,CRE Term,4857000.0,5.0,3.09,Floating,0.0223,0.0025,5,Real Estate,4857000.0
+TL00464,R443,Term Loan,C&I Term,820000.0,5.0,2.44,Floating,0.0235,0.005,5,Senior Secured,820000.0
+TL00465,R005,Term Loan,CRE Term,61774000.0,5.0,2.79,Floating,0.0203,0.0075,5,Real Estate,61774000.0
+TL00466,R232,Term Loan,CRE Term,1074000.0,3.0,2.52,Floating,0.0266,0.0025,7,Real Estate,1074000.0
+TL00467,R075,Term Loan,CRE Term,727000.0,5.0,2.67,Floating,0.0161,0.005,3,Real Estate,727000.0
+TL00468,R006,Term Loan,C&I Term,27550000.0,7.0,1.54,Floating,0.0161,0.0025,4,Senior Secured,27550000.0
+TL00469,R322,Term Loan,C&I Term,1848000.0,3.0,1.28,Floating,0.0193,0.01,4,Senior Secured,1848000.0
+TL00470,R065,Term Loan,Equipment Finance,919000.0,10.0,3.85,Fixed,0.0279,0.0075,6,Senior Secured,919000.0
+TL00471,R267,Term Loan,CRE Term,3571000.0,5.0,4.17,Floating,0.0219,0.0075,7,Real Estate,3571000.0
+TL00472,R487,Term Loan,Equipment Finance,1361000.0,3.0,1.68,Fixed,0.0223,0.0075,5,Senior Secured,1361000.0
+TL00473,R161,Term Loan,Equipment Finance,377000.0,5.0,2.12,Floating,0.0248,0.0025,6,Senior Secured,377000.0
+TL00474,R315,Term Loan,C&I Term,6095000.0,3.0,2.55,Fixed,0.0216,0.0025,6,Senior Secured,6095000.0
+TL00475,R265,Term Loan,CRE Term,957000.0,3.0,0.65,Fixed,0.0239,0.005,5,Real Estate,957000.0
+TL00476,R163,Term Loan,C&I Term,13520000.0,7.0,2.38,Floating,0.0176,0.0025,4,Senior Secured,13520000.0
+TL00477,R033,Term Loan,CRE Term,810000.0,3.0,2.58,Fixed,0.0185,0.005,4,Real Estate,810000.0
+TL00478,R103,Term Loan,C&I Term,9145000.0,3.0,1.92,Floating,0.0296,0.005,6,Senior Secured,9145000.0
+TL00479,R373,Term Loan,C&I Term,5442000.0,7.0,5.73,Fixed,0.0191,0.01,3,Unsecured,5442000.0
+TL00480,R371,Term Loan,CRE Term,666000.0,3.0,2.61,Floating,0.0236,0.005,5,Real Estate,666000.0
+TL00481,R347,Term Loan,CRE Term,1126000.0,7.0,6.67,Floating,0.0232,0.0025,5,Real Estate,1126000.0
+TL00482,R308,Term Loan,CRE Term,1794000.0,7.0,1.76,Floating,0.0274,0.01,7,Real Estate,1794000.0
+TL00483,R006,Term Loan,C&I Term,5518000.0,3.0,2.52,Fixed,0.0263,0.0025,6,Senior Secured,5518000.0
+TL00484,R007,Term Loan,C&I Term,13601000.0,5.0,3.84,Fixed,0.0254,0.0025,7,Unsecured,13601000.0
+TL00485,R494,Term Loan,Equipment Finance,1098000.0,3.0,1.1,Floating,0.0203,0.005,5,Senior Secured,1098000.0
+TL00486,R005,Term Loan,CRE Term,9006000.0,5.0,4.73,Fixed,0.0132,0.0025,4,Real Estate,9006000.0
+TL00487,R379,Term Loan,C&I Term,1367000.0,3.0,1.57,Fixed,0.032,0.01,8,Senior Secured,1367000.0
+TL00488,R013,Term Loan,CRE Term,1392000.0,10.0,9.1,Floating,0.0221,0.005,5,Real Estate,1392000.0
+TL00489,R128,Term Loan,C&I Term,1499000.0,3.0,2.05,Floating,0.013,0.01,3,Senior Secured,1499000.0
+TL00490,R121,Term Loan,CRE Term,814000.0,7.0,4.35,Floating,0.0261,0.0025,6,Real Estate,814000.0
+TL00491,R149,Term Loan,C&I Term,843000.0,3.0,0.98,Floating,0.0243,0.0075,6,Senior Secured,843000.0
+TL00492,R356,Term Loan,Equipment Finance,3587000.0,3.0,2.79,Floating,0.0291,0.0025,7,Senior Secured,3587000.0
+TL00493,R388,Term Loan,Equipment Finance,1269000.0,5.0,3.23,Fixed,0.0345,0.0025,9,Senior Secured,1269000.0
+TL00494,R234,Term Loan,Equipment Finance,926000.0,5.0,1.02,Floating,0.0179,0.005,4,Senior Secured,926000.0
+TL00495,R265,Term Loan,CRE Term,1704000.0,10.0,2.15,Floating,0.021,0.01,4,Real Estate,1704000.0
+TL00496,R244,Term Loan,C&I Term,308000.0,3.0,2.47,Floating,0.0238,0.005,6,Senior Secured,308000.0
+TL00497,R496,Term Loan,CRE Term,2199000.0,3.0,0.99,Floating,0.0155,0.01,3,Real Estate,2199000.0
+TL00498,R417,Term Loan,Equipment Finance,1051000.0,5.0,3.39,Floating,0.0265,0.0025,7,Senior Secured,1051000.0
+TL00499,R423,Term Loan,CRE Term,663000.0,5.0,3.72,Floating,0.0222,0.005,4,Real Estate,663000.0
+TL00500,R009,Term Loan,CRE Term,40338000.0,7.0,2.96,Floating,0.0143,0.0075,4,Real Estate,40338000.0
+TL00501,R295,Term Loan,CRE Term,1335000.0,10.0,6.55,Floating,0.0228,0.005,4,Real Estate,1335000.0
+TL00502,R207,Term Loan,CRE Term,1514000.0,7.0,2.75,Floating,0.0239,0.0075,4,Real Estate,1514000.0
+TL00503,R005,Term Loan,CRE Term,7444000.0,3.0,2.87,Fixed,0.0169,0.0075,5,Real Estate,7444000.0
+TL00504,R001,Term Loan,C&I Term,10819000.0,5.0,4.44,Floating,0.0077,0.0025,3,Senior Secured,10819000.0
+TL00505,R083,Term Loan,C&I Term,1492000.0,7.0,3.01,Floating,0.0248,0.0075,5,Senior Secured,1492000.0
+TL00506,R473,Term Loan,CRE Term,1148000.0,5.0,3.12,Floating,0.0241,0.01,6,Real Estate,1148000.0
+TL00507,R122,Term Loan,C&I Term,621000.0,7.0,4.2,Floating,0.0228,0.01,6,Unsecured,621000.0
+TL00508,R453,Term Loan,Equipment Finance,1053000.0,3.0,2.9,Fixed,0.0291,0.005,8,Senior Secured,1053000.0
+TL00509,R479,Term Loan,CRE Term,170000.0,5.0,2.58,Floating,0.024,0.005,6,Real Estate,170000.0
+TL00510,R447,Term Loan,C&I Term,533000.0,7.0,4.55,Fixed,0.0226,0.01,4,Senior Secured,533000.0
+TL00511,R075,Term Loan,Equipment Finance,4241000.0,5.0,4.71,Fixed,0.0198,0.01,4,Senior Secured,4241000.0
+TL00512,R190,Term Loan,CRE Term,2555000.0,10.0,3.3,Floating,0.0254,0.01,5,Real Estate,2555000.0
+TL00513,R002,Term Loan,CRE Term,31474000.0,5.0,3.2,Floating,0.0149,0.01,3,Real Estate,31474000.0
+TL00514,R035,Term Loan,C&I Term,3990000.0,3.0,0.85,Floating,0.0158,0.005,3,Unsecured,3990000.0
+TL00515,R148,Term Loan,Equipment Finance,2253000.0,5.0,3.47,Fixed,0.024,0.0025,6,Senior Secured,2253000.0
+TL00516,R474,Term Loan,C&I Term,2746000.0,3.0,1.48,Floating,0.0208,0.0025,4,Senior Secured,2746000.0
+TL00517,R253,Term Loan,CRE Term,573000.0,5.0,4.87,Floating,0.0215,0.005,4,Real Estate,573000.0
+TL00518,R163,Term Loan,C&I Term,9872000.0,3.0,1.6,Floating,0.0219,0.01,4,Senior Secured,9872000.0
+TL00519,R310,Term Loan,CRE Term,1384000.0,5.0,1.54,Floating,0.0215,0.005,5,Real Estate,1384000.0
+TL00520,R356,Term Loan,CRE Term,29006000.0,7.0,6.07,Floating,0.031,0.005,8,Real Estate,29006000.0
+TL00521,R498,Term Loan,CRE Term,982000.0,5.0,4.28,Floating,0.0181,0.01,3,Real Estate,982000.0
+TL00522,R001,Term Loan,C&I Term,53104000.0,3.0,2.27,Floating,0.0141,0.0025,4,Senior Secured,53104000.0
+TL00523,R336,Term Loan,Equipment Finance,1160000.0,5.0,4.0,Fixed,0.0138,0.0075,3,Senior Secured,1160000.0
+TL00524,R070,Term Loan,CRE Term,11486000.0,7.0,2.88,Floating,0.0258,0.0075,7,Real Estate,11486000.0
+TL00525,R111,Term Loan,C&I Term,5109000.0,5.0,3.57,Floating,0.0272,0.01,7,Senior Secured,5109000.0
+TL00526,R112,Term Loan,Equipment Finance,580000.0,3.0,0.69,Floating,0.0295,0.005,7,Senior Secured,580000.0
+TL00527,R128,Term Loan,CRE Term,892000.0,5.0,1.79,Fixed,0.0197,0.0075,3,Real Estate,892000.0
+TL00528,R005,Term Loan,CRE Term,4795000.0,5.0,4.73,Floating,0.0168,0.01,5,Real Estate,4795000.0
+TL00529,R172,Term Loan,Equipment Finance,1475000.0,5.0,3.96,Fixed,0.0207,0.01,5,Senior Secured,1475000.0
+TL00530,R155,Term Loan,Equipment Finance,2242000.0,3.0,1.15,Floating,0.0241,0.0075,6,Senior Secured,2242000.0
+TL00531,R208,Term Loan,CRE Term,1123000.0,10.0,2.89,Fixed,0.0298,0.0075,7,Real Estate,1123000.0
+TL00532,R269,Term Loan,CRE Term,4113000.0,3.0,2.88,Floating,0.0209,0.01,5,Real Estate,4113000.0
+TL00533,R427,Term Loan,C&I Term,2052000.0,3.0,0.87,Fixed,0.0239,0.01,6,Senior Secured,2052000.0
+TL00534,R192,Term Loan,CRE Term,893000.0,3.0,1.22,Floating,0.0159,0.0075,4,Real Estate,893000.0
+TL00535,R401,Term Loan,CRE Term,3681000.0,5.0,1.73,Fixed,0.0178,0.005,3,Real Estate,3681000.0
+TL00536,R339,Term Loan,CRE Term,994000.0,5.0,1.03,Fixed,0.0274,0.0075,7,Real Estate,994000.0
+TL00537,R039,Term Loan,Equipment Finance,6039000.0,3.0,1.35,Floating,0.0206,0.0025,5,Senior Secured,6039000.0
+TL00538,R274,Term Loan,C&I Term,2160000.0,5.0,4.9,Floating,0.0188,0.0075,4,Unsecured,2160000.0
+TL00539,R040,Term Loan,C&I Term,3937000.0,7.0,3.31,Floating,0.0278,0.005,6,Unsecured,3937000.0
+TL00540,R057,Term Loan,CRE Term,1209000.0,5.0,3.02,Floating,0.0169,0.01,4,Real Estate,1209000.0
+TL00541,R317,Term Loan,C&I Term,240000.0,10.0,7.97,Floating,0.0173,0.0075,4,Senior Secured,240000.0
+TL00542,R320,Term Loan,C&I Term,4129000.0,5.0,3.2,Floating,0.0197,0.01,3,Unsecured,4129000.0
+TL00543,R363,Term Loan,C&I Term,1544000.0,3.0,2.38,Floating,0.028,0.01,7,Senior Secured,1544000.0
+TL00544,R266,Term Loan,Equipment Finance,575000.0,10.0,7.29,Floating,0.0295,0.01,7,Senior Secured,575000.0
+TL00545,R486,Term Loan,C&I Term,1479000.0,7.0,4.81,Fixed,0.0232,0.0025,5,Senior Secured,1479000.0
+TL00546,R191,Term Loan,C&I Term,985000.0,5.0,3.6,Floating,0.0277,0.01,7,Unsecured,985000.0
+TL00547,R138,Term Loan,C&I Term,449000.0,7.0,5.88,Floating,0.0213,0.005,5,Senior Secured,449000.0
+TL00548,R226,Term Loan,C&I Term,2250000.0,5.0,3.84,Floating,0.0243,0.0075,5,Senior Secured,2250000.0
+TL00549,R416,Term Loan,C&I Term,838000.0,5.0,4.17,Floating,0.0251,0.005,5,Senior Secured,838000.0
+TL00550,R181,Term Loan,CRE Term,950000.0,7.0,2.22,Floating,0.0221,0.005,4,Real Estate,950000.0
+TL00551,R001,Term Loan,CRE Term,7568000.0,7.0,5.19,Floating,0.0144,0.01,4,Real Estate,7568000.0
+TL00552,R318,Term Loan,C&I Term,3533000.0,5.0,3.95,Floating,0.0227,0.01,4,Senior Secured,3533000.0
+TL00553,R340,Term Loan,CRE Term,1272000.0,5.0,2.2,Floating,0.0269,0.0075,7,Real Estate,1272000.0
+TL00554,R299,Term Loan,C&I Term,1401000.0,5.0,4.5,Floating,0.0259,0.0025,7,Senior Secured,1401000.0
+TL00555,R122,Term Loan,C&I Term,924000.0,3.0,1.33,Floating,0.0246,0.0025,6,Senior Secured,924000.0
+TL00556,R435,Term Loan,Equipment Finance,1904000.0,10.0,3.95,Floating,0.0215,0.0025,4,Senior Secured,1904000.0
+TL00557,R153,Term Loan,CRE Term,3869000.0,5.0,4.47,Floating,0.032,0.01,8,Real Estate,3869000.0
+TL00558,R116,Term Loan,Equipment Finance,6623000.0,5.0,1.99,Floating,0.0244,0.005,6,Senior Secured,6623000.0
+TL00559,R473,Term Loan,C&I Term,2278000.0,5.0,2.66,Floating,0.0243,0.0025,5,Senior Secured,2278000.0
+TL00560,R240,Term Loan,C&I Term,2135000.0,5.0,2.47,Floating,0.0169,0.0075,3,Senior Secured,2135000.0
+TL00561,R387,Term Loan,C&I Term,436000.0,5.0,4.59,Floating,0.0208,0.01,5,Senior Secured,436000.0
+TL00562,R387,Term Loan,C&I Term,652000.0,10.0,5.64,Fixed,0.0232,0.0075,6,Unsecured,652000.0
+TL00563,R469,Term Loan,Equipment Finance,1116000.0,5.0,3.78,Floating,0.0288,0.005,7,Senior Secured,1116000.0
+TL00564,R282,Term Loan,C&I Term,736000.0,7.0,5.85,Floating,0.0192,0.0025,4,Unsecured,736000.0
+TL00565,R481,Term Loan,Equipment Finance,1683000.0,5.0,3.51,Floating,0.0132,0.01,3,Senior Secured,1683000.0
+TL00566,R177,Term Loan,Equipment Finance,882000.0,5.0,4.77,Floating,0.0271,0.0025,6,Senior Secured,882000.0
+TL00567,R006,Term Loan,CRE Term,3731000.0,3.0,2.53,Floating,0.016,0.01,4,Real Estate,3731000.0
+TL00568,R005,Term Loan,CRE Term,8924000.0,5.0,2.6,Fixed,0.025,0.0025,6,Real Estate,8924000.0
+TL00569,R182,Term Loan,CRE Term,1244000.0,3.0,2.88,Floating,0.0187,0.0025,5,Real Estate,1244000.0
+TL00570,R168,Term Loan,C&I Term,2091000.0,7.0,4.34,Floating,0.0273,0.005,7,Senior Secured,2091000.0
+TL00571,R176,Term Loan,CRE Term,1400000.0,7.0,1.53,Floating,0.0233,0.0025,6,Real Estate,1400000.0
+TL00572,R210,Term Loan,C&I Term,929000.0,5.0,2.04,Floating,0.0142,0.0025,3,Unsecured,929000.0
+TL00573,R458,Term Loan,Equipment Finance,9438000.0,5.0,3.49,Floating,0.0182,0.0025,4,Senior Secured,9438000.0
+TL00574,R187,Term Loan,CRE Term,1155000.0,7.0,2.28,Floating,0.0182,0.0075,2,Real Estate,1155000.0
+TL00575,R010,Term Loan,CRE Term,19125000.0,3.0,2.0,Fixed,0.0204,0.01,5,Real Estate,19125000.0
+TL00576,R126,Term Loan,CRE Term,4641000.0,10.0,4.89,Floating,0.0314,0.0025,9,Real Estate,4641000.0
+TL00577,R220,Term Loan,CRE Term,428000.0,5.0,3.14,Floating,0.0092,0.0075,2,Real Estate,428000.0
+TL00578,R005,Term Loan,CRE Term,10190000.0,3.0,0.6,Fixed,0.0132,0.005,4,Real Estate,10190000.0
+TL00579,R003,Term Loan,C&I Term,4077000.0,3.0,2.64,Fixed,0.0165,0.005,5,Unsecured,4077000.0
+TL00580,R314,Term Loan,Equipment Finance,1206000.0,10.0,4.9,Fixed,0.0234,0.005,6,Senior Secured,1206000.0
+TL00581,R204,Term Loan,Equipment Finance,724000.0,3.0,0.94,Floating,0.0244,0.01,6,Senior Secured,724000.0
+TL00582,R094,Term Loan,Equipment Finance,1785000.0,7.0,3.85,Floating,0.0193,0.0075,6,Senior Secured,1785000.0
+TL00583,R010,Term Loan,C&I Term,3744000.0,3.0,1.77,Fixed,0.019,0.0075,5,Senior Secured,3744000.0
+TL00584,R343,Term Loan,Equipment Finance,1330000.0,3.0,2.13,Floating,0.0248,0.01,5,Senior Secured,1330000.0
+TL00585,R063,Term Loan,C&I Term,2078000.0,7.0,4.34,Fixed,0.0319,0.0075,7,Senior Secured,2078000.0
+TL00586,R001,Term Loan,CRE Term,22646000.0,3.0,0.7,Floating,0.0111,0.0025,4,Real Estate,22646000.0
+TL00587,R487,Term Loan,C&I Term,713000.0,3.0,2.69,Fixed,0.0174,0.0025,4,Unsecured,713000.0
+TL00588,R046,Term Loan,C&I Term,4001000.0,5.0,2.83,Floating,0.0145,0.005,3,Senior Secured,4001000.0
+TL00589,R349,Term Loan,C&I Term,1523000.0,7.0,1.83,Floating,0.0226,0.0025,5,Senior Secured,1523000.0
+TL00590,R402,Term Loan,C&I Term,4533000.0,5.0,4.09,Floating,0.0192,0.0075,5,Unsecured,4533000.0
+TL00591,R038,Term Loan,C&I Term,1206000.0,3.0,2.18,Floating,0.0208,0.005,3,Senior Secured,1206000.0
+TL00592,R223,Term Loan,Equipment Finance,634000.0,10.0,7.2,Floating,0.0195,0.0025,4,Senior Secured,634000.0
+TL00593,R413,Term Loan,C&I Term,12394000.0,7.0,3.79,Fixed,0.0219,0.005,5,Senior Secured,12394000.0
+TL00594,R311,Term Loan,CRE Term,1057000.0,7.0,3.7,Floating,0.0234,0.01,4,Real Estate,1057000.0
+TL00595,R156,Term Loan,C&I Term,290000.0,7.0,4.4,Floating,0.0222,0.01,5,Senior Secured,290000.0
+TL00596,R121,Term Loan,CRE Term,825000.0,7.0,1.68,Floating,0.0232,0.01,5,Real Estate,825000.0
+TL00597,R133,Term Loan,CRE Term,143000.0,5.0,2.2,Floating,0.0231,0.01,6,Real Estate,143000.0
+TL00598,R008,Term Loan,C&I Term,13285000.0,5.0,4.95,Floating,0.0178,0.0075,6,Unsecured,13285000.0
+TL00599,R389,Term Loan,CRE Term,2513000.0,7.0,5.11,Floating,0.0207,0.01,5,Real Estate,2513000.0
+TL00600,R375,Term Loan,Equipment Finance,1902000.0,7.0,3.75,Fixed,0.0277,0.01,5,Senior Secured,1902000.0
+TL00601,R362,Term Loan,Equipment Finance,902000.0,10.0,3.78,Floating,0.0266,0.0075,6,Senior Secured,902000.0
+TL00602,R310,Term Loan,C&I Term,2753000.0,5.0,3.98,Floating,0.0201,0.005,4,Senior Secured,2753000.0
+TL00603,R471,Term Loan,C&I Term,972000.0,5.0,2.04,Fixed,0.0198,0.01,5,Unsecured,972000.0
+TL00604,R026,Term Loan,CRE Term,1370000.0,5.0,1.65,Floating,0.0217,0.005,4,Real Estate,1370000.0
+TL00605,R230,Term Loan,C&I Term,1095000.0,5.0,1.62,Fixed,0.0188,0.0025,5,Unsecured,1095000.0
+TL00606,R215,Term Loan,Equipment Finance,2161000.0,5.0,3.92,Floating,0.0211,0.0025,6,Senior Secured,2161000.0
+TL00607,R443,Term Loan,C&I Term,1039000.0,7.0,5.0,Floating,0.0208,0.0075,5,Senior Secured,1039000.0
+TL00608,R276,Term Loan,Equipment Finance,1435000.0,5.0,1.28,Floating,0.0243,0.0025,4,Senior Secured,1435000.0
+TL00609,R007,Term Loan,C&I Term,13006000.0,3.0,0.88,Floating,0.0286,0.0025,7,Senior Secured,13006000.0
+TL00610,R319,Term Loan,C&I Term,1167000.0,5.0,3.54,Floating,0.0267,0.0025,7,Senior Secured,1167000.0
+TL00611,R140,Term Loan,Equipment Finance,6120000.0,5.0,3.28,Floating,0.0177,0.0075,4,Senior Secured,6120000.0
+TL00612,R224,Term Loan,Equipment Finance,1543000.0,10.0,7.49,Floating,0.0237,0.005,7,Senior Secured,1543000.0
+TL00613,R465,Term Loan,Equipment Finance,1551000.0,5.0,1.71,Floating,0.0196,0.0075,4,Senior Secured,1551000.0
+TL00614,R146,Term Loan,Equipment Finance,413000.0,5.0,3.91,Fixed,0.0198,0.0075,4,Senior Secured,413000.0
+TL00615,R477,Term Loan,C&I Term,1950000.0,5.0,4.74,Floating,0.027,0.01,6,Senior Secured,1950000.0
+TL00616,R484,Term Loan,C&I Term,3027000.0,5.0,3.4,Fixed,0.0273,0.0025,6,Senior Secured,3027000.0
+TL00617,R338,Term Loan,C&I Term,3452000.0,3.0,1.07,Fixed,0.0217,0.005,5,Unsecured,3452000.0
+TL00618,R327,Term Loan,CRE Term,9124000.0,7.0,5.21,Fixed,0.0236,0.0075,5,Real Estate,9124000.0
+TL00619,R131,Term Loan,C&I Term,739000.0,10.0,4.74,Fixed,0.0232,0.005,6,Senior Secured,739000.0
+TL00620,R446,Term Loan,Equipment Finance,3875000.0,5.0,1.2,Fixed,0.0207,0.0025,4,Senior Secured,3875000.0
+TL00621,R107,Term Loan,C&I Term,4176000.0,5.0,2.21,Floating,0.0265,0.0025,7,Senior Secured,4176000.0
+TL00622,R420,Term Loan,C&I Term,2401000.0,3.0,2.77,Floating,0.0289,0.005,7,Unsecured,2401000.0
+TL00623,R323,Term Loan,C&I Term,600000.0,5.0,2.64,Fixed,0.0231,0.005,5,Senior Secured,600000.0
+TL00624,R211,Term Loan,C&I Term,686000.0,5.0,4.46,Floating,0.0252,0.0025,6,Senior Secured,686000.0
+TL00625,R002,Term Loan,C&I Term,25971000.0,7.0,4.25,Fixed,0.0199,0.005,4,Unsecured,25971000.0
+TL00626,R013,Term Loan,CRE Term,1437000.0,3.0,1.84,Fixed,0.0183,0.0075,5,Real Estate,1437000.0
+TL00627,R093,Term Loan,C&I Term,724000.0,7.0,1.43,Floating,0.0195,0.01,5,Senior Secured,724000.0
+TL00628,R398,Term Loan,CRE Term,3362000.0,5.0,3.55,Floating,0.0131,0.0075,2,Real Estate,3362000.0
+TL00629,R343,Term Loan,Equipment Finance,660000.0,7.0,2.0,Floating,0.0186,0.0025,5,Senior Secured,660000.0
+TL00630,R210,Term Loan,CRE Term,936000.0,5.0,2.91,Floating,0.0184,0.0075,4,Real Estate,936000.0
+TL00631,R204,Term Loan,CRE Term,2001000.0,3.0,1.22,Floating,0.0241,0.0025,6,Real Estate,2001000.0
+TL00632,R065,Term Loan,C&I Term,539000.0,5.0,2.57,Fixed,0.0311,0.0025,7,Senior Secured,539000.0
+TL00633,R309,Term Loan,C&I Term,1205000.0,7.0,4.41,Floating,0.031,0.0075,8,Senior Secured,1205000.0
+TL00634,R204,Term Loan,C&I Term,3142000.0,5.0,1.06,Floating,0.0276,0.005,6,Senior Secured,3142000.0
+TL00635,R007,Term Loan,Equipment Finance,12972000.0,3.0,1.28,Fixed,0.0263,0.005,7,Senior Secured,12972000.0
+TL00636,R181,Term Loan,CRE Term,3567000.0,5.0,4.96,Floating,0.0153,0.01,3,Real Estate,3567000.0
+TL00637,R002,Term Loan,C&I Term,27135000.0,5.0,1.23,Fixed,0.0146,0.0025,3,Unsecured,27135000.0
+TL00638,R159,Term Loan,C&I Term,1323000.0,5.0,2.28,Floating,0.0268,0.0025,6,Senior Secured,1323000.0
+TL00639,R498,Term Loan,Equipment Finance,203000.0,5.0,2.29,Fixed,0.0196,0.0075,3,Senior Secured,203000.0
+TL00640,R242,Term Loan,CRE Term,543000.0,3.0,1.51,Floating,0.0191,0.005,4,Real Estate,543000.0
+TL00641,R003,Term Loan,CRE Term,20178000.0,5.0,3.74,Floating,0.0139,0.01,5,Real Estate,20178000.0
+TL00642,R365,Term Loan,Equipment Finance,380000.0,7.0,2.79,Floating,0.0207,0.0025,6,Senior Secured,380000.0
+TL00643,R006,Term Loan,CRE Term,8437000.0,7.0,3.98,Floating,0.0181,0.005,5,Real Estate,8437000.0
+TL00644,R415,Term Loan,CRE Term,1724000.0,3.0,2.15,Floating,0.008,0.0025,2,Real Estate,1724000.0
+TL00645,R244,Term Loan,C&I Term,4260000.0,5.0,2.29,Fixed,0.0295,0.0025,6,Senior Secured,4260000.0
+TL00646,R319,Term Loan,C&I Term,830000.0,5.0,4.8,Fixed,0.0293,0.005,7,Senior Secured,830000.0
+TL00647,R066,Term Loan,Equipment Finance,2357000.0,3.0,2.95,Floating,0.0234,0.0075,6,Senior Secured,2357000.0
+TL00648,R149,Term Loan,CRE Term,1261000.0,5.0,1.48,Floating,0.0166,0.0025,4,Real Estate,1261000.0
+TL00649,R474,Term Loan,C&I Term,5223000.0,3.0,1.43,Fixed,0.0276,0.01,6,Senior Secured,5223000.0
+TL00650,R197,Term Loan,CRE Term,1162000.0,3.0,1.1,Fixed,0.0194,0.0075,5,Real Estate,1162000.0
+TL00651,R048,Term Loan,C&I Term,3044000.0,7.0,2.45,Floating,0.0141,0.005,3,Senior Secured,3044000.0
+TL00652,R005,Term Loan,CRE Term,5781000.0,5.0,2.96,Floating,0.0156,0.01,4,Real Estate,5781000.0
+TL00653,R110,Term Loan,C&I Term,1447000.0,7.0,4.56,Fixed,0.0253,0.005,6,Senior Secured,1447000.0
+TL00654,R413,Term Loan,Equipment Finance,1877000.0,3.0,1.62,Floating,0.0266,0.0025,6,Senior Secured,1877000.0
+TL00655,R003,Term Loan,CRE Term,7955000.0,5.0,2.09,Floating,0.0225,0.01,5,Real Estate,7955000.0
+TL00656,R271,Term Loan,C&I Term,2574000.0,5.0,2.11,Fixed,0.0304,0.0025,7,Senior Secured,2574000.0
+TL00657,R348,Term Loan,C&I Term,1481000.0,7.0,6.96,Floating,0.0166,0.01,3,Senior Secured,1481000.0
+TL00658,R460,Term Loan,Equipment Finance,7414000.0,7.0,6.57,Fixed,0.0276,0.01,6,Senior Secured,7414000.0
+TL00659,R158,Term Loan,C&I Term,1536000.0,5.0,1.3,Floating,0.0205,0.01,5,Senior Secured,1536000.0
+TL00660,R413,Term Loan,C&I Term,1777000.0,5.0,3.63,Fixed,0.0148,0.005,4,Senior Secured,1777000.0
+TL00661,R040,Term Loan,CRE Term,793000.0,3.0,1.7,Fixed,0.0233,0.0075,6,Real Estate,793000.0
+TL00662,R007,Term Loan,C&I Term,6615000.0,5.0,3.76,Fixed,0.0241,0.01,7,Unsecured,6615000.0
+TL00663,R384,Term Loan,C&I Term,3501000.0,3.0,2.03,Fixed,0.015,0.0025,3,Senior Secured,3501000.0
+TL00664,R019,Term Loan,C&I Term,6558000.0,5.0,4.56,Fixed,0.017,0.005,4,Senior Secured,6558000.0
+TL00665,R394,Term Loan,Equipment Finance,1740000.0,3.0,0.76,Floating,0.021,0.005,5,Senior Secured,1740000.0
+TL00666,R357,Term Loan,C&I Term,1519000.0,7.0,3.36,Fixed,0.0238,0.0075,5,Unsecured,1519000.0
+TL00667,R101,Term Loan,C&I Term,591000.0,5.0,4.94,Fixed,0.0293,0.0075,6,Unsecured,591000.0
+TL00668,R440,Term Loan,C&I Term,2492000.0,5.0,1.73,Floating,0.0207,0.01,6,Senior Secured,2492000.0
+TL00669,R273,Term Loan,C&I Term,8509000.0,5.0,1.51,Floating,0.0218,0.005,6,Senior Secured,8509000.0
+TL00670,R006,Term Loan,C&I Term,9913000.0,5.0,3.92,Floating,0.02,0.0025,6,Senior Secured,9913000.0
+TL00671,R393,Term Loan,C&I Term,1445000.0,3.0,2.47,Floating,0.0185,0.0025,3,Unsecured,1445000.0
+TL00672,R385,Term Loan,C&I Term,353000.0,10.0,7.38,Fixed,0.0161,0.01,3,Unsecured,353000.0
+TL00673,R116,Term Loan,C&I Term,2882000.0,7.0,5.75,Floating,0.0232,0.005,6,Senior Secured,2882000.0
+TL00674,R005,Term Loan,CRE Term,14361000.0,3.0,2.26,Floating,0.0201,0.0075,5,Real Estate,14361000.0
+TL00675,R004,Term Loan,C&I Term,15897000.0,7.0,2.16,Floating,0.019,0.0075,4,Senior Secured,15897000.0
+TL00676,R217,Term Loan,C&I Term,2839000.0,5.0,3.43,Floating,0.025,0.01,6,Senior Secured,2839000.0
+TL00677,R146,Term Loan,Equipment Finance,1111000.0,3.0,2.46,Fixed,0.023,0.0025,6,Senior Secured,1111000.0
+TL00678,R453,Term Loan,Equipment Finance,1152000.0,5.0,4.46,Floating,0.0341,0.0025,9,Senior Secured,1152000.0
+TL00679,R289,Term Loan,CRE Term,453000.0,3.0,1.19,Floating,0.0272,0.0075,7,Real Estate,453000.0
+TL00680,R045,Term Loan,C&I Term,1116000.0,3.0,0.91,Floating,0.03,0.005,8,Senior Secured,1116000.0
+TL00681,R001,Term Loan,C&I Term,3993000.0,7.0,5.77,Fixed,0.0173,0.01,5,Senior Secured,3993000.0
+TL00682,R004,Term Loan,C&I Term,2498000.0,5.0,2.03,Fixed,0.0178,0.0025,4,Unsecured,2498000.0
+TL00683,R491,Term Loan,C&I Term,552000.0,7.0,1.58,Floating,0.0144,0.005,2,Senior Secured,552000.0
+TL00684,R278,Term Loan,C&I Term,13187000.0,7.0,6.02,Floating,0.0192,0.01,3,Unsecured,13187000.0
+TL00685,R105,Term Loan,CRE Term,3177000.0,7.0,4.23,Floating,0.0339,0.01,8,Real Estate,3177000.0
+TL00686,R267,Term Loan,C&I Term,1568000.0,5.0,2.31,Floating,0.0289,0.0025,7,Senior Secured,1568000.0
+TL00687,R500,Term Loan,CRE Term,2616000.0,7.0,1.46,Fixed,0.0181,0.01,4,Real Estate,2616000.0
+TL00688,R427,Term Loan,C&I Term,314000.0,5.0,1.14,Floating,0.0332,0.0025,8,Senior Secured,314000.0
+TL00689,R240,Term Loan,C&I Term,2780000.0,5.0,4.17,Floating,0.0206,0.0025,4,Senior Secured,2780000.0
+TL00690,R208,Term Loan,CRE Term,231000.0,5.0,2.96,Floating,0.0315,0.01,6,Real Estate,231000.0
+TL00691,R425,Term Loan,Equipment Finance,844000.0,10.0,3.2,Floating,0.0202,0.0025,4,Senior Secured,844000.0
+TL00692,R005,Term Loan,CRE Term,10488000.0,3.0,1.46,Floating,0.0211,0.005,5,Real Estate,10488000.0
+TL00693,R150,Term Loan,CRE Term,1581000.0,5.0,1.66,Floating,0.0257,0.0025,6,Real Estate,1581000.0
+TL00694,R489,Term Loan,C&I Term,735000.0,7.0,2.03,Floating,0.0304,0.0075,8,Senior Secured,735000.0
+TL00695,R363,Term Loan,C&I Term,302000.0,5.0,2.11,Floating,0.0244,0.0025,6,Unsecured,302000.0
+TL00696,R080,Term Loan,CRE Term,2078000.0,7.0,4.48,Floating,0.0229,0.005,5,Real Estate,2078000.0
+TL00697,R006,Term Loan,C&I Term,6019000.0,5.0,1.84,Fixed,0.0193,0.005,5,Senior Secured,6019000.0
+TL00698,R075,Term Loan,C&I Term,708000.0,3.0,1.42,Floating,0.0223,0.0075,4,Unsecured,708000.0
+TL00699,R006,Term Loan,C&I Term,23807000.0,5.0,2.91,Floating,0.019,0.005,5,Unsecured,23807000.0
+TL00700,R283,Term Loan,C&I Term,498000.0,5.0,2.68,Floating,0.0238,0.0025,6,Unsecured,498000.0
+TL00701,R158,Term Loan,C&I Term,1673000.0,3.0,0.91,Fixed,0.0214,0.005,5,Senior Secured,1673000.0
+TL00702,R313,Term Loan,C&I Term,1492000.0,3.0,0.69,Fixed,0.0133,0.005,3,Senior Secured,1492000.0
+TL00703,R334,Term Loan,Equipment Finance,2835000.0,3.0,0.69,Fixed,0.0292,0.005,6,Senior Secured,2835000.0
+TL00704,R480,Term Loan,CRE Term,3546000.0,7.0,3.36,Floating,0.0236,0.0075,6,Real Estate,3546000.0
+TL00705,R002,Term Loan,C&I Term,20632000.0,7.0,5.43,Fixed,0.0161,0.005,3,Unsecured,20632000.0
+TL00706,R340,Term Loan,C&I Term,1146000.0,5.0,1.53,Floating,0.0285,0.005,7,Senior Secured,1146000.0
+TL00707,R009,Term Loan,CRE Term,15509000.0,3.0,2.49,Fixed,0.0185,0.01,4,Real Estate,15509000.0
+TL00708,R486,Term Loan,C&I Term,395000.0,5.0,3.86,Fixed,0.0219,0.005,5,Unsecured,395000.0
+TL00709,R185,Term Loan,CRE Term,478000.0,7.0,1.42,Floating,0.0286,0.005,8,Real Estate,478000.0
+TL00710,R226,Term Loan,CRE Term,1778000.0,7.0,1.55,Floating,0.017,0.0025,4,Real Estate,1778000.0
+TL00711,R198,Term Loan,C&I Term,1856000.0,5.0,1.78,Floating,0.0265,0.0075,5,Senior Secured,1856000.0
+TL00712,R423,Term Loan,C&I Term,1923000.0,3.0,0.73,Floating,0.0197,0.0075,4,Senior Secured,1923000.0
+TL00713,R149,Term Loan,C&I Term,864000.0,10.0,6.25,Fixed,0.025,0.0075,5,Senior Secured,864000.0
+TL00714,R196,Term Loan,C&I Term,12988000.0,7.0,1.62,Floating,0.0341,0.0025,8,Senior Secured,12988000.0
+TL00715,R216,Term Loan,C&I Term,2730000.0,3.0,2.53,Fixed,0.0156,0.005,3,Unsecured,2730000.0
+TL00716,R146,Term Loan,Equipment Finance,1841000.0,7.0,4.16,Fixed,0.0233,0.005,5,Senior Secured,1841000.0
+TL00717,R456,Term Loan,C&I Term,2116000.0,3.0,2.35,Floating,0.0195,0.01,4,Senior Secured,2116000.0
+TL00718,R007,Term Loan,CRE Term,43333000.0,3.0,2.4,Floating,0.0205,0.005,7,Real Estate,43333000.0
+TL00719,R109,Term Loan,CRE Term,1020000.0,7.0,4.24,Floating,0.0245,0.005,6,Real Estate,1020000.0
+TL00720,R234,Term Loan,C&I Term,780000.0,5.0,4.7,Fixed,0.0209,0.005,4,Senior Secured,780000.0
+TL00721,R083,Term Loan,C&I Term,1190000.0,5.0,4.96,Floating,0.0238,0.01,6,Senior Secured,1190000.0
+TL00722,R487,Term Loan,C&I Term,4552000.0,10.0,4.87,Floating,0.0214,0.0075,5,Senior Secured,4552000.0
+TL00723,R006,Term Loan,CRE Term,15349000.0,7.0,2.1,Floating,0.0215,0.01,6,Real Estate,15349000.0
+TL00724,R014,Term Loan,C&I Term,1889000.0,3.0,1.47,Fixed,0.0275,0.005,5,Senior Secured,1889000.0
+TL00725,R096,Term Loan,CRE Term,47734000.0,5.0,1.89,Floating,0.0204,0.01,6,Real Estate,47734000.0
+TL00726,R480,Term Loan,Equipment Finance,5116000.0,7.0,4.37,Floating,0.0235,0.01,5,Senior Secured,5116000.0
+TL00727,R009,Term Loan,CRE Term,3865000.0,5.0,2.51,Fixed,0.0119,0.0075,3,Real Estate,3865000.0
+TL00728,R451,Term Loan,Equipment Finance,1124000.0,10.0,5.84,Floating,0.0206,0.0075,5,Senior Secured,1124000.0
+TL00729,R384,Term Loan,CRE Term,603000.0,7.0,5.67,Floating,0.0159,0.01,3,Real Estate,603000.0
+TL00730,R411,Term Loan,Equipment Finance,958000.0,3.0,1.26,Floating,0.0295,0.01,7,Senior Secured,958000.0
+TL00731,R010,Term Loan,Equipment Finance,7940000.0,3.0,1.89,Floating,0.02,0.005,5,Senior Secured,7940000.0
+TL00732,R001,Term Loan,CRE Term,6850000.0,7.0,3.28,Floating,0.0161,0.0075,4,Real Estate,6850000.0
+TL00733,R462,Term Loan,Equipment Finance,431000.0,10.0,8.28,Floating,0.0277,0.005,6,Senior Secured,431000.0
+TL00734,R227,Term Loan,Equipment Finance,14101000.0,3.0,2.13,Floating,0.0226,0.0025,4,Senior Secured,14101000.0
+TL00735,R035,Term Loan,C&I Term,1670000.0,3.0,0.62,Floating,0.0158,0.005,2,Senior Secured,1670000.0
+TL00736,R275,Term Loan,CRE Term,3293000.0,7.0,5.1,Floating,0.018,0.01,4,Real Estate,3293000.0
+TL00737,R416,Term Loan,CRE Term,2410000.0,3.0,1.01,Floating,0.0234,0.01,5,Real Estate,2410000.0
+TL00738,R489,Term Loan,Equipment Finance,1917000.0,3.0,2.34,Floating,0.0318,0.01,8,Senior Secured,1917000.0
+TL00739,R391,Term Loan,C&I Term,4918000.0,7.0,4.58,Fixed,0.0202,0.01,5,Senior Secured,4918000.0
+TL00740,R469,Term Loan,Equipment Finance,2274000.0,7.0,3.65,Fixed,0.0239,0.0075,7,Senior Secured,2274000.0
+TL00741,R010,Term Loan,CRE Term,12196000.0,7.0,5.29,Floating,0.0145,0.01,5,Real Estate,12196000.0
+TL00742,R001,Term Loan,Equipment Finance,18730000.0,7.0,6.2,Fixed,0.0208,0.0025,5,Senior Secured,18730000.0
+TL00743,R109,Term Loan,C&I Term,2402000.0,5.0,4.11,Fixed,0.0257,0.005,6,Senior Secured,2402000.0
+TL00744,R435,Term Loan,CRE Term,1498000.0,10.0,6.36,Floating,0.0192,0.0025,5,Real Estate,1498000.0
+TL00745,R219,Term Loan,CRE Term,1102000.0,5.0,3.89,Fixed,0.0248,0.01,5,Real Estate,1102000.0
+TL00746,R008,Term Loan,Equipment Finance,37272000.0,5.0,2.66,Fixed,0.0215,0.0075,6,Senior Secured,37272000.0
+TL00747,R005,Term Loan,CRE Term,7475000.0,7.0,5.82,Floating,0.0196,0.01,4,Real Estate,7475000.0
+TL00748,R494,Term Loan,CRE Term,1798000.0,7.0,6.04,Floating,0.0231,0.005,5,Real Estate,1798000.0
+TL00749,R287,Term Loan,CRE Term,1831000.0,7.0,2.17,Floating,0.0167,0.005,4,Real Estate,1831000.0
+TL00750,R245,Term Loan,C&I Term,2422000.0,3.0,1.17,Floating,0.0233,0.0075,5,Unsecured,2422000.0
+TL00751,R227,Term Loan,Equipment Finance,2067000.0,10.0,4.16,Fixed,0.0239,0.0075,5,Senior Secured,2067000.0
+TL00752,R001,Term Loan,C&I Term,8255000.0,5.0,1.66,Floating,0.0165,0.005,4,Senior Secured,8255000.0
+TL00753,R196,Term Loan,CRE Term,2660000.0,7.0,3.6,Floating,0.027,0.005,8,Real Estate,2660000.0
+TL00754,R410,Term Loan,CRE Term,409000.0,10.0,3.54,Floating,0.0253,0.0075,6,Real Estate,409000.0
+TL00755,R008,Term Loan,C&I Term,6506000.0,5.0,3.38,Fixed,0.02,0.0025,6,Senior Secured,6506000.0
+TL00756,R304,Term Loan,C&I Term,1627000.0,7.0,1.97,Floating,0.0222,0.0025,4,Senior Secured,1627000.0
+TL00757,R028,Term Loan,C&I Term,10859000.0,5.0,2.08,Fixed,0.0184,0.0025,4,Senior Secured,10859000.0
+TL00758,R167,Term Loan,Equipment Finance,2049000.0,7.0,5.13,Floating,0.0321,0.0025,7,Senior Secured,2049000.0
+TL00759,R177,Term Loan,CRE Term,493000.0,7.0,3.63,Floating,0.0197,0.0025,6,Real Estate,493000.0
+TL00760,R271,Term Loan,C&I Term,2196000.0,7.0,3.76,Floating,0.0281,0.0025,7,Senior Secured,2196000.0
+TL00761,R408,Term Loan,CRE Term,2524000.0,3.0,2.52,Floating,0.023,0.0025,4,Real Estate,2524000.0
+TL00762,R476,Term Loan,C&I Term,1889000.0,3.0,2.96,Floating,0.0284,0.01,8,Senior Secured,1889000.0
+TL00763,R252,Term Loan,Equipment Finance,1300000.0,10.0,6.52,Floating,0.0246,0.0025,6,Senior Secured,1300000.0
+TL00764,R006,Term Loan,C&I Term,9391000.0,10.0,2.63,Floating,0.0183,0.0075,5,Unsecured,9391000.0
+TL00765,R095,Term Loan,C&I Term,3635000.0,10.0,2.82,Floating,0.0177,0.0025,4,Senior Secured,3635000.0
+TL00766,R005,Term Loan,CRE Term,10762000.0,3.0,2.92,Fixed,0.0213,0.01,5,Real Estate,10762000.0
+TL00767,R304,Term Loan,CRE Term,3854000.0,5.0,3.72,Fixed,0.0162,0.0025,4,Real Estate,3854000.0
+TL00768,R123,Term Loan,C&I Term,1294000.0,7.0,5.61,Floating,0.0303,0.0075,8,Senior Secured,1294000.0
+TL00769,R056,Term Loan,CRE Term,9400000.0,7.0,5.18,Fixed,0.0291,0.0075,7,Real Estate,9400000.0
+TL00770,R212,Term Loan,C&I Term,2789000.0,3.0,1.03,Floating,0.0301,0.01,8,Unsecured,2789000.0
+TL00771,R205,Term Loan,C&I Term,2242000.0,5.0,2.79,Floating,0.0225,0.0075,6,Senior Secured,2242000.0
+TL00772,R289,Term Loan,C&I Term,315000.0,3.0,2.52,Floating,0.0276,0.0075,6,Senior Secured,315000.0
+TL00773,R218,Term Loan,C&I Term,9637000.0,5.0,4.47,Floating,0.0296,0.01,7,Unsecured,9637000.0
+TL00774,R383,Term Loan,Equipment Finance,912000.0,3.0,1.17,Fixed,0.0196,0.01,5,Senior Secured,912000.0
+TL00775,R005,Term Loan,CRE Term,19424000.0,3.0,2.03,Floating,0.0139,0.005,4,Real Estate,19424000.0
+TL00776,R198,Term Loan,Equipment Finance,604000.0,3.0,0.98,Floating,0.0198,0.01,5,Senior Secured,604000.0
+TL00777,R469,Term Loan,C&I Term,509000.0,10.0,9.67,Floating,0.0292,0.01,7,Senior Secured,509000.0
+TL00778,R321,Term Loan,C&I Term,6390000.0,7.0,2.81,Floating,0.0201,0.0075,4,Unsecured,6390000.0
+TL00779,R481,Term Loan,C&I Term,1834000.0,10.0,7.81,Floating,0.0242,0.01,5,Senior Secured,1834000.0
+TL00780,R097,Term Loan,C&I Term,3289000.0,5.0,1.92,Floating,0.0158,0.0025,3,Senior Secured,3289000.0
+TL00781,R193,Term Loan,CRE Term,4336000.0,5.0,3.46,Floating,0.0283,0.0075,8,Real Estate,4336000.0
+TL00782,R262,Term Loan,CRE Term,939000.0,5.0,3.64,Floating,0.0245,0.0075,5,Real Estate,939000.0
+TL00783,R275,Term Loan,C&I Term,3805000.0,5.0,2.31,Floating,0.0124,0.01,2,Senior Secured,3805000.0
+TL00784,R497,Term Loan,CRE Term,1393000.0,5.0,4.28,Fixed,0.0171,0.0025,3,Real Estate,1393000.0
+TL00785,R214,Term Loan,CRE Term,1300000.0,7.0,6.36,Floating,0.0099,0.01,2,Real Estate,1300000.0
+TL00786,R005,Term Loan,CRE Term,4608000.0,7.0,6.19,Floating,0.0182,0.0025,5,Real Estate,4608000.0
+TL00787,R088,Term Loan,Equipment Finance,958000.0,7.0,3.25,Floating,0.0219,0.005,4,Senior Secured,958000.0
+TL00788,R244,Term Loan,CRE Term,2756000.0,3.0,2.39,Floating,0.0232,0.0075,6,Real Estate,2756000.0
+TL00789,R004,Term Loan,Equipment Finance,13427000.0,5.0,3.24,Floating,0.017,0.005,4,Senior Secured,13427000.0
+TL00790,R035,Term Loan,CRE Term,402000.0,3.0,2.02,Floating,0.0075,0.01,1,Real Estate,402000.0
+TL00791,R323,Term Loan,C&I Term,2598000.0,3.0,1.75,Floating,0.018,0.01,4,Senior Secured,2598000.0
+TL00792,R041,Term Loan,CRE Term,3922000.0,7.0,4.76,Floating,0.019,0.0025,4,Real Estate,3922000.0
+TL00793,R003,Term Loan,C&I Term,7101000.0,5.0,1.54,Floating,0.0206,0.005,4,Senior Secured,7101000.0
+TL00794,R233,Term Loan,CRE Term,2389000.0,7.0,3.69,Floating,0.0249,0.0025,7,Real Estate,2389000.0
+TL00795,R200,Term Loan,Equipment Finance,3450000.0,3.0,1.03,Floating,0.0183,0.0075,3,Senior Secured,3450000.0
+TL00796,R483,Term Loan,C&I Term,517000.0,10.0,4.24,Floating,0.0192,0.01,3,Senior Secured,517000.0
+TL00797,R053,Term Loan,Equipment Finance,17297000.0,10.0,3.02,Floating,0.0204,0.0075,5,Senior Secured,17297000.0
+TL00798,R365,Term Loan,Equipment Finance,1297000.0,5.0,1.85,Fixed,0.0241,0.0025,6,Senior Secured,1297000.0
+TL00799,R028,Term Loan,C&I Term,3696000.0,7.0,5.78,Floating,0.0198,0.0025,4,Senior Secured,3696000.0
+TL00800,R391,Term Loan,CRE Term,2852000.0,3.0,1.92,Fixed,0.0185,0.0025,5,Real Estate,2852000.0
+TL00801,R305,Term Loan,Equipment Finance,3379000.0,7.0,1.53,Floating,0.0267,0.005,7,Senior Secured,3379000.0
+TL00802,R188,Term Loan,Equipment Finance,864000.0,7.0,5.82,Floating,0.017,0.0075,2,Senior Secured,864000.0
+TL00803,R381,Term Loan,C&I Term,382000.0,7.0,6.49,Floating,0.0263,0.0025,6,Unsecured,382000.0
+TL00804,R317,Term Loan,C&I Term,764000.0,7.0,6.33,Fixed,0.0162,0.01,3,Senior Secured,764000.0
+TL00805,R443,Term Loan,CRE Term,3800000.0,5.0,4.29,Floating,0.0225,0.005,5,Real Estate,3800000.0
+TL00806,R103,Term Loan,C&I Term,7675000.0,7.0,6.96,Floating,0.0293,0.0075,7,Senior Secured,7675000.0
+TL00807,R208,Term Loan,C&I Term,1072000.0,7.0,4.68,Floating,0.0269,0.0075,6,Senior Secured,1072000.0
+TL00808,R353,Term Loan,C&I Term,3944000.0,3.0,2.91,Floating,0.0152,0.0075,3,Senior Secured,3944000.0
+TL00809,R335,Term Loan,C&I Term,2392000.0,3.0,2.88,Fixed,0.026,0.005,5,Unsecured,2392000.0
+TL00810,R296,Term Loan,CRE Term,1062000.0,7.0,3.15,Floating,0.0255,0.005,5,Real Estate,1062000.0
+TL00811,R087,Term Loan,CRE Term,3454000.0,5.0,4.45,Floating,0.0211,0.005,4,Real Estate,3454000.0
+TL00812,R221,Term Loan,CRE Term,5133000.0,5.0,4.17,Floating,0.0145,0.0025,3,Real Estate,5133000.0
+TL00813,R005,Term Loan,CRE Term,5632000.0,10.0,8.21,Floating,0.0204,0.005,6,Real Estate,5632000.0
+TL00814,R400,Term Loan,C&I Term,1320000.0,7.0,6.42,Fixed,0.0186,0.01,4,Unsecured,1320000.0
+TL00815,R120,Term Loan,C&I Term,5048000.0,5.0,2.54,Fixed,0.0224,0.01,5,Unsecured,5048000.0
+TL00816,R225,Term Loan,C&I Term,341000.0,5.0,2.6,Fixed,0.0206,0.01,6,Senior Secured,341000.0
+TL00817,R005,Term Loan,CRE Term,9417000.0,5.0,3.56,Floating,0.0199,0.005,5,Real Estate,9417000.0
+TL00818,R049,Term Loan,C&I Term,1032000.0,7.0,5.53,Floating,0.0226,0.005,4,Senior Secured,1032000.0
+TL00819,R086,Term Loan,C&I Term,8978000.0,5.0,4.52,Floating,0.032,0.0025,8,Senior Secured,8978000.0
+TL00820,R157,Term Loan,C&I Term,301000.0,5.0,4.5,Floating,0.0177,0.005,4,Unsecured,301000.0
+TL00821,R119,Term Loan,C&I Term,969000.0,7.0,5.44,Fixed,0.0202,0.0075,5,Unsecured,969000.0
+TL00822,R149,Term Loan,CRE Term,894000.0,7.0,6.76,Floating,0.0201,0.005,4,Real Estate,894000.0
+TL00823,R137,Term Loan,CRE Term,2834000.0,7.0,2.4,Floating,0.019,0.0075,4,Real Estate,2834000.0
+TL00824,R388,Term Loan,Equipment Finance,1270000.0,3.0,2.88,Floating,0.0373,0.0025,10,Senior Secured,1270000.0
+TL00825,R274,Term Loan,CRE Term,5532000.0,7.0,1.76,Fixed,0.0237,0.005,5,Real Estate,5532000.0
+TL00826,R328,Term Loan,CRE Term,6700000.0,5.0,3.22,Floating,0.0305,0.005,7,Real Estate,6700000.0
+TL00827,R003,Term Loan,C&I Term,7891000.0,3.0,0.82,Fixed,0.0198,0.005,6,Senior Secured,7891000.0
+TL00828,R005,Term Loan,CRE Term,13272000.0,7.0,4.58,Fixed,0.0202,0.0025,5,Real Estate,13272000.0
+TL00829,R375,Term Loan,C&I Term,2971000.0,7.0,3.58,Fixed,0.0213,0.005,5,Unsecured,2971000.0
+TL00830,R246,Term Loan,C&I Term,7844000.0,5.0,1.33,Floating,0.022,0.01,5,Senior Secured,7844000.0
+TL00831,R393,Term Loan,C&I Term,453000.0,7.0,5.03,Floating,0.016,0.01,2,Senior Secured,453000.0
+TL00832,R076,Term Loan,C&I Term,680000.0,5.0,3.92,Floating,0.0246,0.005,5,Senior Secured,680000.0
+TL00833,R006,Term Loan,C&I Term,15776000.0,3.0,1.02,Fixed,0.0236,0.005,5,Senior Secured,15776000.0
+TL00834,R371,Term Loan,CRE Term,3505000.0,5.0,3.78,Fixed,0.0289,0.0075,7,Real Estate,3505000.0
+TL00835,R312,Term Loan,Equipment Finance,226000.0,5.0,1.72,Floating,0.0219,0.005,5,Senior Secured,226000.0
+TL00836,R394,Term Loan,CRE Term,11844000.0,7.0,2.17,Floating,0.0188,0.0075,4,Real Estate,11844000.0
+TL00837,R003,Term Loan,CRE Term,9794000.0,7.0,2.23,Floating,0.0136,0.005,5,Real Estate,9794000.0
+TL00838,R449,Term Loan,CRE Term,291000.0,7.0,4.75,Floating,0.0283,0.01,6,Real Estate,291000.0
+TL00839,R073,Term Loan,C&I Term,357000.0,3.0,2.47,Floating,0.0242,0.0075,6,Unsecured,357000.0
+TL00840,R437,Term Loan,CRE Term,387000.0,5.0,3.39,Floating,0.0235,0.01,5,Real Estate,387000.0
+TL00841,R323,Term Loan,CRE Term,1294000.0,3.0,2.54,Fixed,0.0239,0.01,5,Real Estate,1294000.0
+TL00842,R456,Term Loan,C&I Term,1247000.0,7.0,4.71,Floating,0.0163,0.005,4,Senior Secured,1247000.0
+TL00843,R118,Term Loan,C&I Term,2182000.0,3.0,2.51,Floating,0.0199,0.005,5,Senior Secured,2182000.0
+TL00844,R243,Term Loan,Equipment Finance,2541000.0,5.0,4.91,Floating,0.0317,0.0025,7,Senior Secured,2541000.0
+TL00845,R059,Term Loan,CRE Term,542000.0,7.0,3.59,Floating,0.0173,0.0075,3,Real Estate,542000.0
+TL00846,R245,Term Loan,C&I Term,2834000.0,7.0,2.24,Floating,0.0179,0.0075,4,Senior Secured,2834000.0
+TL00847,R013,Term Loan,CRE Term,1351000.0,5.0,1.54,Floating,0.0219,0.005,5,Real Estate,1351000.0
+TL00848,R330,Term Loan,C&I Term,4744000.0,5.0,3.39,Floating,0.0305,0.0025,7,Senior Secured,4744000.0
+TL00849,R136,Term Loan,C&I Term,699000.0,7.0,4.46,Floating,0.0273,0.01,6,Unsecured,699000.0
+TL00850,R379,Term Loan,C&I Term,2704000.0,5.0,1.74,Floating,0.0297,0.0025,9,Senior Secured,2704000.0
+TL00851,R322,Term Loan,C&I Term,2399000.0,3.0,2.72,Floating,0.0235,0.0075,4,Unsecured,2399000.0
+TL00852,R141,Term Loan,CRE Term,656000.0,7.0,6.76,Floating,0.0218,0.0025,4,Real Estate,656000.0
+TL00853,R203,Term Loan,C&I Term,852000.0,5.0,2.01,Floating,0.0246,0.0025,6,Senior Secured,852000.0
+TL00854,R419,Term Loan,CRE Term,3107000.0,5.0,1.83,Floating,0.0136,0.01,3,Real Estate,3107000.0
+TL00855,R309,Term Loan,C&I Term,1182000.0,3.0,1.11,Floating,0.036,0.0075,9,Senior Secured,1182000.0
+TL00856,R312,Term Loan,CRE Term,754000.0,5.0,2.55,Floating,0.0234,0.0025,5,Real Estate,754000.0
+TL00857,R152,Term Loan,CRE Term,2758000.0,5.0,4.41,Floating,0.0186,0.0025,5,Real Estate,2758000.0
+TL00858,R001,Term Loan,CRE Term,60833000.0,5.0,3.38,Fixed,0.0152,0.005,4,Real Estate,60833000.0
+TL00859,R001,Term Loan,CRE Term,12957000.0,5.0,1.27,Floating,0.0219,0.0075,3,Real Estate,12957000.0
+TL00860,R001,Term Loan,Equipment Finance,29400000.0,5.0,2.89,Floating,0.0161,0.005,4,Senior Secured,29400000.0
+TL00861,R152,Term Loan,CRE Term,3012000.0,7.0,1.91,Floating,0.0231,0.01,6,Real Estate,3012000.0
+TL00862,R369,Term Loan,CRE Term,2430000.0,10.0,5.25,Fixed,0.0197,0.0075,5,Real Estate,2430000.0
+TL00863,R317,Term Loan,CRE Term,1343000.0,3.0,1.57,Floating,0.0266,0.0075,5,Real Estate,1343000.0
+TL00864,R187,Term Loan,C&I Term,471000.0,3.0,2.16,Fixed,0.0159,0.005,2,Senior Secured,471000.0
+TL00865,R475,Term Loan,C&I Term,1116000.0,7.0,4.48,Floating,0.0257,0.0075,5,Unsecured,1116000.0
+TL00866,R029,Term Loan,C&I Term,797000.0,10.0,9.0,Fixed,0.0228,0.01,5,Senior Secured,797000.0
+TL00867,R330,Term Loan,C&I Term,2858000.0,7.0,1.49,Floating,0.0309,0.0025,7,Unsecured,2858000.0
+TL00868,R359,Term Loan,C&I Term,722000.0,3.0,2.46,Floating,0.0201,0.0075,5,Unsecured,722000.0
+TL00869,R010,Term Loan,C&I Term,8708000.0,5.0,1.09,Floating,0.0199,0.01,5,Senior Secured,8708000.0
+TL00870,R404,Term Loan,CRE Term,2013000.0,3.0,1.33,Floating,0.0257,0.005,6,Real Estate,2013000.0
+TL00871,R007,Term Loan,C&I Term,9958000.0,7.0,6.33,Fixed,0.0287,0.01,7,Unsecured,9958000.0
+TL00872,R334,Term Loan,Equipment Finance,296000.0,5.0,3.76,Fixed,0.0258,0.005,6,Senior Secured,296000.0
+TL00873,R224,Term Loan,C&I Term,724000.0,5.0,1.69,Floating,0.0234,0.0025,6,Senior Secured,724000.0
+TL00874,R069,Term Loan,CRE Term,1170000.0,5.0,2.96,Floating,0.0196,0.01,4,Real Estate,1170000.0
+TL00875,R234,Term Loan,C&I Term,1598000.0,5.0,3.89,Floating,0.018,0.005,5,Senior Secured,1598000.0
+TL00876,R245,Term Loan,C&I Term,5900000.0,5.0,4.75,Floating,0.0136,0.01,4,Senior Secured,5900000.0
+TL00877,R105,Term Loan,C&I Term,4843000.0,3.0,2.12,Floating,0.0299,0.005,7,Unsecured,4843000.0
+TL00878,R153,Term Loan,CRE Term,700000.0,5.0,1.1,Floating,0.0297,0.005,8,Real Estate,700000.0
+TL00879,R287,Term Loan,C&I Term,1602000.0,7.0,4.2,Floating,0.0215,0.0075,5,Unsecured,1602000.0
+TL00880,R430,Term Loan,Equipment Finance,903000.0,7.0,2.26,Fixed,0.0215,0.005,4,Senior Secured,903000.0
+TL00881,R377,Term Loan,C&I Term,529000.0,5.0,1.19,Fixed,0.0257,0.01,5,Senior Secured,529000.0
+TL00882,R007,Term Loan,CRE Term,19835000.0,7.0,4.75,Fixed,0.0261,0.0025,7,Real Estate,19835000.0
+TL00883,R089,Term Loan,C&I Term,2530000.0,7.0,5.75,Floating,0.027,0.0025,5,Senior Secured,2530000.0
+TL00884,R139,Term Loan,CRE Term,2809000.0,3.0,0.69,Fixed,0.0207,0.0025,4,Real Estate,2809000.0
+TL00885,R009,Term Loan,C&I Term,6735000.0,3.0,2.48,Floating,0.017,0.005,4,Senior Secured,6735000.0
+TL00886,R354,Term Loan,C&I Term,3378000.0,5.0,3.83,Floating,0.02,0.0025,4,Senior Secured,3378000.0
+TL00887,R007,Term Loan,C&I Term,7382000.0,5.0,4.01,Floating,0.0214,0.005,7,Senior Secured,7382000.0
+TL00888,R315,Term Loan,C&I Term,6653000.0,3.0,1.19,Fixed,0.0246,0.0025,5,Senior Secured,6653000.0
+TL00889,R343,Term Loan,C&I Term,874000.0,3.0,1.54,Floating,0.0161,0.01,5,Senior Secured,874000.0
+TL00890,R468,Term Loan,Equipment Finance,1099000.0,3.0,0.89,Fixed,0.0179,0.0025,4,Senior Secured,1099000.0
+TL00891,R106,Term Loan,C&I Term,190000.0,5.0,1.96,Floating,0.0167,0.01,3,Senior Secured,190000.0
+TL00892,R126,Term Loan,C&I Term,3098000.0,5.0,2.21,Fixed,0.0286,0.01,8,Senior Secured,3098000.0
+TL00893,R426,Term Loan,Equipment Finance,4242000.0,3.0,1.37,Floating,0.0183,0.0075,4,Senior Secured,4242000.0
+TL00894,R485,Term Loan,C&I Term,947000.0,7.0,2.38,Fixed,0.0352,0.01,8,Senior Secured,947000.0
+TL00895,R100,Term Loan,C&I Term,5358000.0,5.0,1.75,Floating,0.0222,0.01,4,Senior Secured,5358000.0
+TL00896,R423,Term Loan,CRE Term,519000.0,5.0,4.61,Floating,0.0177,0.01,4,Real Estate,519000.0
+TL00897,R171,Term Loan,Equipment Finance,838000.0,3.0,2.48,Fixed,0.0266,0.0075,7,Senior Secured,838000.0
+TL00898,R102,Term Loan,CRE Term,637000.0,7.0,3.33,Floating,0.0162,0.0075,4,Real Estate,637000.0
+TL00899,R008,Term Loan,C&I Term,6979000.0,10.0,9.58,Floating,0.0257,0.005,7,Senior Secured,6979000.0
+TL00900,R044,Term Loan,Equipment Finance,9002000.0,5.0,1.96,Fixed,0.0272,0.0075,7,Senior Secured,9002000.0
+TL00901,R289,Term Loan,C&I Term,4289000.0,3.0,1.58,Floating,0.0201,0.005,6,Unsecured,4289000.0
+TL00902,R361,Term Loan,Equipment Finance,751000.0,5.0,4.25,Fixed,0.0197,0.0025,4,Senior Secured,751000.0
+TL00903,R127,Term Loan,Equipment Finance,2212000.0,3.0,1.66,Floating,0.0177,0.01,3,Senior Secured,2212000.0
+TL00904,R340,Term Loan,Equipment Finance,521000.0,7.0,2.71,Fixed,0.0302,0.0075,7,Senior Secured,521000.0
+TL00905,R384,Term Loan,C&I Term,3739000.0,3.0,1.48,Floating,0.0164,0.0075,3,Unsecured,3739000.0
+TL00906,R394,Term Loan,C&I Term,9670000.0,10.0,6.01,Floating,0.0185,0.005,4,Senior Secured,9670000.0
+TL00907,R012,Term Loan,CRE Term,3624000.0,5.0,3.48,Fixed,0.0328,0.01,7,Real Estate,3624000.0
+TL00908,R324,Term Loan,CRE Term,430000.0,5.0,2.62,Floating,0.0222,0.0075,5,Real Estate,430000.0
+TL00909,R462,Term Loan,CRE Term,462000.0,7.0,3.82,Floating,0.0268,0.0025,6,Real Estate,462000.0
+TL00910,R114,Term Loan,Equipment Finance,1507000.0,3.0,1.23,Floating,0.0209,0.01,5,Senior Secured,1507000.0
+TL00911,R227,Term Loan,CRE Term,6121000.0,7.0,4.4,Floating,0.0183,0.01,3,Real Estate,6121000.0
+TL00912,R052,Term Loan,C&I Term,252000.0,3.0,1.13,Floating,0.0158,0.01,4,Senior Secured,252000.0
+TL00913,R377,Term Loan,C&I Term,1017000.0,7.0,6.26,Floating,0.0266,0.005,7,Senior Secured,1017000.0
+TL00914,R145,Term Loan,C&I Term,14395000.0,5.0,3.99,Fixed,0.022,0.0025,6,Unsecured,14395000.0
+TL00915,R026,Term Loan,C&I Term,3314000.0,3.0,1.58,Floating,0.0151,0.0025,3,Unsecured,3314000.0
+TL00916,R001,Term Loan,C&I Term,36076000.0,7.0,5.58,Floating,0.0227,0.0075,5,Senior Secured,36076000.0
+TL00917,R393,Term Loan,Equipment Finance,2210000.0,3.0,0.62,Floating,0.0179,0.01,4,Senior Secured,2210000.0
+TL00918,R364,Term Loan,CRE Term,552000.0,3.0,1.43,Floating,0.0324,0.0025,8,Real Estate,552000.0
+TL00919,R402,Term Loan,CRE Term,1040000.0,7.0,3.87,Floating,0.0288,0.0075,6,Real Estate,1040000.0
+TL00920,R094,Term Loan,C&I Term,1186000.0,5.0,2.88,Fixed,0.0249,0.0025,6,Unsecured,1186000.0
+TL00921,R111,Term Loan,CRE Term,614000.0,7.0,5.59,Floating,0.0303,0.01,7,Real Estate,614000.0
+TL00922,R006,Term Loan,Equipment Finance,5043000.0,5.0,4.85,Floating,0.0198,0.0025,5,Senior Secured,5043000.0
+TL00923,R217,Term Loan,Equipment Finance,4389000.0,5.0,2.52,Fixed,0.0253,0.01,6,Senior Secured,4389000.0
+TL00924,R225,Term Loan,CRE Term,602000.0,5.0,2.4,Floating,0.0269,0.0025,6,Real Estate,602000.0
+TL00925,R144,Term Loan,Equipment Finance,9347000.0,3.0,2.07,Floating,0.0268,0.005,5,Senior Secured,9347000.0
+TL00926,R356,Term Loan,CRE Term,2782000.0,10.0,4.25,Floating,0.029,0.0075,8,Real Estate,2782000.0
+TL00927,R108,Term Loan,C&I Term,1288000.0,3.0,0.94,Floating,0.0226,0.01,6,Senior Secured,1288000.0
+TL00928,R002,Term Loan,Equipment Finance,17174000.0,5.0,4.85,Floating,0.0134,0.005,4,Senior Secured,17174000.0
+TL00929,R430,Term Loan,C&I Term,814000.0,5.0,4.24,Fixed,0.0247,0.01,5,Unsecured,814000.0
+TL00930,R177,Term Loan,C&I Term,6213000.0,5.0,4.83,Floating,0.0306,0.0025,7,Senior Secured,6213000.0
+TL00931,R073,Term Loan,C&I Term,767000.0,5.0,1.87,Floating,0.0265,0.005,7,Unsecured,767000.0
+TL00932,R272,Term Loan,CRE Term,1869000.0,7.0,1.5,Floating,0.0113,0.01,3,Real Estate,1869000.0
+TL00933,R221,Term Loan,CRE Term,547000.0,7.0,3.85,Fixed,0.0149,0.005,3,Real Estate,547000.0
+TL00934,R334,Term Loan,CRE Term,1097000.0,7.0,6.63,Fixed,0.0236,0.0075,5,Real Estate,1097000.0
+TL00935,R236,Term Loan,C&I Term,2604000.0,5.0,1.55,Fixed,0.0192,0.005,4,Senior Secured,2604000.0
+TL00936,R368,Term Loan,C&I Term,6489000.0,5.0,1.47,Floating,0.0255,0.005,6,Senior Secured,6489000.0
+TL00937,R129,Term Loan,Equipment Finance,465000.0,3.0,0.77,Fixed,0.0153,0.01,3,Senior Secured,465000.0
+TL00938,R161,Term Loan,C&I Term,516000.0,7.0,5.68,Floating,0.0275,0.0075,6,Senior Secured,516000.0
+TL00939,R079,Term Loan,Equipment Finance,758000.0,5.0,4.14,Floating,0.0231,0.0075,5,Senior Secured,758000.0
+TL00940,R022,Term Loan,C&I Term,1526000.0,5.0,3.78,Floating,0.0293,0.0075,7,Senior Secured,1526000.0
+TL00941,R266,Term Loan,CRE Term,259000.0,3.0,0.73,Fixed,0.0226,0.01,5,Real Estate,259000.0
+TL00942,R029,Term Loan,CRE Term,1301000.0,7.0,5.45,Floating,0.0207,0.005,4,Real Estate,1301000.0
+TL00943,R009,Term Loan,Equipment Finance,14056000.0,7.0,3.91,Floating,0.0163,0.01,4,Senior Secured,14056000.0
+TL00944,R004,Term Loan,C&I Term,8736000.0,7.0,2.28,Floating,0.0119,0.0075,3,Unsecured,8736000.0
+TL00945,R210,Term Loan,Equipment Finance,2002000.0,3.0,1.31,Floating,0.0203,0.01,4,Senior Secured,2002000.0
+TL00946,R075,Term Loan,CRE Term,1572000.0,10.0,6.01,Fixed,0.0158,0.01,2,Real Estate,1572000.0
+TL00947,R408,Term Loan,CRE Term,2557000.0,3.0,1.39,Fixed,0.0195,0.0025,3,Real Estate,2557000.0
+TL00948,R240,Term Loan,CRE Term,279000.0,5.0,4.88,Floating,0.0204,0.005,4,Real Estate,279000.0
+TL00949,R330,Term Loan,C&I Term,4389000.0,3.0,1.74,Floating,0.0226,0.005,6,Senior Secured,4389000.0
+TL00950,R010,Term Loan,C&I Term,5111000.0,5.0,2.49,Floating,0.0195,0.005,6,Senior Secured,5111000.0
+TL00951,R146,Term Loan,C&I Term,828000.0,5.0,3.69,Fixed,0.0183,0.005,4,Senior Secured,828000.0
+TL00952,R003,Term Loan,C&I Term,16074000.0,3.0,2.16,Floating,0.0185,0.0025,5,Senior Secured,16074000.0
+TL00953,R437,Term Loan,CRE Term,4086000.0,5.0,1.01,Floating,0.0219,0.01,5,Real Estate,4086000.0
+TL00954,R371,Term Loan,C&I Term,1275000.0,7.0,4.86,Floating,0.025,0.01,7,Senior Secured,1275000.0
+TL00955,R404,Term Loan,C&I Term,2048000.0,7.0,2.77,Floating,0.025,0.0075,7,Senior Secured,2048000.0
+TL00956,R010,Term Loan,C&I Term,3450000.0,7.0,3.5,Floating,0.0105,0.005,4,Unsecured,3450000.0
+TL00957,R124,Term Loan,C&I Term,4800000.0,5.0,3.83,Floating,0.0144,0.01,5,Senior Secured,4800000.0
+TL00958,R400,Term Loan,C&I Term,1253000.0,3.0,1.94,Fixed,0.0163,0.005,3,Senior Secured,1253000.0
+TL00959,R181,Term Loan,CRE Term,3515000.0,7.0,3.46,Floating,0.0224,0.005,3,Real Estate,3515000.0
+TL00960,R050,Term Loan,C&I Term,2560000.0,3.0,1.0,Floating,0.0267,0.01,5,Senior Secured,2560000.0
+TL00961,R418,Term Loan,Equipment Finance,1084000.0,5.0,3.02,Floating,0.0254,0.01,7,Senior Secured,1084000.0
+TL00962,R386,Term Loan,C&I Term,9201000.0,3.0,1.37,Floating,0.0254,0.0075,6,Senior Secured,9201000.0
+TL00963,R413,Term Loan,C&I Term,1221000.0,7.0,6.51,Floating,0.0185,0.0025,5,Unsecured,1221000.0
+TL00964,R496,Term Loan,Equipment Finance,1625000.0,5.0,3.14,Floating,0.0161,0.0025,4,Senior Secured,1625000.0
+TL00965,R162,Term Loan,C&I Term,10125000.0,7.0,6.25,Fixed,0.0276,0.01,8,Senior Secured,10125000.0
+TL00966,R466,Term Loan,C&I Term,555000.0,5.0,2.56,Floating,0.0188,0.005,4,Senior Secured,555000.0
+TL00967,R426,Term Loan,Equipment Finance,3745000.0,5.0,4.31,Fixed,0.0161,0.0075,3,Senior Secured,3745000.0
+TL00968,R495,Term Loan,Equipment Finance,5205000.0,5.0,1.23,Floating,0.0228,0.005,5,Senior Secured,5205000.0
+TL00969,R230,Term Loan,CRE Term,1629000.0,3.0,1.32,Floating,0.0267,0.005,6,Real Estate,1629000.0
+TL00970,R038,Term Loan,C&I Term,3389000.0,5.0,1.31,Floating,0.013,0.01,2,Senior Secured,3389000.0
+TL00971,R240,Term Loan,CRE Term,1134000.0,5.0,1.13,Fixed,0.0195,0.0075,4,Real Estate,1134000.0
+TL00972,R258,Term Loan,Equipment Finance,1089000.0,5.0,4.68,Fixed,0.0223,0.005,6,Senior Secured,1089000.0
+TL00973,R377,Term Loan,Equipment Finance,538000.0,3.0,2.32,Floating,0.0188,0.005,5,Senior Secured,538000.0
+TL00974,R466,Term Loan,C&I Term,7344000.0,7.0,4.9,Floating,0.0157,0.0025,4,Senior Secured,7344000.0
+TL00975,R102,Term Loan,C&I Term,1103000.0,5.0,3.13,Floating,0.0182,0.0075,3,Unsecured,1103000.0
+TL00976,R493,Term Loan,C&I Term,2120000.0,3.0,1.97,Floating,0.013,0.0075,2,Senior Secured,2120000.0
+TL00977,R453,Term Loan,C&I Term,1006000.0,3.0,2.13,Fixed,0.0259,0.0025,8,Senior Secured,1006000.0
+TL00978,R371,Term Loan,CRE Term,990000.0,5.0,4.31,Floating,0.0276,0.005,7,Real Estate,990000.0
+TL00979,R135,Term Loan,C&I Term,913000.0,5.0,3.39,Floating,0.0275,0.0075,8,Senior Secured,913000.0
+TL00980,R004,Term Loan,C&I Term,3171000.0,7.0,5.59,Fixed,0.0218,0.0025,4,Senior Secured,3171000.0
+TL00981,R096,Term Loan,C&I Term,3469000.0,3.0,1.27,Fixed,0.0236,0.01,6,Senior Secured,3469000.0
+TL00982,R055,Term Loan,C&I Term,949000.0,7.0,6.87,Fixed,0.0211,0.01,4,Senior Secured,949000.0
+TL00983,R077,Term Loan,C&I Term,3356000.0,5.0,1.13,Floating,0.0221,0.0075,4,Senior Secured,3356000.0
+TL00984,R165,Term Loan,C&I Term,505000.0,5.0,2.55,Floating,0.0198,0.0025,5,Senior Secured,505000.0
+TL00985,R217,Term Loan,C&I Term,829000.0,7.0,6.34,Floating,0.028,0.0075,7,Senior Secured,829000.0
+TL00986,R232,Term Loan,Equipment Finance,641000.0,5.0,1.72,Floating,0.0264,0.01,6,Senior Secured,641000.0
+TL00987,R318,Term Loan,C&I Term,4169000.0,3.0,0.94,Floating,0.0197,0.0025,4,Senior Secured,4169000.0
+TL00988,R045,Term Loan,CRE Term,656000.0,5.0,2.46,Floating,0.0287,0.01,7,Real Estate,656000.0
+TL00989,R007,Term Loan,C&I Term,17180000.0,10.0,5.43,Floating,0.0201,0.01,7,Unsecured,17180000.0
+TL00990,R376,Term Loan,C&I Term,8571000.0,10.0,9.47,Floating,0.0264,0.0025,6,Senior Secured,8571000.0
+TL00991,R005,Term Loan,CRE Term,9748000.0,3.0,2.61,Floating,0.0166,0.0025,4,Real Estate,9748000.0
+TL00992,R471,Term Loan,C&I Term,1311000.0,7.0,4.0,Floating,0.0231,0.0075,5,Senior Secured,1311000.0
+TL00993,R094,Term Loan,C&I Term,441000.0,5.0,4.89,Floating,0.0301,0.01,7,Senior Secured,441000.0
+TL00994,R132,Term Loan,C&I Term,2616000.0,3.0,2.14,Floating,0.0267,0.01,6,Unsecured,2616000.0
+TL00995,R460,Term Loan,CRE Term,1439000.0,7.0,6.29,Fixed,0.0287,0.0075,7,Real Estate,1439000.0
+TL00996,R064,Term Loan,C&I Term,1799000.0,5.0,1.98,Fixed,0.0238,0.0075,5,Unsecured,1799000.0
+TL00997,R005,Term Loan,CRE Term,12006000.0,5.0,2.96,Floating,0.0195,0.0075,5,Real Estate,12006000.0
+TL00998,R121,Term Loan,CRE Term,1778000.0,7.0,1.57,Floating,0.0259,0.0075,5,Real Estate,1778000.0
+TL00999,R191,Term Loan,C&I Term,1917000.0,5.0,1.04,Floating,0.0249,0.01,6,Senior Secured,1917000.0
+TL01000,R306,Term Loan,C&I Term,623000.0,7.0,5.35,Floating,0.031,0.0025,8,Senior Secured,623000.0
