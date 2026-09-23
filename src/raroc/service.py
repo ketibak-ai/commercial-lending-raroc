@@ -49,7 +49,7 @@ def key_relationships() -> list[dict]:
     key = rels[rels.segment == "Key Relationship"].sort_values("raroc", ascending=False)
     out = _records(key[KEY_COLS])
     for r in out:
-        r["watch_list"] = r["raroc"] < 0.15
+        r["watch_list"] = r["raroc"] < C.WATCH_LIST_RAROC
     return out
 
 
@@ -69,7 +69,7 @@ def relationship_detail(relationship_id: str) -> dict:
     by_product["raroc"] = by_product.net_income / by_product.economic_capital
     worst = acc[acc["product"].isin(["Term Loan", "Revolver"])].nsmallest(5, "eva")
     summary = _records(row[KEY_COLS + ["segment"]])[0]
-    summary["watch_list"] = summary["raroc"] < 0.15
+    summary["watch_list"] = summary["raroc"] < C.WATCH_LIST_RAROC
     return {
         "summary": summary,
         "by_product": _records(by_product.reset_index()),

@@ -44,6 +44,14 @@ LGD_BY_COLLATERAL = {
 REVOLVER_CCF = 0.75          # credit conversion factor on undrawn commitments
 IRD_ADDON_BY_TENOR = [(1, 0.005), (5, 0.015), (99, 0.030)]  # simplified SA-CCR add-on
 SA_CCR_ALPHA = 1.4
+IRD_LGD = 0.40
+CVA_MULTIPLIER = 1.25            # CVA capital add-on on derivative credit capital
+PAYMENTS_LOSS_RATE = 0.005       # fraud / operational losses as % of gross fees
+DEPOSIT_DURATION = {"Operating": 3.0, "Non-Operating": 0.5}  # CDs use contractual tenor
+VOLATILE_FTP_SHARE = 0.85        # share of 3m FTP credited on the volatile deposit portion
+REVOLVER_DRAWN_LP_FACTOR = 0.5   # drawn revolver balances carry half the term liquidity premium
+REVOLVER_UNDRAWN_LP_FACTOR = 0.25  # contingent liquidity charge on undrawn commitments
+WATCH_LIST_RAROC = 0.15          # key relationships below this go on the pricing watch list
 
 
 @dataclass(frozen=True)

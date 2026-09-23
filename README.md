@@ -13,7 +13,18 @@ An end-to-end commercial banking pricing system:
 
 Ten **key relationships** are the focus. For these clients, deposits, payments and hedging decide whether the credit earns its cost of capital.
 
-**Live dashboard:** https://ketibak-ai.github.io/commercial-lending-raroc/
+**Live app:** https://ketibak-ai.github.io/commercial-lending-raroc/
+
+The app has four tabs:
+- **Overview:** portfolio and product RAROC plus the 10 key relationships.
+- **Relationships:** all 500 clients, searchable and sortable, each with a drill-down to its accounts.
+- **Accounts:** all 7,020 accounts, filterable, with CSV download.
+- **Scenarios & pricing:**
+  - Rate, credit, pricing and deposit levers, applied to the whole book, the key clients, or one client.
+  - Presets (recession, rate moves, Blue Mesa remediation) and a new-deal pricer.
+  - Scenarios can be saved or shared as a link.
+
+The RAROC engine runs in the browser. It is a JavaScript port tested against the Python engine on every account.
 
 > All data is synthetic, generated with a fixed seed. It represents no real bank or client.
 
@@ -65,8 +76,9 @@ flowchart LR
     SVC --> API[api.py<br/>FastAPI REST]
     SVC --> AG[agent.py<br/>Claude tool-use loop]
     AG --> API
-    SVC --> REP[report.py<br/>CSV · Excel · dashboard]
-    REP --> PAGES[GitHub Pages]
+    SVC --> REP[report.py<br/>CSV · Excel · data export]
+    REP --> WEB[web/ app<br/>JS engine · scenarios]
+    WEB --> PAGES[GitHub Pages]
     API --> OBS[observability.py<br/>JSON logs · /metrics · request IDs]
 ```
 
@@ -75,12 +87,13 @@ flowchart LR
 | Area | Where |
 |---|---|
 | Python, data engineering | `simulate.py`, `engine.py`: vectorised pandas/numpy over 7,020 accounts |
+| Front end | `web/`: dependency-free JS app with a live scenario engine, drill-downs, sortable tables and SVG charts |
 | Banking domain modelling | FTP, Basel IRB capital, SA-CCR, CCF, LCR run-off, ECR, relationship pricing |
 | API design and integration | `api.py`: FastAPI with typed validation, error mapping, optional API-key auth |
 | LLM pipeline and agents | `agent.py`: Claude tool use, adaptive thinking, prompt caching, refusal fallbacks |
 | RAG | `rag.py` + `knowledge/`: section-level chunking, BM25, cited answers |
 | Evaluation | `evals/`: offline retrieval eval in CI, deterministic end-to-end agent eval |
-| Testing | `tests/`: engine maths, API contract, agent loop tested with a fake Claude client |
+| Testing | `tests/`: engine maths, API contract, agent loop tested with a fake Claude client, browser-engine parity on all 7,020 accounts |
 | Cloud deployment, CI/CD | `Dockerfile` (non-root, healthcheck), GitHub Actions: lint, test, eval, image build + smoke test, Pages deploy |
 | Observability | Structured JSON logs with request IDs, Prometheus `/metrics`, per-tool latency, token usage |
 | Security and responsible AI | Secrets from env only, constant-time API-key check, input bounds, policy text treated as data, no PII |
@@ -123,7 +136,7 @@ pip install -e ".[dev]"
 raroc simulate                      # writes data/, reports/ (CSV + Excel), docs/index.html
 raroc price --product Revolver --amount 40e6 --tenor-yrs 3 --rating 7 \
             --collateral Unsecured --utilization 0.3 --relationship-id R007
-pytest -q                           # 29 tests
+pytest -q                           # 32 tests (incl. JS/Python engine parity)
 python evals/retrieval_eval.py      # offline RAG eval
 ```
 
@@ -183,7 +196,8 @@ tests/          engine, pricing, API and agent-loop tests
 evals/          retrieval + agent evals
 data/           simulated accounts (CSV)
 reports/        account/relationship/product RAROC (CSV) + portfolio_raroc.xlsx
-docs/           static dashboard served by GitHub Pages
+src/raroc/web/  browser app: engine.js (RAROC + pricing), app.js (UI), index.html
+docs/           built site served by GitHub Pages (app + data.js)
 ```
 
 ## License

@@ -76,8 +76,8 @@ def revolvers_raroc(rev: pd.DataFrame) -> pd.DataFrame:
     df = rev.copy()
     undrawn = df.commitment - df.balance
     df["exposure"] = df.commitment
-    df["nii"] = df.balance * (df.spread - C.COSTS.loan_liquidity_premium * 0.5) \
-        - undrawn * C.COSTS.revolver_liquidity_premium * 0.25
+    df["nii"] = df.balance * (df.spread - C.COSTS.loan_liquidity_premium * C.REVOLVER_DRAWN_LP_FACTOR) \
+        - undrawn * C.COSTS.revolver_liquidity_premium * C.REVOLVER_UNDRAWN_LP_FACTOR
     df["fee_revenue"] = undrawn * df.unused_fee + df.commitment * df.orig_fee_pct / df.tenor_yrs
     df["opex"] = df.commitment * C.COSTS.revolver_opex_bps
     ead = df.balance + C.REVOLVER_CCF * undrawn
@@ -94,16 +94,16 @@ def irds_raroc(irds: pd.DataFrame) -> pd.DataFrame:
     df["nii"] = 0.0
     df["fee_revenue"] = df.notional * df.sales_credit_bps / 10_000  # annualised sales credit
     df["opex"] = C.COSTS.ird_opex_per_trade
-    df = _credit(df, ead, pd.Series(0.40, index=df.index), df.remaining_yrs)
-    df["credit_capital"] *= 1.25  # CVA capital add-on
+    df = _credit(df, ead, pd.Series(C.IRD_LGD, index=df.index), df.remaining_yrs)
+    df["credit_capital"] *= C.CVA_MULTIPLIER
     return _finish(df)
 
 
 def deposits_raroc(dep: pd.DataFrame) -> pd.DataFrame:
     df = dep.copy()
-    duration = df.deposit_type.map({"Operating": 3.0, "Non-Operating": 0.5}).fillna(df.tenor_yrs)
+    duration = df.deposit_type.map(C.DEPOSIT_DURATION).fillna(df.tenor_yrs)
     haircut = df.deposit_type.map(C.COSTS.deposit_runoff_haircut)
-    ftp_credit = ftp_rate(duration) * (1 - haircut) + haircut * ftp_rate(0.25) * 0.85
+    ftp_credit = ftp_rate(duration) * (1 - haircut) + haircut * ftp_rate(0.25) * C.VOLATILE_FTP_SHARE
     df["ftp_credit"] = ftp_credit
     df["exposure"] = df.balance
     df["ead"] = 0.0
@@ -124,7 +124,7 @@ def payments_raroc(pay: pd.DataFrame) -> pd.DataFrame:
     df["nii"] = 0.0
     df["fee_revenue"] = gross * (1 - df.ecr_offset_pct)  # ECR waives part of analysed fees
     df["opex"] = gross * C.COSTS.payments_cost_to_income
-    df["expected_loss"] = gross * 0.005  # fraud / operational losses
+    df["expected_loss"] = gross * C.PAYMENTS_LOSS_RATE
     df["credit_capital"] = 0.0
     return _finish(df)
 

@@ -27,7 +27,7 @@ raroc = "raroc.cli:main"
 where = ["src"]
 
 [tool.setuptools.package-data]
-raroc = ["dashboard_template.html"]
+raroc = ["web/*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

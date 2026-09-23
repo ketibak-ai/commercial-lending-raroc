@@ -1,8 +1,9 @@
-"""Write outputs: CSVs, an Excel workbook and the static HTML dashboard (GitHub Pages)."""
+"""Write outputs: CSVs, an Excel workbook and the static web app (GitHub Pages)."""
 
 from __future__ import annotations
 
 import json
+import shutil
 from pathlib import Path
 
 import pandas as pd
@@ -11,7 +12,7 @@ from . import config as C
 from . import service
 
 ROOT = Path(__file__).resolve().parents[2]
-TEMPLATE = Path(__file__).with_name("dashboard_template.html")
+WEB = Path(__file__).with_name("web")
 
 SAMPLE_DEALS = [
     dict(product="Term Loan", amount=25e6, tenor_yrs=5, rating=4, collateral="Senior Secured",
@@ -45,29 +46,63 @@ def sample_pricing() -> list[dict]:
     return out
 
 
-def revenue_mix() -> list[dict]:
-    p = service.portfolio()
-    acc = p["result_accounts"]
-    key_ids = [r["relationship_id"] for r in service.key_relationships()]
-    mix = acc[acc.relationship_id.isin(key_ids)].pivot_table(
-        index="relationship_id", columns="product", values="total_revenue", aggfunc="sum",
-        fill_value=0)
-    return json.loads(mix.reindex(key_ids).reset_index().to_json(orient="records"))
+EXPORT_FIELDS = {
+    "relationships": ["relationship_id", "name", "industry", "segment", "rating"],
+    "loans": ["account_id", "relationship_id", "sub_type", "balance", "commitment", "tenor_yrs",
+              "remaining_yrs", "rate_type", "spread", "orig_fee_pct", "rating", "collateral"],
+    "revolvers": ["account_id", "relationship_id", "sub_type", "commitment", "utilization", "balance",
+                  "tenor_yrs", "remaining_yrs", "spread", "unused_fee", "orig_fee_pct", "rating",
+                  "collateral"],
+    "irds": ["account_id", "relationship_id", "sub_type", "notional", "tenor_yrs", "remaining_yrs",
+             "mtm", "sales_credit_bps", "rating"],
+    "deposits": ["account_id", "relationship_id", "sub_type", "deposit_type", "balance", "rate_paid",
+                 "tenor_yrs"],
+    "payments": ["account_id", "relationship_id", "sub_type", "monthly_volume", "unit_price",
+                 "monthly_card_spend", "monthly_revenue", "ecr_offset_pct"],
+}
 
 
-def build_dashboard(path: Path) -> None:
-    data = {
-        "as_of": C.AS_OF_DATE,
-        "hurdle": C.CAPITAL.hurdle_rate,
-        "summary": service.portfolio_summary(),
-        "key": service.key_relationships(),
-        "mix": revenue_mix(),
-        "deals": sample_pricing(),
+def engine_config() -> dict:
+    """Every assumption the browser engine needs, taken from config.py (single source of truth)."""
+    cap, cost = C.CAPITAL, C.COSTS
+    return {
+        "hurdle": cap.hurdle_rate, "taxRate": cap.tax_rate,
+        "capitalCreditRate": cap.capital_credit_rate, "confidence": cap.confidence,
+        "ecMultiplier": cap.ec_multiplier, "opRiskPct": cap.op_risk_pct_revenue,
+        "depositOpCapPct": cap.deposit_op_capital_pct,
+        "ftpCurve": sorted(C.FTP_CURVE.items()), "sofr": C.SOFR,
+        "pd": {str(k): v for k, v in C.PD_BY_RATING.items()}, "lgd": C.LGD_BY_COLLATERAL,
+        "ccf": C.REVOLVER_CCF, "irdAddon": C.IRD_ADDON_BY_TENOR, "saccrAlpha": C.SA_CCR_ALPHA,
+        "irdLgd": C.IRD_LGD, "cvaMultiplier": C.CVA_MULTIPLIER,
+        "paymentsLossRate": C.PAYMENTS_LOSS_RATE, "depositDuration": C.DEPOSIT_DURATION,
+        "volatileFtpShare": C.VOLATILE_FTP_SHARE,
+        "revolverDrawnLpFactor": C.REVOLVER_DRAWN_LP_FACTOR,
+        "revolverUndrawnLpFactor": C.REVOLVER_UNDRAWN_LP_FACTOR,
+        "loanOpex": cost.loan_opex_bps, "revolverOpex": cost.revolver_opex_bps,
+        "irdOpexPerTrade": cost.ird_opex_per_trade, "depositOpex": cost.deposit_opex_bps,
+        "paymentsCostToIncome": cost.payments_cost_to_income,
+        "loanLiquidityPremium": cost.loan_liquidity_premium,
+        "revolverLiquidityPremium": cost.revolver_liquidity_premium,
+        "runoff": cost.deposit_runoff_haircut, "watchList": C.WATCH_LIST_RAROC,
     }
-    html = TEMPLATE.read_text(encoding="utf-8").replace(
-        "__DATA__", json.dumps(data).replace("</", "<\\/"))
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(html, encoding="utf-8")
+
+
+def export_data() -> dict:
+    """Account-level inputs + assumptions; the browser re-runs the engine on these."""
+    p = service.portfolio()
+    out = {"asOf": C.AS_OF_DATE, "config": engine_config()}
+    for name, cols in EXPORT_FIELDS.items():
+        out[name] = {"fields": cols, "rows": json.loads(p[name][cols].to_json(orient="values"))}
+    return out
+
+
+def build_site(site: Path) -> None:
+    """Static web app for GitHub Pages: shell + engine + app code + data."""
+    site.mkdir(parents=True, exist_ok=True)
+    for f in ("index.html", "engine.js", "app.js"):
+        shutil.copyfile(WEB / f, site / f)
+    payload = json.dumps(export_data(), separators=(",", ":"))
+    (site / "data.js").write_text(f"window.RAROC_DATA={payload};\n", encoding="utf-8")
 
 
 def write_all(root: Path = ROOT) -> dict[str, Path]:
@@ -108,6 +143,6 @@ def write_all(root: Path = ROOT) -> dict[str, Path]:
                     max(len(str(c.value or "")) for c in col[:50]) + 2, 40)
             ws.freeze_panes = "A2"
 
-    dashboard = root / "docs" / "index.html"
-    build_dashboard(dashboard)
-    return {"data": data_dir, "reports": rep_dir, "excel": xlsx, "dashboard": dashboard}
+    site = root / "docs"
+    build_site(site)
+    return {"data": data_dir, "reports": rep_dir, "excel": xlsx, "web app": site / "index.html"}
