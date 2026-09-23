@@ -22,6 +22,12 @@
 
   // ---- helpers ------------------------------------------------------------------------
   function clone(o) { return JSON.parse(JSON.stringify(o)); }
+  /** Fill in any model keys missing from an older saved or shared scenario. */
+  function normalise() {
+    sc.model = { ...E.baseModel(book.cfg), ...(sc.model || {}) };
+    sc.model.cycleZ = { ...book.cfg.cycleZ, ...(sc.model.cycleZ || {}) };
+    if (!Array.isArray(sc.newDeals)) sc.newDeals = [];
+  }
   const $ = s => document.querySelector(s);
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const pct = (v, d = 1) => v == null || !isFinite(v) ? "–" : (v * 100).toFixed(d) + "%";
@@ -282,7 +288,8 @@
     const b = $("#banner");
     if (!isScenario()) { b.hidden = true; return; }
     b.hidden = false;
-    b.innerHTML = `<span>Scenario active: <b>${esc(sc.name || "Custom scenario")}</b></span>
+    const modelNote = JSON.stringify(sc.model) !== JSON.stringify(BASE.model) ? `<span>Models: ${esc(modelLabel(sc.model))}</span>` : "";
+    b.innerHTML = `<span>Scenario active: <b>${esc(sc.name || "Custom scenario")}</b></span>${modelNote}
       <span>Portfolio RAROC ${pct(base.total.raroc)} → <b>${pct(cur.total.raroc)}</b> (${ptsDelta(base.total.raroc, cur.total.raroc)})</span>
       <span>EVA ${moneyDelta(base.total.eva, cur.total.eva)}</span>
       <span style="margin-left:auto;display:flex;gap:8px"><a href="#/scenarios">Edit scenario</a><button type="button" class="link" id="resetBase">Back to base case</button></span>`;
@@ -299,7 +306,7 @@
       <section class="tiles">
         ${tile("Portfolio RAROC", pct(t.raroc), on ? `base ${pct(bt.raroc)} · ${ptsDelta(bt.raroc, t.raroc)}` : `vs. ${pct(sc.hurdle, 0)} hurdle`)}
         ${tile("Net income (after tax)", money(t.net), on ? `base ${money(bt.net)}` : "annualised")}
-        ${tile("Economic capital", money(t.capital), on ? `base ${money(bt.capital)}` : "credit + operational")}
+        ${tile(BASIS_LABEL[sc.model.capitalBasis], money(t.capital), on ? `base ${money(bt.capital)}` : sc.model.capitalBasis === "economic" ? "credit + operational" : APPROACH_LABEL[sc.model.baselApproach])}
         ${tile("EVA", money(t.eva), on ? `base ${money(bt.eva)}` : `net income − ${pct(sc.hurdle, 0)} × capital`)}
         ${tile("Relationships below hurdle", `${cur.belowHurdle} / ${book.rels.length}`, `${keyWatch} key relationship(s) flagged`)}
       </section>
@@ -412,11 +419,11 @@
         PRODUCTS.filter(p => r.products[p].n).map(p => { const x = r.products[p]; return `<tr><td class="l">${esc(p)}</td><td>${x.n}</td><td>${money(x.exposure)}</td><td>${money(x.revenue)}</td><td>${money(x.el)}</td><td>${money(x.capital)}</td><td>${money(x.net)}</td><td>${money(x.eva)}</td><td><b>${pct(x.raroc)}</b></td></tr>`; }).join("")
       }<tr><td class="l"><b>Total</b></td><td><b>${r.all.n}</b></td><td></td><td><b>${money(r.all.revenue)}</b></td><td><b>${money(r.all.el)}</b></td><td><b>${money(r.all.capital)}</b></td><td><b>${money(r.all.net)}</b></td><td><b>${money(r.all.eva)}</b></td><td><b>${pct(r.all.raroc)}</b></td></tr></tbody></table></div>
       <h3>All ${accs.length} accounts</h3>
-      <div class="toolbar"><span class="count"></span><button type="button" id="relCsv">Download CSV</button></div>
+      <div class="toolbar"><span class="count"></span><button type="button" id="relCsv">Download CSV${can("professional") ? "" : ' <span class="pro-badge">PRO</span>'}</button></div>
       <div class="card" id="relAccTable"></div>`;
     const draw = () => { const box = $("#relAccTable"); box.innerHTML = ""; renderAccountTable(box, accs, ui.relAccs, false, draw); };
     draw();
-    $("#relCsv").addEventListener("click", () => downloadCsv(`${id}_accounts.csv`, accs));
+    $("#relCsv").addEventListener("click", () => can("professional") ? downloadCsv(`${id}_accounts.csv`, accs) : go("#/plans"));
     $("#priceHere").addEventListener("click", () => { ui.deal.rel = id; ui.deal.rating = r.rating; go("#/scenarios"); setTimeout(() => $("#dealBox")?.scrollIntoView({ behavior: "smooth" }), 50); });
     $("#scopeHere").addEventListener("click", () => { sc.scope = id; sc.name = `${r.name} scenario`; recompute(); go("#/scenarios"); });
   }
@@ -432,7 +439,7 @@
         <label>Segment<select id="accSeg">${["all", "Key Relationship", "Middle Market", "Business Banking"].map(s => `<option value="${s}" ${st.seg === s ? "selected" : ""}>${s === "all" ? "All segments" : s}</option>`).join("")}</select></label>
         <label class="check"><input type="checkbox" id="accBelow" ${st.below ? "checked" : ""}> RAROC below hurdle</label>
         <span class="count" id="accCount"></span>
-        <button type="button" id="accCsv">Download CSV</button>
+        <button type="button" id="accCsv">Download CSV${can("professional") ? "" : ' <span class="pro-badge">PRO</span>'}</button>
       </div>
       <div class="card" id="accTable"></div>`;
     let filtered = [];
@@ -453,7 +460,7 @@
     $("#accProd").addEventListener("change", e => { st.product = e.target.value; st.page = 0; draw(); });
     $("#accSeg").addEventListener("change", e => { st.seg = e.target.value; st.page = 0; draw(); });
     $("#accBelow").addEventListener("change", e => { st.below = e.target.checked; st.page = 0; draw(); });
-    $("#accCsv").addEventListener("click", () => downloadCsv("accounts.csv", sortRows(filtered, st.sort, st.dir, ACC_GET)));
+    $("#accCsv").addEventListener("click", () => can("professional") ? downloadCsv("accounts.csv", sortRows(filtered, st.sort, st.dir, ACC_GET)) : go("#/plans"));
     draw();
   }
 
@@ -520,6 +527,7 @@
           <label class="field">Start from a preset<select id="preset"><option value="">Choose…</option>${PRESETS.map((p, i) => `<option value="${i}">${esc(p.name)}</option>`).join("")}</select></label>
           <label class="field">Scenario name<input type="text" id="scName" value="${esc(sc.name)}" maxlength="60"></label>
         </div>
+        <div data-pro="Custom levers, proposed deals, saving and sharing are Professional features. Presets are free">
         <label class="field" style="margin-top:8px">Apply credit, pricing and deposit levers to<select id="scope">${scopeOptions()}</select></label>
         ${LEVERS.map(g => `<fieldset><legend>${g.group}</legend>${g.items.map(l => `
           <div class="lever">
@@ -537,6 +545,7 @@
           <button type="button" id="resetSc">Reset to base</button>
         </div>
         <p class="hint" id="saveMsg" aria-live="polite"></p>
+        </div>
         <label class="field">Saved scenarios (this browser)<select id="savedList"><option value="">${saved.length ? "Load a saved scenario…" : "None saved yet"}</option>${saved.map((s, i) => `<option value="${i}">${esc(s.name)}</option>`).join("")}</select></label>
         ${saved.length ? '<button type="button" class="link" id="delSaved" style="margin-top:6px">Delete selected</button>' : ""}
 
@@ -554,7 +563,7 @@
             <label class="field rev-only">Unused fee (bps)<input type="number" id="dUnused" min="0" max="200" step="5" value="${d.unusedBps}"></label>
           </div>
           <div id="priceOut" class="price-out"></div>
-          <div class="row2" style="margin-top:10px;align-items:end">
+          <div class="row2" style="margin-top:10px;align-items:end" data-pro="Adding deals to a scenario is a Professional feature">
             <label class="field">Book it at spread (bps)<input type="number" id="dSpread" min="0" max="2500" step="5"></label>
             <button type="button" class="primary" id="addDeal">Add deal to scenario</button>
           </div>
@@ -579,8 +588,8 @@
     $("#preset").addEventListener("change", e => {
       if (e.target.value === "") return;
       const p = PRESETS[+e.target.value];
-      const deals = sc.newDeals;
-      sc = Object.assign(clone(BASE), clone(p.set), { name: p.name, newDeals: deals });
+      const deals = sc.newDeals, model = clone(sc.model);
+      sc = Object.assign(clone(BASE), clone(p.set), { name: p.name, newDeals: deals, model });
       recompute(); renderScenarios();
     });
     $("#resetSc").addEventListener("click", () => { setScenario(clone(BASE)); renderScenarios(); });
@@ -593,7 +602,7 @@
     $("#savedList").addEventListener("change", e => {
       if (e.target.value === "") return;
       const s = loadSaved()[+e.target.value];
-      if (s) { sc = Object.assign(clone(BASE), s); recompute(); renderScenarios(); }
+      if (s) { sc = Object.assign(clone(BASE), s); normalise(); recompute(); renderScenarios(); }
     });
     $("#delSaved")?.addEventListener("click", () => {
       const i = $("#savedList").value; if (i === "") return;
@@ -646,6 +655,7 @@
       ul.querySelectorAll("[data-rm]").forEach(b => b.addEventListener("click", () => { sc.newDeals.splice(+b.dataset.rm, 1); recompute(); drawDeals(); priceNow(); }));
     };
     drawDeals(); priceNow(); renderResults();
+    applyGates(v);
   }
   function markCustom() {
     const n = $("#scName");
@@ -698,6 +708,225 @@
     bindRowNav(box);
   }
 
+  // ---- plans & licensing ------------------------------------------------------------------------
+  // License keys are ECDSA P-256 signed by the vendor (private key held outside this repo).
+  // Client-side checks gate the demo UI; production entitlements are enforced server-side.
+  const LICENSE_PUBKEY = "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEs41+XBZNrYqPhLvaO2CjAjwiY/NZkI7MmQu9FPwTk9xYfN9kaiMLNTuaa8ICChRmXzu6eZmprIZ8nbCcd9Z6qA==";
+  const PLAN_RANK = { community: 0, professional: 1, enterprise: 2 };
+  const PLAN_NAME = { community: "Community", professional: "Professional", enterprise: "Enterprise" };
+  const lic = { plan: "community", org: null, exp: null, demo: false };
+  const can = need => lic.demo || PLAN_RANK[lic.plan] >= PLAN_RANK[need];
+  const store = {
+    get(k, s = localStorage) { try { return s.getItem(k); } catch { return null; } },
+    set(k, v, s = localStorage) { try { v == null ? s.removeItem(k) : s.setItem(k, v); } catch { /* storage blocked */ } },
+  };
+  const b64u = s => Uint8Array.from(atob(s.replace(/-/g, "+").replace(/_/g, "/") + "===".slice((s.length + 3) % 4)), c => c.charCodeAt(0));
+
+  async function verifyLicense(key) {
+    const parts = String(key || "").trim().split(".");
+    if (parts.length !== 3 || parts[0] !== "RAROC1") throw new Error("That is not a RAROC license key.");
+    if (!(window.crypto && crypto.subtle)) throw new Error("License checks need a secure (https) page.");
+    const pub = await crypto.subtle.importKey("spki", b64u(LICENSE_PUBKEY), { name: "ECDSA", namedCurve: "P-256" }, false, ["verify"]);
+    const ok = await crypto.subtle.verify({ name: "ECDSA", hash: "SHA-256" }, pub, b64u(parts[2]),
+      new TextEncoder().encode(parts[0] + "." + parts[1]));
+    if (!ok) throw new Error("This key's signature is not valid.");
+    const p = JSON.parse(new TextDecoder().decode(b64u(parts[1])));
+    if (!PLAN_RANK[p.plan]) throw new Error("Unknown plan in key.");
+    if (p.exp < new Date().toISOString().slice(0, 10)) throw new Error(`This key expired on ${p.exp}.`);
+    return p;
+  }
+  async function activate(key, quiet) {
+    try {
+      const p = await verifyLicense(key);
+      Object.assign(lic, { plan: p.plan, org: p.org, exp: p.exp, demo: false });
+      store.set("raroc.license", key.trim());
+      return null;
+    } catch (e) {
+      if (!quiet) return e.message;
+      store.set("raroc.license", null);
+      return e.message;
+    }
+  }
+  function renderPlanChip() {
+    const c = $("#planChip");
+    c.innerHTML = lic.demo ? `<span class="pro-badge">PRO DEMO</span>`
+      : lic.plan === "community" ? `Community · <a href="#/plans">Upgrade</a>`
+      : `${PLAN_NAME[lic.plan]} · ${esc(lic.org)}`;
+  }
+  /** Disable Professional controls for Community users and explain how to unlock. */
+  function applyGates(root) {
+    if (can("professional")) return;
+    root.querySelectorAll("[data-pro]").forEach(box => {
+      box.classList.add("locked");
+      box.querySelectorAll("input, select, button, textarea").forEach(el => { el.disabled = true; });
+      if (!box.querySelector(".lock-note")) {
+        box.insertAdjacentHTML("afterbegin", `<div class="lock-note"><span class="pro-badge">PRO</span> ${esc(box.dataset.pro || "Professional feature")}. <a href="#/plans">Start a free Pro demo or enter a license key</a>.</div>`);
+      }
+    });
+  }
+
+  function renderPlans() {
+    const v = $("#view-plans");
+    const status = lic.demo ? `You are in a <b>Professional demo</b> for this browser session.`
+      : lic.plan === "community" ? `You are on the free <b>Community</b> plan.`
+      : `Licensed to <b>${esc(lic.org)}</b>: <b>${PLAN_NAME[lic.plan]}</b> plan, valid to ${esc(lic.exp)}.`;
+    v.innerHTML = `<h2>Plans</h2>
+      <p class="sub">The RAROC Pricing Platform prices commercial deals and relationships on economic or regulatory capital. Start free on the synthetic book; upgrade to run your own models and scenarios. Pricing shown is indicative.</p>
+      <div class="plans">
+        <div class="plan"><h3>Community</h3><div class="who">Explore the method</div><div class="price">Free</div>
+          <ul><li>Portfolio, relationship and account RAROC</li><li>All 500 relationships and 7,020 accounts</li><li>Scenario presets and deal pricer</li><li>Model reference tables (EL, PIT, ECAP, Basel)</li></ul>
+          <button type="button" disabled>${lic.plan === "community" && !lic.demo ? "Current plan" : "Included"}</button></div>
+        <div class="plan featured"><h3>Professional</h3><div class="who">Pricing and portfolio teams</div><div class="price">$2,500 <small>/ month, billed annually, up to 10 users</small></div>
+          <ul><li>Everything in Community</li><li><b>Capital basis:</b> economic, Basel III regulatory, or the higher of the two</li><li><b>Basel approaches:</b> Standardized, Foundation IRB, Advanced IRB, 72.5% output floor, CET1 target</li><li><b>EL models:</b> TTC or point-in-time PD, lifetime (CECL-style) EL</li><li><b>PIT credit-cycle factors</b> by industry, editable</li><li><b>ECAP:</b> analytic or calibrated factor tables</li><li>Custom scenario levers, proposed deals, save and share</li><li>CSV export</li></ul>
+          <button type="button" class="primary" id="startDemo">${lic.demo ? "Demo active" : "Start free Pro demo"}</button></div>
+        <div class="plan"><h3>Enterprise</h3><div class="who">Banks rolling out firm-wide</div><div class="price">From $120,000 <small>/ year</small></div>
+          <ul><li>Everything in Professional</li><li>Your loan, deposit and treasury data (connectors, secure upload)</li><li>REST API and the Claude-powered pricing copilot</li><li>Your own PD/LGD models, factor tables and policies</li><li>SSO, audit trail, deployment in your cloud (VPC)</li><li>Model documentation for validation (SR 11-7)</li></ul>
+          <a class="btn-link" href="https://github.com/ketibak-ai/commercial-lending-raroc" target="_blank" rel="noopener">Talk to us</a></div>
+      </div>
+      <h3>License</h3>
+      <div class="card">
+        <p style="margin-top:0">${status}</p>
+        <div class="toolbar" data-license>
+          <label style="flex:1;min-width:240px">License key<input type="text" id="licKey" placeholder="RAROC1.…" autocomplete="off" spellcheck="false"></label>
+          <button type="button" class="primary" id="licGo">Activate</button>
+          ${lic.plan !== "community" || lic.demo ? '<button type="button" id="licOff">Return to Community</button>' : ""}
+        </div>
+        <p class="hint" id="licMsg" aria-live="polite">Keys are verified in your browser against the vendor's public signing key. Your data never leaves this page.</p>
+      </div>`;
+    $("#startDemo").addEventListener("click", () => {
+      lic.demo = true; store.set("raroc.demo", "1", sessionStorage); renderPlanChip(); renderPlans(); renderBanner();
+    });
+    $("#licGo").addEventListener("click", async () => {
+      const err = await activate($("#licKey").value);
+      if (err) { $("#licMsg").textContent = err; return; }
+      renderPlanChip(); renderPlans(); renderBanner();
+    });
+    $("#licOff")?.addEventListener("click", () => {
+      Object.assign(lic, { plan: "community", org: null, exp: null, demo: false });
+      store.set("raroc.license", null); store.set("raroc.demo", null, sessionStorage);
+      renderPlanChip(); renderPlans(); renderBanner();
+    });
+  }
+
+  // ---- risk & capital models --------------------------------------------------------------------
+  const APPROACH_LABEL = { SA: "Standardized (SA)", FIRB: "Foundation IRB", AIRB: "Advanced IRB" };
+  const BASIS_LABEL = { economic: "Economic capital", regulatory: "Regulatory capital", max: "Higher of economic and regulatory" };
+  function modelLabel(m) {
+    const bits = [BASIS_LABEL[m.capitalBasis]];
+    if (m.capitalBasis !== "economic") bits.push(APPROACH_LABEL[m.baselApproach] + (m.outputFloor ? " + output floor" : ""));
+    if (m.capitalBasis !== "regulatory") bits.push(m.ecapMethod === "factor" ? "ECAP factor table" : "analytic ECAP");
+    bits.push(`${m.elPdBasis} EL`);
+    return bits.join(" · ");
+  }
+  const runModel = over => E.run(book, { ...sc, model: { ...sc.model, ...over } });
+
+  function renderModels() {
+    const v = $("#view-models"), m = sc.model, cfg = book.cfg;
+    const credit = cur.accounts.filter(a => E.LENDING.has(a.product));
+    const sum = (list, f) => list.reduce((s, a) => s + f(a), 0);
+    const ead = sum(credit, a => a.ead);
+    const elTtc = sum(credit, a => a.pd * a.lgd * a.ead), elPit = sum(credit, a => a.pdPit * a.lgd * a.ead), elLife = sum(credit, a => a.elLife);
+
+    const approaches = [
+      ["Economic capital, analytic (ASRF 99.9%)", { capitalBasis: "economic", ecapMethod: "analytic" }],
+      ["Economic capital, factor table (99.95%)", { capitalBasis: "economic", ecapMethod: "factor" }],
+      ["Regulatory: Standardized", { capitalBasis: "regulatory", baselApproach: "SA", outputFloor: false }],
+      ["Regulatory: Foundation IRB", { capitalBasis: "regulatory", baselApproach: "FIRB", outputFloor: false }],
+      ["Regulatory: Advanced IRB", { capitalBasis: "regulatory", baselApproach: "AIRB", outputFloor: false }],
+      ["Regulatory: Advanced IRB + output floor", { capitalBasis: "regulatory", baselApproach: "AIRB", outputFloor: true }],
+    ].map(([label, over]) => { const r = runModel(over); return { label, r }; });
+
+    const byRating = {};
+    credit.forEach(a => {
+      const k = a.rating, o = byRating[k] || (byRating[k] = { ead: 0, elTtc: 0, elPit: 0, elLife: 0, pd: a.pd });
+      o.ead += a.ead; o.elTtc += a.pd * a.lgd * a.ead; o.elPit += a.pdPit * a.lgd * a.ead; o.elLife += a.elLife;
+    });
+    const factors = E.ecapFactorTable(cfg);
+    const inds = Object.keys(cfg.cycleZ).sort((a, b) => m.cycleZ[a] - m.cycleZ[b]);
+
+    v.innerHTML = `<h2>Risk &amp; capital models</h2>
+      <p class="sub">Choose how expected loss and capital are measured. Every view in the app (overview, relationships, accounts, scenarios and deal pricing) recalculates on these settings.</p>
+      <div class="card" data-pro="Model settings are a Professional feature">
+        <h3 style="margin-top:0">Model settings <span class="pro-badge">PRO</span></h3>
+        <div class="row3">
+          <label class="field">Capital basis for RAROC<select id="mBasis">${Object.entries(BASIS_LABEL).map(([k, l]) => `<option value="${k}" ${m.capitalBasis === k ? "selected" : ""}>${l}</option>`).join("")}</select></label>
+          <label class="field">Basel approach (regulatory)<select id="mApproach">${Object.entries(APPROACH_LABEL).map(([k, l]) => `<option value="${k}" ${m.baselApproach === k ? "selected" : ""}>${l}</option>`).join("")}</select></label>
+          <label class="field">CET1 capital target (%)<input type="number" id="mCet1" min="4" max="30" step="0.5" value="${+(m.cet1Target * 100).toFixed(2)}"></label>
+          <label class="field">Economic capital method<select id="mEcap"><option value="analytic" ${m.ecapMethod === "analytic" ? "selected" : ""}>Analytic (ASRF, 99.9%)</option><option value="factor" ${m.ecapMethod === "factor" ? "selected" : ""}>Factor table (99.95%, industry add-ons)</option></select></label>
+          <label class="field">PD for expected loss<select id="mPd"><option value="TTC" ${m.elPdBasis === "TTC" ? "selected" : ""}>Through-the-cycle (TTC)</option><option value="PIT" ${m.elPdBasis === "PIT" ? "selected" : ""}>Point-in-time (PIT)</option></select></label>
+          <label class="field">Credit-cycle shift (all industries, σ)<input type="number" id="mShift" min="-3" max="3" step="0.25" value="${m.cycleShift}"></label>
+        </div>
+        <label class="check" style="margin-top:10px;display:flex"><input type="checkbox" id="mFloor" ${m.outputFloor ? "checked" : ""}> Apply Basel III output floor (IRB RWA ≥ ${pct(cfg.outputFloor, 1)} of standardized)</label>
+        <p class="hint">Active: ${esc(modelLabel(m))}</p>
+      </div>
+
+      <h3>Capital under each approach</h3>
+      <p class="sub">Same book and scenario, measured six ways. Regulatory capital = RWA × CET1 target (${pct(m.cet1Target, 1)}); RAROC uses that capital as the denominator.</p>
+      <div class="card table-wrap"><table><thead><tr><th class="l">Approach</th><th>Capital</th><th>RWA</th><th>RWA density (credit)</th><th>Portfolio RAROC</th><th>EVA</th><th>Below hurdle</th></tr></thead><tbody>
+        ${approaches.map(({ label, r }) => { const cr = r.accounts.filter(a => E.LENDING.has(a.product)); const dens = sum(cr, a => a.creditRwa || 0) / sum(cr, a => a.ead);
+          return `<tr><td class="l">${label}</td><td>${money(r.total.capital)}</td><td>${money(r.total.rwa)}</td><td>${pct(dens, 0)}</td><td><b>${pct(r.total.raroc)}</b></td><td>${money(r.total.eva)}</td><td>${r.belowHurdle}</td></tr>`; }).join("")}
+      </tbody></table></div>
+
+      <div class="split">
+        <div>
+          <h3>Expected loss model</h3>
+          <p class="sub">EL = PD × LGD × EAD. Lifetime EL compounds the point-in-time PD over remaining life (CECL-style, undiscounted).</p>
+          <div class="card table-wrap"><table class="kv"><tbody>
+            <tr><td>Credit exposure at default</td><td>${money(ead)}</td></tr>
+            <tr><td>1-year EL, through-the-cycle PD</td><td>${money(elTtc)} (${pct(elTtc / ead, 2)})</td></tr>
+            <tr><td>1-year EL, point-in-time PD</td><td>${money(elPit)} (${pct(elPit / ead, 2)})</td></tr>
+            <tr><td>Lifetime EL (CECL-style)</td><td>${money(elLife)} (${pct(elLife / ead, 2)})</td></tr>
+            <tr><td>EL charged in RAROC</td><td><b>${m.elPdBasis} basis</b></td></tr>
+          </tbody></table></div>
+          <div class="card table-wrap" style="margin-top:12px"><table><thead><tr><th>Rating</th><th>PD (TTC)</th><th>PD (PIT, avg)</th><th>EAD</th><th>1y EL TTC</th><th>1y EL PIT</th><th>Lifetime EL</th></tr></thead><tbody>
+            ${Object.keys(byRating).sort((a, b) => a - b).map(k => { const o = byRating[k]; return `<tr><td>${k}</td><td>${pct(o.pd, 2)}</td><td>${pct(o.elPit && o.elTtc ? o.pd * o.elPit / o.elTtc : null, 2)}</td><td>${money(o.ead)}</td><td>${money(o.elTtc)}</td><td>${money(o.elPit)}</td><td>${money(o.elLife)}</td></tr>`; }).join("")}
+          </tbody></table></div>
+        </div>
+        <div>
+          <h3>Point-in-time (PIT) factors</h3>
+          <p class="sub">PD<sub>PIT</sub> = N(N⁻¹(PD<sub>TTC</sub>) − √ρ · Z), with ρ the Basel asset correlation. Z is each industry's credit-cycle index: 0 = long-run average, negative = downturn.</p>
+          <div class="card table-wrap" data-pro="Editing credit-cycle factors is a Professional feature"><table><thead><tr><th class="l">Industry</th><th>Z</th><th>PD rating 3</th><th>PD rating 5</th><th>PD rating 7</th><th>PIT ÷ TTC (rating 5)</th></tr></thead><tbody>
+            ${inds.map(ind => { const z = (m.cycleZ[ind] ?? 0) + m.cycleShift; const p = r => E.pitPd(cfg.pd[r], z);
+              return `<tr><td class="l">${esc(ind)}</td><td><input class="z" type="number" step="0.1" min="-3" max="3" data-z="${esc(ind)}" value="${m.cycleZ[ind]}" aria-label="Credit-cycle Z for ${esc(ind)}"></td><td>${pct(p("3"), 2)}</td><td>${pct(p("5"), 2)}</td><td>${pct(p("7"), 2)}</td><td>${(p("5") / cfg.pd["5"]).toFixed(2)}×</td></tr>`; }).join("")}
+          </tbody></table>${m.cycleShift ? `<p class="hint">Includes a ${m.cycleShift > 0 ? "+" : ""}${m.cycleShift}σ shift on every industry.</p>` : ""}</div>
+        </div>
+      </div>
+
+      <h3>Economic capital factor table</h3>
+      <p class="sub">Capital per $1 of EAD at 100% LGD, calibrated at ${pct(cfg.ecapConfidence, 2)} confidence with a ${pct(1 - cfg.ecapDiversification, 0)} diversification benefit. Account capital = factor × LGD × EAD × industry multiplier. Maturity rounds up to the next bucket.</p>
+      <div class="card table-wrap"><table><thead><tr><th>Rating</th><th>PD</th>${cfg.ecapBuckets.map(b => `<th>${b}y</th>`).join("")}</tr></thead><tbody>
+        ${factors.map(f => `<tr><td>${f.rating}</td><td>${pct(f.pd, 2)}</td>${f.factors.map(x => `<td>${pct(x, 2)}</td>`).join("")}</tr>`).join("")}
+      </tbody></table>
+      <p class="hint">Industry multipliers: ${Object.entries(cfg.ecapIndustryMult).map(([k, x]) => `${esc(k)} ${x.toFixed(2)}×`).join(" · ")}; all others 1.00×.</p></div>
+
+      <h3>Regulatory capital parameters (Basel III)</h3>
+      <div class="split">
+        <div class="card table-wrap"><table><thead><tr><th>Rating</th><th>SA risk weight</th><th>PD (IRB, floored)</th></tr></thead><tbody>
+          ${Object.keys(cfg.pd).map(r => `<tr><td>${r}</td><td>${pct(cfg.saCorporateRw[r], 0)}</td><td>${pct(Math.max(cfg.pd[r], cfg.irbPdFloor), 2)}</td></tr>`).join("")}
+        </tbody></table><p class="hint">Income-producing CRE under SA: ${pct(cfg.saCreRw, 0)}. Undrawn commitments: ${pct(cfg.saCommitmentCcf, 0)} CCF (SA and F-IRB), ${pct(cfg.ccf, 0)} own estimate (A-IRB).</p></div>
+        <div class="card table-wrap"><table><thead><tr><th class="l">Collateral</th><th>Economic LGD</th><th>F-IRB LGD</th><th>A-IRB floor</th></tr></thead><tbody>
+          ${Object.keys(cfg.lgd).map(c => `<tr><td class="l">${esc(c)}</td><td>${pct(cfg.lgd[c], 0)}</td><td>${pct(cfg.firbLgd[c], 0)}</td><td>${pct(cfg.airbLgdFloor[c], 0)}</td></tr>`).join("")}
+        </tbody></table><p class="hint">A-IRB uses downturn LGD = ${cfg.downturnLgd[0]} + ${cfg.downturnLgd[1]} × LGD, own maturity (1–5y). F-IRB maturity ${cfg.firbMaturity}y. PD floor ${pct(cfg.irbPdFloor, 2)}. Operational risk RWA = 12.5 × ${pct(cfg.smaBicRate, 0)} × revenue (SMA bucket 1).</p></div>
+      </div>`;
+
+    const setM = (k, val) => { if (!can("professional")) return go("#/plans"); sc.model[k] = val; markModelCustom(); recompute(); renderModels(); };
+    $("#mBasis").addEventListener("change", e => setM("capitalBasis", e.target.value));
+    $("#mApproach").addEventListener("change", e => setM("baselApproach", e.target.value));
+    $("#mCet1").addEventListener("change", e => setM("cet1Target", Math.min(Math.max(+e.target.value || 10.5, 4), 30) / 100));
+    $("#mEcap").addEventListener("change", e => setM("ecapMethod", e.target.value));
+    $("#mPd").addEventListener("change", e => setM("elPdBasis", e.target.value));
+    $("#mShift").addEventListener("change", e => setM("cycleShift", Math.min(Math.max(+e.target.value || 0, -3), 3)));
+    $("#mFloor").addEventListener("change", e => setM("outputFloor", e.target.checked));
+    v.querySelectorAll("[data-z]").forEach(inp => inp.addEventListener("change", () => {
+      if (!can("professional")) return go("#/plans");
+      sc.model.cycleZ[inp.dataset.z] = Math.min(Math.max(+inp.value || 0, -3), 3); markModelCustom(); recompute(); renderModels();
+    }));
+    applyGates(v);
+  }
+  function markModelCustom() {
+    if (PRESETS.some(p => p.name === sc.name)) sc.name = "Custom scenario";
+  }
+
   // ---- state, routing ---------------------------------------------------------------------------
   function recompute() { // the full book re-runs in ~10 ms, so recompute synchronously
     cur = E.run(book, sc);
@@ -706,18 +935,20 @@
   }
   function setScenario(s) { sc = s; cur = E.run(book, sc); renderBanner(); }
 
+  const VIEWS = ["overview", "relationships", "accounts", "scenarios", "models", "plans"];
   function go(hash) { if (location.hash === hash) route(); else location.hash = hash; }
   function route() {
     const parts = (location.hash || "#/overview").replace(/^#\//, "").split("/");
-    ui.tab = ["overview", "relationships", "accounts", "scenarios"].includes(parts[0]) ? parts[0] : "overview";
+    ui.tab = VIEWS.includes(parts[0]) ? parts[0] : "overview";
     ui.relId = ui.tab === "relationships" && parts[1] ? decodeURIComponent(parts[1]) : null;
     document.querySelectorAll("nav.tabs a").forEach(a => {
       if (a.dataset.tab === ui.tab) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
     });
-    ["overview", "relationships", "accounts", "scenarios"].forEach(t => { $(`#view-${t}`).hidden = t !== ui.tab; });
+    VIEWS.forEach(t => { $(`#view-${t}`).hidden = t !== ui.tab; });
     hideTip();
-    ({ overview: renderOverview, relationships: renderRelationships, accounts: renderAccounts, scenarios: renderScenarios })[ui.tab]();
-    renderBanner();
+    ({ overview: renderOverview, relationships: renderRelationships, accounts: renderAccounts, scenarios: renderScenarios,
+       models: renderModels, plans: renderPlans })[ui.tab]();
+    renderBanner(); renderPlanChip();
   }
 
   // shared scenario from ?s=
@@ -726,9 +957,12 @@
     if (s) sc = Object.assign(clone(BASE), JSON.parse(decodeURIComponent(escape(atob(s)))));
     if (!Array.isArray(sc.newDeals)) sc.newDeals = [];
   } catch { sc = clone(BASE); }
+  normalise();
   cur = E.run(book, sc);
 
   $("#meta").textContent = `As of ${D.asOf} · ${cur.accounts.length.toLocaleString()} accounts · 500 relationships · hurdle ${pct(BASE.hurdle, 0)} · tax ${pct(BASE.taxRate, 0)} · Basel IRB 99.9% economic capital`;
   window.addEventListener("hashchange", route);
-  route();
+  lic.demo = store.get("raroc.demo", sessionStorage) === "1";
+  const savedKey = store.get("raroc.license");
+  (savedKey ? activate(savedKey, true) : Promise.resolve()).finally(route);
 })();

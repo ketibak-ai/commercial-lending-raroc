@@ -19,6 +19,7 @@ from fastapi.security import APIKeyHeader
 from pydantic import BaseModel, Field
 
 from . import service
+from .config import ModelSettings
 from .observability import METRICS, log_event, request_id, setup_logging
 
 setup_logging(os.getenv("LOG_LEVEL", "INFO"))
@@ -77,6 +78,24 @@ class DealIn(BaseModel):
     target_raroc: float = Field(0.12, gt=0, le=1)
 
 
+class ModelIn(BaseModel):
+    """Risk and capital model choices (all optional; defaults = economic-capital RAROC)."""
+    capital_basis: Literal["economic", "regulatory", "max"] = "economic"
+    basel_approach: Literal["SA", "FIRB", "AIRB"] = "AIRB"
+    output_floor: bool = False
+    cet1_target: float = Field(0.105, ge=0.04, le=0.30)
+    el_pd_basis: Literal["TTC", "PIT"] = "TTC"
+    ecap_method: Literal["analytic", "factor"] = "analytic"
+    cycle_shift: float = Field(0.0, ge=-3, le=3)
+
+    def settings(self) -> ModelSettings:
+        return ModelSettings(**self.model_dump())
+
+
+class PriceIn(DealIn):
+    model: ModelIn = Field(default_factory=ModelIn)
+
+
 class QueryIn(BaseModel):
     query: str = Field(..., min_length=2, max_length=500)
 
@@ -97,29 +116,42 @@ def metrics() -> str:
 
 
 @app.get("/portfolio/summary", dependencies=[Depends(require_api_key)])
-def portfolio_summary() -> dict:
-    return service.portfolio_summary()
+def portfolio_summary(model: ModelIn = Depends()) -> dict:
+    return service.portfolio_summary(model.settings())
 
 
 @app.get("/relationships/key", dependencies=[Depends(require_api_key)])
-def key_relationships() -> list[dict]:
-    return service.key_relationships()
+def key_relationships(model: ModelIn = Depends()) -> list[dict]:
+    return service.key_relationships(model.settings())
 
 
 @app.get("/relationships/{relationship_id}", dependencies=[Depends(require_api_key)])
-def relationship(relationship_id: str) -> dict:
+def relationship(relationship_id: str, model: ModelIn = Depends()) -> dict:
     try:
-        return service.relationship_detail(relationship_id)
+        return service.relationship_detail(relationship_id, model.settings())
     except KeyError as exc:
         raise HTTPException(status_code=404, detail=str(exc)) from exc
 
 
 @app.post("/price", dependencies=[Depends(require_api_key)])
-def price(deal: DealIn) -> dict:
+def price(deal: PriceIn) -> dict:
+    args = deal.model_dump(exclude={"model"})
     try:
-        return service.price(**deal.model_dump())
+        return service.price(settings=deal.model.settings(), **args)
     except ValueError as exc:
         raise HTTPException(status_code=422, detail=str(exc)) from exc
+
+
+@app.get("/models/ecap-factors", dependencies=[Depends(require_api_key)])
+def ecap_factors() -> dict:
+    return service.ecap_factors()
+
+
+@app.get("/models/pit-factors", dependencies=[Depends(require_api_key)])
+def pit_factors(cycle_shift: float = 0.0) -> list[dict]:
+    if not -3 <= cycle_shift <= 3:
+        raise HTTPException(status_code=422, detail="cycle_shift must be between -3 and 3")
+    return service.pit_factors(cycle_shift)
 
 
 @app.post("/policy/search", dependencies=[Depends(require_api_key)])

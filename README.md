@@ -15,7 +15,7 @@ Ten **key relationships** are the focus. For these clients, deposits, payments a
 
 **Live app:** https://ketibak-ai.github.io/commercial-lending-raroc/
 
-The app has four tabs:
+The app has six tabs:
 - **Overview:** portfolio and product RAROC plus the 10 key relationships.
 - **Relationships:** all 500 clients, searchable and sortable, each with a drill-down to its accounts.
 - **Accounts:** all 7,020 accounts, filterable, with CSV download.
@@ -24,7 +24,10 @@ The app has four tabs:
   - Presets (recession, rate moves, Blue Mesa remediation) and a new-deal pricer.
   - Scenarios can be saved or shared as a link.
 
-The RAROC engine runs in the browser. It is a JavaScript port tested against the Python engine on every account.
+- **Risk & capital models:** choose the capital basis, Basel approach, EL model, PIT factors and ECAP method. Every view recalculates.
+- **Plans:** Community (free), Professional and Enterprise tiers, with a license-key unlock and a free Pro demo.
+
+The RAROC engine runs in the browser. It is a JavaScript port tested against the Python engine on every account, under seven model configurations.
 
 > All data is synthetic, generated with a fixed seed. It represents no real bank or client.
 
@@ -64,6 +67,45 @@ Hurdle rate is 12%. Revolvers don't earn their capital on their own, and deposit
 
 ---
 
+## Risk and capital models
+
+| Model | Options | Where |
+|---|---|---|
+| **Expected loss** | EL = PD × LGD × EAD on **TTC** or **point-in-time** PD; lifetime (CECL-style) EL on PIT PD | `engine._credit` |
+| **PIT factors** | Single-factor Z-shift, PD<sub>PIT</sub> = N(N⁻¹(PD<sub>TTC</sub>) − √ρ·Z); credit-cycle Z by industry plus a portfolio shift; Z = 0 reproduces TTC | `config.CREDIT_CYCLE_Z`, `engine.pit_pd` |
+| **Economic capital** | **Analytic** (ASRF at 99.9%, ×1.06) or a calibrated **factor table**: rating × maturity bucket at 99.95%, 15% diversification benefit, industry concentration multipliers | `engine.ecap_factor_table` |
+| **Regulatory capital** | Basel III **Standardized** (rating-mapped risk weights, 40% CCF), **Foundation IRB** (supervisory LGD, M = 2.5), **Advanced IRB** (downturn LGD, LGD floors, own CCF), optional **72.5% output floor**, 5 bp PD floor, SMA op risk; capital = RWA × CET1 target (10.5%) | `engine._credit`, `config` |
+| **Capital basis for RAROC** | Economic, regulatory, or the higher of the two (binding constraint) | `config.ModelSettings` |
+
+Choose the settings in the app, through the API (`/portfolio/summary?capital_basis=regulatory&basel_approach=SA`), or in Python:
+
+```python
+from raroc import service
+from raroc.config import ModelSettings
+service.portfolio_summary(ModelSettings(capital_basis="max", basel_approach="AIRB", output_floor=True, el_pd_basis="PIT"))
+```
+
+| Approach (same book) | Capital | RWA | Portfolio RAROC |
+|---|---:|---:|---:|
+| Economic, analytic | $520M | n/a | 27.2% |
+| Economic, factor table | $560M | n/a | 25.5% |
+| Regulatory, Standardized | $814M | $7.76B | 18.4% |
+| Regulatory, Foundation IRB | $444M | $4.23B | 31.4% |
+| Regulatory, Advanced IRB | $702M | $6.68B | 20.9% |
+| Regulatory, A-IRB + output floor | $751M | $7.16B | 19.7% |
+
+## Plans (open core)
+
+This repository is the open, MIT-licensed core: the engine, the models, the API and the demo app.
+The app is packaged as a product with three tiers:
+- **Community:** free.
+- **Professional:** model settings, custom scenarios, save and share, CSV export.
+- **Enterprise:** own data, API, AI copilot, SSO, VPC.
+
+Professional features unlock with a signed license key or a free in-browser demo. License issuing
+and the commercial plan live in a separate private repository. In the static demo the gates are
+client-side. The SaaS stage moves paid features behind a server-side entitlement check.
+
 ## Architecture
 
 ```mermaid
@@ -88,12 +130,12 @@ flowchart LR
 |---|---|
 | Python, data engineering | `simulate.py`, `engine.py`: vectorised pandas/numpy over 7,020 accounts |
 | Front end | `web/`: dependency-free JS app with a live scenario engine, drill-downs, sortable tables and SVG charts |
-| Banking domain modelling | FTP, Basel IRB capital, SA-CCR, CCF, LCR run-off, ECR, relationship pricing |
+| Banking domain modelling | FTP, Basel III SA / F-IRB / A-IRB with output floor, economic capital factor tables, TTC vs PIT PD, lifetime EL, SA-CCR, CCF, LCR run-off, ECR, relationship pricing |
 | API design and integration | `api.py`: FastAPI with typed validation, error mapping, optional API-key auth |
 | LLM pipeline and agents | `agent.py`: Claude tool use, adaptive thinking, prompt caching, refusal fallbacks |
 | RAG | `rag.py` + `knowledge/`: section-level chunking, BM25, cited answers |
 | Evaluation | `evals/`: offline retrieval eval in CI, deterministic end-to-end agent eval |
-| Testing | `tests/`: engine maths, API contract, agent loop tested with a fake Claude client, browser-engine parity on all 7,020 accounts |
+| Testing | `tests/`: engine maths, Basel and model behaviour, API contract, agent loop tested with a fake Claude client, browser-engine parity on all 7,020 accounts under 7 model settings |
 | Cloud deployment, CI/CD | `Dockerfile` (non-root, healthcheck), GitHub Actions: lint, test, eval, image build + smoke test, Pages deploy |
 | Observability | Structured JSON logs with request IDs, Prometheus `/metrics`, per-tool latency, token usage |
 | Security and responsible AI | Secrets from env only, constant-time API-key check, input bounds, policy text treated as data, no PII |
@@ -136,7 +178,7 @@ pip install -e ".[dev]"
 raroc simulate                      # writes data/, reports/ (CSV + Excel), docs/index.html
 raroc price --product Revolver --amount 40e6 --tenor-yrs 3 --rating 7 \
             --collateral Unsecured --utilization 0.3 --relationship-id R007
-pytest -q                           # 32 tests (incl. JS/Python engine parity)
+pytest -q                           # 59 tests (incl. JS/Python parity across 7 model settings)
 python evals/retrieval_eval.py      # offline RAG eval
 ```
 
@@ -152,7 +194,8 @@ curl -X POST localhost:8000/price -H 'content-type: application/json' \
 | Method | Path | Purpose |
 |---|---|---|
 | GET | `/health` · `/metrics` | liveness, Prometheus metrics |
-| GET | `/portfolio/summary` | RAROC by product |
+| GET | `/portfolio/summary` | RAROC by product; model settings as query parameters |
+| GET | `/models/ecap-factors` · `/models/pit-factors` | ECAP factor table, PIT PDs by industry |
 | GET | `/relationships/key` · `/relationships/{id}` | key-relationship scorecard, drill-down |
 | POST | `/price` | deal pricing |
 | POST | `/policy/search` | RAG over pricing policy |

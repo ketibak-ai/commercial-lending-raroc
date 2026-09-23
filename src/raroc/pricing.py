@@ -14,6 +14,7 @@ from dataclasses import asdict, dataclass
 import pandas as pd
 
 from . import config as C
+from .config import DEFAULT_SETTINGS, ModelSettings
 from .engine import loans_raroc, revolvers_raroc
 
 PRODUCTS = ("Term Loan", "Revolver")
@@ -45,17 +46,18 @@ class DealRequest:
             raise ValueError("utilization must be in [0, 1]")
 
 
-def _deal_metrics(req: DealRequest, spread: float) -> pd.Series:
-    row = {"account_id": "NEW", "relationship_id": req.relationship_id or "NEW",
+def _deal_metrics(req: DealRequest, spread: float, s: ModelSettings = DEFAULT_SETTINGS,
+                  industry: str = "") -> pd.Series:
+    row = {"account_id": "NEW", "relationship_id": req.relationship_id or "NEW", "industry": industry,
            "product": req.product, "sub_type": "New Deal", "tenor_yrs": req.tenor_yrs,
            "remaining_yrs": req.tenor_yrs, "spread": spread, "rating": int(req.rating),
            "collateral": req.collateral, "orig_fee_pct": req.orig_fee_pct}
     if req.product == "Term Loan":
         row.update(balance=req.amount, commitment=req.amount)
-        return loans_raroc(pd.DataFrame([row])).iloc[0]
+        return loans_raroc(pd.DataFrame([row]), s).iloc[0]
     row.update(commitment=req.amount, balance=req.amount * req.utilization,
                unused_fee=req.unused_fee)
-    return revolvers_raroc(pd.DataFrame([row])).iloc[0]
+    return revolvers_raroc(pd.DataFrame([row]), s).iloc[0]
 
 
 def _solve(eva_at, lo: float = -0.05, hi: float = 0.25, tol: float = 1e-7) -> float:
@@ -71,14 +73,15 @@ def _solve(eva_at, lo: float = -0.05, hi: float = 0.25, tol: float = 1e-7) -> fl
     return hi
 
 
-def price_deal(req: DealRequest, accounts: pd.DataFrame | None = None) -> dict:
+def price_deal(req: DealRequest, accounts: pd.DataFrame | None = None,
+               settings: ModelSettings = DEFAULT_SETTINGS, industry: str = "") -> dict:
     req.validate()
     h = req.target_raroc
     cap = C.CAPITAL
 
     def deal_eva(s: float) -> float:
-        m = _deal_metrics(req, s)
-        return m.net_income - h * m.economic_capital
+        m = _deal_metrics(req, s, settings, industry)
+        return m.net_income - h * m.capital
 
     standalone = _solve(deal_eva)
     result = {"request": asdict(req), "standalone_floor_spread": round(standalone, 5)}
@@ -87,11 +90,11 @@ def price_deal(req: DealRequest, accounts: pd.DataFrame | None = None) -> dict:
         existing = accounts[accounts.relationship_id == req.relationship_id]
         if existing.empty:
             raise ValueError(f"unknown relationship_id {req.relationship_id}")
-        ni, ec = existing.net_income.sum(), existing.economic_capital.sum()
+        ni, ec = existing.net_income.sum(), existing.capital.sum()
 
         def rel_eva(s: float) -> float:
-            m = _deal_metrics(req, s)
-            return (ni + m.net_income) - h * (ec + m.economic_capital)
+            m = _deal_metrics(req, s, settings, industry)
+            return (ni + m.net_income) - h * (ec + m.capital)
 
         # Floor at zero: if the relationship clears the hurdle at any positive spread,
         # the relationship constraint is not binding and the cost floor governs.
@@ -112,12 +115,13 @@ def price_deal(req: DealRequest, accounts: pd.DataFrame | None = None) -> dict:
     else:
         result["recommended_spread"] = round(standalone, 5)
 
-    m = _deal_metrics(req, result["recommended_spread"])
+    m = _deal_metrics(req, result["recommended_spread"], settings, industry)
     result["at_recommended"] = {
         "deal_raroc": round(float(m.raroc), 4),
         "annual_revenue": round(float(m.total_revenue), 2),
         "expected_loss": round(float(m.expected_loss), 2),
-        "economic_capital": round(float(m.economic_capital), 2),
+        "capital": round(float(m.capital), 2),
+        "capital_basis": settings.capital_basis,
         "eva": round(float(m.eva), 2),
     }
     result["hurdle"] = h

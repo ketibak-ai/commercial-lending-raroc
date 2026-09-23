@@ -52,8 +52,8 @@ def test_irb_capital_monotonic_in_pd_and_maturity():
 
 def test_raroc_identity(book):
     acc = book["result_accounts"]
-    np.testing.assert_allclose(acc.raroc, acc.net_income / acc.economic_capital)
-    np.testing.assert_allclose(acc.eva, acc.net_income - C.CAPITAL.hurdle_rate * acc.economic_capital)
+    np.testing.assert_allclose(acc.raroc, acc.net_income / acc.capital)
+    np.testing.assert_allclose(acc.eva, acc.net_income - C.CAPITAL.hurdle_rate * acc.capital)
 
 
 def test_deposits_and_payments_lift_relationship_raroc(book):
@@ -88,3 +88,52 @@ def test_weak_relationship_gets_little_concession():
 def test_invalid_deal_rejected(bad):
     with pytest.raises(ValueError):
         price_deal(DealRequest(**bad))
+
+
+# ---- risk and capital models ---------------------------------------------------------------
+from raroc.config import ModelSettings  # noqa: E402
+from raroc.engine import ecap_factor_table, pit_pd  # noqa: E402
+
+
+def test_pit_pd_moves_with_the_cycle():
+    ttc = np.array([0.005])
+    assert pit_pd(ttc, [-1.0])[0] > ttc[0] > pit_pd(ttc, [1.0])[0]
+    assert pit_pd(ttc, [0.0])[0] == pytest.approx(0.005, rel=1e-6)
+
+
+def test_ecap_factor_table_monotonic():
+    t = ecap_factor_table()
+    assert (t.diff(axis=0).iloc[1:] > 0).all().all()   # worse rating -> more capital
+    assert (t.diff(axis=1).iloc[:, 1:] > 0).all().all()  # longer maturity -> more capital
+
+
+def test_regulatory_capital_is_rwa_times_cet1():
+    s = ModelSettings(capital_basis="regulatory", basel_approach="SA", cet1_target=0.12)
+    acc = service.portfolio(s)["result_accounts"]
+    np.testing.assert_allclose(acc.reg_capital, acc.rwa * 0.12)
+    np.testing.assert_allclose(acc.capital, acc.reg_capital)
+
+
+def test_output_floor_only_raises_rwa():
+    base = service.portfolio(ModelSettings(basel_approach="AIRB"))["result_accounts"].rwa
+    floor = ModelSettings(basel_approach="AIRB", output_floor=True)
+    floored = service.portfolio(floor)["result_accounts"].rwa
+    assert (floored >= base - 1e-6).all() and floored.sum() > base.sum()
+
+
+def test_max_basis_is_binding_constraint():
+    acc = service.portfolio(ModelSettings(capital_basis="max", basel_approach="SA"))["result_accounts"]
+    np.testing.assert_allclose(acc.capital, np.maximum(acc.economic_capital, acc.reg_capital))
+
+
+def test_downturn_raises_pit_expected_loss():
+    calm = service.portfolio(ModelSettings(el_pd_basis="PIT"))["result_accounts"].expected_loss.sum()
+    stress = service.portfolio(ModelSettings(el_pd_basis="PIT", cycle_shift=-1.5))["result_accounts"]
+    assert stress.expected_loss.sum() > 2 * calm
+    credit = stress[stress["product"].isin(["Term Loan", "Revolver", "Interest Rate Derivative"])]
+    assert (credit.el_lifetime >= credit.expected_loss - 1e-6).all()
+
+
+def test_invalid_settings_rejected():
+    with pytest.raises(ValueError):
+        ModelSettings(basel_approach="Basel IV").validate()

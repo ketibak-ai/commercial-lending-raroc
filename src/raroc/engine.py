@@ -1,7 +1,11 @@
 """RAROC engine: account-level profitability, relationship roll-up and portfolio summary.
 
-RAROC = (Revenue - Opex - Expected Loss + Capital Credit) x (1 - tax) / Economic Capital
-EVA   = Net Income - Hurdle x Economic Capital
+RAROC = (Revenue - Opex - Expected Loss + Capital Credit) x (1 - tax) / Capital
+EVA   = Net Income - Hurdle x Capital
+
+Capital is economic capital, Basel III regulatory capital, or the higher of the two
+(`ModelSettings.capital_basis`). Every account also carries both measures, RWA, TTC and
+point-in-time PD, one-year and lifetime expected loss.
 """
 
 from __future__ import annotations
@@ -12,12 +16,17 @@ import numpy as np
 import pandas as pd
 
 from . import config as C
+from .config import DEFAULT_SETTINGS, ModelSettings
 
 _N = NormalDist()
+_inv = np.vectorize(_N.inv_cdf)
+_cdf = np.vectorize(_N.cdf)
+
 RESULT_COLS = [
     "account_id", "relationship_id", "product", "sub_type", "exposure", "ead",
-    "nii", "fee_revenue", "total_revenue", "opex", "expected_loss",
-    "credit_capital", "op_capital", "economic_capital", "net_income", "raroc", "eva",
+    "pd_ttc", "pd_pit", "lgd", "nii", "fee_revenue", "total_revenue", "opex",
+    "expected_loss", "el_lifetime", "credit_capital", "op_capital", "economic_capital",
+    "rwa", "reg_capital", "capital", "net_income", "raroc", "eva",
 ]
 
 
@@ -27,52 +36,142 @@ def ftp_rate(tenor: float | np.ndarray) -> np.ndarray:
     return np.interp(np.asarray(tenor, dtype=float), xs, ys)
 
 
-def irb_capital_k(pd_: np.ndarray, lgd: np.ndarray, maturity: np.ndarray) -> np.ndarray:
-    """Basel IRB corporate capital requirement K per unit of EAD."""
+def asset_correlation(pd_: np.ndarray) -> np.ndarray:
+    """Basel corporate asset correlation, 12%-24% decreasing in PD."""
+    w = (1 - np.exp(-50 * pd_)) / (1 - np.exp(-50))
+    return 0.12 * w + 0.24 * (1 - w)
+
+
+def irb_capital_k(pd_: np.ndarray, lgd: np.ndarray, maturity: np.ndarray,
+                  confidence: float = C.CAPITAL.confidence, max_maturity: float = 5.0) -> np.ndarray:
+    """Basel IRB corporate capital requirement K per unit of EAD (maturity capped at 5y by Basel)."""
     pd_ = np.clip(np.asarray(pd_, dtype=float), 0.0003, 0.9999)
     lgd = np.asarray(lgd, dtype=float)
-    m = np.clip(np.asarray(maturity, dtype=float), 1.0, 5.0)
-    w = (1 - np.exp(-50 * pd_)) / (1 - np.exp(-50))
-    r = 0.12 * w + 0.24 * (1 - w)
+    m = np.clip(np.asarray(maturity, dtype=float), 1.0, max_maturity)
+    r = asset_correlation(pd_)
     b = (0.11852 - 0.05478 * np.log(pd_)) ** 2
-    inv = np.vectorize(_N.inv_cdf)
-    cdf = np.vectorize(_N.cdf)
-    cond_pd = cdf((inv(pd_) + np.sqrt(r) * _N.inv_cdf(C.CAPITAL.confidence)) / np.sqrt(1 - r))
+    cond_pd = _cdf((_inv(pd_) + np.sqrt(r) * _N.inv_cdf(confidence)) / np.sqrt(1 - r))
     return lgd * (cond_pd - pd_) * (1 + (m - 2.5) * b) / (1 - 1.5 * b)
 
 
-def _finish(df: pd.DataFrame) -> pd.DataFrame:
-    cap = C.CAPITAL
-    df["total_revenue"] = df.nii + df.fee_revenue
-    df["op_capital"] = df.get("op_capital", 0.0) + cap.op_risk_pct_revenue * df.total_revenue.clip(lower=0)
-    df["economic_capital"] = df.credit_capital + df.op_capital
-    pre_tax = df.total_revenue - df.opex - df.expected_loss + cap.capital_credit_rate * df.economic_capital
-    df["net_income"] = pre_tax * (1 - cap.tax_rate)
-    df["raroc"] = df.net_income / df.economic_capital.replace(0, np.nan)
-    df["eva"] = df.net_income - cap.hurdle_rate * df.economic_capital
-    return df[RESULT_COLS]
+def pit_pd(pd_ttc: np.ndarray, z: np.ndarray) -> np.ndarray:
+    """Single-factor Z-shift, TTC -> point-in-time PD: N(N^-1(PD_TTC) - sqrt(rho) * Z).
+
+    Z = 0 reproduces the long-run (TTC) PD; Z < 0 is a downturn (higher PD), Z > 0 a benign year.
+    """
+    pd_ = np.clip(np.asarray(pd_ttc, dtype=float), 1e-6, 0.9999)
+    rho = asset_correlation(pd_)
+    return _cdf(_inv(pd_) - np.sqrt(rho) * np.asarray(z, dtype=float))
 
 
-def _credit(df: pd.DataFrame, ead: pd.Series, lgd: pd.Series, maturity: pd.Series) -> pd.DataFrame:
-    pd_ = df.rating.map(C.PD_BY_RATING)
-    df["ead"] = ead
-    df["expected_loss"] = pd_ * lgd * ead
-    df["credit_capital"] = irb_capital_k(pd_, lgd, maturity) * ead * C.CAPITAL.ec_multiplier
+def maturity_bucket(m: np.ndarray) -> np.ndarray:
+    buckets = np.array(C.ECAP_MATURITY_BUCKETS, dtype=float)
+    idx = np.searchsorted(buckets, np.asarray(m, dtype=float), side="left")
+    return buckets[np.clip(idx, 0, len(buckets) - 1)]
+
+
+def ecap_factor(pd_: np.ndarray, maturity: np.ndarray, industry: pd.Series) -> np.ndarray:
+    """Economic capital per $1 of EAD at 100% LGD, from the calibrated factor table."""
+    k = irb_capital_k(pd_, 1.0, maturity_bucket(maturity), C.ECAP_FACTOR_CONFIDENCE, C.ECAP_MAX_MATURITY)
+    mult = industry.map(C.ECAP_INDUSTRY_MULTIPLIER).fillna(1.0).to_numpy()
+    return k * C.ECAP_DIVERSIFICATION * mult
+
+
+def ecap_factor_table() -> pd.DataFrame:
+    """The factor table itself (rating x maturity bucket, 100% LGD, no industry add-on)."""
+    rows = []
+    for rating, pd_ in C.PD_BY_RATING.items():
+        for m in C.ECAP_MATURITY_BUCKETS:
+            k = irb_capital_k([pd_], 1.0, [m], C.ECAP_FACTOR_CONFIDENCE, C.ECAP_MAX_MATURITY)[0]
+            rows.append({"rating": rating, "pd": pd_, "maturity_bucket": m,
+                         "factor": k * C.ECAP_DIVERSIFICATION})
+    return pd.DataFrame(rows).pivot(index="rating", columns="maturity_bucket", values="factor")
+
+
+def _industry(df: pd.DataFrame) -> pd.Series:
+    return df["industry"] if "industry" in df else pd.Series("", index=df.index)
+
+
+def _credit(df: pd.DataFrame, s: ModelSettings, ead: pd.Series, ead_sa: pd.Series, lgd: pd.Series,
+            maturity: pd.Series, collateral: pd.Series, sa_rw: pd.Series) -> pd.DataFrame:
+    """Expected loss, economic capital and Basel credit RWA for credit exposures."""
+    industry = _industry(df)
+    pd_ttc = df.rating.map(C.PD_BY_RATING)
+    z = industry.map(C.CREDIT_CYCLE_Z).fillna(0.0) + s.cycle_shift
+    pd_p = pd.Series(pit_pd(pd_ttc, z), index=df.index)
+    pd_el = pd_p if s.el_pd_basis == "PIT" else pd_ttc
+    df["ead"], df["pd_ttc"], df["pd_pit"], df["lgd"] = ead, pd_ttc, pd_p, lgd
+    df["expected_loss"] = pd_el * lgd * ead
+    life = np.maximum(maturity, 1.0)
+    df["el_lifetime"] = (1 - (1 - pd_p) ** life) * lgd * ead  # CECL-style, PIT PD, undiscounted
+
+    if s.ecap_method == "factor":
+        k_ec = ecap_factor(pd_ttc, maturity, industry) * lgd
+    else:
+        k_ec = irb_capital_k(pd_ttc, lgd, maturity) * C.CAPITAL.ec_multiplier
+    df["credit_capital"] = k_ec * ead
+
+    rwa_sa = sa_rw * ead_sa
+    pd_reg = np.maximum(pd_ttc, C.IRB_PD_FLOOR)
+    if s.basel_approach == "SA":
+        rwa = rwa_sa
+    elif s.basel_approach == "FIRB":
+        rwa = irb_capital_k(pd_reg, collateral.map(C.FIRB_LGD), C.FIRB_MATURITY) * 12.5 * ead_sa
+    else:  # AIRB: own LGD (downturn), own maturity, own CCF
+        a, b = C.DOWNTURN_LGD
+        lgd_dt = np.maximum(a + b * lgd, collateral.map(C.AIRB_LGD_FLOOR))
+        rwa = irb_capital_k(pd_reg, lgd_dt, maturity) * 12.5 * ead
+    if s.output_floor and s.basel_approach != "SA":
+        rwa = np.maximum(rwa, C.OUTPUT_FLOOR * rwa_sa)  # applied account by account (conservative)
+    df["credit_rwa"] = rwa
     return df
 
 
-def loans_raroc(loans: pd.DataFrame) -> pd.DataFrame:
+def _no_credit(df: pd.DataFrame) -> pd.DataFrame:
+    for col in ("pd_ttc", "pd_pit", "lgd"):
+        df[col] = np.nan
+    df["ead"] = df["expected_loss"] = df["el_lifetime"] = 0.0
+    df["credit_capital"] = df["credit_rwa"] = 0.0
+    return df
+
+
+def _finish(df: pd.DataFrame, s: ModelSettings) -> pd.DataFrame:
+    cap = C.CAPITAL
+    df["total_revenue"] = df.nii + df.fee_revenue
+    rev_pos = df.total_revenue.clip(lower=0)
+    df["op_capital"] = df.get("op_capital", 0.0) + cap.op_risk_pct_revenue * rev_pos
+    df["economic_capital"] = df.credit_capital + df.op_capital
+    df["rwa"] = df.credit_rwa + 12.5 * C.SMA_BIC_RATE * rev_pos
+    df["reg_capital"] = df.rwa * s.cet1_target
+    df["capital"] = {"economic": df.economic_capital, "regulatory": df.reg_capital,
+                     "max": np.maximum(df.economic_capital, df.reg_capital)}[s.capital_basis]
+    pre_tax = df.total_revenue - df.opex - df.expected_loss + cap.capital_credit_rate * df.capital
+    df["net_income"] = pre_tax * (1 - cap.tax_rate)
+    df["raroc"] = df.net_income / df.capital.replace(0, np.nan)
+    df["eva"] = df.net_income - cap.hurdle_rate * df.capital
+    return df[RESULT_COLS]
+
+
+def _sa_rw(df: pd.DataFrame) -> pd.Series:
+    rw = df.rating.map(C.SA_CORPORATE_RW)
+    if "sub_type" in df:
+        rw = rw.where(df.sub_type != "CRE Term", C.SA_CRE_RW)
+    return rw
+
+
+def loans_raroc(loans: pd.DataFrame, s: ModelSettings = DEFAULT_SETTINGS) -> pd.DataFrame:
     df = loans.copy()
     lp = C.COSTS.loan_liquidity_premium * np.minimum(df.remaining_yrs, 5) / 5
     df["exposure"] = df.balance
     df["nii"] = df.balance * (df.spread - lp)
     df["fee_revenue"] = df.balance * df.orig_fee_pct / df.tenor_yrs
     df["opex"] = df.commitment * C.COSTS.loan_opex_bps
-    df = _credit(df, df.balance, df.collateral.map(C.LGD_BY_COLLATERAL), df.remaining_yrs)
-    return _finish(df)
+    df = _credit(df, s, df.balance, df.balance, df.collateral.map(C.LGD_BY_COLLATERAL),
+                 df.remaining_yrs, df.collateral, _sa_rw(df))
+    return _finish(df, s)
 
 
-def revolvers_raroc(rev: pd.DataFrame) -> pd.DataFrame:
+def revolvers_raroc(rev: pd.DataFrame, s: ModelSettings = DEFAULT_SETTINGS) -> pd.DataFrame:
     df = rev.copy()
     undrawn = df.commitment - df.balance
     df["exposure"] = df.commitment
@@ -81,11 +180,13 @@ def revolvers_raroc(rev: pd.DataFrame) -> pd.DataFrame:
     df["fee_revenue"] = undrawn * df.unused_fee + df.commitment * df.orig_fee_pct / df.tenor_yrs
     df["opex"] = df.commitment * C.COSTS.revolver_opex_bps
     ead = df.balance + C.REVOLVER_CCF * undrawn
-    df = _credit(df, ead, df.collateral.map(C.LGD_BY_COLLATERAL), df.remaining_yrs)
-    return _finish(df)
+    ead_sa = df.balance + C.SA_COMMITMENT_CCF * undrawn
+    df = _credit(df, s, ead, ead_sa, df.collateral.map(C.LGD_BY_COLLATERAL), df.remaining_yrs,
+                 df.collateral, _sa_rw(df))
+    return _finish(df, s)
 
 
-def irds_raroc(irds: pd.DataFrame) -> pd.DataFrame:
+def irds_raroc(irds: pd.DataFrame, s: ModelSettings = DEFAULT_SETTINGS) -> pd.DataFrame:
     df = irds.copy()
     addon = np.select([df.remaining_yrs <= t for t, _ in C.IRD_ADDON_BY_TENOR],
                       [f for _, f in C.IRD_ADDON_BY_TENOR])
@@ -94,55 +195,63 @@ def irds_raroc(irds: pd.DataFrame) -> pd.DataFrame:
     df["nii"] = 0.0
     df["fee_revenue"] = df.notional * df.sales_credit_bps / 10_000  # annualised sales credit
     df["opex"] = C.COSTS.ird_opex_per_trade
-    df = _credit(df, ead, pd.Series(C.IRD_LGD, index=df.index), df.remaining_yrs)
+    unsecured = pd.Series("Unsecured", index=df.index)
+    df = _credit(df, s, ead, ead, pd.Series(C.IRD_LGD, index=df.index), df.remaining_yrs,
+                 unsecured, df.rating.map(C.SA_CORPORATE_RW))
     df["credit_capital"] *= C.CVA_MULTIPLIER
-    return _finish(df)
+    df["credit_rwa"] *= C.CVA_MULTIPLIER
+    return _finish(df, s)
 
 
-def deposits_raroc(dep: pd.DataFrame) -> pd.DataFrame:
+def deposits_raroc(dep: pd.DataFrame, s: ModelSettings = DEFAULT_SETTINGS) -> pd.DataFrame:
     df = dep.copy()
     duration = df.deposit_type.map(C.DEPOSIT_DURATION).fillna(df.tenor_yrs)
     haircut = df.deposit_type.map(C.COSTS.deposit_runoff_haircut)
     ftp_credit = ftp_rate(duration) * (1 - haircut) + haircut * ftp_rate(0.25) * C.VOLATILE_FTP_SHARE
     df["ftp_credit"] = ftp_credit
     df["exposure"] = df.balance
-    df["ead"] = 0.0
     df["nii"] = df.balance * (ftp_credit - df.rate_paid)
     df["fee_revenue"] = 0.0
     df["opex"] = df.balance * C.COSTS.deposit_opex_bps
-    df["expected_loss"] = 0.0
-    df["credit_capital"] = 0.0
+    df = _no_credit(df)
     df["op_capital"] = df.balance * C.CAPITAL.deposit_op_capital_pct
-    return _finish(df)
+    return _finish(df, s)
 
 
-def payments_raroc(pay: pd.DataFrame) -> pd.DataFrame:
+def payments_raroc(pay: pd.DataFrame, s: ModelSettings = DEFAULT_SETTINGS) -> pd.DataFrame:
     df = pay.copy()
     gross = df.monthly_revenue * 12
     df["exposure"] = gross
-    df["ead"] = 0.0
     df["nii"] = 0.0
     df["fee_revenue"] = gross * (1 - df.ecr_offset_pct)  # ECR waives part of analysed fees
     df["opex"] = gross * C.COSTS.payments_cost_to_income
+    df = _no_credit(df)
     df["expected_loss"] = gross * C.PAYMENTS_LOSS_RATE
-    df["credit_capital"] = 0.0
-    return _finish(df)
+    return _finish(df, s)
 
 
-def account_raroc(book: dict[str, pd.DataFrame]) -> pd.DataFrame:
-    parts = [loans_raroc(book["loans"]), revolvers_raroc(book["revolvers"]),
-             irds_raroc(book["irds"]), deposits_raroc(book["deposits"]),
-             payments_raroc(book["payments"])]
+def with_industry(df: pd.DataFrame, rels: pd.DataFrame) -> pd.DataFrame:
+    return df.merge(rels[["relationship_id", "industry"]], on="relationship_id", how="left")
+
+
+def account_raroc(book: dict[str, pd.DataFrame], s: ModelSettings = DEFAULT_SETTINGS) -> pd.DataFrame:
+    s.validate()
+    rels = book["relationships"]
+    parts = [loans_raroc(with_industry(book["loans"], rels), s),
+             revolvers_raroc(with_industry(book["revolvers"], rels), s),
+             irds_raroc(with_industry(book["irds"], rels), s),
+             deposits_raroc(book["deposits"], s), payments_raroc(book["payments"], s)]
     return pd.concat(parts, ignore_index=True)
 
 
 LENDING = {"Term Loan", "Revolver", "Interest Rate Derivative"}
-_SUM = ["total_revenue", "opex", "expected_loss", "economic_capital", "net_income", "eva"]
+_SUM = ["total_revenue", "opex", "expected_loss", "el_lifetime", "economic_capital", "rwa",
+        "reg_capital", "capital", "net_income", "eva"]
 
 
 def _ratio(g: pd.DataFrame) -> pd.Series:
     out = g[_SUM].sum()
-    out["raroc"] = out.net_income / out.economic_capital if out.economic_capital else np.nan
+    out["raroc"] = out.net_income / out.capital if out.capital else np.nan
     return out
 
 
@@ -158,7 +267,7 @@ def relationship_raroc(accounts: pd.DataFrame, rels: pd.DataFrame) -> pd.DataFra
                                 values="exposure", aggfunc="sum", fill_value=0)
     expo.columns = [f"exp_{c.lower().replace(' ', '_')}" for c in expo.columns]
     out = rels.set_index("relationship_id")[["name", "industry", "segment", "rating"]] \
-        .join(full).join(lend[["raroc", "net_income", "economic_capital"]]
+        .join(full).join(lend[["raroc", "net_income", "capital"]]
                          .add_prefix("lending_")).join(counts).join(expo).fillna(0)
     out["ancillary_uplift"] = out.raroc - out.lending_raroc
     out["meets_hurdle"] = out.raroc >= C.CAPITAL.hurdle_rate
@@ -176,8 +285,8 @@ def product_summary(accounts: pd.DataFrame) -> pd.DataFrame:
     return out.reset_index()
 
 
-def run(book: dict[str, pd.DataFrame]) -> dict[str, pd.DataFrame]:
-    accounts = account_raroc(book)
+def run(book: dict[str, pd.DataFrame], s: ModelSettings = DEFAULT_SETTINGS) -> dict[str, pd.DataFrame]:
+    accounts = account_raroc(book, s)
     return {"accounts": accounts,
             "relationships": relationship_raroc(accounts, book["relationships"]),
             "products": product_summary(accounts)}

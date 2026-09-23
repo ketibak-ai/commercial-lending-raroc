@@ -113,3 +113,24 @@ def test_agent_handles_refusal(monkeypatch):
 @pytest.mark.parametrize("tool", [t["name"] for t in agent.TOOLS])
 def test_every_tool_has_handler(tool):
     assert tool in agent._HANDLERS
+
+
+def test_model_settings_via_api():
+    base = client.get("/portfolio/summary").json()
+    params = {"capital_basis": "regulatory", "basel_approach": "SA"}
+    reg = client.get("/portfolio/summary", params=params).json()
+    tot = lambda s: next(r for r in s["by_product"] if r["product"] == "Total Portfolio")  # noqa: E731
+    assert reg["model_settings"]["basel_approach"] == "SA"
+    assert tot(reg)["raroc"] < tot(base)["raroc"]
+    assert client.get("/portfolio/summary", params={"basel_approach": "Basel IV"}).status_code == 422
+    priced = client.post("/price", json={"amount": 2e7, "rating": 5, "relationship_id": "R002",
+                                          "model": {"capital_basis": "regulatory"}}).json()
+    assert priced["at_recommended"]["capital_basis"] == "regulatory"
+
+
+def test_model_reference_endpoints():
+    f = client.get("/models/ecap-factors").json()
+    assert f["table"]["5"]["7"] > f["table"]["5"]["1"]
+    p = client.get("/models/pit-factors", params={"cycle_shift": -1}).json()
+    energy = next(r for r in p if r["industry"] == "Energy")
+    assert energy["pd_pit_rating_5"] > energy["pd_ttc_rating_5"]

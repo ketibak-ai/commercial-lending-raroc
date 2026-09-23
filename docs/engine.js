@@ -46,18 +46,50 @@
     return ys[n - 1];
   }
 
-  /** Basel IRB corporate capital requirement K per unit of EAD. */
-  function irbK(pd, lgd, maturity, confidence) {
-    pd = clamp(pd, 0.0003, 0.9999);
-    const m = clamp(maturity, 1, 5);
+  /** Basel corporate asset correlation, 12%-24% decreasing in PD. */
+  function assetCorr(pd) {
     const w = (1 - Math.exp(-50 * pd)) / (1 - Math.exp(-50));
-    const r = 0.12 * w + 0.24 * (1 - w);
+    return 0.12 * w + 0.24 * (1 - w);
+  }
+
+  /** Basel IRB corporate capital requirement K per unit of EAD (maturity capped at 5y by Basel). */
+  function irbK(pd, lgd, maturity, confidence, maxMaturity = 5) {
+    pd = clamp(pd, 0.0003, 0.9999);
+    const m = clamp(maturity, 1, maxMaturity);
+    const r = assetCorr(pd);
     const b = Math.pow(0.11852 - 0.05478 * Math.log(pd), 2);
     const cond = normCdf((normInv(pd) + Math.sqrt(r) * normInv(confidence)) / Math.sqrt(1 - r));
     return lgd * (cond - pd) * (1 + (m - 2.5) * b) / (1 - 1.5 * b);
   }
 
+  /** Single-factor Z-shift, TTC -> point-in-time PD. Z = 0 reproduces TTC; Z < 0 = downturn. */
+  function pitPd(pdTtc, z) {
+    const pd = clamp(pdTtc, 1e-6, 0.9999), rho = assetCorr(pd);
+    return normCdf(normInv(pd) - Math.sqrt(rho) * z);
+  }
+
+  function maturityBucket(m, buckets) {
+    for (const b of buckets) if (m <= b) return b;
+    return buckets[buckets.length - 1];
+  }
+
+  /** Economic capital per $1 EAD at 100% LGD from the calibrated factor table. */
+  function ecapFactor(cfg, pd, maturity, industry) {
+    const k = irbK(pd, 1, maturityBucket(maturity, cfg.ecapBuckets), cfg.ecapConfidence, cfg.ecapMaxMaturity);
+    return k * cfg.ecapDiversification * (cfg.ecapIndustryMult[industry] ?? 1);
+  }
+
+  function ecapFactorTable(cfg) {
+    return Object.keys(cfg.pd).map(r => ({ rating: +r, pd: cfg.pd[r],
+      factors: cfg.ecapBuckets.map(m => irbK(cfg.pd[r], 1, m, cfg.ecapConfidence, cfg.ecapMaxMaturity) * cfg.ecapDiversification) }));
+  }
+
   // ---- scenario --------------------------------------------------------------------------
+  function baseModel(cfg) {
+    return { capitalBasis: "economic", baselApproach: "AIRB", outputFloor: false, cet1Target: cfg.cet1Target,
+             elPdBasis: "TTC", ecapMethod: "analytic", cycleShift: 0, cycleZ: { ...cfg.cycleZ } };
+  }
+
   function baseScenario(cfg) {
     return {
       name: "Base case",
@@ -69,6 +101,7 @@
       loanSpreadBps: 0, revolverSpreadBps: 0, unusedFeeBps: 0,
       depositBalancePct: 0, depositRateBps: 0, paymentsFeePct: 0,
       newDeals: [],
+      model: baseModel(cfg),
     };
   }
 
@@ -94,28 +127,55 @@
     const keySet = new Set(book.rels.filter(r => r.segment === "Key Relationship").map(r => r.relationship_id));
     const inScope = sc.scope === "ALL" ? () => true
       : sc.scope === "KEY" ? id => keySet.has(id) : id => id === sc.scope;
-    return { cfg, sc, shock, ftp: t => interp(t, xs, ys), inScope,
+    const model = { ...baseModel(cfg), ...(sc.model || {}) };
+    const industryOf = id => (book.relById[id] || {}).industry || "";
+    return { cfg, sc, model, industryOf, shock, ftp: t => interp(t, xs, ys), inScope,
              ccr: cfg.capitalCreditRate + shock, hurdle: sc.hurdle, tax: sc.taxRate };
   }
 
   function finish(a, ctx) {
-    const cfg = ctx.cfg;
+    const cfg = ctx.cfg, m = ctx.model;
     a.revenue = a.nii + a.fee;
-    a.opCapital = (a.opCapital || 0) + cfg.opRiskPct * Math.max(a.revenue, 0);
-    a.capital = a.creditCapital + a.opCapital;
+    const revPos = Math.max(a.revenue, 0);
+    a.opCapital = (a.opCapital || 0) + cfg.opRiskPct * revPos;
+    a.econCapital = a.creditCapital + a.opCapital;
+    a.rwa = (a.creditRwa || 0) + 12.5 * cfg.smaBicRate * revPos;
+    a.regCapital = a.rwa * m.cet1Target;
+    a.capital = m.capitalBasis === "regulatory" ? a.regCapital
+      : m.capitalBasis === "max" ? Math.max(a.econCapital, a.regCapital) : a.econCapital;
     const pre = a.revenue - a.opex - a.el + ctx.ccr * a.capital;
     a.net = pre * (1 - ctx.tax);
     a.raroc = a.capital ? a.net / a.capital : null;
     a.eva = a.net - ctx.hurdle * a.capital;
+    if (a.elLife == null) a.elLife = 0;
     return a;
   }
 
-  function credit(a, rating, lgd, maturity, ctx) {
-    const pd = ctx.cfg.pd[String(rating)];
-    a.pd = pd; a.lgd = lgd;
-    a.el = pd * lgd * a.ead;
-    a.creditCapital = irbK(pd, lgd, maturity, ctx.cfg.confidence) * a.ead * ctx.cfg.ecMultiplier;
+  /** EL (1-year + lifetime), economic capital and Basel credit RWA for a credit exposure. */
+  function credit(a, o, ctx) {
+    const cfg = ctx.cfg, m = ctx.model;
+    const pdTtc = cfg.pd[String(o.rating)];
+    const z = (m.cycleZ[o.industry] ?? 0) + m.cycleShift;
+    const pdP = pitPd(pdTtc, z);
+    a.pd = pdTtc; a.pdPit = pdP; a.lgd = o.lgd; a.industry = o.industry;
+    a.el = (m.elPdBasis === "PIT" ? pdP : pdTtc) * o.lgd * a.ead;
+    a.elLife = (1 - Math.pow(1 - pdP, Math.max(o.maturity, 1))) * o.lgd * a.ead;
+    const kEc = m.ecapMethod === "factor"
+      ? ecapFactor(cfg, pdTtc, o.maturity, o.industry) * o.lgd
+      : irbK(pdTtc, o.lgd, o.maturity, cfg.confidence) * cfg.ecMultiplier;
+    a.creditCapital = kEc * a.ead;
+    const rwaSa = o.saRw * o.eadSa, pdReg = Math.max(pdTtc, cfg.irbPdFloor);
+    let rwa;
+    if (m.baselApproach === "SA") rwa = rwaSa;
+    else if (m.baselApproach === "FIRB") rwa = irbK(pdReg, cfg.firbLgd[o.collateral], cfg.firbMaturity, cfg.confidence) * 12.5 * o.eadSa;
+    else {
+      const lgdDt = Math.max(cfg.downturnLgd[0] + cfg.downturnLgd[1] * o.lgd, cfg.airbLgdFloor[o.collateral]);
+      rwa = irbK(pdReg, lgdDt, o.maturity, cfg.confidence) * 12.5 * a.ead;
+    }
+    if (m.outputFloor && m.baselApproach !== "SA") rwa = Math.max(rwa, cfg.outputFloor * rwaSa);
+    a.creditRwa = rwa;
   }
+  const saRw = (cfg, rating, subType) => subType === "CRE Term" ? cfg.saCreRw : cfg.saCorporateRw[String(rating)];
 
   function stressRating(r, id, ctx) {
     return ctx.inScope(id) ? clamp(Math.round(r + ctx.sc.ratingNotches), 1, 10) : r;
@@ -134,7 +194,8 @@
       exposure: l.balance, ead: l.balance, rating, rate: spread, rateLabel: "spread",
       nii: l.balance * (spread - lp), fee: l.balance * l.orig_fee_pct / l.tenor_yrs,
       opex: l.commitment * cfg.loanOpex };
-    credit(a, rating, lgd, l.remaining_yrs, ctx);
+    credit(a, { rating, lgd, maturity: l.remaining_yrs, eadSa: l.balance, collateral: l.collateral,
+      saRw: saRw(cfg, rating, l.sub_type), industry: l.industry ?? ctx.industryOf(l.relationship_id) }, ctx);
     return finish(a, ctx);
   }
 
@@ -154,7 +215,9 @@
         - undrawn * cfg.revolverLiquidityPremium * cfg.revolverUndrawnLpFactor,
       fee: undrawn * unused + v.commitment * v.orig_fee_pct / v.tenor_yrs,
       opex: v.commitment * cfg.revolverOpex };
-    credit(a, rating, lgd, v.remaining_yrs, ctx);
+    credit(a, { rating, lgd, maturity: v.remaining_yrs, eadSa: balance + cfg.saCommitmentCcf * undrawn,
+      collateral: v.collateral, saRw: saRw(cfg, rating, v.sub_type),
+      industry: v.industry ?? ctx.industryOf(v.relationship_id) }, ctx);
     return finish(a, ctx);
   }
 
@@ -170,8 +233,10 @@
       exposure: t.notional, ead: cfg.saccrAlpha * (Math.max(mtm, 0) + addon * t.notional), rating,
       rate: t.sales_credit_bps / 1e4, rateLabel: "sales credit", mtm,
       nii: 0, fee: t.notional * t.sales_credit_bps / 1e4, opex: cfg.irdOpexPerTrade };
-    credit(a, rating, lgd, t.remaining_yrs, ctx);
+    credit(a, { rating, lgd, maturity: t.remaining_yrs, eadSa: a.ead, collateral: "Unsecured",
+      saRw: cfg.saCorporateRw[String(rating)], industry: ctx.industryOf(t.relationship_id) }, ctx);
     a.creditCapital *= cfg.cvaMultiplier;
+    a.creditRwa *= cfg.cvaMultiplier;
     return finish(a, ctx);
   }
 
@@ -218,9 +283,13 @@
   const LENDING = new Set(["Term Loan", "Revolver", "Interest Rate Derivative"]);
   const PRODUCTS = ["Term Loan", "Revolver", "Interest Rate Derivative", "Deposit", "Payments"];
 
-  function blank() { return { n: 0, exposure: 0, revenue: 0, opex: 0, el: 0, capital: 0, net: 0, eva: 0 }; }
+  function blank() {
+    return { n: 0, exposure: 0, ead: 0, revenue: 0, opex: 0, el: 0, elLife: 0, econCapital: 0, rwa: 0,
+             regCapital: 0, capital: 0, net: 0, eva: 0 };
+  }
   function add(t, a) {
-    t.n++; t.exposure += a.exposure; t.revenue += a.revenue; t.opex += a.opex; t.el += a.el;
+    t.n++; t.exposure += a.exposure; t.ead += a.ead; t.revenue += a.revenue; t.opex += a.opex; t.el += a.el;
+    t.elLife += a.elLife; t.econCapital += a.econCapital; t.rwa += a.rwa; t.regCapital += a.regCapital;
     t.capital += a.capital; t.net += a.net; t.eva += a.eva;
   }
   const ratio = t => { t.raroc = t.capital ? t.net / t.capital : null; return t; };
@@ -290,8 +359,8 @@
     return out;
   }
 
-  const api = { normCdf, normInv, irbK, interp, baseScenario, prepare, run, priceDeal, dealMetrics,
-    PRODUCTS, LENDING };
+  const api = { normCdf, normInv, irbK, assetCorr, pitPd, ecapFactor, ecapFactorTable, interp, baseModel,
+    baseScenario, prepare, run, priceDeal, dealMetrics, PRODUCTS, LENDING };
   if (typeof module !== "undefined" && module.exports) module.exports = api;
   else root.RarocEngine = api;
 })(typeof self !== "undefined" ? self : this);

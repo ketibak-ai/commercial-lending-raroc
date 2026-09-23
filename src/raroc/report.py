@@ -10,6 +10,8 @@ import pandas as pd
 
 from . import config as C
 from . import service
+from .config import ModelSettings
+from .engine import ecap_factor_table
 
 ROOT = Path(__file__).resolve().parents[2]
 WEB = Path(__file__).with_name("web")
@@ -84,6 +86,15 @@ def engine_config() -> dict:
         "loanLiquidityPremium": cost.loan_liquidity_premium,
         "revolverLiquidityPremium": cost.revolver_liquidity_premium,
         "runoff": cost.deposit_runoff_haircut, "watchList": C.WATCH_LIST_RAROC,
+        # risk and capital models
+        "cycleZ": C.CREDIT_CYCLE_Z, "ecapConfidence": C.ECAP_FACTOR_CONFIDENCE,
+        "ecapBuckets": C.ECAP_MATURITY_BUCKETS, "ecapMaxMaturity": C.ECAP_MAX_MATURITY,
+        "ecapDiversification": C.ECAP_DIVERSIFICATION, "ecapIndustryMult": C.ECAP_INDUSTRY_MULTIPLIER,
+        "cet1Target": C.CET1_TARGET, "outputFloor": C.OUTPUT_FLOOR, "irbPdFloor": C.IRB_PD_FLOOR,
+        "saCommitmentCcf": C.SA_COMMITMENT_CCF,
+        "saCorporateRw": {str(k): v for k, v in C.SA_CORPORATE_RW.items()}, "saCreRw": C.SA_CRE_RW,
+        "firbLgd": C.FIRB_LGD, "airbLgdFloor": C.AIRB_LGD_FLOOR, "firbMaturity": C.FIRB_MATURITY,
+        "downturnLgd": C.DOWNTURN_LGD, "smaBicRate": C.SMA_BIC_RATE,
     }
 
 
@@ -137,6 +148,21 @@ def write_all(root: Path = ROOT) -> dict[str, Path]:
             + [(f"FTP {k}y", v) for k, v in C.FTP_CURVE.items()],
             columns=["Assumption", "Value"])
         assumptions.to_excel(xw, sheet_name="Assumptions", index=False)
+        ecap_factor_table().reset_index().rename(columns=lambda c: f"{c}y" if isinstance(c, int) else c) \
+            .to_excel(xw, sheet_name="ECAP Factors", index=False)
+        pd.DataFrame(service.pit_factors()).to_excel(xw, sheet_name="PIT Factors", index=False)
+        pd.DataFrame([
+            {"approach": label, **{k: row[k] for k in ("capital", "rwa", "raroc", "eva")}}
+            for label, s in [
+                ("Economic, analytic", ModelSettings()),
+                ("Economic, factor table", ModelSettings(ecap_method="factor")),
+                ("Regulatory, SA", ModelSettings(capital_basis="regulatory", basel_approach="SA")),
+                ("Regulatory, F-IRB", ModelSettings(capital_basis="regulatory", basel_approach="FIRB")),
+                ("Regulatory, A-IRB", ModelSettings(capital_basis="regulatory", basel_approach="AIRB")),
+                ("Regulatory, A-IRB + floor", ModelSettings(capital_basis="regulatory", output_floor=True)),
+            ]
+            for row in [service.portfolio(s)["result_products"].set_index("product").loc["Total Portfolio"]]
+        ]).to_excel(xw, sheet_name="Capital Approaches", index=False)
         for ws in xw.book.worksheets:
             for col in ws.columns:
                 ws.column_dimensions[col[0].column_letter].width = min(
