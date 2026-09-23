@@ -30,6 +30,11 @@ The app has six tabs:
 The RAROC engine runs in the browser. It is a JavaScript port tested against the Python engine on every account, under seven model configurations.
 
 > All data is synthetic, generated with a fixed seed. It represents no real bank or client.
+>
+> **Independent development.** This project was built independently from public sources: Basel Committee
+> standards, published credit-risk methodology and textbook RAROC practice. All parameters are
+> illustrative. It contains no proprietary, confidential or client information of any current or former
+> employer.
 
 ---
 
