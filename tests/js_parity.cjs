@@ -15,7 +15,7 @@ const out = models.map(model => {
   const res = E.run(book, sc);
   const accounts = {};
   for (const a of res.accounts) {
-    accounts[a.id] = [a.revenue, a.el, a.capital, a.net, a.raroc, a.econCapital, a.rwa, a.regCapital, a.elLife, a.pdPit ?? null];
+    accounts[a.id] = [a.revenue, a.el, a.capital, a.net, a.raroc, a.econCapital, a.rwa, a.regCapital, a.elLife, a.pdPit ?? null, a.allInRate ?? null];
   }
   const rels = {};
   for (const r of res.relList) rels[r.relationship_id] = [r.all.raroc, r.lending.raroc];

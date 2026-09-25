@@ -50,7 +50,7 @@ def js(tmp_path_factory):
 
 
 COLS = ["total_revenue", "expected_loss", "capital", "net_income", "raroc", "economic_capital",
-        "rwa", "reg_capital", "el_lifetime", "pd_pit"]
+        "rwa", "reg_capital", "el_lifetime", "pd_pit", "all_in_rate"]
 
 
 @pytest.mark.parametrize("i", range(len(SETTINGS)), ids=[repr(s) for s in SETTINGS])
@@ -63,6 +63,7 @@ def test_every_account_matches(js, i):
     np.testing.assert_allclose(got[:, dollars], want[:, dollars], rtol=1e-5, atol=0.01)
     np.testing.assert_allclose(got[:, 4], want[:, 4], rtol=1e-5, atol=1e-6)            # RAROC
     np.testing.assert_allclose(got[:, 9], want[:, 9], rtol=1e-5, atol=1e-9, equal_nan=True)  # PIT PD
+    np.testing.assert_allclose(got[:, 10], want[:, 10], atol=1e-12, equal_nan=True)         # coupon
 
 
 @pytest.mark.parametrize("i", range(len(SETTINGS)))

@@ -134,3 +134,10 @@ def test_model_reference_endpoints():
     p = client.get("/models/pit-factors", params={"cycle_shift": -1}).json()
     energy = next(r for r in p if r["industry"] == "Energy")
     assert energy["pd_pit_rating_5"] > energy["pd_ttc_rating_5"]
+
+
+def test_curves_endpoint():
+    c = client.get("/curves").json()
+    ten = {p["tenor_yrs"]: p for p in c["points"]}
+    assert ten[1.0]["ftp"] == pytest.approx(ten[1.0]["sofr"] + ten[1.0]["liquidity_premium"], abs=1e-6)
+    assert c["floating_index"] == "1M Term SOFR"

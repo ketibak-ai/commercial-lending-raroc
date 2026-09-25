@@ -13,7 +13,7 @@ import pandas as pd
 
 from . import config as C
 from .config import DEFAULT_SETTINGS, ModelSettings
-from .engine import ecap_factor_table, pit_pd, run
+from .engine import curve_rate, ecap_factor_table, ftp_rate, liquidity_premium, pit_pd, run
 from .pricing import DealRequest, price_deal
 from .rag import search
 from .simulate import simulate
@@ -112,6 +112,19 @@ def pit_factors(cycle_shift: float = 0.0) -> list[dict]:
             row[f"pd_ttc_rating_{rating}"] = ttc
         out.append(row)
     return out
+
+
+def curves() -> dict:
+    """Rate curves driving the engine (illustrative levels, not market data)."""
+    tenors = sorted(set(C.SOFR_CURVE) | set(C.UST_CURVE))
+    rows = [{"tenor_yrs": round(t, 4),
+             "sofr": round(float(curve_rate(C.SOFR_CURVE, t)), 6),
+             "liquidity_premium": round(float(liquidity_premium(t)), 6),
+             "ftp": round(float(ftp_rate(t)), 6),
+             "ust": round(float(curve_rate(C.UST_CURVE, t)), 6)} for t in tenors]
+    return {"as_of": C.AS_OF_DATE, "sofr_overnight": C.SOFR, "prime": C.PRIME_RATE,
+            "floating_index": "1M Term SOFR", "note": "Illustrative levels, not market data",
+            "points": rows}
 
 
 def policy_search(query: str, k: int = 3) -> list[dict]:

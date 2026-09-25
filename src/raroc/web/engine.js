@@ -46,6 +46,16 @@
     return ys[n - 1];
   }
 
+  // ---- rate curves -------------------------------------------------------------------------
+  const curveAt = (curve, t) => interp(t, curve.map(p => p[0]), curve.map(p => p[1]));
+  /** Scenario shock at tenor t (decimal): parallel move plus a twist pivoting at 2y (+twist at 10y). */
+  function shockAt(sc, t) {
+    const twist = sc.curveTwistBps || 0;
+    return ((sc.rateShockBps || 0) + twist * (clamp(t, 0.25, 10) - 2) / 8) / 1e4;
+  }
+  /** SOFR curve (Term SOFR <= 1y, SOFR swaps >= 1y), optionally shocked by a scenario. */
+  const sofrAt = (cfg, t, sc) => curveAt(cfg.sofrCurve, t) + (sc ? shockAt(sc, t) : 0);
+
   /** Basel corporate asset correlation, 12%-24% decreasing in PD. */
   function assetCorr(pd) {
     const w = (1 - Math.exp(-50 * pd)) / (1 - Math.exp(-50));
@@ -94,7 +104,7 @@
     return {
       name: "Base case",
       hurdle: cfg.hurdle, taxRate: cfg.taxRate,
-      rateShockBps: 0,
+      rateShockBps: 0, curveTwistBps: 0,
       depositBetas: { "Operating": 0.25, "Non-Operating": 0.60, "Time Deposit": 0.85 },
       scope: "ALL",               // "ALL", "KEY" or a relationship id
       ratingNotches: 0, lgdShockPts: 0, utilizationPts: 0,
@@ -122,15 +132,16 @@
 
   // ---- account calculators ----------------------------------------------------------------
   function makeCtx(book, sc) {
-    const cfg = book.cfg, shock = sc.rateShockBps / 1e4;
-    const xs = cfg.ftpCurve.map(p => p[0]), ys = cfg.ftpCurve.map(p => p[1] + shock);
+    const cfg = book.cfg;
+    const shock = t => shockAt(sc, t);
+    const ftp = t => sofrAt(cfg, t, sc) + curveAt(cfg.lpCurve, t);
     const keySet = new Set(book.rels.filter(r => r.segment === "Key Relationship").map(r => r.relationship_id));
     const inScope = sc.scope === "ALL" ? () => true
       : sc.scope === "KEY" ? id => keySet.has(id) : id => id === sc.scope;
     const model = { ...baseModel(cfg), ...(sc.model || {}) };
     const industryOf = id => (book.relById[id] || {}).industry || "";
-    return { cfg, sc, model, industryOf, shock, ftp: t => interp(t, xs, ys), inScope,
-             ccr: cfg.capitalCreditRate + shock, hurdle: sc.hurdle, tax: sc.taxRate };
+    return { cfg, sc, model, industryOf, shock, ftp, inScope,
+             ccr: cfg.capitalCreditRate + shock(1), hurdle: sc.hurdle, tax: sc.taxRate };
   }
 
   function finish(a, ctx) {
@@ -189,9 +200,12 @@
     const spread = l.spread + (s ? ctx.sc.loanSpreadBps / 1e4 : 0);
     const rating = isNew ? l.rating : stressRating(l.rating, l.relationship_id, ctx);
     const lgd = isNew ? cfg.lgd[l.collateral] : stressLgd(cfg.lgd[l.collateral], l.relationship_id, ctx);
-    const lp = cfg.loanLiquidityPremium * Math.min(l.remaining_yrs, 5) / 5;
+    const lp = curveAt(cfg.lpCurve, l.remaining_yrs);  // coupon - FTP = spread - term liquidity premium
+    const fixed = l.rate_type === "Fixed";
+    const index = fixed ? curveAt(cfg.sofrCurve, l.tenor_yrs) : sofrAt(cfg, cfg.floatingIndexTenor, ctx.sc);
     const a = { id: l.account_id, rel: l.relationship_id, product: "Term Loan", subType: l.sub_type,
       exposure: l.balance, ead: l.balance, rating, rate: spread, rateLabel: "spread",
+      allInRate: index + spread, rateType: fixed ? "Fixed" : "Floating",
       nii: l.balance * (spread - lp), fee: l.balance * l.orig_fee_pct / l.tenor_yrs,
       opex: l.commitment * cfg.loanOpex };
     credit(a, { rating, lgd, maturity: l.remaining_yrs, eadSa: l.balance, collateral: l.collateral,
@@ -210,6 +224,7 @@
     const undrawn = v.commitment - balance;
     const a = { id: v.account_id, rel: v.relationship_id, product: "Revolver", subType: v.sub_type,
       exposure: v.commitment, ead: balance + cfg.ccf * undrawn, rating, rate: spread, rateLabel: "spread",
+      allInRate: sofrAt(cfg, cfg.floatingIndexTenor, ctx.sc) + spread, rateType: "Floating",
       utilization: v.commitment ? balance / v.commitment : 0,
       nii: balance * (spread - cfg.loanLiquidityPremium * cfg.revolverDrawnLpFactor)
         - undrawn * cfg.revolverLiquidityPremium * cfg.revolverUndrawnLpFactor,
@@ -225,7 +240,7 @@
     const cfg = ctx.cfg;
     // Client pays fixed: higher rates move value to the client, lowering the bank's MTM exposure
     const dv = t.sub_type === "Interest Rate Cap" ? 0 : (t.sub_type === "Collar" ? 0.5 : 1);
-    const mtm = t.mtm - dv * t.notional * Math.min(t.remaining_yrs, 10) * 0.9 * ctx.shock;
+    const mtm = t.mtm - dv * t.notional * Math.min(t.remaining_yrs, 10) * 0.9 * ctx.shock(t.remaining_yrs);
     const addon = cfg.irdAddon.find(p => t.remaining_yrs <= p[0])[1];
     const rating = stressRating(t.rating, t.relationship_id, ctx);
     const lgd = stressLgd(cfg.irdLgd, t.relationship_id, ctx);
@@ -244,7 +259,7 @@
     const cfg = ctx.cfg, s = ctx.inScope(dp.relationship_id), sc = ctx.sc;
     const balance = dp.balance * (s ? 1 + sc.depositBalancePct / 100 : 1);
     const beta = sc.depositBetas[dp.deposit_type] || 0;
-    const ratePaid = Math.max(dp.rate_paid + beta * ctx.shock + (s ? sc.depositRateBps / 1e4 : 0), 0);
+    const ratePaid = Math.max(dp.rate_paid + beta * ctx.shock(0.25) + (s ? sc.depositRateBps / 1e4 : 0), 0);
     const duration = cfg.depositDuration[dp.deposit_type] ?? dp.tenor_yrs;
     const h = cfg.runoff[dp.deposit_type];
     const ftpCredit = ctx.ftp(duration) * (1 - h) + h * ctx.ftp(0.25) * cfg.volatileFtpShare;
@@ -359,7 +374,7 @@
     return out;
   }
 
-  const api = { normCdf, normInv, irbK, assetCorr, pitPd, ecapFactor, ecapFactorTable, interp, baseModel,
+  const api = { curveAt, shockAt, sofrAt, normCdf, normInv, irbK, assetCorr, pitPd, ecapFactor, ecapFactorTable, interp, baseModel,
     baseScenario, prepare, run, priceDeal, dealMetrics, PRODUCTS, LENDING };
   if (typeof module !== "undefined" && module.exports) module.exports = api;
   else root.RarocEngine = api;

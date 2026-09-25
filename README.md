@@ -15,7 +15,7 @@ Ten **key relationships** are the focus. For these clients, deposits, payments a
 
 **Live app:** https://ketibak-ai.github.io/commercial-lending-raroc/
 
-The app has six tabs:
+The app has seven tabs:
 - **Overview:** portfolio and product RAROC plus the 10 key relationships.
 - **Relationships:** all 500 clients, searchable and sortable, each with a drill-down to its accounts.
 - **Accounts:** all 7,020 accounts, filterable, with CSV download.
@@ -24,6 +24,7 @@ The app has six tabs:
   - Presets (recession, rate moves, Blue Mesa remediation) and a new-deal pricer.
   - Scenarios can be saved or shared as a link.
 
+- **Curves:** the SOFR curve (Term SOFR, SOFR swaps), liquidity premium, FTP, Treasuries and Prime, with the scenario-shocked curve overlaid.
 - **Risk & capital models:** choose the capital basis, Basel approach, EL model, PIT factors and ECAP method. Every view recalculates.
 - **Plans:** Community (free), Professional and Enterprise tiers, with a license-key unlock and a free Pro demo.
 
@@ -71,6 +72,18 @@ Hurdle rate is 12%. Revolvers don't earn their capital on their own, and deposit
 **Summit Ridge Software:** a deposit-rich tech client. A $25MM term loan can be priced at the **78 bps cost floor**, well below its 119 bps stand-alone floor. The deposits pay for the discount.
 
 ---
+
+## Rate curves
+
+Pricing runs off SOFR:
+- **Floating loans and revolvers:** coupon = 1M Term SOFR + spread.
+- **Fixed loans:** coupon = the SOFR swap rate at the original tenor + spread.
+- **Funds transfer pricing:** matched-maturity SOFR + a term liquidity premium (5 bps a year, capped at 25 bps).
+- **Deposits:** credited at that FTP curve, adjusted for run-off.
+- **Capital credit:** the 1Y FTP rate.
+- **Reference only:** Treasury yields and Prime.
+
+Scenarios can shift the SOFR curve in parallel or twist it around the 2Y point (steepener or flattener), and include Bear steepener and Bull flattener presets. The levels are illustrative, not market data. The curve is calibrated so the SOFR-based FTP reproduces the original matched-maturity FTP exactly. Curves are in `config.SOFR_CURVE`, `LIQUIDITY_PREMIUM_CURVE` and `UST_CURVE`, and served at `GET /curves`.
 
 ## Risk and capital models
 
@@ -183,7 +196,7 @@ pip install -e ".[dev]"
 raroc simulate                      # writes data/, reports/ (CSV + Excel), docs/index.html
 raroc price --product Revolver --amount 40e6 --tenor-yrs 3 --rating 7 \
             --collateral Unsecured --utilization 0.3 --relationship-id R007
-pytest -q                           # 59 tests (incl. JS/Python parity across 7 model settings)
+pytest -q                           # 62 tests (incl. JS/Python parity across 7 model settings)
 python evals/retrieval_eval.py      # offline RAG eval
 ```
 
@@ -200,6 +213,7 @@ curl -X POST localhost:8000/price -H 'content-type: application/json' \
 |---|---|---|
 | GET | `/health` · `/metrics` | liveness, Prometheus metrics |
 | GET | `/portfolio/summary` | RAROC by product; model settings as query parameters |
+| GET | `/curves` | SOFR, liquidity premium, FTP and Treasury curves |
 | GET | `/models/ecap-factors` · `/models/pit-factors` | ECAP factor table, PIT PDs by industry |
 | GET | `/relationships/key` · `/relationships/{id}` | key-relationship scorecard, drill-down |
 | POST | `/price` | deal pricing |

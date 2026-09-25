@@ -142,6 +142,11 @@ def price(deal: PriceIn) -> dict:
         raise HTTPException(status_code=422, detail=str(exc)) from exc
 
 
+@app.get("/curves", dependencies=[Depends(require_api_key)])
+def curves() -> dict:
+    return service.curves()
+
+
 @app.get("/models/ecap-factors", dependencies=[Depends(require_api_key)])
 def ecap_factors() -> dict:
     return service.ecap_factors()

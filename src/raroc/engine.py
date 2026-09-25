@@ -26,14 +26,31 @@ RESULT_COLS = [
     "account_id", "relationship_id", "product", "sub_type", "exposure", "ead",
     "pd_ttc", "pd_pit", "lgd", "nii", "fee_revenue", "total_revenue", "opex",
     "expected_loss", "el_lifetime", "credit_capital", "op_capital", "economic_capital",
-    "rwa", "reg_capital", "capital", "net_income", "raroc", "eva",
+    "rwa", "reg_capital", "capital", "net_income", "raroc", "eva", "all_in_rate",
 ]
 
 
-def ftp_rate(tenor: float | np.ndarray) -> np.ndarray:
-    """Linear interpolation on the matched-maturity FTP curve."""
-    xs, ys = zip(*sorted(C.FTP_CURVE.items()), strict=True)
+def curve_rate(curve: dict, tenor: float | np.ndarray) -> np.ndarray:
+    """Linear interpolation on a rate curve {tenor_years: rate}, flat beyond the ends."""
+    xs, ys = zip(*sorted(curve.items()), strict=True)
     return np.interp(np.asarray(tenor, dtype=float), xs, ys)
+
+
+def liquidity_premium(tenor: float | np.ndarray) -> np.ndarray:
+    return curve_rate(C.LIQUIDITY_PREMIUM_CURVE, tenor)
+
+
+def ftp_rate(tenor: float | np.ndarray) -> np.ndarray:
+    """Matched-maturity funds transfer price = SOFR curve + term liquidity premium."""
+    return curve_rate(C.SOFR_CURVE, tenor) + liquidity_premium(tenor)
+
+
+def all_in_rate(df: pd.DataFrame) -> np.ndarray:
+    """Client coupon: floating = 1M Term SOFR + spread; fixed = SOFR swap (original tenor) + spread."""
+    index = np.where(df.get("rate_type", "Floating") == "Fixed",
+                     curve_rate(C.SOFR_CURVE, df.tenor_yrs),
+                     curve_rate(C.SOFR_CURVE, C.FLOATING_INDEX_TENOR))
+    return index + df.spread
 
 
 def asset_correlation(pd_: np.ndarray) -> np.ndarray:
@@ -149,6 +166,8 @@ def _finish(df: pd.DataFrame, s: ModelSettings) -> pd.DataFrame:
     df["net_income"] = pre_tax * (1 - cap.tax_rate)
     df["raroc"] = df.net_income / df.capital.replace(0, np.nan)
     df["eva"] = df.net_income - cap.hurdle_rate * df.capital
+    if "all_in_rate" not in df:
+        df["all_in_rate"] = np.nan
     return df[RESULT_COLS]
 
 
@@ -161,7 +180,8 @@ def _sa_rw(df: pd.DataFrame) -> pd.Series:
 
 def loans_raroc(loans: pd.DataFrame, s: ModelSettings = DEFAULT_SETTINGS) -> pd.DataFrame:
     df = loans.copy()
-    lp = C.COSTS.loan_liquidity_premium * np.minimum(df.remaining_yrs, 5) / 5
+    lp = liquidity_premium(df.remaining_yrs)  # coupon - FTP = spread - term liquidity premium
+    df["all_in_rate"] = all_in_rate(df)
     df["exposure"] = df.balance
     df["nii"] = df.balance * (df.spread - lp)
     df["fee_revenue"] = df.balance * df.orig_fee_pct / df.tenor_yrs
@@ -175,6 +195,7 @@ def revolvers_raroc(rev: pd.DataFrame, s: ModelSettings = DEFAULT_SETTINGS) -> p
     df = rev.copy()
     undrawn = df.commitment - df.balance
     df["exposure"] = df.commitment
+    df["all_in_rate"] = all_in_rate(df)
     df["nii"] = df.balance * (df.spread - C.COSTS.loan_liquidity_premium * C.REVOLVER_DRAWN_LP_FACTOR) \
         - undrawn * C.COSTS.revolver_liquidity_premium * C.REVOLVER_UNDRAWN_LP_FACTOR
     df["fee_revenue"] = undrawn * df.unused_fee + df.commitment * df.orig_fee_pct / df.tenor_yrs

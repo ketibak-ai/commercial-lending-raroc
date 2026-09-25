@@ -64,7 +64,9 @@
   }
   const statusHtml = r => { const [c, t] = statusOf(r); return `<span class="status"><i style="background:${c}"></i>${t}</span>`; };
   function rateText(a) {
-    if (a.product === "Term Loan" || a.product === "Revolver") return bps(a.rate) + " spread";
+    if (a.product === "Term Loan" || a.product === "Revolver") {
+      return `${pct(a.allInRate, 2)} = ${a.rateType === "Fixed" ? "swap" : "SOFR"} + ${Math.round(a.rate * 1e4)}`;
+    }
     if (a.product === "Interest Rate Derivative") return bps(a.rate) + " credit";
     if (a.product === "Deposit") return pct(a.rate, 2) + " paid";
     return pct(a.rate, 0) + " ECR";
@@ -469,6 +471,8 @@
     { name: "Base case", set: {} },
     { name: "Rates +100 bps", set: { rateShockBps: 100 } },
     { name: "Rates −100 bps", set: { rateShockBps: -100 } },
+    { name: "Bear steepener", set: { rateShockBps: 75, curveTwistBps: 75 } },
+    { name: "Bull flattener", set: { rateShockBps: -75, curveTwistBps: -50 } },
     { name: "Mild recession", set: { ratingNotches: 1, lgdShockPts: 5, utilizationPts: 10, depositBalancePct: -5, paymentsFeePct: -5 } },
     { name: "Severe recession", set: { ratingNotches: 2, lgdShockPts: 10, utilizationPts: 20, depositBalancePct: -15, paymentsFeePct: -10, rateShockBps: -150 } },
     { name: "Reprice all revolvers", set: { revolverSpreadBps: 25, unusedFeeBps: 10 } },
@@ -478,7 +482,8 @@
   ];
   const LEVERS = [
     { group: "Market (applies to the whole book)", items: [
-      { key: "rateShockBps", label: "Interest rate shock", unit: "bps", min: -300, max: 300, step: 25, hint: "Parallel shift in the FTP curve. Loans are match-funded, so rates move deposit margins, capital credit and derivative exposure." },
+      { key: "rateShockBps", label: "SOFR curve: parallel shift", unit: "bps", min: -300, max: 300, step: 25, hint: "Moves every tenor of the SOFR curve. Loans are match-funded, so rates move deposit margins, capital credit and derivative exposure." },
+      { key: "curveTwistBps", label: "SOFR curve: twist (10Y vs 2Y)", unit: "bps", min: -200, max: 200, step: 25, hint: "Positive steepens the curve: the 10Y rises by this amount, the 2Y is unchanged, and the short end moves slightly the other way. See the Curves tab." },
       { key: "hurdlePct", label: "Hurdle rate", unit: "%", min: 6, max: 20, step: 0.5 },
     ] },
     { group: "Credit (applies to scope)", items: [
@@ -808,6 +813,95 @@
     });
   }
 
+
+  // ---- rate curves ------------------------------------------------------------------------------
+  const TENOR_LABEL = t => t < 1 ? `${Math.round(t * 12)}M` : `${t}Y`;
+  function renderCurves() {
+    const v = $("#view-curves"), cfg = book.cfg;
+    const shocked = (sc.rateShockBps || 0) !== 0 || (sc.curveTwistBps || 0) !== 0;
+    const grid = [1 / 12, 0.25, 0.5, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    const pts = grid.map(t => ({
+      t, sofr: E.sofrAt(cfg, t), sofrSc: E.sofrAt(cfg, t, sc), lp: E.curveAt(cfg.lpCurve, t),
+      ust: E.curveAt(cfg.ustCurve, t),
+    })).map(p => ({ ...p, ftp: p.sofr + p.lp, ftpSc: p.sofrSc + p.lp }));
+    const at = t => pts.find(p => Math.abs(p.t - t) < 1e-9);
+    const tile = (label, base, scen, note) => `<div class="tile"><div class="label">${label}</div><div class="value">${pct(shocked ? scen : base, 2)}</div><div class="note">${shocked ? `base ${pct(base, 2)} · ${ptsDelta(base, scen).replace(" pts", " pts")}` : note}</div></div>`;
+    const slope = p => (p(10) - p(2)) * 1e4;
+    v.innerHTML = `<h2>Rates &amp; curves</h2>
+      <p class="sub">SOFR drives pricing. Floating loans reset on 1M Term SOFR plus a spread, and fixed loans price off the SOFR swap curve. Funds transfer pricing is SOFR plus a term liquidity premium. Levels are illustrative as of ${esc(D.asOf)}, not market data.${shocked ? ` Showing the <b>${esc(sc.name || "scenario")}</b> curve against the base case.` : ""}</p>
+      <section class="tiles">
+        ${tile("Overnight SOFR", cfg.sofr, cfg.sofr + E.shockAt(sc, 0.25), "secured overnight rate")}
+        ${tile("1M Term SOFR", at(1 / 12).sofr, at(1 / 12).sofrSc, "floating-loan index")}
+        ${tile("2Y SOFR swap", at(2).sofr, at(2).sofrSc, "fixed-rate pricing")}
+        ${tile("10Y SOFR swap", at(10).sofr, at(10).sofrSc, "long end")}
+        <div class="tile"><div class="label">2s10s slope</div><div class="value">${Math.round(slope(t => shocked ? at(t).sofrSc : at(t).sofr))} bps</div><div class="note">${shocked ? `base ${Math.round(slope(t => at(t).sofr))} bps` : "10Y minus 2Y SOFR swap"}</div></div>
+        <div class="tile"><div class="label">Prime rate</div><div class="value">${pct(cfg.primeRate + (shocked ? E.shockAt(sc, 0.25) : 0), 2)}</div><div class="note">reference</div></div>
+      </section>
+      <h3>Curves by tenor</h3>
+      <div class="card">
+        <div class="legend">
+          <span><i class="sw" style="background:var(--s1)"></i>SOFR (Term SOFR, then SOFR swaps)</span>
+          <span><i class="sw" style="background:var(--s2)"></i>FTP = SOFR + liquidity premium</span>
+          <span><i class="sw" style="background:var(--s3)"></i>US Treasury</span>
+          ${shocked ? '<span><i class="sw line" style="border-top-color:var(--s1)"></i>SOFR under scenario</span>' : ""}
+        </div>
+        <svg id="curveChart" role="img" aria-label="SOFR, FTP and Treasury curves by tenor"></svg>
+      </div>
+      <div class="split">
+        <div>
+          <h3>Curve points</h3>
+          <div class="card table-wrap"><table><thead><tr><th class="l">Tenor</th><th>SOFR</th>${shocked ? "<th>Scenario</th>" : ""}<th>Liq. premium</th><th>FTP</th><th>Treasury</th><th>Swap spread</th></tr></thead><tbody>
+            ${pts.map(p => `<tr><td class="l">${TENOR_LABEL(p.t)}</td><td>${pct(p.sofr, 3)}</td>${shocked ? `<td><b>${pct(p.sofrSc, 3)}</b></td>` : ""}<td>${Math.round(p.lp * 1e4)} bps</td><td>${pct(shocked ? p.ftpSc : p.ftp, 3)}</td><td>${pct(p.ust, 3)}</td><td>${Math.round((p.sofr - p.ust) * 1e4)} bps</td></tr>`).join("")}
+          </tbody></table><p class="hint">Swap spread = SOFR swap minus Treasury yield (negative, as in recent US markets).</p></div>
+        </div>
+        <div>
+          <h3>How the curves feed pricing</h3>
+          <div class="card"><ul style="margin:0;padding-left:18px;font-size:14px;line-height:1.6">
+            <li><b>Floating loans and revolvers:</b> coupon = 1M Term SOFR + spread; they reprice with the curve.</li>
+            <li><b>Fixed loans:</b> coupon = SOFR swap at original tenor + spread; locked at booking.</li>
+            <li><b>Funding cost (FTP):</b> SOFR at matched maturity + term liquidity premium (5 bps a year, up to 25 bps). Loans are match-funded, so NII = spread − liquidity premium whichever way rates move.</li>
+            <li><b>Deposits:</b> credited at the FTP curve, adjusted for run-off. A rate move passes to depositors at the deposit betas, so deposit value is the most rate-sensitive line.</li>
+            <li><b>Capital credit:</b> equity earns the 1Y FTP rate.</li>
+            <li><b>Derivatives:</b> client pay-fixed swaps lose value to the bank as rates rise, reducing counterparty exposure.</li>
+          </ul>
+          <p class="hint" style="margin-top:10px">Shift or twist the curve under <a href="#/scenarios">Scenarios &amp; pricing</a>, or pick the Bear steepener or Bull flattener preset.</p></div>
+        </div>
+      </div>`;
+    curveChart($("#curveChart"), pts, shocked);
+  }
+
+  function curveChart(svg, pts, shocked) {
+    svg.innerHTML = "";
+    const W = 1000, H = 340, left = 56, right = 110, top = 14, bottom = 34;
+    svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+    const all = pts.flatMap(p => [p.sofr, p.ftp, p.ust].concat(shocked ? [p.sofrSc] : []));
+    const lo = Math.floor(Math.min(...all) * 400) / 400, hi = Math.ceil(Math.max(...all) * 400) / 400;
+    const x = t => left + (t / 10) * (W - left - right);
+    const y = r => top + (hi - r) / (hi - lo) * (H - top - bottom);
+    for (let r = lo; r <= hi + 1e-9; r += 0.0025) {
+      el("line", { x1: left, x2: W - right, y1: y(r), y2: y(r), stroke: "var(--grid)" }, svg);
+      el("text", { x: left - 8, y: y(r) + 4, "text-anchor": "end", class: "tick" }, svg, pct(r, 2));
+    }
+    [0.25, 1, 2, 3, 5, 7, 10].forEach(t => el("text", { x: x(t), y: H - 10, "text-anchor": "middle", class: "tick" }, svg, TENOR_LABEL(t)));
+    const series = [["sofr", "--s1", "SOFR", ""], ["ftp", "--s2", "FTP", ""], ["ust", "--s3", "Treasury", ""]]
+      .concat(shocked ? [["sofrSc", "--s1", "Scenario", "6 4"]] : []);
+    series.forEach(([k, c, name, dash]) => {
+      const d = pts.map((p, i) => `${i ? "L" : "M"}${x(p.t).toFixed(1)},${y(p[k]).toFixed(1)}`).join(" ");
+      el("path", { d, fill: "none", stroke: `var(${c})`, "stroke-width": 2, "stroke-dasharray": dash, "stroke-linejoin": "round" }, svg);
+      const last = pts[pts.length - 1];
+      el("text", { x: x(last.t) + 8, y: y(last[k]) + 4, style: "fill:var(--ink)" }, svg, `${name} ${pct(last[k], 2)}`);
+    });
+    const guide = el("line", { x1: 0, x2: 0, y1: top, y2: H - bottom, stroke: "var(--axis)", opacity: 0 }, svg);
+    const hit = el("rect", { x: left, y: top, width: W - left - right, height: H - top - bottom, fill: "transparent" }, svg);
+    hit.addEventListener("mousemove", e => {
+      const r = svg.getBoundingClientRect(), tx = ((e.clientX - r.left) / r.width * W - left) / (W - left - right) * 10;
+      const p = pts.reduce((a, b) => Math.abs(b.t - tx) < Math.abs(a.t - tx) ? b : a);
+      guide.setAttribute("x1", x(p.t)); guide.setAttribute("x2", x(p.t)); guide.setAttribute("opacity", 1);
+      showTip(e, `<b>${TENOR_LABEL(p.t)}</b>SOFR ${pct(p.sofr, 3)}${shocked ? ` → ${pct(p.sofrSc, 3)}` : ""}<br>FTP ${pct(shocked ? p.ftpSc : p.ftp, 3)}<br>Treasury ${pct(p.ust, 3)}`);
+    });
+    hit.addEventListener("mouseleave", () => { guide.setAttribute("opacity", 0); hideTip(); });
+  }
+
   // ---- risk & capital models --------------------------------------------------------------------
   const APPROACH_LABEL = { SA: "Standardized (SA)", FIRB: "Foundation IRB", AIRB: "Advanced IRB" };
   const BASIS_LABEL = { economic: "Economic capital", regulatory: "Regulatory capital", max: "Higher of economic and regulatory" };
@@ -935,7 +1029,7 @@
   }
   function setScenario(s) { sc = s; cur = E.run(book, sc); renderBanner(); }
 
-  const VIEWS = ["overview", "relationships", "accounts", "scenarios", "models", "plans"];
+  const VIEWS = ["overview", "relationships", "accounts", "scenarios", "curves", "models", "plans"];
   function go(hash) { if (location.hash === hash) route(); else location.hash = hash; }
   function route() {
     const parts = (location.hash || "#/overview").replace(/^#\//, "").split("/");
@@ -947,7 +1041,7 @@
     VIEWS.forEach(t => { $(`#view-${t}`).hidden = t !== ui.tab; });
     hideTip();
     ({ overview: renderOverview, relationships: renderRelationships, accounts: renderAccounts, scenarios: renderScenarios,
-       models: renderModels, plans: renderPlans })[ui.tab]();
+       curves: renderCurves, models: renderModels, plans: renderPlans })[ui.tab]();
     renderBanner(); renderPlanChip();
   }
 

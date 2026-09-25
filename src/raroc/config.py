@@ -17,17 +17,43 @@ N_PAYMENTS = 2000
 N_KEY_RELATIONSHIPS = 10
 N_OTHER_RELATIONSHIPS = 490
 
-# Funds transfer pricing curve (tenor in years -> matched-maturity rate)
-FTP_CURVE = {
-    0.25: 0.0410,
-    1.0: 0.0385,
-    2.0: 0.0370,
-    3.0: 0.0365,
-    5.0: 0.0370,
-    7.0: 0.0380,
-    10.0: 0.0395,
+# ---- Rate curves (tenor in years -> rate). Illustrative levels as of AS_OF_DATE, not market data.
+SOFR = 0.0420                      # overnight SOFR
+SOFR_CURVE = {                     # <= 1y: CME Term SOFR style; >= 1y: SOFR OIS swap rates
+    1 / 12: 0.041500,
+    0.25: 0.040875,
+    1.0: 0.038000,
+    2.0: 0.036000,
+    3.0: 0.035000,
+    5.0: 0.034500,
+    7.0: 0.035500,
+    10.0: 0.037000,
 }
-SOFR = 0.0420
+LIQUIDITY_PREMIUM_CURVE = {        # bank term funding spread over SOFR: 5 bps per year, capped at 25 bps
+    0.0: 0.0,
+    5.0: 0.0025,
+    10.0: 0.0025,
+}
+UST_CURVE = {                      # US Treasury par yields (reference; swap spread = SOFR swap - UST)
+    0.25: 0.0418, 0.5: 0.0410, 1.0: 0.0392, 2.0: 0.0372, 3.0: 0.0366,
+    5.0: 0.0368, 7.0: 0.0378, 10.0: 0.0392,
+}
+PRIME_RATE = 0.0750                # WSJ Prime style reference rate
+FLOATING_INDEX_TENOR = 1 / 12      # floating loans reset on 1M Term SOFR
+
+
+def _interp(curve: dict, t: float) -> float:
+    xs = sorted(curve)
+    if t <= xs[0]:
+        return curve[xs[0]]
+    for lo, hi in zip(xs, xs[1:], strict=False):
+        if t <= hi:
+            return curve[lo] + (t - lo) / (hi - lo) * (curve[hi] - curve[lo])
+    return curve[xs[-1]]
+
+
+# Funds transfer pricing = SOFR curve + term liquidity premium (matched maturity)
+FTP_CURVE = {t: r + _interp(LIQUIDITY_PREMIUM_CURVE, t) for t, r in SOFR_CURVE.items()}
 
 # Internal risk rating 1 (best) .. 10 (worst) -> one-year probability of default
 PD_BY_RATING = {

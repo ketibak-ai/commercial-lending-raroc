@@ -137,3 +137,26 @@ def test_downturn_raises_pit_expected_loss():
 def test_invalid_settings_rejected():
     with pytest.raises(ValueError):
         ModelSettings(basel_approach="Basel IV").validate()
+
+
+# ---- rate curves ------------------------------------------------------------------------------
+from raroc.engine import curve_rate, liquidity_premium  # noqa: E402
+
+
+def test_ftp_is_sofr_plus_liquidity_premium():
+    for t in (0.25, 1, 2.5, 5, 7, 10):
+        assert ftp_rate(t) == pytest.approx(curve_rate(C.SOFR_CURVE, t) + liquidity_premium(t))
+    # calibrated so the SOFR-based FTP reproduces the original matched-maturity curve exactly
+    original = {0.25: 0.0410, 1.0: 0.0385, 2.0: 0.0370, 3.0: 0.0365, 5.0: 0.0370, 7.0: 0.0380, 10.0: 0.0395}
+    for t, r in original.items():
+        assert ftp_rate(t) == pytest.approx(r, abs=1e-12)
+
+
+def test_all_in_rate_uses_sofr_index(book):
+    loans = book["loans"].set_index("account_id")
+    acc = book["result_accounts"].set_index("account_id")
+    fl = loans[loans.rate_type == "Floating"].index[0]
+    fx = loans[loans.rate_type == "Fixed"].index[0]
+    assert acc.loc[fl, "all_in_rate"] == pytest.approx(C.SOFR_CURVE[1 / 12] + loans.loc[fl, "spread"])
+    assert acc.loc[fx, "all_in_rate"] == pytest.approx(
+        curve_rate(C.SOFR_CURVE, loans.loc[fx, "tenor_yrs"]) + loans.loc[fx, "spread"])
